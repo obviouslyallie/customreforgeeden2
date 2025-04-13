@@ -7,3 +7,4 @@
 -  IF we can increase viability of early game spapce that would be ideal. Might have issues with set faction space placement
 2. Increase Resources espically late game
 3. Reduce skill points for select items (mostly hydroponic bays)
+4. Rename so we don't get autoupdated over
