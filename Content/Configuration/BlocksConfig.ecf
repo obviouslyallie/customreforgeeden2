@@ -149,8 +149,8 @@
   Group: stone
   { Child DropOnDestroy
     Item: CrushedStone
-    Count: "1,3"
-    Prob: 0.18
+    Count: "1,5"
+    Prob: 0.28
   }
 }
 { Block Id: 2, Name: Grass
@@ -278,8 +278,8 @@
   Group: snow
   { Child DropOnDestroy
     Item: CrushedStone
-    Count: "1,3"
-    Prob: 0.18
+    Count: "1,5"
+    Prob: 0.28
   }
 }
 { Block Id: 17, Name: RockGrey02
@@ -291,8 +291,8 @@
   Group: stone
   { Child DropOnDestroy
     Item: CrushedStone
-    Count: "1,3"
-    Prob: 0.18
+    Count: "1,5"
+    Prob: 0.28
   }
 }
 { Block Id: 18, Name: RockYellow
@@ -304,8 +304,8 @@
   Group: stone
   { Child DropOnDestroy
     Item: CrushedStone
-    Count: "1,3"
-    Prob: 0.18
+    Count: "1,5"
+    Prob: 0.28
   }
 }
 { Block Id: 19, Name: RockBlack
@@ -317,8 +317,8 @@
   Group: stone
   { Child DropOnDestroy
     Item: CrushedStone
-    Count: "1,3"
-    Prob: 0.18
+    Count: "1,5"
+    Prob: 0.28
   }
 }
 { Block Id: 20, Name: RockBlack02
@@ -330,8 +330,8 @@
   Group: stone
   { Child DropOnDestroy
     Item: CrushedStone
-    Count: "1,3"
-    Prob: 0.18
+    Count: "1,5"
+    Prob: 0.28
   }
 }
 { Block Id: 21, Name: Snow03
@@ -383,12 +383,12 @@
   Group: lava
   { Child DropOnDestroy_1
     Item: CrushedStone
-    Count: "1,2"
+    Count: "1,3"
     Prob: 0.12
   }
   { Child DropOnDestroy_2
     Item: Sulfur
-    Count: "1,2"
+    Count: "1,5"
     Prob: 0.04
   }
   Temperature: 150
@@ -403,11 +403,11 @@
   { Child DropOnDestroy_1
     Item: CrushedStone
     Count: "1,2"
-    Prob: 0.12
+    Prob: 0.22
   }
   { Child DropOnDestroy_2
     Item: Sulfur
-    Count: "1,2"
+    Count: "1,5"
     Prob: 0.04
   }
   Temperature: 150
@@ -583,8 +583,8 @@
   Group: lava 
   { Child DropOnDestroy_1
     Item: CrushedStone
-    Count: "1,2"
-    Prob: 0.12
+    Count: "1,5"
+    Prob: 0.22
   }
   { Child DropOnDestroy_2
     Item: Sulfur
@@ -620,7 +620,7 @@
   Group: stone
   { Child DropOnDestroy_1
     Item: CrushedStone
-    Count: "1,3"
+    Count: "1,5"
     Prob: 0.3
   }
   { Child DropOnDestroy_2
@@ -647,11 +647,11 @@
   ShowUser: No
   Group: resource
   XpFactor: 6.0
-  AutoMinerFactor: 0.5
+  AutoMinerFactor: 0.7
   { Child DropOnDestroy
     Item: SathiumOre
-    Count: "1,2"
-    Prob: 0.5
+    Count: "2,6"
+    Prob: 0.8
   }
 }
 #  Used for iron resource  
@@ -664,8 +664,8 @@
   Group: stone
   { Child DropOnDestroy
     Item: CrushedStone
-    Count: "1,3"
-    Prob: 0.18
+    Count: "1,5"
+    Prob: 0.28
   }
 }
 #  Used for silicon resource  
@@ -709,13 +709,13 @@
   Group: stone
   { Child DropOnDestroy_1
     Item: CrushedStone
-    Count: "2,4"
-    Prob: 0.4      # higher probability
+    Count: "4,8"
+    Prob: 0.6      # higher probability
   }
   { Child DropOnDestroy_2
     Item: Graphite
-    Count: "1,2"
-    Prob: 0.03
+    Count: "1,9"
+    Prob: 0.33
   }
 }
 
@@ -728,12 +728,12 @@
   Group: stone
   { Child DropOnDestroy_1
     Item: CrushedStone
-    Count: "1,3"
-    Prob: 0.18
+    Count: "1,5"
+    Prob: 0.28
   }
   { Child DropOnDestroy_2
     Item: Graphite
-    Count: "1,3"
+    Count: "1,6"
     Prob: 0.05
   }
 }
@@ -746,8 +746,8 @@
   Group: stone
   { Child DropOnDestroy
     Item: CrushedStone
-    Count: "1,3"
-    Prob: 0.15
+    Count: "1,5"
+    Prob: 0.25
   }
 }
 # double. delete when save game break
@@ -873,8 +873,8 @@
   Group: sand 
   { Child DropOnDestroy
     Item: Salt
-    Count: "1,2"
-    Prob: 0.03
+    Count: "1,8"
+    Prob: 0.07
   }
 }
 # double. delete when save game break
@@ -894,8 +894,8 @@
   Group: stone
   { Child DropOnDestroy
     Item: CrushedStone
-    Count: "1,3"
-    Prob: 0.15
+    Count: "1,5"
+    Prob: 0.25
   }
 }
 { Block Id: 76, Name: RockRed02
@@ -907,8 +907,8 @@
   Group: stone
   { Child DropOnDestroy
     Item: CrushedStone
-    Count: "1,3"
-    Prob: 0.15
+    Count: "1,5"
+    Prob: 0.25
   }
 }
 # double. delete when save game break
@@ -928,8 +928,8 @@
   ShowUser: No
   { Child DropOnDestroy
     Item: CrushedStone
-    Count: "1,3"
-    Prob: 0.18
+    Count: "1,5"
+    Prob: 0.28
   }
 }
 { +Block Id: 79, Name: CopperResource
@@ -937,14 +937,14 @@
   Shape: Terrain
   Mesh: terrain
   Texture: 177   #  rock_grey05 
-  AutoMinerFactor: 0.5
+  AutoMinerFactor: 0.9
   XpFactor: 3.0
   ShowUser: No
   Group: resource 
   { Child DropOnDestroy
     Item: CopperOre
-    Count: "1,3"
-    Prob: 0.6
+    Count: "2,8"
+    Prob: 0.8
   }
 }
 { +Block Id: 80, Name: PromethiumResource
@@ -952,14 +952,14 @@
   Shape: Terrain
   Mesh: terrain
   Texture: 136    #  alien_rock_blue01  
-  AutoMinerFactor: 0.3
+  AutoMinerFactor: 0.9
   XpFactor: 5.0
   ShowUser: No
   Group: resource 
   { Child DropOnDestroy
     Item: PromethiumOre
-    Count: "1,2"
-    Prob: 0.4
+    Count: "3,9"
+    Prob: 0.8
   }
   Radiation: 12
 }
@@ -968,14 +968,14 @@
   Shape: Terrain
   Mesh: terrain
   Texture: 173   #  rock_grey03  
-  AutoMinerFactor: 0.5
+  AutoMinerFactor: 0.9
   XpFactor: 2.0
   ShowUser: No
   Group: resource
   { Child DropOnDestroy
     Item: IronOre
-    Count: "1,4"
-    Prob: 0.6
+    Count: "3,9"
+    Prob: 0.7
   }
 }
 { +Block Id: 82, Name: SiliconResource
@@ -983,14 +983,14 @@
   Shape: Terrain
   Mesh: terrain
   Texture: 174   #  rock_grey04  
-  AutoMinerFactor: 0.5
+  AutoMinerFactor: 0.9
   XpFactor: 2.5
   ShowUser: No
   Group: resource 
   { Child DropOnDestroy
     Item: SiliconOre
-    Count: "1,4"
-    Prob: 0.6
+    Count: "2,7"
+    Prob: 0.7
   }
 }
 { +Block Id: 83, Name: NeodymiumResource
@@ -998,14 +998,14 @@
   Shape: Terrain
   Mesh: terrain
   Texture: 179   #  rock_brown02  
-  AutoMinerFactor: 0.5
+  AutoMinerFactor: 1.2
   XpFactor: 5.0
   ShowUser: No
   Group: resource 
   { Child DropOnDestroy
     Item: NeodymiumOre
-    Count: "1,3"
-    Prob: 0.5
+    Count: "6,15"
+    Prob: 0.7
   }
 }
 { +Block Id: 84, Name: MagnesiumResource
@@ -1019,8 +1019,8 @@
   Group: resource 
   { Child DropOnDestroy
     Item: MagnesiumOre
-    Count: "1,3"
-    Prob: 0.5
+    Count: "7,12"
+    Prob: 0.8
   }
 }
 { +Block Id: 85, Name: CobaltResource
@@ -1028,14 +1028,14 @@
   Shape: Terrain
   Mesh: terrain
   Texture: 129    #  rock_grey02  
-  AutoMinerFactor: 0.5
+  AutoMinerFactor: 0.9
   XpFactor: 4.0
   ShowUser: No
   Group: resource 
   { Child DropOnDestroy
     Item: CobaltOre
-    Count: "1,3"
-    Prob: 0.5
+    Count: "3,8"
+    Prob: 0.6
   }
 }
 { Block Id: 86, Name: RockGrey08
@@ -1048,7 +1048,7 @@
   { Child DropOnDestroy
     Item: CrushedStone
     Count: "1,3"
-    Prob: 0.18
+    Prob: 0.28
   }
 }
 # double. delete when save game break
@@ -1103,13 +1103,13 @@
   Mesh: terrain
   Texture: 116    
   ShowUser: No
-  AutoMinerFactor: 0.4
+  AutoMinerFactor: 1.2
   XpFactor: 7.0
   Group: resource 
   { Child DropOnDestroy
     Item: ErestrumOre
-    Count: "1,3"
-    Prob: 0.5
+    Count: "3,12"
+    Prob: 0.7
   }
   Radiation: 5
 }
@@ -1120,13 +1120,13 @@
   Mesh: terrain
   Texture: 128  
   ShowUser: No
-  AutoMinerFactor: 0.3
+  AutoMinerFactor: 0.8
   XpFactor: 8.0
   Group: resource
   { Child DropOnDestroy
     Item: ZascosiumOre
-    Count: "1,2"
-    Prob: 0.5
+    Count: "4,12"
+    Prob: 0.8
   }
 }
 # double. delete when save game break
@@ -1161,14 +1161,14 @@
   Shape: Terrain
   Mesh: terrain
   Texture: 140    
-  AutoMinerFactor: 0 # Gold has to be a limited asset (inflation!) => no endless production by the virtual AutoMiners
+  AutoMinerFactor: 0.8 # Gold has to be a limited asset (inflation!) => no endless production by the virtual AutoMiners
   ShowUser: No
   XpFactor: 9.0
   Group: resource 
   { Child DropOnDestroy
     Item: GoldOre
-    Count: "1,2"
-    Prob: 0.2
+    Count: "3,12"
+    Prob: 0.7
   }
 }
 { Block Id: 96, Name: SnowyGrass
@@ -1410,14 +1410,14 @@
   Shape: Terrain
   Mesh: terrain
   Texture: 104   
-  AutoMinerFactor: 0.05
+  AutoMinerFactor: 0.9
   XpFactor: 6.0
   ShowUser: NoButCSV
   Group: resource
   { Child DropOnDestroy
     Item: PentaxidOre
-    Count: "1,2"
-    Prob: 0.66
+    Count: "4,12"
+    Prob: 0.8
   }
 }
 # double. delete when save game break 
@@ -1511,7 +1511,7 @@
   { Child DropOnDestroy
     Item: CrushedStone
     Count: "1,3"
-    Prob: 0.18
+    Prob: 0.28
   }
 }
 { Block Id: 123, Name: RockGrey09
@@ -1524,7 +1524,7 @@
   { Child DropOnDestroy
     Item: CrushedStone
     Count: "1,3"
-    Prob: 0.18
+    Prob: 0.28
   }
 }
 { Block Id: 124, Name: SandYellow01
@@ -1553,7 +1553,7 @@
   { Child DropOnDestroy
     Item: CrushedStone
     Count: "1,3"
-    Prob: 0.18
+    Prob: 0.28
   }
 }
 { Block Id: 127, Name: Cliff5
@@ -1566,7 +1566,7 @@
   { Child DropOnDestroy
     Item: CrushedStone
     Count: "1,3"
-    Prob: 0.18
+    Prob: 0.28
   }
 }
 
@@ -1605,8 +1605,8 @@
   Group: resource
   { Child DropOnDestroy
     Item: IceBlocks
-    Count: "1,3"
-    Prob: 0.5
+    Count: "4,8"
+    Prob: 0.9
   }
 }
 
@@ -1616,13 +1616,13 @@
   Mesh: terrain
   Texture: 216   
   ShowUser: No
-  AutoMinerFactor: 0.5
+  AutoMinerFactor: 0.9
   XpFactor: 4.0
   Group: resource
   { Child DropOnDestroy
     Item: TitanOre
-    Count: "1,3"
-    Prob: 0.45
+    Count: "8,13"
+    Prob: 0.75
   }
 }
 { +Block Id: 133, Name: AluminiumResource
@@ -1631,13 +1631,13 @@
   Mesh: terrain
   Texture: 217   
   ShowUser: No
-  AutoMinerFactor: 0.3
+  AutoMinerFactor: 0.9
   XpFactor: 5.0
   Group: resource
   { Child DropOnDestroy
     Item: AluminiumOre
-    Count: "1,2"
-    Prob: 0.4
+    Count: "3,7"
+    Prob: 0.7
   }
 }
 { +Block Id: 134, Name: PlatinResource
@@ -1646,13 +1646,13 @@
   Mesh: terrain
   Texture: 218   
   ShowUser: No
-  AutoMinerFactor: 0
+  AutoMinerFactor: 0.7
   XpFactor: 10.0
   Group: resource
   { Child DropOnDestroy
     Item: PlatinOre
-    Count: "1,2"
-    Prob: 0.3
+    Count: "5,9"
+    Prob: 0.7
   }
 }
 { +Block Id: 135, Name: CarbonResource
@@ -1666,7 +1666,7 @@
   Group: resource
   { Child DropOnDestroy
     Item: Graphite
-    Count: "2,7"
+    Count: "6,23"
     Prob: 0.66
   }
 }
