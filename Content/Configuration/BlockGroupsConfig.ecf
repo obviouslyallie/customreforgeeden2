@@ -80,12 +80,12 @@
 # Project Eden Custom block limits
 
  { BlockGroup Name: Eden_MaxWindTurbines
-   MaxCount: 16
+   MaxCount: 32
    Blocks: "Eden_WindTurbineIdle,Eden_WindTurbineActive,Eden_WindTurbineActiveT2"
  }
 
  { BlockGroup Name: Eden_MaxGeoPower
-   MaxCount: 8
+   MaxCount: 16
    Blocks: "Eden_GeothermalGeneratorActive"
  }
 
@@ -95,6 +95,6 @@
  }
 
  # { BlockGroup Name: Eden_MaxAuxiliaryCores
-   # MaxCount: 10
+   # MaxCount: 20
    # Blocks: "Eden_AuxillaryDummy,Eden_AuxillaryCPUBA,Eden_AuxillaryPowerBA,Eden_AuxillaryShieldBA"
  # }
