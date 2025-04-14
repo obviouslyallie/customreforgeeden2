@@ -546,7 +546,7 @@
     LabelColor: "1, 1, 1, 0.8"
     LabelSize: 200
     Shape: Sphere 
-    Position: "10, 0, 45"
+    Position: "10, 0, 35"
     RadiusMinMax: "0, 2"
     TotalSpawnCount: 0
     UseDefaultStarDef: true
@@ -556,8 +556,8 @@
   # { Child StarRegion_26
     # Name: "Zirax Space"
     # Shape: Elliptical
-    # Position: "343, -13, 83"
-    # RadiusMinMax: "0, 75"
+    # Position: "273, -13, 83"
+    # RadiusMinMax: "0, 45"
     # TotalSpawnCount: 100
     # FlattenFac: 0.65
     # UseDefaultStarDef: true
