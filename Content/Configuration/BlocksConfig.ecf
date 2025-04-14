@@ -3473,8 +3473,8 @@
   BlastRadius: 5
   BlastDamage: 600
 
-  UnlockCost: 12, display: true
-  UnlockLevel: 7, display: true
+  UnlockCost: 0, display: true
+  UnlockLevel: 1, display: true
   # TechTreeParent: GeneratorBA
   TechTreeNames: "Base,Capital Vessel"
 }
@@ -3509,9 +3509,9 @@
   AllowPlacingAt: "Base,MS", display: true
   SizeInBlocks: "1,2,1", display: true
   SizeInBlocksLocked: "Base,MS"
-  Mass: 2500, type: float, display: true, formatter: Kilogram
-  Volume: 2250, type: float, display: true, formatter: Liter    
-  VolumeCapacity: 1200, type: float, display: true, formatter: Liter
+  Mass: 5000, type: float, display: true, formatter: Kilogram
+  Volume: 4450, type: float, display: true, formatter: Liter    
+  VolumeCapacity: 2400, type: float, display: true, formatter: Liter
   HitPoints: 1000, type: int, display: true
   StackSize: 500
   Category: Devices
@@ -38916,7 +38916,7 @@
   Temperature: 1080, display: true
   Radiation: 15, display: RadiationLevel
 
-  UnlockCost: 50, display: true
+  UnlockCost: 40, display: true
   UnlockLevel: 25, display: true
   TechTreeParent: ThrusterMSDriveT2Blocks
   TechTreeNames: Capital Vessel
@@ -42683,7 +42683,7 @@
   BlastRadius: 7
   BlastDamage: 900
   
-  UnlockCost: 45, display: true
+  UnlockCost: 25, display: true
   UnlockLevel: 25, display: true
   TechTreeParent: DetectorCVT2
   TechTreeNames: Capital Vessel
@@ -42772,7 +42772,7 @@
   BlastRadius: 5
   BlastDamage: 800
   
-  UnlockCost: 32, display: true
+  UnlockCost: 25, display: true
   UnlockLevel: 25, display: true
   TechTreeParent: DetectorSVT2
   TechTreeNames: "Small Vessel"
@@ -42923,7 +42923,7 @@
   BlastRadius: 4
   BlastDamage: 600
 
-  UnlockCost: 25, display: true
+  UnlockCost: 20, display: true
   UnlockLevel: 20, display: true
   TechTreeParent: DrillAttachmentSVT2
   TechTreeNames: Small Vessel
@@ -43345,7 +43345,7 @@
   Volume: 31.25, type: float, display: true, formatter: Liter
   CPUIn: 225, type: int, display: true
   StackSize: 2000
-  Range: 150, type: int, display: true
+  Range: 250, type: int, display: true
   Category: Devices
   BlastParticleIndex: 10
   BlastRadius: 4
@@ -43353,7 +43353,7 @@
   RepairToTemplate: false, display: true
   DowngradeTo: RemoteConnectionT2, display: false
 
-  UnlockCost: 20, display: true
+  UnlockCost: 15, display: true
   UnlockLevel: 25, display: true
   TechTreeParent: RemoteConnectionT2
   TechTreeNames: "Base,Capital Vessel,Small Vessel,Hover Vessel"
@@ -43397,8 +43397,8 @@
   CustomIcon: TeleporterCV
   RepairToTemplate: false, display: true
   
-  UnlockCost: 40, display: true
-  UnlockLevel: 25, display: true
+  UnlockCost: 20, display: true
+  UnlockLevel: 22, display: true
   TechTreeParent: TeleporterCV
   TechTreeNames: Capital Vessel
 }
@@ -43440,7 +43440,7 @@
   CustomIcon: TeleporterBA
   RepairToTemplate: false, display: true
   
-  UnlockCost: 30, display: true
+  UnlockCost: 20, display: true
   UnlockLevel: 20, display: true
   TechTreeParent: TeleporterBA
   TechTreeNames: Base
@@ -43483,8 +43483,8 @@
   CustomIcon: TeleporterBA
   RepairToTemplate: false, display: true
   
-  UnlockCost: 40, display: true
-  UnlockLevel: 25, display: true
+  UnlockCost: 20, display: true
+  UnlockLevel: 24, display: true
   TechTreeParent: TeleporterBAT2
   TechTreeNames: Base
 }
@@ -49468,8 +49468,8 @@
   Category: Devices
   XpFactor: 1
 
-  UnlockCost: 5, display: true
-  UnlockLevel: 10, display: true
+  UnlockCost: 4, display: true
+  UnlockLevel: 8, display: true
   TechTreeNames: "Base,Capital Vessel"
 }
 
@@ -49511,8 +49511,8 @@
   PickupTarget: Eden_HydroponicsGrain
   TemplateRoot: Eden_HydroponicsGrain
 
-  UnlockCost: 200, display: true
-  UnlockLevel: 15, display: true
+  UnlockCost: 10, display: true
+  UnlockLevel: 12, display: true
   TechTreeNames: "Base,Capital Vessel"
 }
 
@@ -49565,8 +49565,8 @@
   PickupTarget: Eden_HydroponicsFruit
   TemplateRoot: Eden_HydroponicsFruit
 
-  UnlockCost: 200, display: true
-  UnlockLevel: 15, display: true
+  UnlockCost: 10, display: true
+  UnlockLevel: 13, display: true
   TechTreeNames: "Base,Capital Vessel"
 }
 
@@ -49601,8 +49601,8 @@
   PickupTarget: Eden_HydroponicsVegetables
   TemplateRoot: Eden_HydroponicsVegetables
 
-  UnlockCost: 200, display: true
-  UnlockLevel: 15, display: true
+  UnlockCost: 10, display: true
+  UnlockLevel: 14, display: true
   TechTreeNames: "Base,Capital Vessel"
 }
 
@@ -49637,8 +49637,8 @@
   PickupTarget: Eden_HydroponicsNaturalStimulant
   TemplateRoot: Eden_HydroponicsNaturalStimulant
 
-  UnlockCost: 25, display: true
-  UnlockLevel: 20, display: true
+  UnlockCost: 15, display: true
+  UnlockLevel: 16, display: true
   TechTreeParent: Eden_HydroponicsVegetables
   TechTreeNames: "Base,Capital Vessel"
 }
@@ -49674,8 +49674,8 @@
   PickupTarget: Eden_HydroponicsHerbalLeaves
   TemplateRoot: Eden_HydroponicsHerbalLeaves
 
-  UnlockCost: 25, display: true
-  UnlockLevel: 20, display: true
+  UnlockCost: 8, display: true
+  UnlockLevel: 17, display: true
   TechTreeParent: Eden_HydroponicsGrain
   TechTreeNames: "Base,Capital Vessel"
 }
@@ -49711,8 +49711,8 @@
   PickupTarget: Eden_HydroponicsPlantProtein
   TemplateRoot: Eden_HydroponicsPlantProtein
 
-  UnlockCost: 25, display: true
-  UnlockLevel: 20, display: true
+  UnlockCost: 12, display: true
+  UnlockLevel: 17, display: true
   TechTreeParent: Eden_HydroponicsVegetables
   TechTreeNames: "Base,Capital Vessel"
 }
@@ -49748,8 +49748,8 @@
   PickupTarget: Eden_HydroponicsNaturalSweetener
   TemplateRoot: Eden_HydroponicsNaturalSweetener
 
-  UnlockCost: 25, display: true
-  UnlockLevel: 20, display: true
+  UnlockCost: 12, display: true
+  UnlockLevel: 15, display: true
   TechTreeParent: Eden_HydroponicsFruit
   TechTreeNames: "Base,Capital Vessel"
 }
@@ -49786,8 +49786,8 @@
   PickupTarget: Eden_HydroponicsFiber
   TemplateRoot: Eden_HydroponicsFiber
 
-  UnlockCost: 25, display: true
-  UnlockLevel: 20, display: true
+  UnlockCost: 12, display: true
+  UnlockLevel: 16, display: true
   TechTreeParent: Eden_HydroponicsGrain
   TechTreeNames: "Base,Capital Vessel"
 }
@@ -49823,8 +49823,8 @@
   PickupTarget: Eden_HydroponicsMushroomBrown
   TemplateRoot: Eden_HydroponicsMushroomBrown
 
-  UnlockCost: 25, display: true
-  UnlockLevel: 20, display: true
+  UnlockCost: 12, display: true
+  UnlockLevel: 15, display: true
   TechTreeParent: Eden_HydroponicsFruit
   TechTreeNames: "Base,Capital Vessel"
 }
@@ -49860,8 +49860,8 @@
   PickupTarget: Eden_HydroponicsSpice
   TemplateRoot: Eden_HydroponicsSpice
 
-  UnlockCost: 25, display: true
-  UnlockLevel: 20, display: true
+  UnlockCost: 12, display: true
+  UnlockLevel: 16, display: true
   TechTreeParent: Eden_HydroponicsVegetables
   TechTreeNames: "Base,Capital Vessel"
 }
@@ -49897,8 +49897,8 @@
   PickupTarget: Eden_HydroponicsBerries
   TemplateRoot: Eden_HydroponicsBerries
 
-  UnlockCost: 25, display: true
-  UnlockLevel: 20, display: true
+  UnlockCost: 12, display: true
+  UnlockLevel: 17, display: true
   TechTreeParent: Eden_HydroponicsFruit
   TechTreeNames: "Base,Capital Vessel"
 }
@@ -49926,19 +49926,19 @@
   { Child PlantGrowing
     Next: Eden_HydroponicsPentaxidGrown
     # GrowthRate: 30
-    GrowthRate: 140
+    GrowthRate: 280
     FertileLevel: 3
     OnDeath: Eden_HydroponicsEmpty
   }
   CropType: PentaxidOre, display: true
-  CropYield: 18, display: true
+  CropYield: 36, display: true
   GrowthTimeInfo: 105, type: int, display: true, formatter: Minutes
   PickupTarget: Eden_HydroponicsPentaxid
   TemplateRoot: Eden_HydroponicsPentaxid
   EnergyIn: 56, type: int, display: true, formatter: Watt
 
-  UnlockCost: 200, display: true
-  UnlockLevel: 15, display: true
+  UnlockCost: 12, display: true
+  UnlockLevel: 12, display: true
   TechTreeNames: "Base,Capital Vessel"
 }
 
@@ -49949,7 +49949,7 @@
   CustomIcon: Eden_HydroponicsPentaxid
   { Child DropOnHarvest
     Item: PentaxidOre
-    Count: 18
+    Count: 36
   }
   { Child CropsGrown
     OnHarvest: Eden_HydroponicsPentaxid
