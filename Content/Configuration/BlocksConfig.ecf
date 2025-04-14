@@ -647,7 +647,7 @@
   ShowUser: No
   Group: resource
   XpFactor: 6.0
-  AutoMinerFactor: 0.5
+  AutoMinerFactor: 0.7
   { Child DropOnDestroy
     Item: SathiumOre
     Count: "2,6"
@@ -937,7 +937,7 @@
   Shape: Terrain
   Mesh: terrain
   Texture: 177   #  rock_grey05 
-  AutoMinerFactor: 0.5
+  AutoMinerFactor: 0.9
   XpFactor: 3.0
   ShowUser: No
   Group: resource 
@@ -952,7 +952,7 @@
   Shape: Terrain
   Mesh: terrain
   Texture: 136    #  alien_rock_blue01  
-  AutoMinerFactor: 0.3
+  AutoMinerFactor: 0.9
   XpFactor: 5.0
   ShowUser: No
   Group: resource 
@@ -968,7 +968,7 @@
   Shape: Terrain
   Mesh: terrain
   Texture: 173   #  rock_grey03  
-  AutoMinerFactor: 0.5
+  AutoMinerFactor: 0.9
   XpFactor: 2.0
   ShowUser: No
   Group: resource
@@ -983,7 +983,7 @@
   Shape: Terrain
   Mesh: terrain
   Texture: 174   #  rock_grey04  
-  AutoMinerFactor: 0.5
+  AutoMinerFactor: 0.9
   XpFactor: 2.5
   ShowUser: No
   Group: resource 
@@ -998,7 +998,7 @@
   Shape: Terrain
   Mesh: terrain
   Texture: 179   #  rock_brown02  
-  AutoMinerFactor: 0.5
+  AutoMinerFactor: 1.2
   XpFactor: 5.0
   ShowUser: No
   Group: resource 
@@ -1028,7 +1028,7 @@
   Shape: Terrain
   Mesh: terrain
   Texture: 129    #  rock_grey02  
-  AutoMinerFactor: 0.5
+  AutoMinerFactor: 0.9
   XpFactor: 4.0
   ShowUser: No
   Group: resource 
@@ -1103,7 +1103,7 @@
   Mesh: terrain
   Texture: 116    
   ShowUser: No
-  AutoMinerFactor: 1
+  AutoMinerFactor: 1.2
   XpFactor: 7.0
   Group: resource 
   { Child DropOnDestroy
@@ -1410,7 +1410,7 @@
   Shape: Terrain
   Mesh: terrain
   Texture: 104   
-  AutoMinerFactor: 0.05
+  AutoMinerFactor: 0.9
   XpFactor: 6.0
   ShowUser: NoButCSV
   Group: resource
@@ -1616,7 +1616,7 @@
   Mesh: terrain
   Texture: 216   
   ShowUser: No
-  AutoMinerFactor: 0.5
+  AutoMinerFactor: 0.9
   XpFactor: 4.0
   Group: resource
   { Child DropOnDestroy
@@ -1631,7 +1631,7 @@
   Mesh: terrain
   Texture: 217   
   ShowUser: No
-  AutoMinerFactor: 0.3
+  AutoMinerFactor: 0.9
   XpFactor: 5.0
   Group: resource
   { Child DropOnDestroy
