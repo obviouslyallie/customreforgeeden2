@@ -147,8 +147,8 @@
 
 
 { GalaxyConfig, Name: General
-  StarCount: "12000, 14000" # Minimum and maximum star count based on seed. Lowering this number will take away stars from the main spiral shape of the galaxy. Individual star clusters will be unaffected (unless the main shape runs out of stars completely).
-  Radius: "0, 400"                           # inner and outer radius of galaxy in LY (no random!)
+  StarCount: "4000, 7000" # Minimum and maximum star count based on seed. Lowering this number will take away stars from the main spiral shape of the galaxy. Individual star clusters will be unaffected (unless the main shape runs out of stars completely).
+  Radius: "0, 250"                           # inner and outer radius of galaxy in LY (no random!)
 
 
 # Do not change anything below this line unless you know what you're doing.
@@ -159,7 +159,7 @@
 
 
 
-  NebulaCount: "150, 175"                     # random value min/max
+  NebulaCount: "15, 75"                     # random value min/max
   # NebulaCount: "175, 225"                     # random value min/max
   # NebulaCount: "0, 0"                     # random value min/max
   # Nebula Colors (only temporary until we add better support for it): 3 color gradients are supported, you need to set at least two colors but can use any number of colors for the gradients
@@ -269,7 +269,7 @@
     Name: "Outer Center Sphere"
     Shape: Elliptical 
     RadiusMinMax: "20, 150"
-    TotalSpawnCount: 1250
+    TotalSpawnCount: 750
     UseDefaultStarDef: false
     StarClass_1: Anomaly2, param1: "Prob=1, SpawnAmount=5"
     StarClass_2: O1b, param1: "Prob=0.03, ClusterProb=0, ClusterRange=0-0"      
@@ -321,7 +321,7 @@
     Shape: Elliptical
     Position: "360, 50, -1150"
     RadiusMinMax: "8, 50"
-    TotalSpawnCount: 125
+    TotalSpawnCount: 55
     FlattenFac: 0.2  # default is 0.2
     UseDefaultStarDef: false
     StarClass_1: UV-Legacy, param1: "Prob=0.1"
@@ -340,7 +340,7 @@
     Shape: Elliptical
     Position: "360, 50, -1150"
     RadiusMinMax: "8, 200"
-    TotalSpawnCount: 300
+    TotalSpawnCount: 100
     FlattenFac: 0.35  # default is 0.2
     UseDefaultStarDef: false
     StarClass_1: S-S-Legacy, param1: "Prob=0.02"
@@ -358,7 +358,7 @@
     Shape: Elliptical
     Position: "360, 50, -1150"
     RadiusMinMax: "200, 300"
-    TotalSpawnCount: 150
+    TotalSpawnCount: 50
     FlattenFac: 0.2  # default is 0.2
     UseDefaultStarDef: false
     StarClass_1: S-S-Legacy, param1: "Prob=0.005"
@@ -418,7 +418,7 @@
     # Shape: Elliptical
     # Position: "300, 40, -1150"
     # RadiusMinMax: "0, 150"
-    # TotalSpawnCount: 60
+    # TotalSpawnCount: 20
     # FlattenFac: 0.15  # default is 0.2
     # UseDefaultStarDef: true
     # StarClass_1: S, param1: "SpawnAmount=3, Prob=1"
@@ -463,7 +463,7 @@
     Shape: Elliptical
     Position: "-750, 100, 0"
     RadiusMinMax: "4, 55"
-    TotalSpawnCount: 75
+    TotalSpawnCount: 25
     FlattenFac: 0.4  # default is 0.2
     UseDefaultStarDef: false
     StarClass_1: B2V, param1: "Prob=0.2"
@@ -486,7 +486,7 @@
     Shape: Elliptical
     Position: "310, 4, -126"
     RadiusMinMax: "0, 35"
-    TotalSpawnCount: 75
+    TotalSpawnCount: 25
     FlattenFac: 0.25  # default is 0.2
     UseDefaultStarDef: false
     StarClass_1: G, param1: "Prob=0.3"
@@ -504,7 +504,7 @@
     Shape: Elliptical
     Position: "310, 4, -126"
     RadiusMinMax: "35, 70"
-    TotalSpawnCount: 125
+    TotalSpawnCount: 55
     FlattenFac: 0.75  # default is 0.2
     UseDefaultStarDef: true
     StarClass_1: G2, param1: "Prob=0.2"
@@ -558,7 +558,7 @@
     # Shape: Elliptical
     # Position: "343, -13, 83"
     # RadiusMinMax: "0, 75"
-    # TotalSpawnCount: 200
+    # TotalSpawnCount: 100
     # FlattenFac: 0.65
     # UseDefaultStarDef: true
     # StarClass_1: K2, param1: "Prob=0.9"
@@ -632,7 +632,7 @@
     Shape: Elliptical
     Position: "-200, 0, 350"
     RadiusMinMax: "0, 100"
-    TotalSpawnCount: 75
+    TotalSpawnCount: 55
     FlattenFac: 0.25  # default is 0.2
     UseDefaultStarDef: false
     StarClass_1: G, param1: "Prob=0.3"
@@ -686,7 +686,7 @@
     Shape: Elliptical
     Position: "-625, -25, 625"
     RadiusMinMax: "0, 125"
-    TotalSpawnCount: 50
+    TotalSpawnCount: 40
     FlattenFac: 0.4  # default is 0.2
     UseDefaultStarDef: false
     StarClass_1: M2-Drone, param1: "Prob=0.3"
@@ -697,7 +697,7 @@
     StarClass_6: K, param1: "Prob=0.02"
     StarClass_7: D4-Drone, param1: "Prob=0.2"
 
-    NebulaSpawnCount: 45
+    NebulaSpawnCount: 15
     NebulaColorIndex: 6
     # NebulaColorIndex: 11
   }
@@ -707,7 +707,7 @@
     Shape: Elliptical
     Position: "-550, -20, 600"
     RadiusMinMax: "75, 250"
-    TotalSpawnCount: 175
+    TotalSpawnCount: 75
     FlattenFac: 0.4  # default is 0.2
     UseDefaultStarDef: false
     StarClass_1: M2-Drone, param1: "Prob=0.7"
@@ -854,7 +854,7 @@
     Shape: Elliptical
     Position: "-105, 15, 540"
     RadiusMinMax: "1, 25"
-    TotalSpawnCount: 60
+    TotalSpawnCount: 20
     FlattenFac: 0.55  # default is 0.2
     UseDefaultStarDef: false
     StarClass_1: G, param1: "Prob=1"
@@ -891,7 +891,7 @@
     Shape: Elliptical
     Position: "300, -250, 300"
     RadiusMinMax: "0, 20"
-    TotalSpawnCount: 35
+    TotalSpawnCount: 25
     FlattenFac: 0.35  # default is 0.2
     UseDefaultStarDef: false
     # StarClass_1: O1b, param1: "SpawnAmount=50, Prob=0.3"
@@ -907,7 +907,7 @@
     Shape: Spiral
     Position: "300, -250, 300"
     RadiusMinMax: "0, 90"
-    TotalSpawnCount: 200
+    TotalSpawnCount: 60
     # FlattenFac: 0.2  # default is 0.2
     UseDefaultStarDef: false
     # StarClass_1: O, param1: "Prob=0.1"
@@ -926,7 +926,7 @@
     Shape: Elliptical
     Position: "300, -250, 300"
     RadiusMinMax: "20, 115"
-    TotalSpawnCount: 300
+    TotalSpawnCount: 60
     # FlattenFac: 0.2  # default is 0.2
     UseDefaultStarDef: false
     # StarClass_1: O, param1: "Prob=0.1"
@@ -951,7 +951,7 @@
     Shape: Elliptical
     Position: "1010, 290, 0"
     RadiusMinMax: "5, 100"
-    TotalSpawnCount: 175
+    TotalSpawnCount: 75
     FlattenFac: 0.35
     UseDefaultStarDef: false
     StarClass_1: S2, param1: "SpawnAmount=5, Prob=1"
@@ -966,7 +966,7 @@
     # Shape: Elliptical
     # Position: "-200, 450, 300"
     # RadiusMinMax: "3, 15"
-    # TotalSpawnCount: 35
+    # TotalSpawnCount: 25
     # FlattenFac: 0.55  # default is 0.2
     # UseDefaultStarDef: false
     # StarClass_1: K, param1: "Prob=0.4"
@@ -979,7 +979,7 @@
     # Shape: Elliptical
     # Position: "-200, 450, 300"
     # RadiusMinMax: "15, 175"
-    # TotalSpawnCount: 1250
+    # TotalSpawnCount: 550
     # FlattenFac: 0.30  # default is 0.2
     # UseDefaultStarDef: false
     # StarClass_1: K, param1: "Prob=0.1"
@@ -996,7 +996,7 @@
     # Shape: Elliptical
     # Position: "-300, 450, 500"
     # RadiusMinMax: "2, 30"
-    # TotalSpawnCount: 75
+    # TotalSpawnCount: 35
     # FlattenFac: 0.35  # default is 0.2
     # UseDefaultStarDef: false
     # StarClass_1: K, param1: "Prob=0.5"
@@ -1010,7 +1010,7 @@
     # Shape: Spiral
     # Position: "-300, 450, 500"
     # RadiusMinMax: "30, 145"
-    # TotalSpawnCount: 750
+    # TotalSpawnCount: 150
     # # FlattenFac: 0.2  # default is 0.2
     # UseDefaultStarDef: false
     # StarClass_1: K, param1: "Prob=0.05"
@@ -1026,7 +1026,7 @@
     # Shape: Elliptical
     # Position: "-300, 450, 500"
     # RadiusMinMax: "100, 200"
-    # TotalSpawnCount: 1400
+    # TotalSpawnCount: 140
     # # FlattenFac: 0.2  # default is 0.2
     # UseDefaultStarDef: false
     # StarClass_1: O, param1: "Prob=0.05"
@@ -1197,7 +1197,7 @@
     Name: "Filler"
     Shape: Elliptical
     RadiusMinMax: "150, 700"
-    TotalSpawnCount: 3000
+    TotalSpawnCount: 1000
     # TotalSpawnCount: 0
     FlattenFac: 0.25  # default is 0.2
     UseDefaultStarDef: true
@@ -1217,7 +1217,7 @@
     Name: "Beyond the Rim"
     Shape: Elliptical
     RadiusMinMax: "600, 800"
-    TotalSpawnCount: 750
+    TotalSpawnCount: 450
     FlattenFac: 0.1  # default is 0.2
     UseDefaultStarDef: false
     StarClass_1: N, param1: "Prob=0.02"
@@ -1235,7 +1235,7 @@
     Name: "A Ring"
     Shape: Elliptical
     RadiusMinMax: "300, 301"
-    TotalSpawnCount: 250
+    TotalSpawnCount: 150
     FlattenFac: 0.01  # default is 0.2
     UseDefaultStarDef: false
     StarClass_1: A, param1: "Prob=0.1, ClusterProb=1, ClusterRange=0.2-0.8"
@@ -1424,7 +1424,7 @@
   { Child Territory_1
     Faction: Zirax
     Center: "10, 0, 45"
-    Radius: 145
+    Radius: 115
     Other_1: Talon, param1: "0.3, 0.7"  # prob for Talon spawn at "center, radius"
     Other_2: Alien, param1: "1, 1"
     Other_3: Xenu, param1: "1, 1"
@@ -1438,7 +1438,7 @@
   { Child Territory_2
     Faction: Polaris
     Center: "135, 0, 295" 
-    Radius: 90  # in LY
+    Radius: 70  # in LY
     Other_1: Talon, param1: "0.5, 1"
     Other_2: Alien, param1: "1, 1"
     Other_3: Pirates, param1: "0, 0.2"
@@ -1449,14 +1449,14 @@
   }
   { Child Territory_3
     Faction: Kriel
-    Center: "-750, 100, 0" 
+    Center: "-450, 100, 0" 
     Radius: 75  # in LY
     Other_1: Alien, param1: "1, 1"
   }
   { Child Territory_4
     Faction: Trader
     Center: "310, 4, -126" 
-    Radius: 70  # in LY
+    Radius: 50  # in LY
     Other_1: Pirates, param1: "0, 0.1"
     Other_2: Alien, param1: "1, 1"
     Other_3: UCH, param1: "0.3, 0.6"
@@ -1468,7 +1468,7 @@
   { Child Territory_5
     Faction: Pirates
     Center: "375, 0, 60"
-    Radius: 75  # in LY
+    Radius: 55  # in LY
     Other_1: Alien, param1: "1, 1"
     Other_2: Zirax, param1: "0, 0.2"
     Other_3: Talon, param1: "0.5, 1"
@@ -1483,7 +1483,7 @@
   }
   # { Child Territory_7
     # Faction: Zirax
-    # Center: "200, 20, -860" 
+    # Center: "200, 20, -560" 
     # Radius: 100  # in LY
     # Other_1: Xenu, param1: "1, 1"
     # Other_2: Rados, param1: "1, 1"
@@ -1505,7 +1505,7 @@
   # }
   { Child Territory_7
     Faction: Eden_Progenitor
-    # Center: "850, 200, 0" 
+    # Center: "650, 200, 0" 
     Center: "1010, 290, 0"
     Radius: 150  # in LY 
     Other_1: Progenitor, param1: "1, 1"
@@ -1527,7 +1527,7 @@
   { Child Territory_9 # Large colonized area of space.
     Faction: Colonists
     Center: "-200, 0, 350" 
-    Radius: 125
+    Radius: 85
     Other_1: Polaris, param1: "0.4, 0.2"
     Other_2: Pirates, param1: "0.01, 0.7"
     Other_3: Warlord, param1: "1, 1"
@@ -1540,7 +1540,7 @@
   { Child Territory_10 # Outlaw Space
     Faction: Wastelanders
     Center: "-100, 0, -350" 
-    Radius: 160
+    Radius: 110
     Other_1: Pirates, param1: "1, 0.1"
     Other_2: Alien, param1: "1, 1"
     Other_3: Warlord, param1: "1, 1"
@@ -1550,7 +1550,7 @@
   { Child Territory_11 # Dronelands
     Faction: Eden_DroneHome
     Center: "-625, -25, 625" 
-    Radius: 275
+    Radius: 75
   }
   { Child Territory_12 # Solitude
     Faction: Eden_SolitudeTerritory
