@@ -16,31 +16,7 @@ SolarSystems:
       - Coordinates: [0, 0, 0]
         SectorMapType: None
         Playfields:
-          - ['0,0,0', Alpha, SunRandom, '']
-      - Coordinates: [2, 0, 0]
-        SectorMapType: WarpTarget
-        Playfields:
-          - ['0,0,0', 'Alpha [Sun Right]', SpaceWarpTargetFixed, '']
-      - Coordinates: [-2, 0, 0]
-        SectorMapType: WarpTarget
-        Playfields:
-          - ['0,0,0', 'Alpha [Sun Left]', SpaceWarpTargetFixed, '']
-      - Coordinates: [0, 2, 0]
-        SectorMapType: WarpTarget
-        Playfields:
-          - ['0,0,0', 'Alpha [Sun Top]', SpaceWarpTargetFixed, '']
-      - Coordinates: [0, -2, 0]
-        SectorMapType: WarpTarget
-        Playfields:
-          - ['0,0,0', 'Alpha [Sun Bottom]', SpaceWarpTargetFixed, '']
-      - Coordinates: [0, 0, 2]
-        SectorMapType: WarpTarget
-        Playfields:
-          - ['0,0,0', 'Alpha [Sun Front]', SpaceWarpTargetFixed, '']
-      - Coordinates: [0, 0, -2]
-        SectorMapType: WarpTarget
-        Playfields:
-          - ['0,0,0', 'Alpha [Sun Back]', SpaceWarpTargetFixed, '']
+          - ['0,0,0', Alpha, Sun, '']
 
 # ------------------------------------------------------------------------------------------------- Starting Planets Alpha
       # - Coordinates: [-30, 0, -30]
@@ -172,37 +148,14 @@ SolarSystems:
       - Coordinates: [0, 0, 0]
         SectorMapType: None
         Playfields:
-          - ['0,0,0', Beta, SunRandom, '']
-      - Coordinates: [5, 0, 0]
-        SectorMapType: WarpTarget
-        Playfields:
-          - ['0,0,0', 'Beta [Sun Right]', SpaceWarpTargetFixed, '']
-      - Coordinates: [-5, 0, 0]
-        SectorMapType: WarpTarget
-        Playfields:
-          - ['0,0,0', 'Beta [Sun Left]', SpaceWarpTargetFixed, '']
-      - Coordinates: [0, 5, 0]
-        SectorMapType: WarpTarget
-        Playfields:
-          - ['0,0,0', 'Beta [Sun Top]', SpaceWarpTargetFixed, '']
-      - Coordinates: [0, -5, 0]
-        SectorMapType: WarpTarget
-        Playfields:
-          - ['0,0,0', 'Beta [Sun Bottom]', SpaceWarpTargetFixed, '']
-      - Coordinates: [0, 0, 5]
-        SectorMapType: WarpTarget
-        Playfields:
-          - ['0,0,0', 'Beta [Sun Front]', SpaceWarpTargetFixed, '']
-      - Coordinates: [0, 0, -5]
-        SectorMapType: WarpTarget
-        Playfields:
-          - ['0,0,0', 'Beta [Sun Back]', SpaceWarpTargetFixed, '']
+          - ['0,0,0', Beta, Sun, '']
+
 # ------------------------------------------------------------------------------------------------- Second Sun
       - Coordinates: [10, 6, 10]
         Color: '1,0.95,0.63'
         SectorMapType: Sun
         Playfields:
-          - ['0, 0, 0', Beta B, SunRandom,'', '', 'K', '11']
+          - ['0, 0, 0', Beta B, Sun,'', '', 'K', '11']
 
 # ------------------------------------------------------------------------------------------------- Starting Planets Beta
       - Coordinates: [-25, 0, 45]
@@ -333,31 +286,7 @@ SolarSystems:
       - Coordinates: [0, 0, 0]
         SectorMapType: None
         Playfields:
-          - ['0,0,0', Delta, SunRandom, '']
-      - Coordinates: [3, 0, 0]
-        SectorMapType: WarpTarget
-        Playfields:
-          - ['0,0,0', 'Delta [Sun Right]', SpaceWarpTargetFixed, '']
-      - Coordinates: [-3, 0, 0]
-        SectorMapType: WarpTarget
-        Playfields:
-          - ['0,0,0', 'Delta [Sun Left]', SpaceWarpTargetFixed, '']
-      - Coordinates: [0, 3, 0]
-        SectorMapType: WarpTarget
-        Playfields:
-          - ['0,0,0', 'Delta [Sun Top]', SpaceWarpTargetFixed, '']
-      - Coordinates: [0, -3, 0]
-        SectorMapType: WarpTarget
-        Playfields:
-          - ['0,0,0', 'Delta [Sun Bottom]', SpaceWarpTargetFixed, '']
-      - Coordinates: [0, 0, 3]
-        SectorMapType: WarpTarget
-        Playfields:
-          - ['0,0,0', 'Delta [Sun Front]', SpaceWarpTargetFixed, '']
-      - Coordinates: [0, 0, -3]
-        SectorMapType: WarpTarget
-        Playfields:
-          - ['0,0,0', 'Delta [Sun Back]', SpaceWarpTargetFixed, '']
+          - ['0,0,0', Delta, Sun, '']
 
 # ------------------------------------------------------------------------------------------------- Starting Planets Delta
       - Coordinates: [20, 3, -80]
@@ -484,31 +413,8 @@ SolarSystems:
       - Coordinates: [0, 0, 0]
         SectorMapType: None
         Playfields:
-          - ['0,0,0', Epsilon, SunRandom, '']
-      - Coordinates: [2, 0, 0]
-        SectorMapType: WarpTarget
-        Playfields:
-          - ['0,0,0', 'Epsilon [Sun Right]', SpaceWarpTargetFixed, '']
-      - Coordinates: [-2, 0, 0]
-        SectorMapType: WarpTarget
-        Playfields:
-          - ['0,0,0', 'Epsilon [Sun Left]', SpaceWarpTargetFixed, '']
-      - Coordinates: [0, 2, 0]
-        SectorMapType: WarpTarget
-        Playfields:
-          - ['0,0,0', 'Epsilon [Sun Top]', SpaceWarpTargetFixed, '']
-      - Coordinates: [0, -2, 0]
-        SectorMapType: WarpTarget
-        Playfields:
-          - ['0,0,0', 'Epsilon [Sun Bottom]', SpaceWarpTargetFixed, '']
-      - Coordinates: [0, 0, 2]
-        SectorMapType: WarpTarget
-        Playfields:
-          - ['0,0,0', 'Epsilon [Sun Front]', SpaceWarpTargetFixed, '']
-      - Coordinates: [0, 0, -2]
-        SectorMapType: WarpTarget
-        Playfields:
-          - ['0,0,0', 'Epsilon [Sun Back]', SpaceWarpTargetFixed, '']
+          - ['0,0,0', Epsilon, Sun, '']
+
 
 # -------------------------------------------------------------------------------------------------------------------------------------------------------- Starting Planets Epsilon
       - Coordinates: [-10, 0, -10]
@@ -650,31 +556,7 @@ SolarSystems:
       - Coordinates: [0, 0, 0]
         SectorMapType: None
         Playfields:
-          - ['0,0,0', Rogue System, SunRandom, '']
-      - Coordinates: [2, 0, 0]
-        SectorMapType: WarpTarget
-        Playfields:
-          - ['0,0,0', 'Rogue System [Sun Right]', SpaceWarpTargetFixed, '']
-      - Coordinates: [-2, 0, 0]
-        SectorMapType: WarpTarget
-        Playfields:
-          - ['0,0,0', 'Rogue System [Sun Left]', SpaceWarpTargetFixed, '']
-      - Coordinates: [0, 2, 0]
-        SectorMapType: WarpTarget
-        Playfields:
-          - ['0,0,0', 'Rogue System [Sun Top]', SpaceWarpTargetFixed, '']
-      - Coordinates: [0, -2, 0]
-        SectorMapType: WarpTarget
-        Playfields:
-          - ['0,0,0', 'Rogue System [Sun Bottom]', SpaceWarpTargetFixed, '']
-      - Coordinates: [0, 0, 2]
-        SectorMapType: WarpTarget
-        Playfields:
-          - ['0,0,0', 'Rogue System [Sun Front]', SpaceWarpTargetFixed, '']
-      - Coordinates: [0, 0, -2]
-        SectorMapType: WarpTarget
-        Playfields:
-          - ['0,0,0', 'Rogue System [Sun Back]', SpaceWarpTargetFixed, '']
+          - ['0,0,0', Rogue System, Sun, '']
 
 # -------------------------------------------------------------------------------------------------------------------------------------------------------- Starting Planets Rogue
       - Coordinates: [-25, 0, -25]
@@ -750,31 +632,8 @@ SolarSystems:
       - Coordinates: [0, 0, 0]
         SectorMapType: None
         Playfields:
-          - ['0,0,0', Galactic Core, SunRandom, '']
-      - Coordinates: [2, 0, 0]
-        SectorMapType: WarpTarget
-        Playfields:
-          - ['0,0,0', 'Galactic Core [Sun Right]', SpaceWarpTargetFixed, '']
-      - Coordinates: [-2, 0, 0]
-        SectorMapType: WarpTarget
-        Playfields:
-          - ['0,0,0', 'Galactic Core [Sun Left]', SpaceWarpTargetFixed, '']
-      - Coordinates: [0, 2, 0]
-        SectorMapType: WarpTarget
-        Playfields:
-          - ['0,0,0', 'Galactic Core [Sun Top]', SpaceWarpTargetFixed, '']
-      - Coordinates: [0, -2, 0]
-        SectorMapType: WarpTarget
-        Playfields:
-          - ['0,0,0', 'Galactic Core [Sun Bottom]', SpaceWarpTargetFixed, '']
-      - Coordinates: [0, 0, 2]
-        SectorMapType: WarpTarget
-        Playfields:
-          - ['0,0,0', 'Galactic Core [Sun Front]', SpaceWarpTargetFixed, '']
-      - Coordinates: [0, 0, -2]
-        SectorMapType: WarpTarget
-        Playfields:
-          - ['0,0,0', 'Galactic Core [Sun Back]', SpaceWarpTargetFixed, '']
+          - ['0,0,0', Galactic Core, Sun, '']
+
 
   - Name: Sea of Silence
     Coordinates: [360, 60, -1150]
@@ -785,31 +644,7 @@ SolarSystems:
       - Coordinates: [0, 0, 0]
         SectorMapType: None
         Playfields:
-          - ['0,0,0', Sea of Silence, SunRandom, '']
-      - Coordinates: [2, 0, 0]
-        SectorMapType: WarpTarget
-        Playfields:
-          - ['0,0,0', 'Sea of Silence [Sun Right]', SpaceWarpTargetFixed, '']
-      - Coordinates: [-2, 0, 0]
-        SectorMapType: WarpTarget
-        Playfields:
-          - ['0,0,0', 'Sea of Silence [Sun Left]', SpaceWarpTargetFixed, '']
-      - Coordinates: [0, 2, 0]
-        SectorMapType: WarpTarget
-        Playfields:
-          - ['0,0,0', 'Sea of Silence [Sun Top]', SpaceWarpTargetFixed, '']
-      - Coordinates: [0, -2, 0]
-        SectorMapType: WarpTarget
-        Playfields:
-          - ['0,0,0', 'Sea of Silence [Sun Bottom]', SpaceWarpTargetFixed, '']
-      - Coordinates: [0, 0, 2]
-        SectorMapType: WarpTarget
-        Playfields:
-          - ['0,0,0', 'Sea of Silence [Sun Front]', SpaceWarpTargetFixed, '']
-      - Coordinates: [0, 0, -2]
-        SectorMapType: WarpTarget
-        Playfields:
-          - ['0,0,0', 'Sea of Silence [Sun Back]', SpaceWarpTargetFixed, '']
+          - ['0,0,0', Sea of Silence, Sun, '']
 
   - Name: Nexus
     Coordinates: [-750, 110, 0]
@@ -820,31 +655,8 @@ SolarSystems:
       - Coordinates: [0, 0, 0]
         SectorMapType: None
         Playfields:
-          - ['0,0,0', Nexus, SunRandom, '']
-      - Coordinates: [2, 0, 0]
-        SectorMapType: WarpTarget
-        Playfields:
-          - ['0,0,0', 'Nexus [Sun Right]', SpaceWarpTargetFixed, '']
-      - Coordinates: [-2, 0, 0]
-        SectorMapType: WarpTarget
-        Playfields:
-          - ['0,0,0', 'Nexus [Sun Left]', SpaceWarpTargetFixed, '']
-      - Coordinates: [0, 2, 0]
-        SectorMapType: WarpTarget
-        Playfields:
-          - ['0,0,0', 'Nexus [Sun Top]', SpaceWarpTargetFixed, '']
-      - Coordinates: [0, -2, 0]
-        SectorMapType: WarpTarget
-        Playfields:
-          - ['0,0,0', 'Nexus [Sun Bottom]', SpaceWarpTargetFixed, '']
-      - Coordinates: [0, 0, 2]
-        SectorMapType: WarpTarget
-        Playfields:
-          - ['0,0,0', 'Nexus [Sun Front]', SpaceWarpTargetFixed, '']
-      - Coordinates: [0, 0, -2]
-        SectorMapType: WarpTarget
-        Playfields:
-          - ['0,0,0', 'Nexus [Sun Back]', SpaceWarpTargetFixed, '']
+          - ['0,0,0', Nexus, Sun, '']
+
 
   - Name: Tranquility
     Coordinates: [310, 14, -126]
@@ -855,31 +667,8 @@ SolarSystems:
       - Coordinates: [0, 0, 0]
         SectorMapType: None
         Playfields:
-          - ['0,0,0', Tranquility, SunRandom, '']
-      - Coordinates: [2, 0, 0]
-        SectorMapType: WarpTarget
-        Playfields:
-          - ['0,0,0', 'Tranquility [Sun Right]', SpaceWarpTargetFixed, '']
-      - Coordinates: [-2, 0, 0]
-        SectorMapType: WarpTarget
-        Playfields:
-          - ['0,0,0', 'Tranquility [Sun Left]', SpaceWarpTargetFixed, '']
-      - Coordinates: [0, 2, 0]
-        SectorMapType: WarpTarget
-        Playfields:
-          - ['0,0,0', 'Tranquility [Sun Top]', SpaceWarpTargetFixed, '']
-      - Coordinates: [0, -2, 0]
-        SectorMapType: WarpTarget
-        Playfields:
-          - ['0,0,0', 'Tranquility [Sun Bottom]', SpaceWarpTargetFixed, '']
-      - Coordinates: [0, 0, 2]
-        SectorMapType: WarpTarget
-        Playfields:
-          - ['0,0,0', 'Tranquility [Sun Front]', SpaceWarpTargetFixed, '']
-      - Coordinates: [0, 0, -2]
-        SectorMapType: WarpTarget
-        Playfields:
-          - ['0,0,0', 'Tranquility [Sun Back]', SpaceWarpTargetFixed, '']
+          - ['0,0,0', Tranquility, Sun, '']
+
 
   - Name: The Badlands
     Coordinates: [375, 10, 60]
@@ -890,31 +679,7 @@ SolarSystems:
       - Coordinates: [0, 0, 0]
         SectorMapType: None
         Playfields:
-          - ['0,0,0', The Badlands, SunRandom, '']
-      - Coordinates: [2, 0, 0]
-        SectorMapType: WarpTarget
-        Playfields:
-          - ['0,0,0', 'The Badlands [Sun Right]', SpaceWarpTargetFixed, '']
-      - Coordinates: [-2, 0, 0]
-        SectorMapType: WarpTarget
-        Playfields:
-          - ['0,0,0', 'The Badlands [Sun Left]', SpaceWarpTargetFixed, '']
-      - Coordinates: [0, 2, 0]
-        SectorMapType: WarpTarget
-        Playfields:
-          - ['0,0,0', 'The Badlands [Sun Top]', SpaceWarpTargetFixed, '']
-      - Coordinates: [0, -2, 0]
-        SectorMapType: WarpTarget
-        Playfields:
-          - ['0,0,0', 'The Badlands [Sun Bottom]', SpaceWarpTargetFixed, '']
-      - Coordinates: [0, 0, 2]
-        SectorMapType: WarpTarget
-        Playfields:
-          - ['0,0,0', 'The Badlands [Sun Front]', SpaceWarpTargetFixed, '']
-      - Coordinates: [0, 0, -2]
-        SectorMapType: WarpTarget
-        Playfields:
-          - ['0,0,0', 'The Badlands [Sun Back]', SpaceWarpTargetFixed, '']
+          - ['0,0,0', The Badlands, Sun, '']
 
   - Name: The Throne
     Coordinates: [10, 10, 45]
@@ -925,31 +690,7 @@ SolarSystems:
       - Coordinates: [0, 0, 0]
         SectorMapType: None
         Playfields:
-          - ['0,0,0', The Throne, SunRandom, '']
-      - Coordinates: [2, 0, 0]
-        SectorMapType: WarpTarget
-        Playfields:
-          - ['0,0,0', 'The Throne [Sun Right]', SpaceWarpTargetFixed, '']
-      - Coordinates: [-2, 0, 0]
-        SectorMapType: WarpTarget
-        Playfields:
-          - ['0,0,0', 'The Throne [Sun Left]', SpaceWarpTargetFixed, '']
-      - Coordinates: [0, 2, 0]
-        SectorMapType: WarpTarget
-        Playfields:
-          - ['0,0,0', 'The Throne [Sun Top]', SpaceWarpTargetFixed, '']
-      - Coordinates: [0, -2, 0]
-        SectorMapType: WarpTarget
-        Playfields:
-          - ['0,0,0', 'The Throne [Sun Bottom]', SpaceWarpTargetFixed, '']
-      - Coordinates: [0, 0, 2]
-        SectorMapType: WarpTarget
-        Playfields:
-          - ['0,0,0', 'The Throne [Sun Front]', SpaceWarpTargetFixed, '']
-      - Coordinates: [0, 0, -2]
-        SectorMapType: WarpTarget
-        Playfields:
-          - ['0,0,0', 'The Throne [Sun Back]', SpaceWarpTargetFixed, '']
+          - ['0,0,0', The Throne, Sun, '']
 
   - Name: The Forge
     Coordinates: [135, 10, 295]
@@ -960,31 +701,7 @@ SolarSystems:
       - Coordinates: [0, 0, 0]
         SectorMapType: None
         Playfields:
-          - ['0,0,0', The Forge, SunRandom, '']
-      - Coordinates: [2, 0, 0]
-        SectorMapType: WarpTarget
-        Playfields:
-          - ['0,0,0', 'The Forge [Sun Right]', SpaceWarpTargetFixed, '']
-      - Coordinates: [-2, 0, 0]
-        SectorMapType: WarpTarget
-        Playfields:
-          - ['0,0,0', 'The Forge [Sun Left]', SpaceWarpTargetFixed, '']
-      - Coordinates: [0, 2, 0]
-        SectorMapType: WarpTarget
-        Playfields:
-          - ['0,0,0', 'The Forge [Sun Top]', SpaceWarpTargetFixed, '']
-      - Coordinates: [0, -2, 0]
-        SectorMapType: WarpTarget
-        Playfields:
-          - ['0,0,0', 'The Forge [Sun Bottom]', SpaceWarpTargetFixed, '']
-      - Coordinates: [0, 0, 2]
-        SectorMapType: WarpTarget
-        Playfields:
-          - ['0,0,0', 'The Forge [Sun Front]', SpaceWarpTargetFixed, '']
-      - Coordinates: [0, 0, -2]
-        SectorMapType: WarpTarget
-        Playfields:
-          - ['0,0,0', 'The Forge [Sun Back]', SpaceWarpTargetFixed, '']
+          - ['0,0,0', The Forge, Sun, '']
 
   - Name: Prosperity
     Coordinates: [-200, 10, 350]
