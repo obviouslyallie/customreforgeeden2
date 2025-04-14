@@ -148,7 +148,7 @@
 
 { GalaxyConfig, Name: General
   StarCount: "4000, 7000" # Minimum and maximum star count based on seed. Lowering this number will take away stars from the main spiral shape of the galaxy. Individual star clusters will be unaffected (unless the main shape runs out of stars completely).
-  Radius: "0, 250"                           # inner and outer radius of galaxy in LY (no random!)
+  Radius: "0, 450"                           # inner and outer radius of galaxy in LY (no random!)
 
 
 # Do not change anything below this line unless you know what you're doing.
