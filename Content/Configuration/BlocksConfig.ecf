@@ -1,4 +1,4 @@
-﻿# Do not remove legacy items. Set to: 'ShowUser: NoButCSV'  
+# Do not remove legacy items. Set to: 'ShowUser: NoButCSV'  
 # If legacy items should be removed but cause savegame break, please add a note as reference  
 # 
 # Terrain blocks are stored for id=0 to id=255 Do NOT use other blocks there!  
@@ -11562,10 +11562,10 @@
   BlastDamage: 5000
 
   ItemPerAU: PentaxidCrystal, display: true
-  CostPerAU: 1, display: true
-  CostPerLY: 4, display: true
-  RangeAU: 50, display: true
-  RangeLY: 30, display: true
+  CostPerAU: 0.4, display: true
+  CostPerLY: 2, display: true
+  RangeAU: 100, display: true
+  RangeLY: 60, display: true
   Mod.RangeLY: "RangeLY + Player.Skills['PilotLYRange'] + Player.Skills['Eden_PilotLYRange']"
       
   Radiation: 25, display: RadiationLevel
@@ -19745,7 +19745,7 @@
   BlastParticleIndex: 10
   BlastRadius: 10
   BlastDamage: 200
-  RangeLY: 0 # a value of 0 allows to teleport only within the current sector
+  RangeLY: 2 # a value of 0 allows to teleport only within the current sector
   
   UnlockCost: 20, display: true
   UnlockLevel: 15, display: true
@@ -20569,7 +20569,7 @@
   BlastParticleIndex: 10
   BlastRadius: 5
   BlastDamage: 3000
-  RangeLY: 25, display: true
+  RangeLY: 50, display: true
   
   UnlockCost: 20, display: true
   UnlockLevel: 15, display: true
@@ -21250,9 +21250,9 @@
   BlastDamage: 1250
   
   ItemPerAU: PentaxidCrystal, display: true
-  CostPerAU: 0.75, display: true
+  CostPerAU: 0.25, display: true
   CostPerLY: 0, display: true
-  RangeAU: 24, display: true
+  RangeAU: 48, display: true
   RangeLY: 0, display: true
   Mod.RangeLY: "RangeLY + (Player.Skills['PilotLYRange'] * 0) + (Player.Skills['Eden_PilotLYRange'] * 0)"
       
@@ -35514,17 +35514,17 @@
   BlastDamage: 1400
 
   ItemPerAU: PentaxidCrystal
-  CostPerAU: 0.5, display: true
-  CostPerLY: 5, display: true
-  RangeAU: 48, display: true
-  RangeLY: 15, display: true
+  CostPerAU: 0.2, display: true
+  CostPerLY: 2, display: true
+  RangeAU: 86, display: true
+  RangeLY: 30, display: true
       
   Radiation: 35, display: RadiationLevel
   Temperature: 66, display: true
   
   # Mod.RangeLY: "RangeLY + Player.Skills['PilotLYRange']"
-  # Mod.RangeLY: "RangeLY + Player.Skills['PilotLYRange'] + Player.Skills['Eden_PilotLYRange']"
-  Mod.RangeLY: "RangeLY + (Player.Skills['PilotLYRange'] + (Player.Skills['Eden_PilotLYRange'] / 2))"
+  Mod.RangeLY: "RangeLY + Player.Skills['PilotLYRange'] + Player.Skills['Eden_PilotLYRange']"
+  # Mod.RangeLY: "RangeLY + (Player.Skills['PilotLYRange'] + (Player.Skills['Eden_PilotLYRange'] / 2))"
 
   UnlockCost: 20, display: true
   UnlockLevel: 20, display: true
@@ -43479,7 +43479,7 @@
   BlastParticleIndex: 0
   BlastRadius: 7
   BlastDamage: 4000
-  RangeLY: 100, display: true
+  RangeLY: 300, display: true
   CustomIcon: TeleporterBA
   RepairToTemplate: false, display: true
   
@@ -57705,7 +57705,7 @@
   # BlastRadius: 3
   # BlastDamage: 175
   # HitPoints: 1500, type: int, display: true
-  # RotSpeed: 160, type: int, display: true
+  # RotSpeed: 160, type: int, display: tarue
   # EnergyIn: 5, type: int, display: true, formatter: Watt
   # CPUIn: 90000, type: int, display: true
   # XpFactor: 10
