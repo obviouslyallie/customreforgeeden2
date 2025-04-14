@@ -147,8 +147,8 @@
 
 
 { GalaxyConfig, Name: General
-  StarCount: "28000, 30000" # Minimum and maximum star count based on seed. Lowering this number will take away stars from the main spiral shape of the galaxy. Individual star clusters will be unaffected (unless the main shape runs out of stars completely).
-  Radius: "0, 850"                           # inner and outer radius of galaxy in LY (no random!)
+  StarCount: "12000, 14000" # Minimum and maximum star count based on seed. Lowering this number will take away stars from the main spiral shape of the galaxy. Individual star clusters will be unaffected (unless the main shape runs out of stars completely).
+  Radius: "0, 400"                           # inner and outer radius of galaxy in LY (no random!)
 
 
 # Do not change anything below this line unless you know what you're doing.
@@ -250,7 +250,7 @@
     Name: "Inner Center Sphere"
     Shape: Sphere
     RadiusMinMax: "3, 25"
-    TotalSpawnCount: 300
+    TotalSpawnCount: 150
     UseDefaultStarDef: false
     StarClass_1: O1b, param1: "Prob=0.2, ClusterProb=0, ClusterRange=0-0"      
     StarClass_2: B, param1: "Prob=0.3, ClusterProb=0, ClusterRange=0-0"
@@ -269,7 +269,7 @@
     Name: "Outer Center Sphere"
     Shape: Elliptical 
     RadiusMinMax: "20, 150"
-    TotalSpawnCount: 2500
+    TotalSpawnCount: 1250
     UseDefaultStarDef: false
     StarClass_1: Anomaly2, param1: "Prob=1, SpawnAmount=5"
     StarClass_2: O1b, param1: "Prob=0.03, ClusterProb=0, ClusterRange=0-0"      
@@ -306,7 +306,7 @@
     Shape: Sphere 
     Position: "360, 50, -1150"
     RadiusMinMax: "4, 8"
-    TotalSpawnCount: 25
+    TotalSpawnCount: 12
     UseDefaultStarDef: false
     StarClass_1: N1a-Legacy, param1: "SpawnAmount=25, ClusterProb=0"
     StarClass_2: S-S-Legacy, param1: "Prob=0.05"
@@ -321,7 +321,7 @@
     Shape: Elliptical
     Position: "360, 50, -1150"
     RadiusMinMax: "8, 50"
-    TotalSpawnCount: 250
+    TotalSpawnCount: 125
     FlattenFac: 0.2  # default is 0.2
     UseDefaultStarDef: false
     StarClass_1: UV-Legacy, param1: "Prob=0.1"
@@ -340,7 +340,7 @@
     Shape: Elliptical
     Position: "360, 50, -1150"
     RadiusMinMax: "8, 200"
-    TotalSpawnCount: 600
+    TotalSpawnCount: 300
     FlattenFac: 0.35  # default is 0.2
     UseDefaultStarDef: false
     StarClass_1: S-S-Legacy, param1: "Prob=0.02"
@@ -358,7 +358,7 @@
     Shape: Elliptical
     Position: "360, 50, -1150"
     RadiusMinMax: "200, 300"
-    TotalSpawnCount: 300
+    TotalSpawnCount: 150
     FlattenFac: 0.2  # default is 0.2
     UseDefaultStarDef: false
     StarClass_1: S-S-Legacy, param1: "Prob=0.005"
@@ -377,7 +377,7 @@
     Shape: Elliptical
     Position: "120, 10, -600"
     RadiusMinMax: "0, 150"
-    TotalSpawnCount: 50
+    TotalSpawnCount: 25
     FlattenFac: 0.15  # default is 0.2
     UseDefaultStarDef: true
   }
@@ -387,7 +387,7 @@
     Shape: Elliptical
     Position: "180, 20, -750"
     RadiusMinMax: "0, 150"
-    TotalSpawnCount: 50
+    TotalSpawnCount: 25
     FlattenFac: 0.15  # default is 0.2
     UseDefaultStarDef: true
     NebulaSpawnCount: 25
@@ -418,7 +418,7 @@
     # Shape: Elliptical
     # Position: "300, 40, -1150"
     # RadiusMinMax: "0, 150"
-    # TotalSpawnCount: 125
+    # TotalSpawnCount: 60
     # FlattenFac: 0.15  # default is 0.2
     # UseDefaultStarDef: true
     # StarClass_1: S, param1: "SpawnAmount=3, Prob=1"
@@ -435,7 +435,7 @@
     Shape: Sphere
     Position: "200, 15, 50"
     RadiusMinMax: "15, 35"
-    TotalSpawnCount: 35
+    TotalSpawnCount: 15
     # FlattenFac: 0.5
     # UseDefaultStarDef: true
     StarClass_1: G, param1: "Prob=0.6"
@@ -463,7 +463,7 @@
     Shape: Elliptical
     Position: "-750, 100, 0"
     RadiusMinMax: "4, 55"
-    TotalSpawnCount: 150
+    TotalSpawnCount: 75
     FlattenFac: 0.4  # default is 0.2
     UseDefaultStarDef: false
     StarClass_1: B2V, param1: "Prob=0.2"
@@ -486,7 +486,7 @@
     Shape: Elliptical
     Position: "310, 4, -126"
     RadiusMinMax: "0, 35"
-    TotalSpawnCount: 150
+    TotalSpawnCount: 75
     FlattenFac: 0.25  # default is 0.2
     UseDefaultStarDef: false
     StarClass_1: G, param1: "Prob=0.3"
@@ -504,7 +504,7 @@
     Shape: Elliptical
     Position: "310, 4, -126"
     RadiusMinMax: "35, 70"
-    TotalSpawnCount: 250
+    TotalSpawnCount: 125
     FlattenFac: 0.75  # default is 0.2
     UseDefaultStarDef: true
     StarClass_1: G2, param1: "Prob=0.2"
@@ -525,7 +525,7 @@
     Shape: Elliptical
     Position: "375, 0, 60"
     RadiusMinMax: "0, 70"
-    TotalSpawnCount: 50
+    TotalSpawnCount: 25
     FlattenFac: 0.7
     UseDefaultStarDef: false
     StarClass_1: F2, param1: "Prob=0.7"
@@ -558,7 +558,7 @@
     # Shape: Elliptical
     # Position: "343, -13, 83"
     # RadiusMinMax: "0, 75"
-    # TotalSpawnCount: 400
+    # TotalSpawnCount: 200
     # FlattenFac: 0.65
     # UseDefaultStarDef: true
     # StarClass_1: K2, param1: "Prob=0.9"
@@ -574,7 +574,7 @@
     Shape: Sphere
     Position: "135, 0, 295"
     RadiusMinMax: "5, 60"
-    TotalSpawnCount: 52
+    TotalSpawnCount: 25
     # FlattenFac: 0.5
     UseDefaultStarDef: true
     StarClass_1: K2-7, param1: "SpawnAmount=2, Prob=1"
@@ -593,7 +593,7 @@
     Position: "138, 0, 415"
     # RadiusMinMax: "3, 30"
     RadiusMinMax: "3, 60"
-    TotalSpawnCount: 45
+    TotalSpawnCount: 20
     FlattenFac: 0.35
     # UseDefaultStarDef: true
     StarClass_1: K2V, param1: "Prob=0.6"
@@ -632,7 +632,7 @@
     Shape: Elliptical
     Position: "-200, 0, 350"
     RadiusMinMax: "0, 100"
-    TotalSpawnCount: 150
+    TotalSpawnCount: 75
     FlattenFac: 0.25  # default is 0.2
     UseDefaultStarDef: false
     StarClass_1: G, param1: "Prob=0.3"
@@ -657,7 +657,7 @@
     Shape: Elliptical
     Position: "-100, 0, -350"
     RadiusMinMax: "0, 55"
-    TotalSpawnCount: 50
+    TotalSpawnCount: 25
     FlattenFac: 0.5
     UseDefaultStarDef: true
     StarClass_1: F3, param1: "Prob=0.9"
@@ -670,7 +670,7 @@
     Shape: Elliptical
     Position: "-100, 0, -350"
     RadiusMinMax: "100, 150"
-    TotalSpawnCount: 75
+    TotalSpawnCount: 35
     FlattenFac: 0.2
     UseDefaultStarDef: true
     StarClass_1: F3, param1: "Prob=0.9"
@@ -686,7 +686,7 @@
     Shape: Elliptical
     Position: "-625, -25, 625"
     RadiusMinMax: "0, 125"
-    TotalSpawnCount: 100
+    TotalSpawnCount: 50
     FlattenFac: 0.4  # default is 0.2
     UseDefaultStarDef: false
     StarClass_1: M2-Drone, param1: "Prob=0.3"
@@ -707,7 +707,7 @@
     Shape: Elliptical
     Position: "-550, -20, 600"
     RadiusMinMax: "75, 250"
-    TotalSpawnCount: 350
+    TotalSpawnCount: 175
     FlattenFac: 0.4  # default is 0.2
     UseDefaultStarDef: false
     StarClass_1: M2-Drone, param1: "Prob=0.7"
@@ -753,7 +753,7 @@
     Shape: Elliptical
     Position: "-33, 30, 50"
     RadiusMinMax: "1, 6"
-    TotalSpawnCount: 24
+    TotalSpawnCount: 12
     FlattenFac: 0.8  # default is 0.2
     UseDefaultStarDef: false
     StarClass_1: M1Ia, param1: "SpawnAmount=6, Prob=1"
@@ -770,7 +770,7 @@
     Shape: Elliptical
     Position: "55, -50, -50"
     RadiusMinMax: "1, 21"
-    TotalSpawnCount: 45
+    TotalSpawnCount: 20
     FlattenFac: 0.8  # default is 0.2
     UseDefaultStarDef: false
     StarClass_1: M1Ia, param1: "SpawnAmount=6, Prob=1"
@@ -788,7 +788,7 @@
     Shape: Elliptical
     Position: "-11, 35, -98"
     RadiusMinMax: "10, 12"
-    TotalSpawnCount: 50
+    TotalSpawnCount: 25
     FlattenFac: 0.25  # default is 0.2
     UseDefaultStarDef: false
     StarClass_1: WR2, param1: "SpawnAmount=3, Prob=1"
@@ -804,7 +804,7 @@
     Shape: Elliptical
     Position: "-418, 0, -258"
     RadiusMinMax: "5, 100"
-    TotalSpawnCount: 75
+    TotalSpawnCount: 35
     FlattenFac: 0.4  # default is 0.2
     UseDefaultStarDef: false
     StarClass_1: A4V, param1: "SpawnAmount=25, Prob=1"
@@ -825,7 +825,7 @@
     Shape: Elliptical
     Position: "-165, -15, 460"
     RadiusMinMax: "1, 25"
-    TotalSpawnCount: 125
+    TotalSpawnCount: 60
     FlattenFac: 0.55  # default is 0.2
     UseDefaultStarDef: false
     StarClass_1: B, param1: "Prob=1"
@@ -841,7 +841,7 @@
     Shape: Elliptical
     Position: "-135, 0, 495"
     RadiusMinMax: "1, 25"
-    TotalSpawnCount: 125
+    TotalSpawnCount: 60
     FlattenFac: 0.55  # default is 0.2
     UseDefaultStarDef: false
     StarClass_1: A, param1: "Prob=1"
@@ -854,7 +854,7 @@
     Shape: Elliptical
     Position: "-105, 15, 540"
     RadiusMinMax: "1, 25"
-    TotalSpawnCount: 125
+    TotalSpawnCount: 60
     FlattenFac: 0.55  # default is 0.2
     UseDefaultStarDef: false
     StarClass_1: G, param1: "Prob=1"
@@ -870,7 +870,7 @@
     Shape: Sphere
     Position: "-290, 23, -40"
     RadiusMinMax: "5, 50"
-    TotalSpawnCount: 15
+    TotalSpawnCount: 10
     # FlattenFac: 0.5
     # UseDefaultStarDef: true
     StarClass_1: G, param1: "Prob=0.5"
@@ -891,7 +891,7 @@
     Shape: Elliptical
     Position: "300, -250, 300"
     RadiusMinMax: "0, 20"
-    TotalSpawnCount: 75
+    TotalSpawnCount: 35
     FlattenFac: 0.35  # default is 0.2
     UseDefaultStarDef: false
     # StarClass_1: O1b, param1: "SpawnAmount=50, Prob=0.3"
@@ -907,7 +907,7 @@
     Shape: Spiral
     Position: "300, -250, 300"
     RadiusMinMax: "0, 90"
-    TotalSpawnCount: 600
+    TotalSpawnCount: 200
     # FlattenFac: 0.2  # default is 0.2
     UseDefaultStarDef: false
     # StarClass_1: O, param1: "Prob=0.1"
@@ -926,7 +926,7 @@
     Shape: Elliptical
     Position: "300, -250, 300"
     RadiusMinMax: "20, 115"
-    TotalSpawnCount: 600
+    TotalSpawnCount: 300
     # FlattenFac: 0.2  # default is 0.2
     UseDefaultStarDef: false
     # StarClass_1: O, param1: "Prob=0.1"
@@ -951,7 +951,7 @@
     Shape: Elliptical
     Position: "1010, 290, 0"
     RadiusMinMax: "5, 100"
-    TotalSpawnCount: 375
+    TotalSpawnCount: 175
     FlattenFac: 0.35
     UseDefaultStarDef: false
     StarClass_1: S2, param1: "SpawnAmount=5, Prob=1"
@@ -966,7 +966,7 @@
     # Shape: Elliptical
     # Position: "-200, 450, 300"
     # RadiusMinMax: "3, 15"
-    # TotalSpawnCount: 75
+    # TotalSpawnCount: 35
     # FlattenFac: 0.55  # default is 0.2
     # UseDefaultStarDef: false
     # StarClass_1: K, param1: "Prob=0.4"
@@ -979,7 +979,7 @@
     # Shape: Elliptical
     # Position: "-200, 450, 300"
     # RadiusMinMax: "15, 175"
-    # TotalSpawnCount: 2500
+    # TotalSpawnCount: 1250
     # FlattenFac: 0.30  # default is 0.2
     # UseDefaultStarDef: false
     # StarClass_1: K, param1: "Prob=0.1"
@@ -996,7 +996,7 @@
     # Shape: Elliptical
     # Position: "-300, 450, 500"
     # RadiusMinMax: "2, 30"
-    # TotalSpawnCount: 150
+    # TotalSpawnCount: 75
     # FlattenFac: 0.35  # default is 0.2
     # UseDefaultStarDef: false
     # StarClass_1: K, param1: "Prob=0.5"
@@ -1010,7 +1010,7 @@
     # Shape: Spiral
     # Position: "-300, 450, 500"
     # RadiusMinMax: "30, 145"
-    # TotalSpawnCount: 1500
+    # TotalSpawnCount: 750
     # # FlattenFac: 0.2  # default is 0.2
     # UseDefaultStarDef: false
     # StarClass_1: K, param1: "Prob=0.05"
@@ -1026,7 +1026,7 @@
     # Shape: Elliptical
     # Position: "-300, 450, 500"
     # RadiusMinMax: "100, 200"
-    # TotalSpawnCount: 3000
+    # TotalSpawnCount: 1400
     # # FlattenFac: 0.2  # default is 0.2
     # UseDefaultStarDef: false
     # StarClass_1: O, param1: "Prob=0.05"
@@ -1197,7 +1197,7 @@
     Name: "Filler"
     Shape: Elliptical
     RadiusMinMax: "150, 700"
-    TotalSpawnCount: 6000
+    TotalSpawnCount: 3000
     # TotalSpawnCount: 0
     FlattenFac: 0.25  # default is 0.2
     UseDefaultStarDef: true
@@ -1208,7 +1208,7 @@
     Name: "Outer Galaxy"
     Shape: Elliptical
     RadiusMinMax: "400, 600"
-    TotalSpawnCount: 500
+    TotalSpawnCount: 250
     FlattenFac: 0.25  # default is 0.2
     UseDefaultStarDef: true
     StarClass_1: Q23, param1: "SpawnAmount=3, Prob=0.01"
@@ -1217,7 +1217,7 @@
     Name: "Beyond the Rim"
     Shape: Elliptical
     RadiusMinMax: "600, 800"
-    TotalSpawnCount: 1500
+    TotalSpawnCount: 750
     FlattenFac: 0.1  # default is 0.2
     UseDefaultStarDef: false
     StarClass_1: N, param1: "Prob=0.02"
@@ -1235,7 +1235,7 @@
     Name: "A Ring"
     Shape: Elliptical
     RadiusMinMax: "300, 301"
-    TotalSpawnCount: 500
+    TotalSpawnCount: 250
     FlattenFac: 0.01  # default is 0.2
     UseDefaultStarDef: false
     StarClass_1: A, param1: "Prob=0.1, ClusterProb=1, ClusterRange=0.2-0.8"
