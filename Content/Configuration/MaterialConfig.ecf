@@ -535,6 +535,19 @@
 # ========================================================================================================================== Project Eden Custom Materials
 # ============================================================================================================================================================================
 
+# Fighters
+# { Material Name: edenfighter
+  # damage_category: DroneSpace
+  # surface_category: metal
+  # particle_category: metal
+  # particle_destroy_category: metal
+  # stepsound: metal
+  # stability_glue: 200
+  # Mass: 16, type: float, display: false, formatter: Kilogram
+  # Hardness: 10, type: float, display: false, formatter: Hardness
+  # HitPoints: 1500, type: int, display: false
+# }
+
 { Material Name: edensalvaget1
   damage_category: edensalvaget1
   surface_category: metal

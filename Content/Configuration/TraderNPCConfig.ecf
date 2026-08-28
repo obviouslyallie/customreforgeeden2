@@ -309,7 +309,7 @@
 }
 
 { Trader Name: Food
-  SellingText: "How's in going? I'm an amateur cook, trying to sell my wares. You interested?"
+  SellingText: "How's it going? I'm an amateur cook, trying to sell my wares. You interested?"
   SellingGoods: "trwFood"
   Discount: 0.08
   Item1: "Steak, mf=1.0-1.25, 10-50, mf=0.5-0.75, 10-50"
@@ -1451,6 +1451,8 @@
   Item16: "DrillEpic, 0, 0, mf=0.5-0.5, 0-5"
   Item17: "ZiraxAssaultRiflePlayer, 0, 0, mf=0.75-0.75, 0-50"
   Item18: "ZiraxShotgunPlayer, 0, 0, mf=0.75-0.75, 0-50"
+  Item19: "Eden_Uzi, 0, 0, mf=0.75-0.75, 0-50"
+  Item20: "Eden_ShotgunGauss, 0, 0, mf=0.75-0.75, 0-50"
 }
 # Armor Supplier
 { Trader Name: ServantCorp Supplier
@@ -1741,6 +1743,32 @@
   Item17: "CivilianFurniture, 0, 0 , mf=1.5-1.75, 25-50"
   Item18: "ReportMaintenanceData, 0, 0 , mf=3.75-4.5, 5-15"
   Item19: "AntimatterConverter, 0, 0 , mf=0.75-1.0, 10-20"
+}
+# Colony General Store (Uses TD_ColonyStore_Init or TD_ColonyStoreBuild_Init)
+{ Trader Name: ColonyGeneralStore
+  SellingText: "Welcome, Welcome!\nI've just opened for the day, so i'm well-stocked on anything you might need out on the frontier."
+  SellingGoods: "trwResources"
+#SELLING to player
+  Item1: "AntibioticOintment, mf=1.0-1.25, 20-30, mf=0.5-0.75, 50-50"
+  Item2: "AntiRadiationOintment, mf=1.0-1.25, 20-30, mf=0.5-0.75, 40-50"
+  Item3: "Bandages, mf=1.0-1.25, 20-50, mf=0.5-0.75, 60-80"
+  Item4: "Medikit02, mf=1.0-1.25, 5-10, mf=0.5-0.75, 15-50"
+  Item5: "Jerky, mf=1.0-1.25, 15-30, mf=0.5-0.75, 35-50"
+  Item6: "Pistol, mf=1.0-1.25, 50-100, mf=0.5-0.75, 150-500"
+  Item7: "Shotgun, mf=1.0-1.25, 50-100, mf=0.5-0.75, 150-500"
+  Item8: "AssaultRifle, mf=1.0-1.25, 50-100, mf=0.5-0.75, 150-500"
+  Item9: "Sniper, mf=1.0-1.25, 50-100, mf=0.5-0.75, 150-500"
+  Item10: "MultiTool, mf=1.0-1.25, 5-10, mf=0.5-0.75, 5-60"
+  Item11: "BioFuel, mf=1.0-1.25, 50-100, mf=0.5-0.75, 100-200"
+  Item12: "9mmBullet, mf=1.0-1.25, 250-400, mf=0.5-0.75, 150-500"
+  Item13: "ShotgunShells, mf=1.0-1.25, 50-100, mf=0.5-0.75, 50-200"
+  Item14: "5.56mmBullet, mf=1.0-1.25, 250-400, mf=0.5-0.75, 150-500"
+  Item15: "7.62mmBullet, mf=1.0-1.25, 50-400, mf=0.5-0.75, 150-500"
+  Item16: "RespiratorCharge, mf=1.0-1.25, 50-100, mf=0.5-0.75, 100-500"
+  Item17: "MultiCharge, mf=1.0-1.25, 10-20, mf=0.5-0.75, 1-22"
+  Item18: "DrillCharge, mf=1.0-1.25, 10-30, mf=0.5-0.75, 1-31"
+  Item19: "InsulationBoost, mf=1.0-1.25, 1-12, 0, 0"
+  Item20: "HoverbikeHowler, mf=1.0-1.25, 1-6, mf=0.5-0.75, 4-10"
 }
 
 # ===== Manufacturing Traders
@@ -2272,8 +2300,8 @@
   Item11: "AntimatterConverter, mf=1.0-1.25, 9-15, 0, 0"
 #BUYING from player
   Item12: "SteelPlate, 0, 0 , mf=0.5-0.75, 2000-16000"
-  Item13: "TitanPlates, 0, 0 , mf=0.5-0.75, 2000-12000"
-  Item14: "SteelPlateArmored, 0, 0 , mf=0.5-0.75, 2000-7000"
+  Item13: "TitanPlates, 0, 0 , mf=0.5-0.75, 2000-13000"
+  Item14: "SteelPlateArmored, 0, 0 , mf=0.5-0.75, 2000-10000"
   Item15: "Computer, 0, 0 , mf=0.5-0.75, 300-1000" 
   Item16: "Oscillator, 0, 0 , mf=0.5-0.75, 1000-2800"
   Item17: "CobaltAlloy, 0, 0 , mf=0.5-0.75, 1500-4000"
@@ -2796,7 +2824,7 @@
   Item17: "Liquors, 0, 0 , mf=1.5-1.75, 180-240"
   Item18: "FishMeat, 0, 0 , mf=1.5-1.75, 100-200"
 }
-# Medical Trader (Pirates) (Uses TD_FreeRadicals_Start dialog)
+# Medical Trader (Pirates) (Uses TD_FreeRadicals_Init dialog)
 { Trader Name: Free-Radicals
   SellingText: "Yes, I know we don't have much. No, we don't stock Zyme. I can't believe I went to medical school for this...\n<DISCOUNTTEXT>"
   SellingGoods: "trwMedical"
@@ -2813,7 +2841,7 @@
   Item10: "AdrenalineShot, mf=1.0-1.25, 3-10, mf=0.5-0.75, 10-100"
   Item11: "RadiationPills, mf=1.0-1.25, 0-10, mf=0.5-0.75, 10-150"
 }
-# Pirate Weapon Dealer (Uses TD_AmmoBandit_Start dialog)
+# Pirate Weapon Dealer (Uses TD_AmmoBandit_Init dialog)
 { Trader Name: The Ammo Bandit
   SellingText: "Bienvenido al Ammo Bandito!\nWe have the widest range of ammunition this side of darkspace!\n<DISCOUNTTEXT>"
   SellingGoods: "trwAmmo"
@@ -2828,25 +2856,34 @@
   Item8: "AssaultRiflePolaris, mf=1.0-1.25, 1-10, mf=0.65-0.75, 0-35"
   Item9: "ShotgunPolaris, mf=1.0-1.25, 1-10, mf=0.65-0.75, 0-25"
   Item10: "LaserRiflePolaris, mf=1.0-1.25, 1-10, mf=0.65-0.75, 0-15"
-  Item11: "RocketLauncher, mf=1.0-1.25, 1-10, mf=0.65-0.75, 5-30"
+  Item11: "Eden_Uzi, mf=1.0-1.5, 1-3, mf=0.65-0.75, 2-10"
   Item12: "LaserPistol, mf=1.0-1.25, 1-10, mf=0.65-0.75, 6-15"
   Item13: "FlameThrower, mf=1.0-1.25, 1-5, mf=0.65-0.75, 1-25"
   Item14: "LaserRifle, mf=1.0-1.25, 1-8, mf=0.65-0.75, 0-15"
   Item15: "Minigun, mf=1.0-1.25, 1-5, mf=0.65-0.75, 5-20"
-  Item16: "Explosives, mf=1.0-1.25, 1-15, mf=0.5-0.75, 5-50"
-  Item17: "ArmorHeavyT2, mf=1.0-1.25, 1-5, mf=0.5-0.75, 0-15"
-  Item18: "PistolKit, mf=1.0-1.25, 1-10, mf=0.5-0.75, 10-50" 
-  Item19: "RifleKit, mf=1.0-1.25, 1-10, mf=0.5-0.75, 10-50"
-  Item20: "ShotgunKit, mf=1.0-1.25, 1-10, mf=0.5-0.75, 10-50"
-  Item21: "HeavyWeaponKit, mf=1.0-1.25, 1-10, mf=0.5-0.75, 10-50"
-  Item22: "LaserKit, mf=1.0-1.25, 1-10, mf=0.5-0.75, 10-50"
-  Item23: "SniperKit, mf=1.0-1.25, 1-10, mf=0.5-0.75, 10-50"
-  Item24: "ZiraxAssaultRiflePlayer, mf=1.25-1.5, 1-4, mf=0.75-0.75, 0-50"
-  Item25: "ZiraxShotgunPlayer, mf=1.25-1.5, 1-4, mf=0.75-0.75, 0-50"
-  Item26: "RocketLauncherZirax, mf=1.25-1.5, 1-4, mf=0.75-0.75, 0-50"
-  Item27: "ZiraxLaserRifle, mf=1.5-1.75, 1-2, mf=0.75-0.75, 0-50"
-  Item28: "SmallUpgradeKit, mf=0.75-1.0, 5-9, mf=0.25-0.5, 3-16"
-  Item29: "HoverbikeHowler, mf=1.25-1.5, 1-4, mf=0.5-0.75, 0-7"
+  Item16: "BoltActionSniper, mf=1.25-1.75, 0-1, mf=0.65-0.75, 1-2"
+  Item17: "Explosives, mf=1.0-1.25, 1-15, mf=0.5-0.75, 5-50"
+  Item18: "ArmorHeavyT2, mf=1.0-1.25, 1-5, mf=0.5-0.75, 0-15"
+  Item19: "PistolKit, mf=1.0-1.25, 1-10, mf=0.5-0.75, 10-50" 
+  Item20: "RifleKit, mf=1.0-1.25, 1-10, mf=0.5-0.75, 10-50"
+  Item21: "ShotgunKit, mf=1.0-1.25, 1-10, mf=0.5-0.75, 10-50"
+  Item22: "HeavyWeaponKit, mf=1.0-1.25, 1-10, mf=0.5-0.75, 10-50"
+  Item23: "LaserKit, mf=1.0-1.25, 1-10, mf=0.5-0.75, 10-50"
+  Item24: "SniperKit, mf=1.0-1.25, 1-10, mf=0.5-0.75, 10-50"
+  Item25: "ZiraxAssaultRiflePlayer, mf=1.25-1.5, 1-4, mf=0.75-0.75, 0-50"
+  Item26: "ZiraxShotgunPlayer, mf=1.25-1.5, 1-4, mf=0.75-0.75, 0-50"
+  Item27: "RocketLauncherZirax, mf=1.25-1.5, 1-4, mf=0.75-0.75, 0-50"
+  Item28: "ZiraxLaserRifle, mf=1.5-1.75, 1-2, mf=0.75-0.75, 0-50"
+  Item29: "SmallUpgradeKit, mf=0.75-1.0, 5-9, mf=0.25-0.5, 3-16"
+  Item30: "HoverbikeHowler, mf=1.25-1.5, 1-4, mf=0.5-0.75, 0-7"
+  Item31: "Token:86, 40000, 1-2, 20000, 2-3"
+  Item32: "Token:87, 50000, 1-3, 25000, 2-4"
+  Item33: "Token:88, 35000, 0-1, 17500, 1-2"
+  Item34: "Token:89, 40000, 1-3, 20000, 2-4"
+  Item35: "Token:90, 70000, 0-1, 35000, 1-2"
+  Item36: "Token:91, 75000, 0-1, 37500, 1-2"
+  Item37: "Token:92, 30000, 1-3, 15000, 2-4"
+  Item38: "Token:93, 55000, 0-2, 27500, 1-3"
 }
 # Fence (Pirates) (Uses TD_PirateFence_Init dialog)
 { Trader Name: Fence
@@ -2889,7 +2926,7 @@
   Item8: "StomachPills, 0, 0 , mf=0.5-0.75, 70-120"
   Item9: "CannedMeat, 0, 0 , mf=0.5-0.75, 50-200"
   Item10: "CannedVegetables, 0, 0 , mf=0.5-0.75, 50-200"
-  Item11: "Token:4023, 0, 0 , 3600-3800, 10-20" #Wire
+  Item11: "DrugIce, 0, 0 , mf=1.25-1.5, 10-20" #Wire
 }
 # Drug Dealer (Uses TD_DrugDealer_Init dialog)
 { Trader Name: DrugDealer
@@ -2899,9 +2936,8 @@
   Item1: "Narcotics, mf=1.0-1.25, 50-100, 0, 0"
   Item2: "AdrenalineShot, mf=0.75-1.0, 10-20, 0, 0"
   Item3: "NaturalStimulant, mf=0.75-1.0, 80-120, 0, 0"
-  Item4: "Token:4023, 3600-3800, 3-10, 0, 0" #Wire
-  Item5: "Token:4024, 2350-2500, 3-10, 0, 0" #Zyme
-  Item6: "Token:4025, 4400-4750, 3-10, 0, 0" #BlackIce
+  Item4: "DrugWire, mf=1.5-1.75, 3-15, 0, 0" #Wire
+  Item5: "DrugIce, mf=1.5-1.75, 3-10, 0, 0" #BlackIce
 }
 # Drug Lab (Uses TD_DrugLab_Init dialog)
 { Trader Name: DrugLabPirates
@@ -2910,9 +2946,9 @@
 #SELLING to player
   Item1: "Narcotics, mf=0.75-1.0, 150-250, 0, 0"
   Item2: "ToxicWaste, mf=0.5-0.75, 100-300, 0, 0"
-  Item3: "Token:4023, 2600-2800, 15-30, 0, 0" #Wire
-  Item4: "Token:4024, 1350-1500, 15-30, 0, 0" #Zyme
-  Item5: "Token:4025, 2900-3250, 15-30, 0, 0" #BlackIce
+  Item3: "Medikit02, mf=0.75-1.0, 10-20, 0, 0"
+  Item4: "DrugWire, mf=1.0-1.25, 15-40, 0, 0" #Wire
+  Item5: "DrugIce, mf=1.0-1.25, 15-40, 0, 0" #BlackIce
 #BUYING from player
   Item6: "Chemicals, 0, 0 , mf=1.5-2.0, 100-250"
   Item7: "Filters, 0, 0 , mf=1.5-2.0, 100-200"
@@ -2922,6 +2958,33 @@
   Item11: "XenonBottle, 0, 0 , mf=1.5-2.0, 300-500"
   Item12: "ToxicLiquid, 0, 0, mf=1.5-1.75, 200-400"
   Item13: "NutrientSolution, 0, 0, mf=1.0-1.25, 100-450"
+}
+# Cardshark (Uses TD_CardShark_Init dialog)
+{ Trader Name: CardDealerPirate
+  SellingText: "Hey, just because we're not on friendly terms with most civilized factions doesn't mean we don't like their products. If anything, we do what we do because we like them too much!"
+  SellingGoods: "trwResources"
+#SELLING to player
+  Item1: "Token:120, 90-120, 5-20, 0, 0"
+  Item2: "Token:183, 85-110, 5-20, 0, 0"
+  Item3: "Token:127, 90-120, 5-20, 0, 0"
+  Item4: "Token:151, 85-110, 5-20, 0, 0"
+#BUYING from player
+  Item5: "Token:139, 0, 0 , 90-120, 0-25"
+  Item6: "Token:190, 0, 0 , 85-110, 0-25"
+  Item7: "Token:193, 0, 0 , 90-120, 0-25"
+  Item8: "Token:164, 0, 0 , 85-110, 0-25"
+  Item9: "Token:185, 0, 0 , 1100-1300, 0-25"
+  Item10: "Token:132, 0, 0 , 350-450, 0-25"
+  Item11: "Token:140, 0, 0 , 325-475, 0-25"
+  Item12: "Token:169, 0, 0 , 1050-1250, 0-25"
+  Item13: "Token:130, 0, 0 , 90-120, 0-25"
+  Item14: "Token:195, 0, 0 , 90-120, 0-25"
+  Item15: "Token:152, 0, 0 , 90-120, 0-25"
+  Item16: "Token:200, 0, 0 , 90-120, 0-25"
+  Item17: "Token:159, 0, 0 , 90-120, 0-25"
+  Item18: "Token:166, 0, 0 , 400-500, 0-25"
+  Item19: "Token:141, 0, 0 , 5000-6000, 0-25"
+  Item20: "Token:168, 0, 0 , 5000-6000, 0-25"
 }
 # ============== Card Dealers (Anime Stores) ==================
 # Pulsar MAX (Uses TD_PulsarMax_Start dialog)
@@ -3183,10 +3246,11 @@
   Item7: "PhoenixFernFonds, mf=1.0-1.25, 0-70, 0, 0"
   Item8: "AlienSpikeLemon, mf=1.0-1.25, 0-50, 0, 0"
   Item9: "OpuntiaCactusSpears, mf=1.0-1.25, 0-145, 0, 0"
+  Item10: "SpaceDurian, mf=1.0-1.25, 0-10, 0, 0"
 #BUYING from player
-  Item10: "PlantProtein, 0, 0, mf=1.0-1.0, 50-80"
-  Item11: "HerbalLeaves, 0, 0, mf=1.0-1.0, 50-80"
-  Item12: "AlienParts03, 0, 0, mf=1.0-1.0, 10-20"
+  Item11: "PlantProtein, 0, 0, mf=1.0-1.0, 50-80"
+  Item12: "HerbalLeaves, 0, 0, mf=1.0-1.0, 50-80"
+  Item13: "AlienParts03, 0, 0, mf=1.0-1.0, 10-20"
 }
 # For Talon Tannery (Uses TD_LeatherTalon_Start dialog)
 { Trader Name: Talon Tanner
@@ -3235,7 +3299,7 @@
   Item4: "AlienParts01, mf=1.0-1.25, 10-48, 0, 0"
   Item5: "ConfettiMossScrapings, mf=1.0-1.25, 20-80, 0, 0"
   Item6: "FireMossScrapings, mf=1.0-1.25, 20-80, 0, 0"
-  Item7: "SpaceDurian, mf=1.0-1.25, 0-6, 0, 0"
+  Item7: "SpaceDurian, mf=1.0-1.25, 0-11, 0, 0"
 #BUYING from player
   Item8: "PowerBar, 0, 0, mf=1.0-1.0, 10-20"
   Item9: "BerryJuice, 0, 0, mf=1.0-1.0, 10-40"
@@ -3341,7 +3405,7 @@
 #SELLING to player
   Item1: "NaturalSweetener, mf=1.0-1.25, 30-50, 0, 0"  
   Item2: "Fruit, mf=1.0-1.25, 15-30, 0, 0"
-  Item3: "AkuaFruit, mf=1.0-1.25, 5-9, 0, 0"
+  Item3: "AkuaFruit, mf=1.0-1.25, 15-19, 0, 0"
   Item4: "Berries, mf=1.0-1.25, 12-28, 0, 0"
   Item5: "AlienPalmTreeStage1, mf=1.0-1.25, 9-18, 0, 0"
   Item6: "ElderberryStage1, mf=1.0-1.25, 9-18, 0, 0"
@@ -3374,7 +3438,6 @@
   Item3: "Fiber, mf=1.0-1.25, 400-1000, 0, 0"
   Item4: "AlienThorn, mf=1.25-1.5, 20-50, 0, 0"
 }
-
 
 
 
@@ -3430,12 +3493,12 @@
   SellingText: "I buy ore to refine into ingots. If you're looking to purchase ingots, check on the lower levels. I also sell a refinery license that allows access to the use of our furnaces."
   SellingGoods: ""
   Discount: "0.1"
-  Item1: "IronOre, 0, 0, mf=0.4-0.5, 10000-25000"
-  Item2: "CopperOre, 0, 0, mf=0.4-0.5, 10000-25000"
-  Item3: "SiliconOre, 0, 0, mf=0.4-0.5, 10000-25000"
-  Item4: "TitanOre, 0, 0, mf=0.4-0.5, 10000-25000"
-  Item5: "NeodymiumOre, 0, 0, mf=0.4-0.5, 10000-25000"
-  Item6: "SathiumOre, 0, 0, mf=0.4-0.5, 10000-25000"
+  Item1: "IronOre, 0, 0, mf=0.25-0.35, 10000-25000"
+  Item2: "CopperOre, 0, 0, mf=0.25-0.35, 10000-25000"
+  Item3: "SiliconOre, 0, 0, mf=0.25-0.35, 10000-25000"
+  Item4: "TitanOre, 0, 0, mf=0.25-0.35, 10000-25000"
+  Item5: "NeodymiumOre, 0, 0, mf=0.25-0.35, 10000-25000"
+  Item6: "SathiumOre, 0, 0, mf=0.25-0.35, 10000-25000"
   Item7: "Token:6201, 500000-500000, 5000-5000, 0, 0"
 }
 
@@ -4131,6 +4194,8 @@
   Item17: "Token:6405, 0-0, 0-0, mf=1.1-1.3, 5-25"
   Item18: "Token:6416, 0-0, 0-0, mf=1.1-1.3, 5-25"
   Item19: "Token:6417, 0-0, 0-0, mf=1.1-1.3, 5-25"
+  Item20: "Token:6418, 0-0, 0-0, mf=1.1-1.3, 5-25"
+  Item21: "Token:6419, 0-0, 0-0, mf=1.1-1.3, 5-25"
 }
 
 # Found on Mining Foremen ships in asteroid fields or mining sites.
@@ -4173,7 +4238,7 @@
   Item29: "Eden_ProbeSystemT2, 0-0, 0-0, mf=0.35-0.75, 10-20"
   Item30: "Eden_ProbeSystemT3, 0-0, 0-0, mf=0.35-0.75, 10-20"
   Item31: "Eden_ProbeSystemT4, 0-0, 0-0, mf=0.35-0.75, 10-20"
-  Item32: "Token:6415, 0-0, 0-0, mf=1.5-1.6, 1-1"
+  Item32: "Token:6415, 0-0, 0-0, mf=0.4-0.6, 1-1"
   Item33: "ReportScienceRawData, 0-0, 0-0, mf=1.5-2, 10-20"
   Item34: "ReportMaterialData, 0-0, 0-0, mf=1.5-2, 10-20"
   Item35: "ReportExplorationRawData, 0-0, 0-0, mf=1.5-2, 10-20"
@@ -4572,6 +4637,7 @@
 # SELLING to player
   Item1: "Token:6102, 2-2, 0-0, 1-1, 1-1" # sell to player
   Item2: "Eden_PosterGroup, mf=4-6, 64-128"
+  Item3: "Eden_ShuttleBlocks, mf=6-8, 32-64"
 }
 
 # Bulk cargo traders
@@ -4579,164 +4645,166 @@
 
 # Colonists
 { Trader Name: Eden_DeliveryColonistsSellT1
-  SellingText: "I deal with delivery contracts to the Free Colonists. You pay a collateral up front and you get your collateral plus payment back when you deliver the package. You will need to meet the required reputation listed on the package in order to deliver the cargo. Use your connected toolbar to trade.\n[c][FFFF00]Requires 8000 cargo space.[-][/c]"
+  SellingText: Eden_Oldtraderinfo
   SellingGoods: ""
   Discount: "0.25"
-  Item1: "Eden_TradeColT1, mf=1-1, 6-12, mf=0-0, 0-0"
+  # Item1: "Eden_TradeColT3, mf=1-1, 0-0, mf=0-0, 0-0"
+  Item1: "Token:6102, 2-2, 0-0, 1-1, 1-1" # sell to player
 }
 { Trader Name: Eden_DeliveryColonistsSellT2
-  SellingText: "I deal with delivery contracts to the Free Colonists. You pay a collateral up front and you get your collateral plus payment back when you deliver the package. You will need to meet the required reputation listed on the package in order to deliver the cargo. Use your connected toolbar to trade.\n[c][FFFF00]Requires 64000 cargo space.[-][/c]"
+  SellingText: Eden_Oldtraderinfo
   SellingGoods: ""
   Discount: "0.25"
-  Item1: "Eden_TradeColT2, mf=1-1, 3-6, mf=0-0, 0-0"
+  Item1: "Token:6102, 2-2, 0-0, 1-1, 1-1" # sell to player
 }
 { Trader Name: Eden_DeliveryColonistsSellT3
-  SellingText: "I deal with delivery contracts to the Free Colonists. You pay a collateral up front and you get your collateral plus payment back when you deliver the package. You will need to meet the required reputation listed on the package in order to deliver the cargo. Use your connected toolbar to trade.\n[c][FFFF00]Requires 320000 cargo space.[-][/c]"
+  SellingText: Eden_Oldtraderinfo
   SellingGoods: ""
   Discount: "0.25"
-  Item1: "Eden_TradeColT3, mf=1-1, 2-4, mf=0-0, 0-0"
+  Item1: "Token:6102, 2-2, 0-0, 1-1, 1-1" # sell to player
 }
 
 # Polaris
 { Trader Name: Eden_DeliveryPolarisSellT1
-  SellingText: "I deal with delivery contracts to Polaris. You pay a collateral up front and you get your collateral plus payment back when you deliver the package. You will need to meet the required reputation listed on the package in order to deliver the cargo. Use your connected toolbar to trade.\n[c][FFFF00]Requires 8000 cargo space.[-][/c]"
+  SellingText: Eden_Oldtraderinfo
   SellingGoods: ""
   Discount: "0.25"
-  Item1: "Eden_TradePolarisT1, mf=1-1, 6-12, mf=0-0, 0-0"
+  Item1: "Token:6102, 2-2, 0-0, 1-1, 1-1" # sell to player
 }
 { Trader Name: Eden_DeliveryPolarisSellT2
-  SellingText: "I deal with delivery contracts to Polaris. You pay a collateral up front and you get your collateral plus payment back when you deliver the package. You will need to meet the required reputation listed on the package in order to deliver the cargo. Use your connected toolbar to trade.\n[c][FFFF00]Requires 64000 cargo space.[-][/c]"
+  SellingText: Eden_Oldtraderinfo
   SellingGoods: ""
   Discount: "0.25"
-  Item1: "Eden_TradePolarisT2, mf=1-1, 3-6, mf=0-0, 0-0"
+  Item1: "Token:6102, 2-2, 0-0, 1-1, 1-1" # sell to player
 }
 { Trader Name: Eden_DeliveryPolarisSellT3
-  SellingText: "I deal with delivery contracts to Polaris. You pay a collateral up front and you get your collateral plus payment back when you deliver the package. You will need to meet the required reputation listed on the package in order to deliver the cargo. Use your connected toolbar to trade.\n[c][FFFF00]Requires 320000 cargo space.[-][/c]"
+  SellingText: Eden_Oldtraderinfo
   SellingGoods: ""
   Discount: "0.25"
-  Item1: "Eden_TradePolarisT3, mf=1-1, 2-4, mf=0-0, 0-0"
+  Item1: "Token:6102, 2-2, 0-0, 1-1, 1-1" # sell to player
 }
 
 # Zirax
 { Trader Name: Eden_DeliveryZiraxSellT1
-  SellingText: "I deal with delivery contracts to the Zirax Empire. You pay a collateral up front and you get your collateral plus payment back when you deliver the package. You will need to meet the required reputation listed on the package in order to deliver the cargo. Use your connected toolbar to trade.\n[c][FFFF00]Requires 8000 cargo space.[-][/c]"
+  SellingText: Eden_Oldtraderinfo
   SellingGoods: ""
   Discount: "0.25"
-  Item1: "Eden_TradeZiraxT1, mf=1-1, 6-12, mf=0-0, 0-0"
+  Item1: "Token:6102, 2-2, 0-0, 1-1, 1-1" # sell to player
 }
 { Trader Name: Eden_DeliveryZiraxSellT2
-  SellingText: "I deal with delivery contracts to the Zirax Empire. You pay a collateral up front and you get your collateral plus payment back when you deliver the package. You will need to meet the required reputation listed on the package in order to deliver the cargo. Use your connected toolbar to trade.\n[c][FFFF00]Requires 64000 cargo space.[-][/c]"
+  SellingText: Eden_Oldtraderinfo
   SellingGoods: ""
   Discount: "0.25"
-  Item1: "Eden_TradeZiraxT2, mf=1-1, 3-6, mf=0-0, 0-0"
+  Item1: "Token:6102, 2-2, 0-0, 1-1, 1-1" # sell to player
 }
 { Trader Name: Eden_DeliveryZiraxSellT3
-  SellingText: "I deal with delivery contracts to the Zirax Empire. You pay a collateral up front and you get your collateral plus payment back when you deliver the package. You will need to meet the required reputation listed on the package in order to deliver the cargo. Use your connected toolbar to trade.\n[c][FFFF00]Requires 320000 cargo space.[-][/c]"
+  SellingText: Eden_Oldtraderinfo
   SellingGoods: ""
   Discount: "0.25"
-  Item1: "Eden_TradeZiraxT3, mf=1-1, 2-4, mf=0-0, 0-0"
+  Item1: "Token:6102, 2-2, 0-0, 1-1, 1-1" # sell to player
 }
 
 # Pirates
 { Trader Name: Eden_DeliveryPiratesSellT1
-  SellingText: "I deal with delivery contracts to Pirates. You pay a collateral up front and you get your collateral plus payment back when you deliver the package. You will need to meet the required reputation listed on the package in order to deliver the cargo. Use your connected toolbar to trade.\n[c][FFFF00]Requires 8000 cargo space.[-][/c]"
+  SellingText: Eden_Oldtraderinfo
   SellingGoods: ""
   Discount: "0.25"
-  Item1: "Eden_TradePiratesT1, mf=1-1, 6-12, mf=0-0, 0-0"
+  Item1: "Token:6102, 2-2, 0-0, 1-1, 1-1" # sell to player
 }
 { Trader Name: Eden_DeliveryPiratesSellT2
-  SellingText: "I deal with delivery contracts to Pirates. You pay a collateral up front and you get your collateral plus payment back when you deliver the package. You will need to meet the required reputation listed on the package in order to deliver the cargo. Use your connected toolbar to trade.\n[c][FFFF00]Requires 64000 cargo space.[-][/c]"
+  SellingText: Eden_Oldtraderinfo
   SellingGoods: ""
   Discount: "0.25"
-  Item1: "Eden_TradePiratesT2, mf=1-1, 3-6, mf=0-0, 0-0"
+  Item1: "Token:6102, 2-2, 0-0, 1-1, 1-1" # sell to player
 }
 { Trader Name: Eden_DeliveryPiratesSellT3
-  SellingText: "I deal with delivery contracts to Pirates. You pay a collateral up front and you get your collateral plus payment back when you deliver the package. You will need to meet the required reputation listed on the package in order to deliver the cargo. Use your connected toolbar to trade.\n[c][FFFF00]Requires 320000 cargo space.[-][/c]"
+  SellingText: Eden_Oldtraderinfo
   SellingGoods: ""
   Discount: "0.25"
-  Item1: "Eden_TradePiratesT3, mf=1-1, 2-4, mf=0-0, 0-0"
+  Item1: "Token:6102, 2-2, 0-0, 1-1, 1-1" # sell to player
 }
 
 # Faction Distribution Centers buying
 
 # Colonists
 { Trader Name: Eden_DeliveryColonistsT1
-  SellingText: "If you have any Small Sealed Packages marked for delivery I will accept them. Use your connected toolbar to trade."
+  SellingText: Eden_Oldtraderinfo
   SellingGoods: ""
   Discount: "0.0"
-  Item1: "Eden_TradeColT1, mf=0-0, 0-0, mf=1.1-1.1, 12-24"
+  Item1: "Token:6102, 2-2, 0-0, 1-1, 1-1" # sell to player
 }
 { Trader Name: Eden_DeliveryColonistsT2
-  SellingText: "If you have any Medium Sealed Packages marked for delivery I will accept them. Use your connected toolbar to trade."
+  SellingText: Eden_Oldtraderinfo
   SellingGoods: ""
   Discount: "0.0"
-  Item1: "Eden_TradeColT2, mf=0-0, 0-0, mf=1.15-1.15, 6-12"
+  Item1: "Token:6102, 2-2, 0-0, 1-1, 1-1" # sell to player
 }
 { Trader Name: Eden_DeliveryColonistsT3
-  SellingText: "If you have any Large Sealed Packages marked for delivery I will accept them. Use your connected toolbar to trade."
+  SellingText: Eden_Oldtraderinfo
   SellingGoods: ""
   Discount: "0.0"
-  Item1: "Eden_TradeColT3, mf=0-0, 0-0, mf=1.2-1.2, 3-6"
+  Item1: "Token:6102, 2-2, 0-0, 1-1, 1-1" # sell to player
 }
 
 # Polaris
 { Trader Name: Eden_DeliveryPolarisT1
-  SellingText: "If you have any Small Sealed Packages marked for delivery I will accept them. Use your connected toolbar to trade."
+  SellingText: Eden_Oldtraderinfo
   SellingGoods: ""
   Discount: "0.0"
-  Item1: "Eden_TradePolarisT1, mf=0-0, 0-0, mf=1.1-1.1, 12-24"
+  # Item1: "Eden_TradeColT3, mf=1-1, 0-0, mf=0-0, 0-0"
+  Item1: "Token:6102, 2-2, 0-0, 1-1, 1-1" # sell to player
 }
 { Trader Name: Eden_DeliveryPolarisT2
-  SellingText: "If you have any Medium Sealed Packages marked for delivery I will accept them. Use your connected toolbar to trade."
+  SellingText: Eden_Oldtraderinfo
   SellingGoods: ""
   Discount: "0.0"
-  Item1: "Eden_TradePolarisT2, mf=0-0, 0-0, mf=1.15-1.15, 6-12"
+  Item1: "Token:6102, 2-2, 0-0, 1-1, 1-1" # sell to player
 }
 { Trader Name: Eden_DeliveryPolarisT3
-  SellingText: "If you have any Large Sealed Packages marked for delivery I will accept them. Use your connected toolbar to trade."
+  SellingText: Eden_Oldtraderinfo
   SellingGoods: ""
   Discount: "0.0"
-  Item1: "Eden_TradePolarisT3, mf=0-0, 0-0, mf=1.20-1.20, 3-6"
+  Item1: "Token:6102, 2-2, 0-0, 1-1, 1-1" # sell to player
 }
 
 # Zirax
 { Trader Name: Eden_DeliveryZiraxT1
-  SellingText: "If you have any Small Sealed Packages marked for delivery I will accept them. Use your connected toolbar to trade."
+  SellingText: Eden_Oldtraderinfo
   SellingGoods: ""
   Discount: "0"
-  Item1: "Eden_TradeZiraxT1, mf=0-0, 0-0, mf=1.12-1.12, 12-24"
+  Item1: "Token:6102, 2-2, 0-0, 1-1, 1-1" # sell to player
 }
 { Trader Name: Eden_DeliveryZiraxT2
-  SellingText: "If you have any Medium Sealed Packages marked for delivery I will accept them. Use your connected toolbar to trade."
+  SellingText: Eden_Oldtraderinfo
   SellingGoods: ""
   Discount: "0"
-  Item1: "Eden_TradeZiraxT2, mf=0-0, 0-0, mf=1.18-1.18, 6-12"
+  Item1: "Token:6102, 2-2, 0-0, 1-1, 1-1" # sell to player
 }
 { Trader Name: Eden_DeliveryZiraxT3
-  SellingText: "If you have any Large Sealed Packages marked for delivery I will accept them. Use your connected toolbar to trade."
+  SellingText: Eden_Oldtraderinfo
   SellingGoods: ""
   Discount: "0"
-  Item1: "Eden_TradeZiraxT3, mf=0-0, 0-0, mf=1.25-1.25, 3-6"
+  Item1: "Token:6102, 2-2, 0-0, 1-1, 1-1" # sell to player
 }
 
 # Pirates
 { Trader Name: Eden_DeliveryPiratesT1
-  SellingText: "If you have any Small Sealed Packages marked for delivery I will accept them. Use your connected toolbar to trade."
+  SellingText: Eden_Oldtraderinfo
   SellingGoods: ""
   Discount: "0.0"
-  Item1: "Eden_TradePiratesT1, mf=0-0, 0-0, mf=1.12-1.12, 12-24"
+  Item1: "Token:6102, 2-2, 0-0, 1-1, 1-1" # sell to player
 }
 { Trader Name: Eden_DeliveryPiratesT2
-  SellingText: "If you have any Medium Sealed Packages marked for delivery I will accept them. Use your connected toolbar to trade."
+  SellingText: Eden_Oldtraderinfo
   SellingGoods: ""
   Discount: "0.0"
-  Item1: "Eden_TradePiratesT2, mf=0-0, 0-0, mf=1.18-1.18, 6-12"
+  Item1: "Token:6102, 2-2, 0-0, 1-1, 1-1" # sell to player
 }
 { Trader Name: Eden_DeliveryPiratesT3
-  SellingText: "If you have any Large Sealed Packages marked for delivery I will accept them. Use your connected toolbar to trade."
+  SellingText: Eden_Oldtraderinfo
   SellingGoods: ""
   Discount: "0.0"
-  Item1: "Eden_TradePiratesT3, mf=0-0, 0-0, mf=1.25-1.25, 3-6"
+  Item1: "Token:6102, 2-2, 0-0, 1-1, 1-1" # sell to player
 }
 
 # Heavy Ice Traders
@@ -5285,21 +5353,21 @@
 # BUYING from trader
   Item1: "Token:6102, 2-2, 0-0, 1-1, 1-1" # Buy from trader
   Item2: "Eden_ShipmentAdvComponent, mf=1-1, 2-3" # Advanced Component Shipment
-  Item3: "Eden_ShipmentMining, mf=1-1, 2-3" # Mining Equipment Shipment
-  Item4: "Eden_ShipmentHydroponics, mf=1-1, 1-2" # Hydroponics Shipment
-  Item5: "Eden_Polymer, mf=1.1-1.2, 30-100"
-  Item6: "Eden_DiamondCut, mf=1.5-1.75, 20-35"
-  Item7: "Eden_PosterGroup, mf=4-6, 64-128"
+  # Item3: "Eden_ShipmentMining, mf=1-1, 2-3" # Mining Equipment Shipment
+  Item3: "Eden_ShipmentHydroponics, mf=1-1, 1-2" # Hydroponics Shipment
+  Item4: "Eden_Polymer, mf=1.1-1.2, 30-100"
+  Item5: "Eden_DiamondCut, mf=1.5-1.75, 20-35"
+  Item6: "Eden_PosterGroup, mf=4-6, 64-128"
 # SELLING to trader
-  Item8: "Token:6101, 2-2, 0-0, 1-1, 1-1" # Sell to trader
-  Item9: "Eden_ShipmentComponent, 0-0, 0-0, mf=1.15-1.17, 2-4" # Component Shipment
-  Item10: "Eden_ShipmentMetal, 0-0, 0-0, mf=1.15-1.17, 3-5" # Precious Metal Shipment
-  Item11: "Eden_ShipmentOptronics, 0-0, 0-0, mf=1.15-1.17, 3-5" # Optronics Shipment
-  Item12: "Eden_ShipmentRobotics, 0-0, 0-0, mf=1.15-1.17, 3-5" # Robotics Shipment
-  Item13: "Eden_ShipmentWorker, 0-0, 0-0, mf=1.15-1.17, 3-5" # Worker Shipment
-  Item14: "Eden_ShipmentOfficer, 0-0, 0-0, mf=1.15-1.17, 1-3" # Officer Shipment
-  Item15: "Optronics, 0-0, 0-0, mf=1.3-1.75, 5-10"
-  Item16: "Robotics, 0-0, 0-0, mf=1.3-1.75, 5-10"
+  Item7: "Token:6101, 2-2, 0-0, 1-1, 1-1" # Sell to trader
+  Item8: "Eden_ShipmentComponent, 0-0, 0-0, mf=1.15-1.17, 2-4" # Component Shipment
+  Item9: "Eden_ShipmentMetal, 0-0, 0-0, mf=1.15-1.17, 3-5" # Precious Metal Shipment
+  Item10: "Eden_ShipmentOptronics, 0-0, 0-0, mf=1.15-1.17, 3-5" # Optronics Shipment
+  Item11: "Eden_ShipmentRobotics, 0-0, 0-0, mf=1.15-1.17, 3-5" # Robotics Shipment
+  Item12: "Eden_ShipmentWorker, 0-0, 0-0, mf=1.15-1.17, 3-5" # Worker Shipment
+  Item13: "Eden_ShipmentOfficer, 0-0, 0-0, mf=1.15-1.17, 1-3" # Officer Shipment
+  Item14: "Optronics, 0-0, 0-0, mf=1.3-1.75, 5-10"
+  Item15: "Robotics, 0-0, 0-0, mf=1.3-1.75, 5-10"
 }
 
 { Trader Name: Eden_FactoryTraHydrogen

@@ -146,7 +146,7 @@
     Name_0: Meat, param1: 1, param2: "1,4"
     Name_1: AlienTooth, param1: 0.75, param2: "1,2"
     Name_2: Egg, param1: 0.3, param2: "1,2"
-    Name_3: Bone, param1: 0.3, param2: "1,2"
+    Name_3: Bone, param1: 0.3, param2: "2,4"
   }
 }
 
@@ -160,7 +160,7 @@
   { Child Items
     Name_0: Meat, param1: 1, param2: "2,6"
     Name_1: Egg, param1: 0.4, param2: "1,2"
-    Name_2: Bone, param1: 0.3, param2: "1,3"
+    Name_2: Bone, param1: 0.3, param2: "3,7"
   }
 }
 
@@ -174,7 +174,7 @@
   { Child Items
     Name_0: Meat, param1: 1, param2: "5,12"
     Name_1: AlienTooth, param1: 0.3, param2: "2,3"
-    Name_2: Bone, param1: 0.3, param2: "2,4"
+    Name_2: Bone, param1: 0.3, param2: "3,7"
   }
 }
 ## Dinosaur Baby (Triceratops, LizardMule, Parasaur)
@@ -244,7 +244,7 @@
 
   { Child Items
     Name_0: Meat, param1: 0.4, param2: "1"
-    Name_1: Bone, param1: 0.3, param2: "1,3"
+    Name_1: Bone, param1: 0.3, param2: "2,3"
     Name_2: XenoSubstrate, param1: 0.2, param2: "1,2"
     Name_3: AlienParts02, param1: 0.2, param2: "1"
     Name_4: AlienParts04, param1: 0.15, param2: "1"
@@ -332,7 +332,7 @@
     Name_1: AlienTooth, param1: 0.33, param2: "2,3"
     Name_2: XenoSubstrate, param1: 0.25, param2: "1,3"
     Name_3: AlienParts04, param1: 0.25, param2: "1"
-    Name_4: Bone, param1: 0.25, param2: "1,2"
+    Name_4: Bone, param1: 0.25, param2: "1,3"
   }
 }
 
@@ -566,8 +566,8 @@
     Name_7: 9mmBullet, param1: 1, param2: "13,45"
 	
     Group_0: Posters, param1: 0.05
-    Group_1: Keycards, param1: 0.075
-    Group_2: WeaponUpgradesUltra, param1: 0.08
+    Group_1: Keycards, param1: 0.05
+    Group_2: WeaponUpgradesUltra, param1: 0.05
     Group_3: TradingCardCommon, param1: 0.08
     Group_4: TradingCardRare, param1: 0.08
     Group_5: TroopersFood, param1: 0.4
@@ -889,8 +889,7 @@
     Group_4: ArmorT2, param1: 0.140
     Group_5: WeaponUpgradesRare, param1: 0.15
     Group_6: SuitBooster, param1: 0.175
-    Group_7: Eden_VeryRare, param1: 0.15
-    Group_8: Eden_WeaponsVeryRare, param1: 0.1
+    Group_7: Eden_WeaponsVeryRare, param1: 0.1
   }
 }
 
@@ -909,12 +908,11 @@
     Name_4: LargeUpgradeKit, param1: 0.20, param2: 1
     Name_5: AutoMinerCore, param1: 0.20, param2: "1,3"
 
-    Group_0: WeaponUpgradesUltra, param1: 0.2
+    Group_0: WeaponUpgradesUltra, param1: 0.15
     Group_1: SuitBoosterT2, param1: 0.25
     Group_2: OptronicsUltra, param1: 0.33
     Group_3: WeaponsEpic, param1: 0.5
-    Group_4: Eden_UltraRare, param1: 0.2
-    Group_5: Eden_WeaponsEpic, param1: 0.15
+    Group_4: Eden_WeaponsEpic, param1: 0.15
   }
 }
 
@@ -1011,9 +1009,9 @@
     Name_11: NitrogenBottle,  param1: 0.3, param2: "6,13"
     Name_12: Coolant, param1: 0.3, param2: "6,12"
     Name_13: HeliumBottle, param1: 0.3, param2: "6,12"
-    Name_14: Salt,  param1: 0.3, param2: "20,75"
-    Name_15: Graphite,  param1: 0.3, param2: "30,80"
-    Name_16: Sulfur, param1: 0.3, param2: "20,40"
+    Name_14: Salt,  param1: 0.3, param2: "120,175"
+    Name_15: Graphite,  param1: 0.3, param2: "130,280"
+    Name_16: Sulfur, param1: 0.3, param2: "60,120"
   }
 }
 ## Cargo Freighter (Components)
@@ -3587,76 +3585,56 @@
   }
 }
 
-# Free ID 644
+# Smuggler loot (money, gold, relics, jewelry, drugs, etc)
+{ +Container Id: 644
+  Count: "1,1"
+  Size: "8,8"
+  SfxOpen: UseActions/ContainerOpen
+  SfxClose: UseActions/ContainerClose
 
-# # Bandit Loot
-# { +Container Id: 644
-  # Count: "1,3"
-  # Size: "8,8"
-  # SfxOpen: UseActions/ContainerOpen
-  # SfxClose: UseActions/ContainerClose
+  { Child Items
+    # Name_0: MoneyCard, param1: 0.5, param2: "1000,5000"
+    # Name_1: GoldCoins, param1: 0.2, param2: "20,100"
+    # Name_2: PlatinumCard, param1: 0.05, param2: "1,2"
+    # Name_3: AncientRelics, param1: 0.05, param2: "1,2"
+    # Name_4: Jewellery, param1: 0.2, param2: "15,30"
+    Group_0: Eden_SmugglerValuables, param1: 1
 
-  # { Child Items
-    # Name_0: EnergyMatrix, param1: 0.2, param2: "20,40"
-    # Name_1: OpticalFiber, param1: 0.2, param2: "50,100"
-    # Name_2: MechanicalComponents, param1: 0.2, param2: "50,100"
-    # Name_3: CapacitorComponent, param1: 0.1, param2: "20,40"
-    # Name_4: Computer, param1: 0.2, param2: "15,30"
-    # Name_5: SteelPlate, param1: 0.2, param2: "250,500"
-    # Name_6: TitanPlates, param1: 0.2, param2: "125,250"
-    # Name_7: PentaxidCrystal, param1: 0.3, param2: "15,45"
-    # Name_8: EnergyCellLarge, param1: 0.15, param2: "5,15"
-    # Group_0: Eden_SalvageUniqueT0, param1: 0.25
-  # }
-# }
+  }
+}
 
-# Free ID 645
+# Smuggler loot (contraband)
+{ +Container Id: 645
+  Count: "1,2"
+  Size: "8,8"
+  SfxOpen: UseActions/ContainerOpen
+  SfxClose: UseActions/ContainerClose
 
-# # Raider Loot
-# { +Container Id: 645
-  # Count: "1,3"
-  # Size: "8,8"
-  # SfxOpen: UseActions/ContainerOpen
-  # SfxClose: UseActions/ContainerClose
+  { Child Items
+    Group_0: Eden_SmugglerContraband, param1: 0.5
+    Group_1: MissingCargo, param1: 0.25
+    Group_2: Posters, param1: 0.2
+    Group_3: ArmorT1, param1: 0.2
+    Group_4: ArmorT2, param1: 0.1
+    Group_5: WeaponUpgradesCommon, param1: 0.3
+    Group_6: WeaponUpgradesRare, param1: 0.1
+  }
+}
 
-  # { Child Items
-    # Name_0: EnergyMatrix, param1: 0.2, param2: "20,40"
-    # Name_1: OpticalFiber, param1: 0.2, param2: "50,100"
-    # Name_2: MechanicalComponents, param1: 0.2, param2: "50,100"
-    # Name_3: CapacitorComponent, param1: 0.1, param2: "20,40"
-    # Name_4: Computer, param1: 0.2, param2: "15,30"
-    # Name_5: SteelPlate, param1: 0.2, param2: "250,500"
-    # Name_6: TitanPlates, param1: 0.2, param2: "125,250"
-    # Name_7: PentaxidCrystal, param1: 0.3, param2: "15,45"
-    # Name_8: EnergyCellLarge, param1: 0.15, param2: "5,15"
-    # Group_0: Eden_SalvageUniqueT0, param1: 0.25
-    # Group_1: Eden_RecipesAll, param1: 0.1
-  # }
-# }
+# Smuggler loot (mounted weapons and military equipment)
+{ +Container Id: 646
+  Count: "1,1"
+  Size: "8,8"
+  SfxOpen: UseActions/ContainerOpen
+  SfxClose: UseActions/ContainerClose
 
-# Free ID 646
-
-# # Syndicate Loot
-# { +Container Id: 646
-  # Count: "1,3"
-  # Size: "8,8"
-  # SfxOpen: UseActions/ContainerOpen
-  # SfxClose: UseActions/ContainerClose
-
-  # { Child Items
-    # Name_0: EnergyMatrix, param1: 0.2, param2: "20,40"
-    # Name_1: OpticalFiber, param1: 0.2, param2: "50,100"
-    # Name_2: MechanicalComponents, param1: 0.2, param2: "50,100"
-    # Name_3: CapacitorComponent, param1: 0.1, param2: "20,40"
-    # Name_4: Computer, param1: 0.2, param2: "15,30"
-    # Name_5: SteelPlate, param1: 0.2, param2: "250,500"
-    # Name_6: TitanPlates, param1: 0.2, param2: "125,250"
-    # Name_7: PentaxidCrystal, param1: 0.3, param2: "15,45"
-    # Name_8: EnergyCellLarge, param1: 0.15, param2: "5,15"
-    # Group_0: Eden_SalvageUniqueT0, param1: 0.25
-    # Group_1: Eden_RecipesAll, param1: 0.05
-  # }
-# }
+  { Child Items
+    Group_0: Eden_DefenseSystemsT1, param1: 0.35
+    Group_1: Eden_WeaponsSmallT1, param1: 0.5
+    Group_2: Eden_WeaponsLargeT1, param1: 0.25
+    Group_3: Eden_WeaponsSmallT2, param1: 0.1
+  }
+}
 
 # UCH Reward Vessel reward T1
 { +Container Id: 647
@@ -4003,7 +3981,7 @@
 
 # Tier 5 Mining Loot
 { +Container Id: 669
-  Count: "1,3"
+  Count: "2,3"
   Size: "8,8"
   SfxOpen: UseActions/ContainerOpen
   SfxClose: UseActions/ContainerClose
@@ -4017,7 +3995,7 @@
 
 # Tier 6 Mining Loot
 { +Container Id: 670
-  Count: "1,3"
+  Count: "2,3"
   Size: "8,8"
   SfxOpen: UseActions/ContainerOpen
   SfxClose: UseActions/ContainerClose
@@ -4148,9 +4126,11 @@
   SfxClose: UseActions/KEYUnlockingMetalDoor(mono)
 
   { Child Items
-    # Name_0: PentaxidCrystal, param1: 0.5, param2: "15,50"
+    Name_0: Token, param1: 0.03, param2: "meta=6400"
     Group_0: empty, param1: 1
-    Group_1: Eden_SalvageT1, param1: 0.1
+    Group_1: Eden_SalvageT1, param1: 0.2
+    Group_2: Eden_MiningContracts, param1: 0.05
+    Group_3: Eden_MissingCargo, param1: 0.05
     # Group_2: Eden_SalvageT1, param1: 0.05
   }
 }
@@ -4163,8 +4143,11 @@
   SfxClose: UseActions/KEYUnlockingMetalDoor(mono)
 
   { Child Items
+    Name_0: Token, param1: 0.03, param2: "meta=6400"
     Group_0: empty, param1: 1
-    Group_1: Eden_SalvageT1, param1: 0.1
+    Group_1: Eden_SalvageT1, param1: 0.2
+    Group_2: Eden_MiningContracts, param1: 0.05
+    Group_3: Eden_MissingCargo, param1: 0.05
     # Group_1: Eden_MissingCargo, param1: 0.1
   }
 }
@@ -4177,8 +4160,11 @@
   SfxClose: UseActions/KEYUnlockingMetalDoor(mono)
 
   { Child Items
+    Name_0: Token, param1: 0.03, param2: "meta=6400"
     Group_0: empty, param1: 1
-    Group_1: Eden_SalvageT1, param1: 0.1
+    Group_1: Eden_SalvageT1, param1: 0.2
+    Group_2: Eden_MiningContracts, param1: 0.05
+    Group_3: Eden_MissingCargo, param1: 0.05
     # Group_1: Eden_MissingCargo, param1: 0.1
   }
 }
@@ -4240,7 +4226,7 @@
   }
 }
 
-# Contracts
+# Contracts (all)
 { +Container Id: 685
   Count: "1,1"
   Size: "8,8"
@@ -4251,6 +4237,157 @@
     Group_0: Eden_MiningContracts, param1: 1
   }
 }
+
+# Crystal creatures gold infused
+{ +Container Id: 686
+  Count: "2,3"
+  Size: "8,1"
+  SfxOpen: UseActions/stone_open_close
+  SfxClose: UseActions/stone_open_close
+
+  { Child Items
+    Name_0: RockDust, param1: 0.7, param2: "15,25"
+    Name_1: SiliconOre, param1: 0.7, param2: "15,25"
+    Name_2: GoldOre, param1: 0.5, param2: "5,20"
+    Name_3: PentaxidOre, param1: 0.4, param2: "5,10"
+    Name_4: PromethiumOre, param1: 0.4, param2: "1,2"
+    Name_5: RawDiamond, param1: 0.2, param2: "1,1"
+
+    Group_0: OresImproved, param1: 0.1
+    Group_1: OresBasic, param1: 0.8
+  }
+}
+
+# Crystal creatures promethium and pentaxid infused
+{ +Container Id: 687
+  Count: "2,3"
+  Size: "8,1"
+  SfxOpen: UseActions/stone_open_close
+  SfxClose: UseActions/stone_open_close
+
+  { Child Items
+    Name_0: RockDust, param1: 0.7, param2: "15,25"
+    Name_1: SiliconOre, param1: 0.7, param2: "15,25"
+    Name_3: PentaxidOre, param1: 0.4, param2: "10,20"
+    Name_4: PromethiumOre, param1: 0.4, param2: "10,20"
+    Name_5: RawDiamond, param1: 0.2, param2: "1,1"
+  }
+}
+
+# Mining contracts (all factions)
+{ +Container Id: 688
+  Count: "1,1"
+  Size: "8,8"
+  SfxOpen: UseActions/ContainerOpen
+  SfxClose: UseActions/ContainerClose
+
+  { Child Items
+    Group_0: Eden_MiningContractsCol, param1: 0.5
+    Group_1: Eden_MiningContractsPol, param1: 0.5
+    Group_2: Eden_MiningContractsTra, param1: 0.2
+    Group_3: Eden_MiningContractsZir, param1: 0.2
+  }
+}
+
+# Mining contracts (Free Colonists)
+{ +Container Id: 689
+  Count: "1,1"
+  Size: "8,8"
+  SfxOpen: UseActions/ContainerOpen
+  SfxClose: UseActions/ContainerClose
+
+  { Child Items
+    Group_0: Eden_MiningContractsCol, param1: 1
+  }
+}
+
+# Mining contracts (Polaris Megacorp)
+{ +Container Id: 690
+  Count: "1,1"
+  Size: "8,8"
+  SfxOpen: UseActions/ContainerOpen
+  SfxClose: UseActions/ContainerClose
+
+  { Child Items
+    Group_0: Eden_MiningContractsPol, param1: 1
+  }
+}
+
+# Mining contracts (Trade Federation)
+{ +Container Id: 691
+  Count: "1,1"
+  Size: "8,8"
+  SfxOpen: UseActions/ContainerOpen
+  SfxClose: UseActions/ContainerClose
+
+  { Child Items
+    Group_0: Eden_MiningContractsTra, param1: 1
+  }
+}
+
+# Mining contracts (Zirax Empire)
+{ +Container Id: 692
+  Count: "1,1"
+  Size: "8,8"
+  SfxOpen: UseActions/ContainerOpen
+  SfxClose: UseActions/ContainerClose
+
+  { Child Items
+    Group_0: Eden_MiningContractsZir, param1: 1
+  }
+}
+
+# Gases
+{ +Container Id: 693
+  Count: "1,1"
+  Size: "8,1"
+  SfxOpen: UseActions/ContainerOpen
+  SfxClose: UseActions/ContainerClose
+
+  { Child Items
+    Name_0: HydrogenBottle, param1: 0.7, param2: "10,30"
+    Name_1: OxygenBottleLarge, param1: 0.7, param2: "10,30"
+    Name_2: HeliumBottle, param1: 0.5, param2: "10,30"
+    Name_3: NitrogenBottle, param1: 0.4, param2: "10,30"
+    Name_4: XenonBottle, param1: 0.3, param2: "10,30"
+  }
+}
+
+# Industrial byproducts
+{ +Container Id: 694
+  Count: "1,1"
+  Size: "8,1"
+  SfxOpen: UseActions/ContainerOpen
+  SfxClose: UseActions/ContainerClose
+
+  { Child Items
+    Name_0: WaterJug, param1: 0.7, param2: "10,30"
+    Name_1: ToxicWaste, param1: 0.7, param2: "10,30"
+    Name_2: Coolant, param1: 0.5, param2: "10,30"
+    Name_3: ToxicLiquid, param1: 0.4, param2: "10,30"
+    Name_4: ToxicWaste, param1: 0.3, param2: "10,30"
+  }
+}
+
+# Data and reports
+{ +Container Id: 695
+  Count: "1,1"
+  Size: "8,1"
+  SfxOpen: UseActions/ContainerOpen
+  SfxClose: UseActions/ContainerClose
+
+  { Child Items
+    Name_0: Eden_WarpUpgrade, param1: 0.03, param2: "1,1"
+    Group_0: Keycards, param1: 0.1
+    Group_1: Hacking, param1: 0.25
+    Group_2: Eden_ReportsCommon, param1: 0.7
+    Group_3: Eden_ReportsScience, param1: 0.5
+    Group_4: Eden_ReportsExloration, param1: 0.5
+    Group_5: Eden_ReportsSecurity, param1: 0.4
+    Group_6: Eden_ReportsMilitary, param1: 0.2
+  }
+}
+
 
 # # Narrow Band Scan Report T1
 # { +Container Id: 674
@@ -4286,6 +4423,34 @@
     # Name_0: Token, param1: 1, param2: "meta=6505"
   # }
 # }
+
+# # ========================================================================================================================== Key cards and POI missions
+
+# Smuggler Boss Key Card
+{ +Container Id: 700
+  Count: "1,1"
+  Size: "8,1"
+  SfxOpen: UseActions/ZIPPERShort3(mono)
+  SfxClose: UseActions/ZIPPERShort3(mono)
+
+  { Child Items
+    Name_0: Token, param1: 1, param2: "meta=6314"
+  }
+}
+
+# Smuggler Safe Key Card
+{ +Container Id: 701
+  Count: "1,1"
+  Size: "8,1"
+  SfxOpen: UseActions/ZIPPERShort3(mono)
+  SfxClose: UseActions/ZIPPERShort3(mono)
+
+  { Child Items
+    Name_0: Token, param1: 1, param2: "meta=6315"
+  }
+}
+
+
 
 # # Death's Hand - OLD
 # { +Container Id: 700

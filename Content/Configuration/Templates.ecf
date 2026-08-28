@@ -1478,6 +1478,14 @@
     GlassPlate: 2
   }
 }
+{ +Template Name: JunkBlocks
+  CraftTime: 1
+  Target: "SmallC,BaseC,LargeC,AdvC"
+  { Child Inputs
+    PlasticMaterial: 4
+    MetalPieces: 2
+  }
+}
 
 { +Template Name: IndoorPlants
   CraftTime: 1
@@ -1512,6 +1520,17 @@
   { Child Inputs
     Electronics: 4
     PlasticMaterial: 8
+    Computer: 1
+    OpticalFiber: 10
+  }
+}
+
+{ +Template Name: PDAdialogueDevices
+  CraftTime: 2
+  Target: "SmallC,BaseC,LargeC,AdvC"
+  { Child Inputs
+    Electronics: 4
+    PlasticMaterial: 4
     Computer: 1
     OpticalFiber: 10
   }
@@ -1593,6 +1612,19 @@
     SteelPlate: 6
     PlasticMaterial: 12
     Motor: 1
+  }
+}
+
+{ +Template Name: Eden_ShuttleBlocks
+  BaseItem: true
+  DeconOverride: Stop
+  CraftTime: 1
+  Target: ""
+  { Child Inputs
+    TitanPlates: 12
+    Computer: 4
+    CapacitorComponent: 2
+    PlasmaConverter: 1
   }
 }
 
@@ -2241,6 +2273,19 @@
     Motor: 12
     FluxCoil: 10
     Cement: 40
+  }
+}
+
+{ +Template Name: FurnaceCV
+  CraftTime: 10
+  Target: "SmallC,AdvC"
+  { Child Inputs
+    CapacitorComponent: 16
+    EnergyMatrix: 16
+    SteelPlateArmored: 80
+    Motor: 12
+    PowerCoil: 10
+    HeatExchanger: 24
   }
 }
 
@@ -3341,6 +3386,24 @@
   }
 }
 
+{ +Template Name: FusionReactorShieldedLarge
+  CraftTime: 360
+  DeconOverride: Stop
+  Target: SmallC
+  { Child Inputs
+    ReactorCore: 1
+    RadiationShielding: 64
+    Superconductor: 52
+    HeatExchanger: 64
+    CapacitorComponent: 80
+    ZascosiumAlloy: 80
+    Eden_PowerRegulator: 8
+    Eden_Electromagnet: 12
+    Eden_ComputerT2: 8
+    QuantumProcessor: 8
+  }
+}
+
 { +Template Name: PlasmaTurbineT0
   CraftTime: 5
   Target: "SmallC,BaseC,LargeC,AdvC"
@@ -3801,6 +3864,17 @@
     FluxCoil: 6
   }
 }
+{ +Template Name: PentaxidTankT2
+  CraftTime: 8
+  Target: "SmallC,AdvC"
+  { Child Inputs
+    SteelPlateArmored: 24
+    Oscillator: 16
+	PlatinOunce: 16
+    RadiationShielding: 8
+    PowerCoil: 4
+  }
+}
 { +Template Name: PentaxidTankSV
   CraftTime: 5
   Target: "SmallC,LargeC,AdvC"
@@ -3810,6 +3884,17 @@
     EnergyMatrix: 4
     CobaltAlloy: 48
 	PlasticMaterial: 24
+  }
+}
+{ +Template Name: PentaxidTankSVT2
+  CraftTime: 8
+  Target: "SmallC,AdvC"
+  { Child Inputs
+	FluxCoil: 2
+    RadiationShielding: 4
+    ZascosiumAlloy: 8
+    PlatinOunce: 8
+    TitanPlates: 16
   }
 }
 { +Template Name: ShieldBoosterSmallT1Blocks
@@ -3927,7 +4012,7 @@
 }
 
 { +Template Name: DroneLargePlayer01Unit
-  CraftTime: 60  
+  CraftTime: 30  
   Target: "LargeC,AdvC,SmallC"
   { Child Inputs
     TitanPlates: 12
@@ -3938,7 +4023,7 @@
 }
 
 { +Template Name: DroneLargePlayer02Unit
-  CraftTime: 120  
+  CraftTime: 60  
   Target: "AdvC,SmallC"
   { Child Inputs
     SteelPlateArmored: 12
@@ -4000,6 +4085,18 @@
 	PlasticMaterial: 12
     OpticalFiber: 4
     Computer: 1
+  }
+}
+
+{ +Template Name: CockpitCanopyV1
+  CraftTime: 10
+  Target: "SmallC,LargeC,AdvC"
+  { Child Inputs
+    EnergyMatrix: 8
+    Oscillator: 8
+    ZascosiumAlloy: 8
+    SteelPlateArmored: 12
+    CapacitorComponent: 4
   }
 }
 
@@ -4503,7 +4600,7 @@
     Computer: 8
     EnergyMatrix: 8
     TitanPlates: 24
-    ZascosiumAlloy: 32
+    CobaltAlloy: 32
     Graphite: 12
   }
 }
@@ -4549,7 +4646,7 @@
     TitanPlates: 32
     Computer: 12
     CapacitorComponent: 4
-	CobaltAlloy: 48
+	ZascosiumAlloy: 48
 	EnergyMatrix: 12
 	FluxCoil: 4
   }
@@ -6339,6 +6436,25 @@
     AdvancedUpgradeKit: 2
   }
 }
+# T3 CV 35mm Vulcan Cannon - Uses 35mmVulcanShell (Not craftable)
+{ +Template Name: WeaponCVHeavyVulcanT3
+  CraftTime: 10
+  Target: "SmallC"
+  { Child Inputs
+	SteelPlateArmored: 88
+    MechanicalComponents: 72
+    Motor: 24
+	Computer: 12
+	CobaltAlloy: 64
+    Oscillator: 48
+    ZascosiumAlloy: 96
+    FluxCoil: 20
+	Robotics: 4
+	HeatExchanger: 24
+	Coolant: 48
+	LargeUpgradeKit: 4
+  }
+}
 
 
 # =============================
@@ -6915,6 +7031,7 @@
     TitanPlates: 3
     NCPowder: 18
     Electronics: 3
+    HydrogenBottle: 4
     MagnesiumPowder: 10
   }
 }
@@ -7144,7 +7261,7 @@
     NeodymiumIngot: 12
   }
 }
-# Used by HV/SV T3 Railgun #2088
+# Used by HV/SV T3 Railgun #1896
 { +Template Name: RailgunSlugT3
   OutputCount: 20
   CraftTime: 5
@@ -7152,7 +7269,7 @@
   { Child Inputs
     ZascosiumAlloy: 8
     SathiumIngot: 10
-    Eden_MagmacitePlate: 3
+    Eden_MagmacitePlate: 1
   }
 }
 # Used by HV/SV T1 SV Laser Turret #780
@@ -7354,6 +7471,18 @@
     NCPowder: 45
   }
 }
+# Used by CV T3 Vulcan Cannon #1525
+{ +Template Name: 35mmVulcanShell
+  OutputCount: 100
+  CraftTime: 8
+  Target: "SmallC,AdvC"
+  { Child Inputs
+    SteelPlateArmored: 25
+	CopperIngot: 8
+	Eden_TungstenIngot: 5
+    NCPowder: 80
+  }
+}
 # Used by CV T1 Missile Turret #1524
 { +Template Name: FastRocketMS
   OutputCount: 24
@@ -7508,15 +7637,15 @@
     NeodymiumIngot: 15
   }
 }
-# Used by CV T3 Railgun #3414
+# Used by CV T3 Railgun #2980
 { +Template Name: RailgunSlugCVT3
   OutputCount: 20
   CraftTime: 5
   Target: "SmallC,AdvC"
   { Child Inputs
-    Eden_MagmacitePlate: 12
-    SathiumIngot: 18
-    NeodymiumIngot: 18
+    Eden_MagmacitePlate: 5
+    SathiumIngot: 20
+    NeodymiumIngot: 20
   }
 }
 # Used by CV T1 Cannon #772
@@ -9734,6 +9863,39 @@
   }
 }
 
+# Needed for Tech Tree
+{ +Template Name: Eden_TechTreeIndustrial
+  DeconOverride: Stop
+  OutputCount: 1
+  CraftTime: 3
+  Target: ""
+  { Child Inputs
+    SteelPlate: 0
+  }
+}
+
+# Needed for Tech Tree
+{ +Template Name: Eden_TechTreeWeapons
+  DeconOverride: Stop
+  OutputCount: 1
+  CraftTime: 3
+  Target: ""
+  { Child Inputs
+    SteelPlate: 0
+  }
+}
+
+# Needed for Tech Tree
+{ +Template Name: Eden_TechTreeMedical
+  DeconOverride: Stop
+  OutputCount: 1
+  CraftTime: 3
+  Target: ""
+  { Child Inputs
+    SteelPlate: 0
+  }
+}
+
 # Salvage
 # Found on Dead planets and elsewhere. Used in a deconstructor to retrieve components. Looking for a way to disable adding it the factory.
 { +Template Name: Eden_Salvage1
@@ -9802,7 +9964,6 @@
     Oscillator: 12
   }
 }
-
 
 
 # ============================================================================================================================================================================
@@ -9946,21 +10107,31 @@
   # }
 # }
 
-
+{ +Template Name: Eden_DrillMicro
+  CraftTime: 5
+  Target: "SmallC,HoverC,BaseC,LargeC,AdvC"
+  { Child Inputs
+    Electronics: 4
+    Computer: 1
+    OpticalFiber: 10
+    EnergyMatrix: 1
+    SteelPlate: 6
+  }
+}
 
 # ========================================================================================================================== Blocks
 { +Template Name: Eden_ModularLaserBlocksSV
-  BaseItem: true
   CraftTime: 15
+  DeconOverride: Stop
   Target: "SmallC,,AdvC"
   { Child Inputs
     TitanPlates: 28
-	Computer: 12
-	EnergyMatrix: 10
+    Computer: 12
+    EnergyMatrix: 10
     Oscillator: 24
     ZascosiumAlloy: 24
     CapacitorComponent: 8
-	SmallUpgradeKit: 1
+    SmallUpgradeKit: 1
     AdvancedUpgradeKit: 1
     Eden_ModularPulseLaserLensSmall: 1
     Eden_PowerRegulator: 2
@@ -9969,7 +10140,6 @@
 
 { +Template Name: Eden_ModularPulseLaserSVIR_Ammo
   OutputCount: 50
-  DeconOverride: Continue
   CraftTime: 3
   Target: "SmallC,AdvC"
   { Child Inputs
@@ -10006,7 +10176,6 @@
 
 { +Template Name: Eden_TurretBolterCV
   BaseItem: true
-  DeconOverride: Continue
   CraftTime: 15
   Target: ""
   { Child Inputs
@@ -10032,7 +10201,6 @@
 
 { +Template Name: Eden_TurretBolterBA
   BaseItem: true
-  DeconOverride: Continue
   CraftTime: 15
   Target: ""
   { Child Inputs
@@ -10046,7 +10214,7 @@
 }
 
 { +Template Name: Eden_TurretBolterBA_Ammo
-  OutputCount: 140
+  OutputCount: 70
   CraftTime: 3
   Target: "SmallC,LargeC,AdvC"
   { Child Inputs
@@ -10058,7 +10226,6 @@
 
 { +Template Name: Eden_TurretMissileLight
   BaseItem: true
-  DeconOverride: Continue
   CraftTime: 15
   Target: ""
   { Child Inputs
@@ -10075,7 +10242,6 @@
 
 { +Template Name: Eden_TurretMissileLightT2
   BaseItem: true
-  DeconOverride: Continue
   CraftTime: 15
   Target: ""
   { Child Inputs
@@ -10130,7 +10296,6 @@
 
 { +Template Name: Eden_BlasterCVT2_Ammo
   OutputCount: 100
-  DeconOverride: Continue
   CraftTime: 3
   Target: "SmallC,AdvC"
   { Child Inputs
@@ -10144,7 +10309,6 @@
 
 { +Template Name: Eden_RailgunCVSpinal
   OutputCount: 1
-  DeconOverride: Continue
   CraftTime: 20
   Target: "SmallC,AdvC"
   { Child Inputs
@@ -10160,7 +10324,6 @@
 
 { +Template Name: Eden_CVTorpedoRapid
   BaseItem: true
-  DeconOverride: Continue
   CraftTime: 15
   Target: "SmallC,LargeC,AdvC"
   { Child Inputs
@@ -10186,7 +10349,6 @@
 
 { +Template Name: Eden_TurretVulcanCV
   BaseItem: true
-  DeconOverride: Continue
   CraftTime: 15
   Target: "SmallC,AdvC"
   { Child Inputs
@@ -10203,7 +10365,6 @@
 
 { +Template Name: Eden_TurretAlienVulcan
   BaseItem: true
-  DeconOverride: Continue
   CraftTime: 15
   Target: ""
   { Child Inputs
@@ -10228,8 +10389,7 @@
 }
 
 { +Template Name: Eden_DrillIceCV
-  BaseItem: true
-  DeconOverride: Continue
+  # BaseItem: true
   CraftTime: 15
   Target: "SmallC,LargeC,AdvC"
   { Child Inputs
@@ -10244,8 +10404,7 @@
 }
 
 { +Template Name: Eden_DrillIceTurretCV
-  BaseItem: true
-  DeconOverride: Continue
+  # BaseItem: true
   CraftTime: 15
   Target: "SmallC,AdvC"
   { Child Inputs
@@ -10260,8 +10419,7 @@
 }
 
 { +Template Name: Eden_DrillRichCV
-  BaseItem: true
-  DeconOverride: Continue
+  # BaseItem: true
   CraftTime: 15
   Target: "SmallC,LargeC,AdvC"
   { Child Inputs
@@ -10277,8 +10435,7 @@
 }
 
 { +Template Name: Eden_DrillTurretAutoCV
-  BaseItem: true
-  DeconOverride: Continue
+  # BaseItem: true
   CraftTime: 15
   Target: "SmallC,AdvC"
   { Child Inputs
@@ -10294,8 +10451,8 @@
 }
 
 { +Template Name: Eden_DrillTurretAutoCVT2
-  BaseItem: true
-  DeconOverride: Continue
+  # BaseItem: true
+  DeconOverride: Stop
   CraftTime: 20
   Target: "SmallC"
   { Child Inputs
@@ -10350,9 +10507,19 @@
   }
 }
 
+{ +Template Name: Eden_TurretTargetPainter
+  CraftTime: 5
+  Target: "SmallC,HoverC,BaseC,LargeC,AdvC"
+  { Child Inputs
+    Electronics: 3
+    OpticalFiber: 4
+    MechanicalComponents: 2
+    PlasticMaterial: 4
+    SteelPlate: 16
+  }
+}
+
 { +Template Name: Eden_TurretMissileCruiseBlocks
-  BaseItem: true
-  DeconOverride: Continue
   CraftTime: 15
   Target: "SmallC,AdvC"
   { Child Inputs
@@ -10393,8 +10560,6 @@
 }
 
 { +Template Name: Eden_TurretBeamBlocksT1
-  BaseItem: true
-  DeconOverride: Continue
   CraftTime: 15
   Target: "SmallC,AdvC"
   { Child Inputs
@@ -10407,9 +10572,8 @@
 }
 
 { +Template Name: Eden_TurretBeamBlocksT2
-  BaseItem: true
-  DeconOverride: Continue
   CraftTime: 15
+  DeconOverride: Stop
   Target: "SmallC,AdvC"
   { Child Inputs
     MechanicalComponents: 160
@@ -10423,8 +10587,6 @@
 }
 
 { +Template Name: Eden_TurretRailgun
-  BaseItem: true
-  DeconOverride: Continue
   CraftTime: 15
   Target: "SmallC,AdvC"
   { Child Inputs
@@ -10450,8 +10612,6 @@
 }
 
 { +Template Name: Eden_TurretRailgunT2
-  BaseItem: true
-  DeconOverride: Continue
   CraftTime: 15
   Target: "SmallC,AdvC"
   { Child Inputs
@@ -10478,8 +10638,6 @@
 # }
 
 { +Template Name: Eden_TurretFlakClose
-  BaseItem: true
-  DeconOverride: Continue
   CraftTime: 15
   Target: "SmallC,AdvC"
   { Child Inputs
@@ -10499,7 +10657,7 @@
   Target: "SmallC,LargeC,AdvC"
   { Child Inputs
     SteelPlate: 8
-	CopperIngot: 4
+    CopperIngot: 4
     MagnesiumPowder: 15
     NCPowder: 25
   }
@@ -10657,25 +10815,27 @@
   # }
 # }
 
-{ +Template Name: Eden_WindTurbineBase
-  BaseItem: true
-  CraftTime: 10
-  Target: "SurvC,SmallC,HoverC,BaseC,LargeC,AdvC"
-  { Child Inputs
-    Electronics: 4
-    Motor: 1
-    Computer: 1
-    PlasticMaterial: 24
-    SteelPlate: 24
-    Nanotubes: 8
-  }
-}
+# { +Template Name: Eden_WindTurbineBase
+  # BaseItem: true
+  # CraftTime: 10
+  # Target: "SurvC,SmallC,HoverC,BaseC,LargeC,AdvC"
+  # { Child Inputs
+    # Electronics: 4
+    # Motor: 1
+    # Computer: 1
+    # PlasticMaterial: 24
+    # SteelPlate: 24
+    # Nanotubes: 8
+  # }
+# }
 
 { +Template Name: Eden_WindTurbineIdle
   BaseItem: true
   CraftTime: 10
   Target: "SurvC,SmallC,HoverC,BaseC,LargeC,AdvC"
   { Child Inputs
+    Electronics: 4
+    Computer: 1
     Motor: 6
     PlasticMaterial: 50
     SteelPlate: 24
@@ -10710,23 +10870,21 @@
   }
 }
 
-{ +Template Name: Eden_GeothermalGeneratorActive
-  BaseItem: true
-  CraftTime: 10
-  # Target: "SurvC,SmallC,HoverC,BaseC,LargeC,AdvC"
-  Target: ""
-  { Child Inputs
-    Motor: 12
-    Eden_TungstenIngot: 24
-    TitanPlates: 48
-    NeodymiumIngot: 24
-    Eden_CoreSample: 1
-  }
-}
+# { +Template Name: Eden_GeothermalGeneratorActive
+  # BaseItem: true
+  # CraftTime: 10
+  # # Target: "SurvC,SmallC,HoverC,BaseC,LargeC,AdvC"
+  # Target: ""
+  # { Child Inputs
+    # Motor: 12
+    # Eden_TungstenIngot: 24
+    # TitanPlates: 48
+    # NeodymiumIngot: 24
+  # }
+# }
 
 { +Template Name: Eden_WaterGeneratorT2
-  BaseItem: true
-  CraftTime: 10
+  CraftTime: 20
   Target: "SmallC,LargeC,AdvC"
   { Child Inputs
     SteelPlate: 50
@@ -10734,27 +10892,25 @@
     Computer: 5
     Motor: 10
     OpticalFiber: 25
+    SmallOptronicMatrix: 1
+    Filters: 10
   }
 }
 
 { +Template Name: Eden_WaterGeneratorT2Active
-  BaseItem: true
   CraftTime: 10
-  # Target: "SurvC,SmallC,HoverC,BaseC,LargeC,AdvC"
-  Target: ""
+  Target: "SmallC,LargeC,AdvC"
   { Child Inputs
-    SteelPlate: 50
-    MechanicalComponents: 80
-    Computer: 5
-    Motor: 10
-    OpticalFiber: 25
-    Eden_WaterSample: 1
+    SteelPlate: 12
+    Electronics: 8
+    Computer: 10
+    OpticalFiber: 6
+    LargeOptronicMatrix: 1
   }
 }
 
 { +Template Name: Eden_HydroponicsEmpty
   BaseItem: true
-  DeconOverride: Continue
   CraftTime: 10
   Target: "SmallC,AdvC"
   { Child Inputs
@@ -10924,6 +11080,16 @@
   }
 }
 
+{ +Template Name: Eden_WindTurbineBase
+  CraftTime: 5
+  Target: "SmallC,HoverC,BaseC,LargeC,AdvC"
+  { Child Inputs
+    SteelPlate: 20
+    PlasticMaterial: 50
+    Electronics: 5
+    OpticalFiber: 10
+  }
+}
 
 { +Template Name: Eden_AutoMiningDeviceT4
   CraftTime: 60
@@ -10966,18 +11132,47 @@
 # }
 
 { +Template Name: Eden_TurretVulcanSmall
-  BaseItem: true
-  DeconOverride: Continue
   CraftTime: 15
   Target: "SmallC,BaseC,LargeC,AdvC"
   { Child Inputs
     TitanPlates: 32
-	MechanicalComponents: 42
+    MechanicalComponents: 42
     Oscillator: 16
-	Computer: 4
+    Computer: 4
     Motor: 12
     CobaltAlloy: 16
     EnergyMatrix: 8
+  }
+}
+
+{ +Template Name: Eden_DroneBayHawk
+  CraftTime: 40
+  Target: "SmallC"
+  { Child Inputs
+    TitanPlates: 120
+    SteelPlateArmored: 64
+    ZascosiumAlloy: 24
+    Oscillator: 32
+    CapacitorComponent: 20
+    Computer: 24
+    PlatinOunce: 16
+    MechanicalComponents: 60
+    GoldIngot: 32
+    AdvancedUpgradeKit: 1
+  }
+}
+
+{ +Template Name: Eden_DroneHawkPlayerUnit
+  CraftTime: 120
+  Target: "AdvC,SmallC"
+  { Child Inputs
+    HumanNPCBlocks: 1
+    Core: 1
+    SteelPlateArmored: 24
+    ZascosiumAlloy: 4
+    Oscillator: 6
+    Computer: 6
+    CapacitorComponent: 8
   }
 }
 
@@ -11119,7 +11314,42 @@
     Computer: 10
     OpticalFiber: 6
     FluxCoil: 7
-    SmallOptronicBridge: 4
+  }
+}
+
+{ +Template Name: Eden_Telepad
+  CraftTime: 10
+  Target: "BaseC,SmallC,LargeC,AdvC"
+  { Child Inputs
+    Oscillator: 8
+    FluxCoil: 4
+    CapacitorComponent: 4
+	Computer: 2
+    PentaxidElement: 10
+  }
+}
+
+{ +Template Name: Eden_JumpBeacon
+  CraftTime: 10
+  Target: "SmallC,AdvC"
+  { Child Inputs
+    SteelPlateArmored: 500
+    Eden_Electromagnet: 12
+    PlatinOunce: 50
+    RadiationShielding: 5
+    PlasmaConverter: 8
+    AdvancedUpgradeKit: 1
+    ReactorCore: 1
+  }
+}
+
+{ +Template Name: Eden_JumpBeaconCharge
+  OutputCount: 1
+  CraftTime: 1
+  BaseItem: true
+  Target: "SmallC,HoverC,BaseC,LargeC,AdvC"
+  { Child Inputs
+    PentaxidCrystal: 250
   }
 }
 
@@ -11605,7 +11835,7 @@
 
 # Salvage
 { +Template Name: Eden_SalvageT1
-  CraftTime: 30 #B1 SV 12
+  CraftTime: 30
   Target: ""
   { Child Inputs
     Motor: 8
@@ -11620,7 +11850,7 @@
 }
 
 { +Template Name: Eden_SalvageT2
-  CraftTime: 30 #B1 SV 12
+  CraftTime: 30
   Target: ""
   { Child Inputs
     Motor: 8
@@ -11635,7 +11865,7 @@
 }
 
 { +Template Name: Eden_SalvageT3
-  CraftTime: 30 #B1 SV 12
+  CraftTime: 30
   Target: ""
   { Child Inputs
     Motor: 8
@@ -11650,7 +11880,7 @@
 }
 
 { +Template Name: Eden_SalvageT4
-  CraftTime: 30 #B1 SV 12
+  CraftTime: 30
   Target: ""
   { Child Inputs
     Motor: 8
@@ -11665,7 +11895,7 @@
 }
 
 { +Template Name: Eden_SalvageT5
-  CraftTime: 30 #B1 SV 12
+  CraftTime: 30
   Target: ""
   { Child Inputs
     Motor: 8
@@ -11680,7 +11910,7 @@
 }
 
 { +Template Name: Eden_SalvageT6
-  CraftTime: 30 #B1 SV 12
+  CraftTime: 30
   Target: ""
   { Child Inputs
     Motor: 8
@@ -12012,45 +12242,45 @@
 
 
 
-{ +Template Name: Eden_HematiteShipment
-  BaseItem: true
-  OutputCount: 1
-  CraftTime: 5
-  Target: "SmallC,HoverC,BaseC,LargeC,AdvC"
-  { Child Inputs
-    Eden_HematiteOre: 2000
-  }
-}
+# { +Template Name: Eden_HematiteShipment
+  # BaseItem: true
+  # OutputCount: 1
+  # CraftTime: 5
+  # Target: "SmallC,HoverC,BaseC,LargeC,AdvC"
+  # { Child Inputs
+    # Eden_HematiteOre: 2000
+  # }
+# }
 
-{ +Template Name: Eden_IlmeniteShipment
-  BaseItem: true
-  OutputCount: 1
-  CraftTime: 5
-  Target: "SmallC,HoverC,BaseC,LargeC,AdvC"
-  { Child Inputs
-    Eden_IlmeniteOre: 6000
-  }
-}
+# { +Template Name: Eden_IlmeniteShipment
+  # BaseItem: true
+  # OutputCount: 1
+  # CraftTime: 5
+  # Target: "SmallC,HoverC,BaseC,LargeC,AdvC"
+  # { Child Inputs
+    # Eden_IlmeniteOre: 2000
+  # }
+# }
 
-{ +Template Name: Eden_PyrolusiteShipment
-  BaseItem: true
-  OutputCount: 1
-  CraftTime: 5
-  Target: "SmallC,HoverC,BaseC,LargeC,AdvC"
-  { Child Inputs
-    Eden_PyrolusiteOre: 15000
-  }
-}
+# { +Template Name: Eden_PyrolusiteShipment
+  # BaseItem: true
+  # OutputCount: 1
+  # CraftTime: 5
+  # Target: "SmallC,HoverC,BaseC,LargeC,AdvC"
+  # { Child Inputs
+    # Eden_PyrolusiteOre: 15000
+  # }
+# }
 
-{ +Template Name: Eden_ChromiteShipment
-  BaseItem: true
-  OutputCount: 1
-  CraftTime: 5
-  Target: "SmallC,HoverC,BaseC,LargeC,AdvC"
-  { Child Inputs
-    Eden_ChromiteOre: 6000
-  }
-}
+# { +Template Name: Eden_ChromiteShipment
+  # BaseItem: true
+  # OutputCount: 1
+  # CraftTime: 5
+  # Target: "SmallC,HoverC,BaseC,LargeC,AdvC"
+  # { Child Inputs
+    # Eden_ChromiteOre: 6000
+  # }
+# }
 
 { +Template Name: Eden_WarpCoreMoonshine
   DeconOverride: Stop
@@ -12355,7 +12585,7 @@
     MechanicalComponents: 4
     Electronics: 4
     SteelPlate: 8
-	Motor: 1
+    Motor: 1
   }
 }
 
@@ -12402,3 +12632,4 @@
     WaterJug: 0
   }
 }
+

@@ -696,6 +696,14 @@
   Otyugh: "3, 4"
 }
 
+{ EGroup Name: Eden_CrystalSlugsOrange
+  Eden_CrystalSlugOrange: "2, 3"
+}
+
+{ EGroup Name: Eden_CrystalSlugsBlue
+  Eden_CrystalSlugBlue: "2, 3"
+}
+
 # =============================================== Alien
 { EGroup Name: Eden_OverseerPatrol
   Overseer: "1, 1"

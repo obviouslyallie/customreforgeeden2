@@ -1,0 +1,15 @@
+# Rankings are disabled by default in Reforged Eden 2 due to frequent complaints that they are not accurate and database issues reported by server owners.
+# Disabling them may lead to better server performance and save game stability especially for larger servers with longer term saves. Re-enabling them is not recommended.
+# If you want to re-enable the rankings simply rename or delete this file and the game will pull from the default configs.
+# -------------------- Configuration of the ranking boxes, RankingBoxX,Y
+- RankingBox1,1 = RankingsDisabled
+- RankingsDisabled.Name = [c][ffff00]RANKINGS DISABLED IN RE2[-][/c]
+
+
+- RankingsDisabled.PlayersTop10.Query = 
+
+- RankingsDisabled.LocalPlayer.Query =
+
+- RankingsDisabled.FactionTop10.Query =
+
+- RankingsDisabled.AllFactionsTop10.Query =

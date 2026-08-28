@@ -206,6 +206,12 @@
   RemoveOnUse: true
   Description: An explosive charge typically used for mining operations that require blasting or controlled demolition of unwanted structures.\n\n[c][FFFFFF]Can only be used at marked locations[-][/c]\n[c][FF0000]Consumed on use[-][/c]
 }
+# Pirate/Random Keycard (Used in NONE)
+{ Token Id: 4037, Name: [c][FF5500]Security Keycard[/c]
+  CustomIcon: KeyCardYellow
+  RemoveOnUse: true
+  Description: [c][ffffff]A Keycard with no identifiable markings on it beyond a number. It can probably open a door somewhere.[-][/c]\n[c][FF0000]Consumed on use[-][/c]
+}
 # ====================================================
 # ============== Weapon Software Updates =============
 # ====================================================
@@ -661,6 +667,52 @@
   Description: Temporarily shunts entropy in a closed system into nullspace though not without cost.\n[c][00FF00]Unknown Effect[-][/c]\n[c][FFBB00]Unknown Use[-][/c]
   MarketPrice: 30000, display: true
 }
+# ======= Unique Pirate Mods
+{ Token Id: 86, Name: [c][FFDD00]Shredder Mod[/c]
+  CustomIcon: WeaponKitD
+  Description: An illegal shotgun modification favored by pirates for dislocating shoulders and causing hearing loss.\n[c][00FF00]Damage +25%[-][/c]\n[c][FF0000]Recoil = Yes[-][/c]\n[c][FFBB00]Compatible with most Shotguns[-][/c]
+  MarketPrice: 40000, display: true
+}
+{ Token Id: 87, Name: [c][FFDD00]Vortex Barrel[/c]
+  CustomIcon: WeaponKitD
+  Description: An illegal and questionable barrel intended for use in the close confines of a starship's narrow corridors where accuracy doesn't matter.\n[c][00FF00]Damage +20%[-][/c]\n[c][FF0000]Accuracy = No[-][/c]\n[c][FFBB00]Compatible with most Shotguns[-][/c]
+  MarketPrice: 50000, display: true
+}
+{ Token Id: 88, Name: [c][FFDD00]Auto-Backpack[/c]
+  CustomIcon: WeaponKitD
+  Description: A ridiculous attempt by pirates at getting more bullets both into and out of a minigun. While it does work... it is most certainly not comfortable.\n[c][00FF00]Reload Speed +100%[-][/c]\n[c][FF0000]Accuracy -20%[-][/c]\n[c][FFBB00]Compatible with only the Minigun[-][/c]
+  MarketPrice: 35000, display: true
+}
+{ Token Id: 89, Name: [c][FFDD00]Big Blackhawk[/c]
+  CustomIcon: WeaponKitD
+  Description: An experimental heavy barrel intended to enhance firepower of the Starhawk Heavy Pistol. The only prototypes were stolen by pirates causing the entire project to be abandoned in favor of the ARX-99.\n[c][00FF00]Damage +40%[-][/c]\n[c][FF0000]Recoil +30%[-][/c]\n[c][FFBB00]Compatible with only the Starhawk[-][/c]
+  MarketPrice: 40000, display: true
+}
+{ Token Id: 90, Name: [c][FFDD00]Corrodium Injector[/c]
+  CustomIcon: WeaponKitD
+  Description: An external module mounted between the magazine and the loader of a Plasma Cannon. It injects highly-reactive Corrodium into plasma cells before loading.\n[c][00FF00]Blast Damage +50%[-][/c]\n[c][FFBB00]Compatible with Plasma Cannon Magazines[-][/c]
+  MarketPrice: 70000, display: true
+}
+{ Token Id: 91, Name: [c][FFDD00]Syndicate Specialist Kit[/c]
+  CustomIcon: WeaponKitD
+  Description: Produced by the Syndicate to overhaul their mass-production SMGs into high-quality firearms. Expensive to produce so the pricetag is comparatively high.\n[c][00FF00]Damage +30%\nRecoil -40%\nAccuracy +50%[-][/c]\n[c][FFBB00]Compatible with only the RX-9 Syndicate Uzi[-][/c]
+  MarketPrice: 75000, display: true
+}
+{ Token Id: 92, Name: [c][FFDD00]Heat Blade Attachment[/c]
+  CustomIcon: WeaponKitD
+  Description: The plasma sword has gotten popular among pirates for cutting fuel lines and destroying sentry guns. As such they're one of the only factions to actively improve the weapon.\n[c][00FF00]Damage +60%[-][/c]\n[c][FFBB00]Compatible with the Plasma Sword[-][/c]
+  MarketPrice: 30000, display: true
+}
+{ Token Id: 93, Name: [c][FFDD00]Zaku-FSII Weapon Kit[/c]
+  CustomIcon: WeaponKitD
+  Description: Some kind of weapon modification kit. It was stolen off a UCH transport but no one knows what kind of weapon it fits.\n[c][00FF00]Damage +20%\nRecoil -20%\nReload Speed +20%[-][/c]\n[c][FFBB00]Unknown Compatibility[-][/c]
+  MarketPrice: 55000, display: true
+}
+{ Token Id: 94, Name: [c][FFDD00]Interceptor Custom[/c]
+  CustomIcon: WeaponKitD
+  Description: A custom conversion kit for the Dual Enforcers... converting them from a functional movie replica into a precision piece of equipment.\n[c][00FF00]Damage +20%\nRecoil -30%[-][/c]\n[c][FFBB00]Compatible with the Dual Enforcers[-][/c]
+  MarketPrice: 70000, display: true
+}
 # ==========================================================
 # ============= Trading Cards (weird, right?) ==============
 # ==========================================================
@@ -1010,16 +1062,15 @@
 
 
 
-
 # ======================================================================================================================================================================
 # =================================================================================================================================Project Eden Custom Tokens:
 # ======================================================================================================================================================================
 
 # Admin Control Chip required to access admin settings
-{ Token Id: 6000, Name: [c][ffff00]Project Eden Admin Access Card[-][/c]
+{ Token Id: 6000, Name: [c][0000ff]Project Eden Admin Access Card[-][/c]
   CustomIcon: Eden_GuideAdmin2
   DropOnDeath: false
-  Description: "[c][ffff00]Admin item[-][/c] \n\n[c][ffffff]This key card allows access to the scenario admin controls in Project Eden. \n\nThe admin controls are located in the briefing rooms of most Project Eden Research Vessels outside the starting systems or you can access it in the tutorial tab of the PDA."
+  Description: "[c][0000ff]Admin item[-][/c] \n\n[c][ffffff]This key card allows access to the scenario admin settings under the Tutorial tab of the PDA and various debug options in dialogues."
 }
 
 
@@ -1073,7 +1124,7 @@
 }
 
 # Derelict Station/Lost Station logs
-{ Token Id: 6006, Name: "[c][FF0000]Salvaging or retrieving with a multitool is[-][/c]"
+{ Token Id: 6006, Name: "Salvaging with a multitool is"
   DropOnDeath: false
   Description: "Dummy token for in-game description of the locked Salvage found in wrecks."
 }
@@ -1138,6 +1189,162 @@
   CustomIcon: Tablet
   DropOnDeath: false
   Description: "[c][A9A9A9]Dear Terran,\n\nThank you for the ship! We'll make sure to think of you every time we're out cruisin' the galaxy.\nToo bad we had to leave you in that pit, I was just starting to like you.\n\nLucky for you I was able to convince the rest of me crew to leave you with some gear to give you a fightin' chance!\n\nAh well, perhaps we will meet again one day and I might even give you the opportunity to win back your ship.\nWho am I kidding? I could read you like an open book! Hah!\n\nUntil we meet again.[-][/c]"
+}
+
+# Tokens for random starting planet selection
+{ Token Id: 6020, Name: Teleporter Access Key Card [c][00FFFF]A[-][/c]
+  CustomIcon: KeyCardBlack
+  DropOnDeath: false
+  RemoveOnUse: true
+  # Description: "Use on teleporter A in the random starting hub.\nThis token can be traded to other players or left in the public container in the starting hub for another player to follow you."
+  Description: Eden_RandomStartinfo
+}
+
+{ Token Id: 6021, Name: Teleporter Access Key Card [c][00FFFF]B[-][/c]
+  CustomIcon: KeyCardBlack
+  DropOnDeath: false
+  RemoveOnUse: true
+  Description: Eden_RandomStartinfo
+}
+
+{ Token Id: 6022, Name: Teleporter Access Key Card [c][00FFFF]C[-][/c]
+  CustomIcon: KeyCardBlack
+  DropOnDeath: false
+  RemoveOnUse: true
+  Description: Eden_RandomStartinfo
+}
+
+{ Token Id: 6023, Name: Teleporter Access Key Card [c][00FFFF]D[-][/c]
+  CustomIcon: KeyCardBlack
+  DropOnDeath: false
+  RemoveOnUse: true
+  Description: Eden_RandomStartinfo
+}
+
+{ Token Id: 6024, Name: Teleporter Access Key Card [c][00FFFF]E[-][/c]
+  CustomIcon: KeyCardBlack
+  DropOnDeath: false
+  RemoveOnUse: true
+  Description: Eden_RandomStartinfo
+}
+
+{ Token Id: 6025, Name: Teleporter Access Key Card [c][00FFFF]F[-][/c]
+  CustomIcon: KeyCardBlack
+  DropOnDeath: false
+  RemoveOnUse: true
+  Description: Eden_RandomStartinfo
+}
+
+{ Token Id: 6026, Name: Teleporter Access Key Card [c][00FFFF]G[-][/c]
+  CustomIcon: KeyCardBlack
+  DropOnDeath: false
+  RemoveOnUse: true
+  Description: Eden_RandomStartinfo
+}
+
+{ Token Id: 6027, Name: Teleporter Access Key Card [c][00FFFF]H[-][/c]
+  CustomIcon: KeyCardBlack
+  DropOnDeath: false
+  RemoveOnUse: true
+  Description: Eden_RandomStartinfo
+}
+
+{ Token Id: 6028, Name: Teleporter Access Key Card [c][00FFFF]I[-][/c]
+  CustomIcon: KeyCardBlack
+  DropOnDeath: false
+  RemoveOnUse: true
+  Description: Eden_RandomStartinfo
+}
+
+{ Token Id: 6029, Name: Teleporter Access Key Card [c][00FFFF]J[-][/c]
+  CustomIcon: KeyCardBlack
+  DropOnDeath: false
+  RemoveOnUse: true
+  Description: Eden_RandomStartinfo
+}
+
+{ Token Id: 6030, Name: Teleporter Access Key Card [c][00FFFF]K[-][/c]
+  CustomIcon: KeyCardBlack
+  DropOnDeath: false
+  RemoveOnUse: true
+  Description: Eden_RandomStartinfo
+}
+
+{ Token Id: 6031, Name: Teleporter Access Key Card [c][00FFFF]L[-][/c]
+  CustomIcon: KeyCardBlack
+  DropOnDeath: false
+  RemoveOnUse: true
+  Description: Eden_RandomStartinfo
+}
+
+{ Token Id: 6032, Name: Teleporter Access Key Card [c][00FFFF]M[-][/c]
+  CustomIcon: KeyCardBlack
+  DropOnDeath: false
+  RemoveOnUse: true
+  Description: Eden_RandomStartinfo
+}
+
+{ Token Id: 6033, Name: Teleporter Access Key Card [c][00FFFF]N[-][/c]
+  CustomIcon: KeyCardBlack
+  DropOnDeath: false
+  RemoveOnUse: true
+  Description: Eden_RandomStartinfo
+}
+
+{ Token Id: 6034, Name: Teleporter Access Key Card [c][00FFFF]O[-][/c]
+  CustomIcon: KeyCardBlack
+  DropOnDeath: false
+  RemoveOnUse: true
+  Description: Eden_RandomStartinfo
+}
+
+{ Token Id: 6035, Name: Teleporter Access Key Card [c][00FFFF]P[-][/c]
+  CustomIcon: KeyCardBlack
+  DropOnDeath: false
+  RemoveOnUse: true
+  Description: Eden_RandomStartinfo
+}
+
+{ Token Id: 6036, Name: Teleporter Access Key Card [c][00FFFF]Q[-][/c]
+  CustomIcon: KeyCardBlack
+  DropOnDeath: false
+  RemoveOnUse: true
+  Description: Eden_RandomStartinfo
+}
+
+{ Token Id: 6037, Name: Teleporter Access Key Card [c][00FFFF]R[-][/c]
+  CustomIcon: KeyCardBlack
+  DropOnDeath: false
+  RemoveOnUse: true
+  Description: Eden_RandomStartinfo
+}
+
+{ Token Id: 6038, Name: Teleporter Access Key Card [c][00FFFF]S[-][/c]
+  CustomIcon: KeyCardBlack
+  DropOnDeath: false
+  RemoveOnUse: true
+  Description: Eden_RandomStartinfo
+}
+
+{ Token Id: 6039, Name: Teleporter Access Key Card [c][00FFFF]T[-][/c]
+  CustomIcon: KeyCardBlack
+  DropOnDeath: false
+  RemoveOnUse: true
+  Description: Eden_RandomStartinfo
+}
+
+{ Token Id: 6040, Name: Teleporter Access Key Card [c][00FFFF]U[-][/c]
+  CustomIcon: KeyCardBlack
+  DropOnDeath: false
+  RemoveOnUse: true
+  Description: Eden_RandomStartinfo
+}
+
+{ Token Id: 6041, Name: Teleporter Access Key Card [c][00FFFF]V[-][/c]
+  CustomIcon: KeyCardBlack
+  DropOnDeath: false
+  RemoveOnUse: true
+  Description: Eden_RandomStartinfo
 }
 
 # ================================================================================================================================ Trading seperators
@@ -1357,6 +1564,52 @@
   Description: "A broken processor taken from an strange structure on an asteroid field in the Syntrax system.\n\n[c][FF00FF]Mission item:[-][/c]\nExpedition: Dronelands"
 }
 
+# For mission on desert crystal planets
+{ Token Id: 6131, Name: Deep Level Mineral Survey
+  CustomIcon: Eden_GuideTextOrange
+  Description: "The results of a deep level mineral survey.\nA Polaris surveyor on crystal desert planets may be interested in 3 of these surveys."
+}
+
+# Generic Tal'on Treasure Key for opening locked Treasure Boxes
+{ Token Id: 6132, Name: Old Treasure Key
+  CustomIcon: Eden_TreasureKey
+  Description: "This key might open a treasure box somewhere."
+  RemoveOnUse: true
+}
+
+# Crystal tablet
+{ Token Id: 6133, Name: Ancient Aurum Crystal Tablet
+  CustomIcon: Eden_TabletAmber
+  Description: "This is a carving of ancient Tal'on design on a tablet of pure aurum crystal. The Polaris Surveyor on Crystal Desert class planets may be interested in this."
+}
+
+# Packaged crystal tablet
+{ Token Id: 6134, Name: Packaged Ancient Aurum Crystal Tablet
+  CustomIcon: Eden_Chest
+  Description: "This is a carving of ancient Tal'on design on a tablet of pure aurum crystal, packed in an official Polaris secure container made to resemble a Tal'on design. The Tal'on on Desert Oasis class planets may be interested in this."
+}
+
+# =============================================== Tokens for Smuggler missions
+{ Token Id: 6135, Name: [c][afff4d]Smuggler Package[-][/c]
+  CustomIcon: Eden_Chest
+  Description: "[c][afff4d]Used for smuggler jobs.[-][/c]"
+}
+
+{ Token Id: 6136, Name: [c][afff4d]ArkBank Ledger[-][/c]
+  CustomIcon: Eden_ArkBankLedger
+  Description: "A detailed record of transactions at an ArkBank branch.\n\n[c][afff4d]Used for smuggler jobs.[-][/c]"
+}
+
+{ Token Id: 6137, Name: [c][afff4d]Second-hand Supplies[-][/c]
+  CustomIcon: CargoPalette04
+  Description: "[c][afff4d]Used for smuggler jobs.[-][/c]"
+}
+
+{ Token Id: 6138, Name: [c][afff4d]Safe Smuggling Route[-][/c]
+  CustomIcon: Eden_GuideTextOrange
+  Description: "Give to a smuggler to restock them with a new type of smuggled good.\nCan only turn in at a smuggler who is currently out of stock.\n\nA detailed map of customs and military patrols and warp lanes. A smuggler could put this to good use to restock their supply of smuggled goods that they sell."
+}
+
 # ================================================================================================================================ Tokens for message deliveries
 
 { Token Id: 6150, Name: Message for Trade Federation Orbital Habitat
@@ -1377,7 +1630,7 @@
   MarketPrice: 25000, display: true
 }
 
-# ================================================================================================================================ Licenses and Rewards
+# ================================================================================================================================ Licenses Rewards
 
 # Polaris Refinery License
 { Token Id: 6201, Name: [c][00FFFF]Polaris Refinery License[/c]
@@ -1396,7 +1649,6 @@
   RemoveOnUse: true
 }
 
-# Colonists Refinery License
 { Token Id: 6203, Name: Stolen Polaris Supply Cache Access Card
   Description: "Opens the door of a Polaris supply cache, allowing you to break into it without reputation penalty. Single use only."
   # Description: Eden_PolarisRefineryLicenseinfo
@@ -1407,10 +1659,9 @@
 # Summons UCH Research Vessel
 { Token Id: 6204, Name: UCH Research Beacon
   CustomIcon: Eden_UCHBeacon
-  Description: "Signals a UCH Research Vessel to warp in nearby. Use by placing in your personal inventory then activate the Warp in UCH Research Vessel mission in the PDA under Science and Research.\nCan only be used in standard habitable, cold, and hot planetary orbits and only once per sector.\nWarning: make sure there are no obstacles within 2000 meters before activating."
+  Description: "Signals a UCH Research Vessel to warp in nearby.\n\n[c][00FFFF]INSTRUCTIONS FOR USE:[-][/c][sup]\n[c][FFFFFF]- Place down a Base Starter Block to spawn a new base while in space (hold O first to make it even with the playfield).\n- Place a Construction Beacon directly on top of the core.\n- Place the UCH Research Beacon into your personal inventory then interact with the Construction Beacon.\n- Select Call in UCH Research Vessel and follow the instructions.[-][/c][/sup]\n\nCan only be used in standard habitable, cold, and hot planetary orbits and only once per sector.\n[c][FF0000]Warning:[-][/c] make sure there are no obstacles within 2000 meters before activating."
   DropOnDeath: false
 }
-
 
 # Exploration Data
 # { Token Id: 6202, Name: Exploration Data
@@ -1431,7 +1682,6 @@
 { Token Id: 6302, Name: [c][8FFF8F]Suspicious Package[/c]
   Description: A small package to be delivered to Room 4 in the Syndicate Casino. \n\n[i][c][A9A9A9]It's ticking...[-][/c][/i]
 }
-
 
 { Token Id: 6303, Name: Smuggler Key Card
   CustomIcon: KeyCardYellow
@@ -1480,12 +1730,43 @@
   Description: "A draft version of a pocket guide to the basic star classes in Andromeda."
 }
 
+{ Token Id: 6311, Name: UCH Access Card
+  CustomIcon: KeyCardBlue
+  Description: "A one time use keycard allowing access to a door or console."
+  RemoveOnUse: true
+}
+
+{ Token Id: 6312, Name: UCH Restricted Access Card
+  CustomIcon: KeyCardBlue
+  Description: "A one time use keycard allowing access to a secure door or console."
+  RemoveOnUse: true
+}
+
+{ Token Id: 6313, Name: [c][A9A9A9]Ancient Jump Gate Repair List[-][/c]
+  CustomIcon: KeyCardBlue
+  Description: "[c][A9A9A9]A reference list of materials needed to repair an ancient jump gate.\n\n1 Quantum Processor\n100 Promethium Hydrocell\n5 Heat Exchanger\n2 Antimatter Converter\n2000 Repair Charge"
+  RemoveOnUse: true
+}
+
+{ Token Id: 6314, Name: [c][FFFF00]Smuggler Boss Key Card[-][/c]
+  CustomIcon: KeyCardYellow
+  RemoveOnUse: true
+  Description: "A key card from a smuggler boss. Probably used for something important on the base you found it on.\n\n[c][FF0000]Consumed on use.[-][/c]"
+  MarketPrice: 500, display: true
+}
+
+{ Token Id: 6315, Name: [c][FFFF00]Smuggler Safe Key Card[-][/c]
+  CustomIcon: KeyCardYellow
+  RemoveOnUse: true
+  Description: "A key card that can be used to open a smuggler safe. Probably used for something important on the base you found it on.\n\n[c][FF0000]Consumed on use.[-][/c]"
+  MarketPrice: 500, display: true
+}
 # ================================================================================================================================ Schematics
 # Encrypted Schematic
 { Token Id: 6400, Name: "[c][FFFFFF]Encrypted Schematic[-][/c]"
   CustomIcon: Eden_RecipeRandom2
   DropOnDeath: false
-  Description: "An encrypted schematic.\nDecode it to obtain a random schematic by using a schematic computer on board a UCH Research Vessel or your science station."
+  Description: Eden_EncryptedSchematicinfo
   MarketPrice: 50000, display: true
 }
 
@@ -1625,6 +1906,22 @@
   MarketPrice: 50000, display: true
 }
 
+# Phalanx Battery (Heavy)
+{ Token Id: 6418, Name: "Schematic - [c][FFFFFF]Phalanx Battery (Heavy)[-][/c]"
+  CustomIcon: Eden_WeaponCVHeavyVulcanT3_Recipe
+  DropOnDeath: false
+  Description: "Schematic category: [c][00FFFF]UCH Technology[-][/c].\nCost: [c][00FFFF]100 Unlock Points[-][/c]\n\nSchematics can be turned in at Schematic Computers on UCH Research Vessels to unlock the listed crafting template or sold to traders."
+  MarketPrice: 200000, display: true
+}
+
+# Shielded Fusion Reactor
+{ Token Id: 6419, Name: "Schematic - [c][FFFFFF]Shielded Fusion Reactor (Heavy)[-][/c]"
+  CustomIcon: FusionReactorShieldedLarge_Recipe
+  DropOnDeath: false
+  Description: "Schematic category: [c][00FFFF]UCH Technology[-][/c].\nCost: [c][00FFFF]100 Unlock Points[-][/c]\n\nSchematics can be turned in at Schematic Computers on UCH Research Vessels to unlock the listed crafting template or sold to traders."
+  MarketPrice: 200000, display: true
+}
+
 # ================================================================================================================================ Mission Tokens
 
 # ----------------------------------------------------------------------------------------- Frontier mission
@@ -1748,13 +2045,6 @@
   MarketPrice: 50000, display: true
 }
 
-# Mining Contract Reward
-{ Token Id: 6517, Name: Mining Contract Reward Tier 1
-  CustomIcon: AlienContainerRare
-  Description: "Turn in at a distribution center in the trade station sector of a faction."
-  MarketPrice: 50000, display: true
-}
-
 # ----------------------------------------------------------------------------------------- Combat Site Loot
 
 # Combat Reward Tier 1
@@ -1826,10 +2116,18 @@
   MarketPrice: 60000, display: false
 }
 
-{ Token Id: 6531, Name: "[c][FF00FF]Legacy Bio Cache[-][/c]"
-  CustomIcon: AlienContainerUltraRare
+{ Token Id: 6531, Name: "[c][00FFAA]Legacy Bio Cache[-][/c]"
+  CustomIcon: CargoBoxLegacy
   Description: Eden_CacheAlieninfo
   MarketPrice: 60000, display: false
+}
+
+# ----------------------------------------------------------------------------------------- Supply Caches
+
+{ Token Id: 6540, Name: "[c][dfb772]Pentaxid Supply Cache[-][/c]"
+  CustomIcon: AlienContainer
+  Description: "A container of refined pentaxid.\nOpen using a science station."
+  MarketPrice: 10000, display: false
 }
 
 # ----------------------------------------------------------------------------------------- Exploration reports
@@ -2712,103 +3010,297 @@
 
 
 
+# ================================================================================================================================ Mining contracts
+
+# Added to make loot easier to handle. This allows for 1 loot group for containers to give the proper distribution of mining contracts.
+{ Token Id: 6799, Name: "[c][00FFFF]Sealed Mining Contract[-][/c]"
+  CustomIcon: Eden_MiningContractSealed
+  Description: Eden_MiningContractSealed_Info
+  MarketPrice: 10000, display: true
+}
+
+# ----------------------------------------------------------------------------------------- Colonists 6800-6819
+# Graphite, Iron, Silicon, Copper, Ice
+
+{ Token Id: 6800, Name: "[c][00FFFF]Mining Contract: Graphite[-][/c]"
+  CustomIcon: Eden_MiningContractColGraphite
+  Description: Eden_MiningContractColGraphite_Info
+  MarketPrice: 10000, display: true
+}
+
+{ Token Id: 6801, Name: "[c][00FFFF]Mining Contract: Iron[-][/c]"
+  CustomIcon: Eden_MiningContractColIron
+  Description: Eden_MiningContractColIron_Info
+  MarketPrice: 10000, display: true
+}
+
+{ Token Id: 6802, Name: "[c][00FFFF]Mining Contract: Silicon[-][/c]"
+  CustomIcon: Eden_MiningContractColSilicon
+  Description: Eden_MiningContractColSilicon_Info
+  MarketPrice: 10000, display: true
+}
+
+{ Token Id: 6803, Name: "[c][00FFFF]Mining Contract: Copper[-][/c]"
+  CustomIcon: Eden_MiningContractColCopper
+  Description: Eden_MiningContractColCopper_Info
+  MarketPrice: 10000, display: true
+}
+
+{ Token Id: 6804, Name: "[c][00FFFF]Mining Contract: Ice[-][/c]"
+  CustomIcon: Eden_MiningContractColIce
+  Description: Eden_MiningContractColIce_Info
+  MarketPrice: 10000, display: true
+}
+
+{ Token Id: 6805, Name: "[c][00FFFF]Mining Contract: Titanium[-][/c]"
+  CustomIcon: Eden_MiningContractColTitanium
+  Description: Eden_MiningContractColTitanium_Info
+  MarketPrice: 10000, display: true
+}
+
+{ Token Id: 6806, Name: "[c][00FFFF]Mining Contract: Aluminium[-][/c]"
+  CustomIcon: Eden_MiningContractColAluminium
+  Description: Eden_MiningContractColAluminium_Info
+  MarketPrice: 10000, display: true
+}
+
+
+# ----------------------------------------------------------------------------------------- Polaris 6820-6839
+# Cobalt, Titanium, Neodymium, Aluminium, Promethium, Rich Ice
+
+{ Token Id: 6820, Name: "[c][00FFFF]Mining Contract: Cobalt[-][/c]"
+  CustomIcon: Eden_MiningContractPolCobalt
+  Description: Eden_MiningContractPolCobalt_Info
+  MarketPrice: 10000, display: true
+}
+
+{ Token Id: 6821, Name: "[c][00FFFF]Mining Contract: Titanium[-][/c]"
+  CustomIcon: Eden_MiningContractPolTitanium
+  Description: Eden_MiningContractPolTitanium_Info
+  MarketPrice: 10000, display: true
+}
+
+{ Token Id: 6822, Name: "[c][00FFFF]Mining Contract: Neodymium[-][/c]"
+  CustomIcon: Eden_MiningContractPolNeodymium
+  Description: Eden_MiningContractPolNeodymium_Info
+  MarketPrice: 10000, display: true
+}
+
+{ Token Id: 6823, Name: "[c][00FFFF]Mining Contract: Aluminium[-][/c]"
+  CustomIcon: Eden_MiningContractPolAluminium
+  Description: Eden_MiningContractPolAluminium_Info
+  MarketPrice: 10000, display: true
+}
+
+{ Token Id: 6824, Name: "[c][00FFFF]Mining Contract: Promethium[-][/c]"
+  CustomIcon: Eden_MiningContractPolPromethium
+  Description: Eden_MiningContractPolPromethium_Info
+  MarketPrice: 10000, display: true
+}
+
+{ Token Id: 6825, Name: "[c][00FFFF]Mining Contract: Rich Ice[-][/c]"
+  CustomIcon: Eden_MiningContractPolRichIce
+  Description: Eden_MiningContractPolRichIce_Info
+  MarketPrice: 10000, display: true
+}
+
+{ Token Id: 6826, Name: "[c][00FFFF]Mining Contract: Iron[-][/c]"
+  CustomIcon: Eden_MiningContractPolIron
+  Description: Eden_MiningContractPolIron_Info
+  MarketPrice: 10000, display: true
+}
+
+{ Token Id: 6827, Name: "[c][00FFFF]Mining Contract: Copper[-][/c]"
+  CustomIcon: Eden_MiningContractPolCopper
+  Description: Eden_MiningContractPolCopper_Info
+  MarketPrice: 10000, display: true
+}
+
+
+# ----------------------------------------------------------------------------------------- Trade Federation 6840-6859
+# Platinum, Erestrum, Gold, tungsten, Pentaxid
+
+{ Token Id: 6840, Name: "[c][00FFFF]Mining Contract: Platinum[-][/c]"
+  CustomIcon: Eden_MiningContractTraPlatinum
+  Description: Eden_MiningContractTraPlatinum_Info
+  MarketPrice: 10000, display: true
+}
+
+{ Token Id: 6841, Name: "[c][00FFFF]Mining Contract: Erestrum[-][/c]"
+  CustomIcon: Eden_MiningContractTraErestrum
+  Description: Eden_MiningContractTraErestrum_Info
+  MarketPrice: 10000, display: true
+}
+
+{ Token Id: 6842, Name: "[c][00FFFF]Mining Contract: Gold[-][/c]"
+  CustomIcon: Eden_MiningContractTraGold
+  Description: Eden_MiningContractTraGold_Info
+  MarketPrice: 10000, display: true
+}
+
+{ Token Id: 6843, Name: "[c][00FFFF]Mining Contract: Tungsten[-][/c]"
+  CustomIcon: Eden_MiningContractTraTungsten
+  Description: Eden_MiningContractTraTungsten_Info
+  MarketPrice: 10000, display: true
+}
+
+{ Token Id: 6844, Name: "[c][00FFFF]Mining Contract: Pentaxid[-][/c]"
+  CustomIcon: Eden_MiningContractTraPentaxid
+  Description: Eden_MiningContractTraPentaxid_Info
+  MarketPrice: 10000, display: true
+}
+
+{ Token Id: 6845, Name: "[c][00FFFF]Mining Contract: Stone[-][/c]"
+  CustomIcon: Eden_MiningContractTraStone
+  Description: Eden_MiningContractTraStone_Info
+  MarketPrice: 10000, display: true
+}
+
+
+
+
+# ----------------------------------------------------------------------------------------- Zirax Empire 6860-6879
+# Magnesium, Sathium, Zascosium, Palladium, Magmacite
+
+{ Token Id: 6860, Name: "[c][00FFFF]Mining Contract: Magnesium[-][/c]"
+  CustomIcon: Eden_MiningContractZirMagnesium
+  Description: Eden_MiningContractZirMagnesium_Info
+  MarketPrice: 10000, display: true
+}
+
+{ Token Id: 6861, Name: "[c][00FFFF]Mining Contract: Sathium[-][/c]"
+  CustomIcon: Eden_MiningContractZirSathium
+  Description: Eden_MiningContractZirSathium_Info
+  MarketPrice: 10000, display: true
+}
+
+{ Token Id: 6862, Name: "[c][00FFFF]Mining Contract: Zascosium[-][/c]"
+  CustomIcon: Eden_MiningContractZirZascosium
+  Description: Eden_MiningContractZirZascosium_Info
+  MarketPrice: 10000, display: true
+}
+
+{ Token Id: 6863, Name: "[c][00FFFF]Mining Contract: Palladium[-][/c]"
+  CustomIcon: Eden_MiningContractZirPalladium
+  Description: Eden_MiningContractZirPalladium_Info
+  MarketPrice: 10000, display: true
+}
+
+{ Token Id: 6864, Name: "[c][00FFFF]Mining Contract: Magmacite[-][/c]"
+  CustomIcon: Eden_MiningContractZirMagmacite
+  Description: Eden_MiningContractZirMagmacite_Info
+  MarketPrice: 10000, display: true
+}
+
+{ Token Id: 6865, Name: "[c][00FFFF]Mining Contract: Erestrum[-][/c]"
+  CustomIcon: Eden_MiningContractZirErestrum
+  Description: Eden_MiningContractZirErestrum_Info
+  MarketPrice: 10000, display: true
+}
+
+{ Token Id: 6866, Name: "[c][00FFFF]Mining Contract: Titanium[-][/c]"
+  CustomIcon: Eden_MiningContractZirTitanium
+  Description: Eden_MiningContractZirTitanium_Info
+  MarketPrice: 10000, display: true
+}
+
+
+# # Fulfilled Mining Contract Tier 1
+# { Token Id: 6801, Name: "Fulfilled Mining Contract Tier 1"
+  # CustomIcon: KeyCardRed
+  # Description: "Used to start a mining mission."
+  # MarketPrice: 25000, display: true
+# }
+
+# # Fulfilled Mining Contract Tier 2
+# { Token Id: 6802, Name: "Fulfilled Mining Contract Tier 2"
+  # CustomIcon: KeyCardRed
+  # Description: "Used to start a mining mission."
+  # MarketPrice: 25000, display: true
+# }
+
+# # Fulfilled Mining Contract Tier 3
+# { Token Id: 6803, Name: "Fulfilled Mining Contract Tier 3"
+  # CustomIcon: KeyCardRed
+  # Description: "Used to start a mining mission."
+  # MarketPrice: 25000, display: true
+# }
+
+# # Fulfilled Mining Contract Tier 4
+# { Token Id: 6804, Name: "Fulfilled Mining Contract Tier 4"
+  # CustomIcon: KeyCardRed
+  # Description: "Used to start a mining mission."
+  # MarketPrice: 25000, display: true
+# }
+
+# # Fulfilled Mining Contract Tier 1
+# { Token Id: 6805, Name: "Fulfilled Mining Contract Tier 5"
+  # CustomIcon: KeyCardRed
+  # Description: "Used to start a mining mission."
+  # MarketPrice: 25000, display: true
+# }
 
 # Fulfilled Mining Contract Tier 1
-{ Token Id: 6801, Name: "Fulfilled Mining Contract Tier 1"
-  CustomIcon: KeyCardRed
-  Description: "Used to start a mining mission."
-  MarketPrice: 25000, display: true
-}
+# { Token Id: 6806, Name: "Fulfilled Mining Contract Tier 6"
+  # CustomIcon: KeyCardRed
+  # Description: "Used to start a mining mission."
+  # MarketPrice: 25000, display: true
+# }
 
-# Fulfilled Mining Contract Tier 2
-{ Token Id: 6802, Name: "Fulfilled Mining Contract Tier 2"
-  CustomIcon: KeyCardRed
-  Description: "Used to start a mining mission."
-  MarketPrice: 25000, display: true
-}
+# # Colonists Mining Contract: Iron
+# { Token Id: 6811, Name: "[c][FFFFFF](Colonists)[-][/c] Mining Contract: Iron"
+  # CustomIcon: Eden_GuideOreBlue1
+  # DropOnDeath: false
+  # Description: "Used to start a mining contract mission.\nPlace in your personal inventory then start the contract in the PDA under Contracts.\nKeep the contract, you will need it to complete the mission."
+  # MarketPrice: 500, display: true
+# }
 
-# Fulfilled Mining Contract Tier 3
-{ Token Id: 6803, Name: "Fulfilled Mining Contract Tier 3"
-  CustomIcon: KeyCardRed
-  Description: "Used to start a mining mission."
-  MarketPrice: 25000, display: true
-}
+# # Colonists Mining Contract: Copper, Silicon
+# { Token Id: 6812, Name: "[c][FFFFFF](Colonists)[-][/c] Mining Contract: Copper, Silicon"
+  # CustomIcon: Eden_GuideOreBlue2
+  # DropOnDeath: false
+  # Description: "Used to start a mining contract mission.\nPlace in your personal inventory then start the contract in the PDA under Contracts.\nKeep the contract, you will need it to complete the mission."
+  # MarketPrice: 500, display: true
+# }
 
-# Fulfilled Mining Contract Tier 4
-{ Token Id: 6804, Name: "Fulfilled Mining Contract Tier 4"
-  CustomIcon: KeyCardRed
-  Description: "Used to start a mining mission."
-  MarketPrice: 25000, display: true
-}
+# # Colonists Mining Contract: Promethium, Titanium, Magnesium
+# { Token Id: 6813, Name: "[c][FFFFFF](Colonists)[-][/c] Mining Contract: Promethium, Titanium, Magnesium"
+  # CustomIcon: Eden_GuideOreBlue3
+  # DropOnDeath: false
+  # Description: "Used to start a mining contract mission.\nPlace in your personal inventory then start the contract in the PDA under Contracts.\nKeep the contract, you will need it to complete the mission."
+  # MarketPrice: 500, display: true
+# }
 
-# Fulfilled Mining Contract Tier 1
-{ Token Id: 6805, Name: "Fulfilled Mining Contract Tier 5"
-  CustomIcon: KeyCardRed
-  Description: "Used to start a mining mission."
-  MarketPrice: 25000, display: true
-}
+# # Polaris Mining Contract: Iron, Cobalt, Neodymium
+# { Token Id: 6821, Name: "[c][E59933](Polaris)[-][/c] Mining Contract: Iron, Cobalt, Neodymium"
+  # CustomIcon: Eden_GuideOreOrange1
+  # DropOnDeath: false
+  # Description: "Used to start a mining contract mission.\nPlace in your personal inventory then start the contract in the PDA under Contracts.\nKeep the contract, you will need it to complete the mission."
+  # MarketPrice: 500, display: true
+# }
 
-# Fulfilled Mining Contract Tier 1
-{ Token Id: 6806, Name: "Fulfilled Mining Contract Tier 6"
-  CustomIcon: KeyCardRed
-  Description: "Used to start a mining mission."
-  MarketPrice: 25000, display: true
-}
+# # Polaris Mining Contract: Sathium, Gold, Erestrum
+# { Token Id: 6822, Name: "[c][E59933](Polaris)[-][/c] Mining Contract: Sathium, Gold, Erestrum"
+  # CustomIcon: Eden_GuideOreOrange2
+  # DropOnDeath: false
+  # Description: "Used to start a mining contract mission.\nPlace in your personal inventory then start the contract in the PDA under Contracts.\nKeep the contract, you will need it to complete the mission."
+  # MarketPrice: 500, display: true
+# }
 
-# Colonists Mining Contract: Iron
-{ Token Id: 6811, Name: "[c][FFFFFF](Colonists)[-][/c] Mining Contract: Iron"
-  CustomIcon: Eden_GuideOreBlue1
-  DropOnDeath: false
-  Description: "Used to start a mining contract mission.\nPlace in your personal inventory then start the contract in the PDA under Contracts.\nKeep the contract, you will need it to complete the mission."
-  MarketPrice: 500, display: true
-}
+# # Polaris Mining Contract: Pentaxid, Zascosium, Aluminium
+# { Token Id: 6823, Name: "[c][E59933](Polaris)[-][/c] Mining Contract: Pentaxid, Zascosium, Aluminium"
+  # CustomIcon: Eden_GuideOreOrange3
+  # DropOnDeath: false
+  # Description: "Used to start a mining contract mission.\nPlace in your personal inventory then start the contract in the PDA under Contracts.\nKeep the contract, you will need it to complete the mission."
+  # MarketPrice: 500, display: true
+# }
 
-# Colonists Mining Contract: Copper, Silicon
-{ Token Id: 6812, Name: "[c][FFFFFF](Colonists)[-][/c] Mining Contract: Copper, Silicon"
-  CustomIcon: Eden_GuideOreBlue2
-  DropOnDeath: false
-  Description: "Used to start a mining contract mission.\nPlace in your personal inventory then start the contract in the PDA under Contracts.\nKeep the contract, you will need it to complete the mission."
-  MarketPrice: 500, display: true
-}
-
-# Colonists Mining Contract: Promethium, Titanium, Magnesium
-{ Token Id: 6813, Name: "[c][FFFFFF](Colonists)[-][/c] Mining Contract: Promethium, Titanium, Magnesium"
-  CustomIcon: Eden_GuideOreBlue3
-  DropOnDeath: false
-  Description: "Used to start a mining contract mission.\nPlace in your personal inventory then start the contract in the PDA under Contracts.\nKeep the contract, you will need it to complete the mission."
-  MarketPrice: 500, display: true
-}
-
-# Polaris Mining Contract: Iron, Cobalt, Neodymium
-{ Token Id: 6821, Name: "[c][E59933](Polaris)[-][/c] Mining Contract: Iron, Cobalt, Neodymium"
-  CustomIcon: Eden_GuideOreOrange1
-  DropOnDeath: false
-  Description: "Used to start a mining contract mission.\nPlace in your personal inventory then start the contract in the PDA under Contracts.\nKeep the contract, you will need it to complete the mission."
-  MarketPrice: 500, display: true
-}
-
-# Polaris Mining Contract: Sathium, Gold, Erestrum
-{ Token Id: 6822, Name: "[c][E59933](Polaris)[-][/c] Mining Contract: Sathium, Gold, Erestrum"
-  CustomIcon: Eden_GuideOreOrange2
-  DropOnDeath: false
-  Description: "Used to start a mining contract mission.\nPlace in your personal inventory then start the contract in the PDA under Contracts.\nKeep the contract, you will need it to complete the mission."
-  MarketPrice: 500, display: true
-}
-
-# Polaris Mining Contract: Pentaxid, Zascosium, Aluminium
-{ Token Id: 6823, Name: "[c][E59933](Polaris)[-][/c] Mining Contract: Pentaxid, Zascosium, Aluminium"
-  CustomIcon: Eden_GuideOreOrange3
-  DropOnDeath: false
-  Description: "Used to start a mining contract mission.\nPlace in your personal inventory then start the contract in the PDA under Contracts.\nKeep the contract, you will need it to complete the mission."
-  MarketPrice: 500, display: true
-}
-
-{ Token Id: 6824, Name: "[c][E59933](Polaris)[-][/c] Mining Contract: Rich Ice"
-  CustomIcon: Eden_GuideOreOrange3
-  DropOnDeath: false
-  Description: "Used to start a mining contract mission.\nPlace in your personal inventory then start the contract in the PDA under Contracts.\nKeep the contract, you will need it to complete the mission.\n\nDetails: Mine rich ice asteroids within the galactic region of Solitude. Specialized ice mining drills will be required."
-  MarketPrice: 500, display: true
-}
+# { Token Id: 6824, Name: "[c][E59933](Polaris)[-][/c] Mining Contract: Rich Ice"
+  # CustomIcon: Eden_GuideOreOrange3
+  # DropOnDeath: false
+  # Description: "Used to start a mining contract mission.\nPlace in your personal inventory then start the contract in the PDA under Contracts.\nKeep the contract, you will need it to complete the mission.\n\nDetails: Mine rich ice asteroids within the galactic region of Solitude. Specialized ice mining drills will be required."
+  # MarketPrice: 500, display: true
+# }
 
 # # -------------------------------------------------------------------------- Wanted by Colonists
 # # Savanth Greenzald's Insignia
@@ -3195,7 +3687,7 @@
   DropOnDeath: false
   # Description: "[c][00ffff]>>> Empyriopedia <<<[-][/c][sup]\n\n[c][FFFF00]Tooltips:[-][/c] Tooltips provide useful information on many items and devices. Mouse over any item in your inventory, constructor, or tech tree to view important details.\n[c][FFFF00]PDA:[-][/c] Your PDA contains information on missions and an Empyriopedia section with important information.\n\nComplete the [c][00FFFF]Make Contact with Terran Forces[-][/c] mission under the Project Eden Story section to unlock additional missions and Empyriopedia entries. The Empyriopedia is filled in as you progress.\n\nAccess the PDA with [c][FFFF00]F1[-][/c].\n\n[c][FFFF00]Planets and Sectors: [-][/c]Planets and sectors in the current solar system are scanned and a basic description of each can be viewed on the local or solar system map.\n\n[c][FFFF00]Galaxy: [-][/c]Project Eden contains a large galaxy viewable on the galaxy map. Star class and faction territory change what you may find in a star system.[/sup]"
   # Description: "[c][00ffff]   >>> Read the PDA First <<<[-][/c][sup]\nAccess the PDA with [c][ffff00]F1[-][/c].\n\n[c][00ffff]Missions:[-][/c] Missions are managed under the Solo Missions PDA tab. Start completing the Reforged Galaxy or Project Eden story missions to unlock additional missions.\n\n[c][00ffff]Empyriopedia:[-][/c] Contains a comprehensive encyclopedia of the scenario in the PDA and can answer many of your questions. Additional entries are unlocked as you progress through the scenario.\n\n[c][00ffff]Journey Book:[-][/c] Shows a log of previous mission dialog in the PDA.\n\n[c][00ffff]Tooltips:[-][/c] Tooltips provide important information on many items and devices. Mouse over any item in your inventory, constructor, or tech tree to view details.\n\n[c][00ffff]Planets and Sectors:[-][/c] Planets and sectors in the current solar system are scanned and a basic description of each can be viewed on the local or solar system map.\n\n[c][00ffff]Galaxy:[-][/c] Project Eden contains a large galaxy viewable on the galaxy map. Star class and faction territory change what you may find in a star system.\n\n[c][00ffff]Mass and Volume:[-][/c] Enabled by default. Use the logistics system to move items too big to fit in your inventory.\n\n[c][00ffff]CPU:[-][/c] Enabled by default. Add CPU Extenders to increase the max CPU of your ship or base.[/sup]"
-  Description: "[c][00ffff]>>> Save blueprints often <<<[-][/c]\n\n[sup][c][00ffff]Missions:[-][/c] Missions and the PDA is disabled in creative mode.\n[c][00ffff]Mass and Volume:[-][/c] Disabled in creative mode. Use a [c][00ff00]survival game[-][/c] for testing the effects of mass and volume. Ship mass still counts while in creative.\n[c][00ffff]CPU:[-][/c] Disabled in creative mode. Add CPU Extenders to increase the max CPU of your ship or base so it will still function in survival. Check the CPU tab of the control panel to view current CPU specs.\n[c][ff5000]Restricted items:[-][/c] Some items in the Item Menu are intended for internal scenario development only and are not meant for use by players.\n\n[c][00ffff]Keyboard shortcuts:[-][/c] (default)\n[c][00ff00][G][-][/c] God Mode, [c][00ff00][H][-][/c] Item Menu\n\n[c][00ffff]Useful Console Commands:[-][/c]\n[c][00ff00]help[-][/c] Prints a list of all console commands. Use [c][ffffff]help command[-][/c] for help specific to that command.\n[c][00ff00]sector 'Name of Star/Planet'[-][/c] Teleports you to that star system, space sector, or orbit of that planet.\n[c][00ff00]tt 'Name of Planet'[-][/c] Teleports you to the surface of the planet or moon.\n[c][ffffff]sector 'Haven'[-][/c] will teleport you to the orbit of Haven.\n[c][ffffff]tt 'Alpha IV'[-][/c] will teleport you to the surface of Alpha IV.\n[c][00ff00]sd debug[-][/c] Allows you to double click any star in the galaxy map to view that star system. Useful for finding a specific planet type to build on.[/sup]"
+  Description: "[c][00ffff]>>> Save blueprints often <<<[-][/c]\n\n[sup][c][00ffff]Missions:[-][/c] Missions and the PDA is disabled in creative mode.\n[c][00ffff]Mass and Volume:[-][/c] Disabled in creative mode. Use a [c][00ff00]survival game[-][/c] for testing the effects of mass and volume. Ship mass still counts while in creative.\n[c][00ffff]CPU:[-][/c] Disabled in creative mode. Add CPU Extenders to increase the max CPU of your ship or base so it will still function in survival. Check the CPU tab of the control panel to view current CPU specs.\n[c][ff5000]Restricted items:[-][/c] Some items in the Item Menu are intended for internal scenario development only and are not meant for use by players.\n\n[c][00ffff]Keyboard shortcuts:[-][/c] (default)\n[c][00ff00][G][-][/c] God Mode, [c][00ff00][H][-][/c] Item Menu\n\n[c][00ffff]Useful Console Commands:[-][/c]\n[c][00ff00]help[-][/c] Prints a list of all console commands. Use [c][ffffff]help command[-][/c] for help specific to that command.\n[c][00ff00]prefabinfo 'Blueprint Name'[-][/c] Shows information to troubleshoot a blueprint by showing which blocks exceed limits or are illegal.\nCan only be used in creative mode and only on locally saved blueprints.\nSave workshop blueprints as personal\ncopies first.\n[c][00ff00]sector 'Name of Star/Planet'[-][/c] Teleports you to that star system, space sector, or orbit of that planet.\n[c][00ff00]tt 'Name of Planet'[-][/c] Teleports you to the surface of the planet or moon.\n[c][ffffff]sector 'Akua'[-][/c] will teleport you to the orbit of Akua.\n[c][ffffff]tt 'Alpha IV'[-][/c] will teleport you to the surface of Alpha IV.\n[c][00ff00]sd debug[-][/c] Allows you to double click any star in the galaxy map to view that star system. Useful for finding a specific planet type to build on.[/sup]"
   # Description: Eden_Supportinfo
 }
 
