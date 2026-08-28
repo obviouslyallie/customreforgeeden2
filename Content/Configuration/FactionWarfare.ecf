@@ -1368,7 +1368,7 @@
 
 { Element Name: Unit 
   Faction: Zirax
-  ClassName: SpaceDroneLaser   /* class from EClassConfig or ItemConfig or .epb name for vessels (without the .epb) */
+  ClassName: DroneSpaceZiraxLaser   /* class from EClassConfig or ItemConfig or .epb name for vessels (without the .epb) */
   Category: BaseDefenseOrbitVessel  /* category name. A category can contain multiple units of different strength. system will choose the best for requested price
                                     /*  - SmallMinigunDone, MediumMinigunDrone, HeavyMinigunDrone */
   CommandPointsLvl1: 5              /* price of the unit at lvl 1 */
@@ -1376,7 +1376,7 @@
 }
 { Element Name: Unit 
   Faction: Zirax
-  ClassName: SpaceDronePlasma   /* class from EClassConfig or ItemConfig or .epb name for vessels (without the .epb) */
+  ClassName: DroneSpaceZiraxRocket   /* class from EClassConfig or ItemConfig or .epb name for vessels (without the .epb) */
   Category: BaseDefenseOrbitVessel  /* category name. A category can contain multiple units of different strength. system will choose the best for requested price
                                     /*  - SmallMinigunDone, MediumMinigunDrone, HeavyMinigunDrone */
   CommandPointsLvl1: 5              /* price of the unit at lvl 1 */
@@ -1384,7 +1384,15 @@
 }
 { Element Name: Unit 
   Faction: Zirax
-  ClassName: SDS_Zunat   /* class from EClassConfig or ItemConfig or .epb name for vessels (without the .epb) */
+  ClassName: DroneSpaceZiraxPlasma   /* class from EClassConfig or ItemConfig or .epb name for vessels (without the .epb) */
+  Category: BaseDefenseOrbitVessel  /* category name. A category can contain multiple units of different strength. system will choose the best for requested price
+                                    /*  - SmallMinigunDone, MediumMinigunDrone, HeavyMinigunDrone */
+  CommandPointsLvl1: 5              /* price of the unit at lvl 1 */
+  CommandPointsPerLevel: 1          /* price per level, final price = CommandPointsLvl1 + level * CommandPointsPerLevel */
+}
+{ Element Name: Unit 
+  Faction: Zirax
+  ClassName: R2SDS_ZiraxCutter01   /* class from EClassConfig or ItemConfig or .epb name for vessels (without the .epb) */
   Category: BaseDefenseOrbitVessel  /* category name. A category can contain multiple units of different strength. system will choose the best for requested price
                                     /*  - SmallMinigunDone, MediumMinigunDrone, HeavyMinigunDrone */
   CommandPointsLvl1: 40              /* price of the unit at lvl 1 */
@@ -1392,7 +1400,7 @@
 }
 { Element Name: Unit 
   Faction: Zirax
-  ClassName: SDS_Periat   /* class from EClassConfig or ItemConfig or .epb name for vessels (without the .epb) */
+  ClassName: R2SDS_ZiraxCorvette01   /* class from EClassConfig or ItemConfig or .epb name for vessels (without the .epb) */
   Category: BaseDefenseOrbitVessel  /* category name. A category can contain multiple units of different strength. system will choose the best for requested price
                                     /*  - SmallMinigunDone, MediumMinigunDrone, HeavyMinigunDrone */
   CommandPointsLvl1: 60             /* price of the unit at lvl 1 */
@@ -1400,7 +1408,7 @@
 }
 { Element Name: Unit 
   Faction: Zirax
-  ClassName: SDS_Imerat   /* class from EClassConfig or ItemConfig or .epb name for vessels (without the .epb) */
+  ClassName: R2SDS_ZiraxFrigate01   /* class from EClassConfig or ItemConfig or .epb name for vessels (without the .epb) */
   Category: BaseDefenseOrbitVessel  /* category name. A category can contain multiple units of different strength. system will choose the best for requested price
                                     /*  - SmallMinigunDone, MediumMinigunDrone, HeavyMinigunDrone */
   CommandPointsLvl1: 80             /* price of the unit at lvl 1 */
@@ -1408,65 +1416,26 @@
 }
 { Element Name: Unit 
   Faction: Zirax
-  ClassName: RPV_XenuCutterT2   /* class from EClassConfig or ItemConfig or .epb name for vessels (without the .epb) */
+  ClassName: R2SDS_ZiraxDestroyer01   /* class from EClassConfig or ItemConfig or .epb name for vessels (without the .epb) */
   Category: BaseDefenseOrbitVessel  /* category name. A category can contain multiple units of different strength. system will choose the best for requested price
                                     /*  - SmallMinigunDone, MediumMinigunDrone, HeavyMinigunDrone */
-  CommandPointsLvl1: 10              /* price of the unit at lvl 1 */
-  CommandPointsPerLevel: 1          /* price per level, final price = CommandPointsLvl1 + level * CommandPointsPerLevel */
+  CommandPointsLvl1: 100              /* price of the unit at lvl 1 */
+  CommandPointsPerLevel: 10          /* price per level, final price = CommandPointsLvl1 + level * CommandPointsPerLevel */
 }
 { Element Name: Unit 
   Faction: Zirax
-  ClassName: RPV_EpsilonCutterT2   /* class from EClassConfig or ItemConfig or .epb name for vessels (without the .epb) */
-  Category: BaseDefenseOrbitVessel  /* category name. A category can contain multiple units of different strength. system will choose the best for requested price
-                                    /*  - SmallMinigunDone, MediumMinigunDrone, HeavyMinigunDrone */
-  CommandPointsLvl1: 10              /* price of the unit at lvl 1 */
-  CommandPointsPerLevel: 1          /* price per level, final price = CommandPointsLvl1 + level * CommandPointsPerLevel */
-}
-{ Element Name: Unit 
-  Faction: Zirax
-  ClassName: RPV_RadosCutterT2   /* class from EClassConfig or ItemConfig or .epb name for vessels (without the .epb) */
-  Category: BaseDefenseOrbitVessel  /* category name. A category can contain multiple units of different strength. system will choose the best for requested price
-                                    /*  - SmallMinigunDone, MediumMinigunDrone, HeavyMinigunDrone */
-  CommandPointsLvl1: 10              /* price of the unit at lvl 1 */
-  CommandPointsPerLevel: 1          /* price per level, final price = CommandPointsLvl1 + level * CommandPointsPerLevel */
-}
-{ Element Name: Unit 
-  Faction: Zirax
-  ClassName: SDS_Tovera
+  ClassName: R2SDS_ZiraxDreadnought01
   Category: BaseDefenseOrbitVessel
-  CommandPointsLvl1: 120
-  CommandPointsPerLevel: 5
+  CommandPointsLvl1: 500
+  CommandPointsPerLevel: 25
 }
 { Element Name: Unit 
   Faction: Zirax
-  ClassName: SDS_KamiratXenu
+  ClassName: R2SDS_ZiraxCarrier01
   Category: BaseDefenseOrbitVessel
   CommandPointsLvl1: 70
   CommandPointsPerLevel: 5
 }
-{ Element Name: Unit 
-  Faction: Zirax
-  ClassName: SDS_KamiratEpsilon
-  Category: BaseDefenseOrbitVessel
-  CommandPointsLvl1: 70
-  CommandPointsPerLevel: 5
-}
-# Fleet Combat Scenario
-{ Element Name: Unit 
-  Faction: Zirax
-  ClassName: SDS_Zrx-Battlefleet01
-  Category: BaseDefenseOrbitVessel
-  CommandPointsLvl1: 170
-  CommandPointsPerLevel: 5
-}
-{ Element Name: Unit 
-  Faction: Zirax
-  ClassName: SDS_Zrx-Battlefleet02
-  Category: BaseDefenseOrbitVessel
-  CommandPointsLvl1: 250
-  CommandPointsPerLevel: 5
-}
-
 
 { Element Name: Scenario
   Name: BD1
@@ -1514,7 +1483,7 @@
 
 { Element Name: Unit 
   Faction: Polaris
-  ClassName: ROPV_PolarisCorvetteKF762   /* class from EClassConfig or ItemConfig or .epb name for vessels (without the .epb) */
+  ClassName: R2OPV_PolarisCutter01   /* class from EClassConfig or ItemConfig or .epb name for vessels (without the .epb) */
   Category: BaseDefenseOrbitVessel  /* category name. A category can contain multiple units of different strength. system will choose the best for requested price
                                     /*  - SmallMinigunDone, MediumMinigunDrone, HeavyMinigunDrone */
   CommandPointsLvl1: 25             /* price of the unit at lvl 1 */
@@ -1522,7 +1491,7 @@
 }
 { Element Name: Unit 
   Faction: Polaris
-  ClassName: ROPV_PolarisFrigateVG220   /* class from EClassConfig or ItemConfig or .epb name for vessels (without the .epb) */
+  ClassName: R2OPV_PolarisCorvette01   /* class from EClassConfig or ItemConfig or .epb name for vessels (without the .epb) */
   Category: BaseDefenseOrbitVessel  /* category name. A category can contain multiple units of different strength. system will choose the best for requested price
                                     /*  - SmallMinigunDone, MediumMinigunDrone, HeavyMinigunDrone */
   CommandPointsLvl1: 50             /* price of the unit at lvl 1 */
@@ -1530,19 +1499,11 @@
 }
 { Element Name: Unit 
   Faction: Polaris
-  ClassName: ROPV_PolarisDestroyerSM612   /* class from EClassConfig or ItemConfig or .epb name for vessels (without the .epb) */
+  ClassName: R2OPV_PolarisFrigate01   /* class from EClassConfig or ItemConfig or .epb name for vessels (without the .epb) */
   Category: BaseDefenseOrbitVessel  /* category name. A category can contain multiple units of different strength. system will choose the best for requested price
                                     /*  - SmallMinigunDone, MediumMinigunDrone, HeavyMinigunDrone */
   CommandPointsLvl1: 100             /* price of the unit at lvl 1 */
   CommandPointsPerLevel: 5          /* price per level, final price = CommandPointsLvl1 + level * CommandPointsPerLevel */
-}
-
-{ Element Name: Unit 
-  Faction: Polaris
-  ClassName: SDS_Pol-Battlefleet01
-  Category: BaseDefenseOrbitVessel
-  CommandPointsLvl1: 250
-  CommandPointsPerLevel: 5
 }
 
 { Element Name: Scenario
@@ -1577,37 +1538,28 @@
 
 { Element Name: Unit 
   Faction: TheLegacy
-  ClassName: SDS_Decimator   /* class from EClassConfig or ItemConfig or .epb name for vessels (without the .epb) */
+  ClassName: RE2_OPV_LegacyT0_01   /* class from EClassConfig or ItemConfig or .epb name for vessels (without the .epb) */
   Category: BaseDefenseOrbitVessel  /* category name. A category can contain multiple units of different strength. system will choose the best for requested price
                                     /*  - SmallMinigunDone, MediumMinigunDrone, HeavyMinigunDrone */
-  CommandPointsLvl1: 100              /* price of the unit at lvl 1 */
+  CommandPointsLvl1: 50              /* price of the unit at lvl 1 */
   CommandPointsPerLevel: 10          /* price per level, final price = CommandPointsLvl1 + level * CommandPointsPerLevel */
 }
 { Element Name: Unit 
   Faction: TheLegacy
-  ClassName: SDS_Infector   /* class from EClassConfig or ItemConfig or .epb name for vessels (without the .epb) */
+  ClassName: RE2_OPV_LegacyT0_02   /* class from EClassConfig or ItemConfig or .epb name for vessels (without the .epb) */
   Category: BaseDefenseOrbitVessel  /* category name. A category can contain multiple units of different strength. system will choose the best for requested price
                                     /*  - SmallMinigunDone, MediumMinigunDrone, HeavyMinigunDrone */
-  CommandPointsLvl1: 75             /* price of the unit at lvl 1 */
-  CommandPointsPerLevel: 5          /* price per level, final price = CommandPointsLvl1 + level * CommandPointsPerLevel */
+  CommandPointsLvl1: 50              /* price of the unit at lvl 1 */
+  CommandPointsPerLevel: 10          /* price per level, final price = CommandPointsLvl1 + level * CommandPointsPerLevel */
 }
 { Element Name: Unit 
   Faction: TheLegacy
-  ClassName: SDS_Devastator   /* class from EClassConfig or ItemConfig or .epb name for vessels (without the .epb) */
+  ClassName: RE2_OPV_LegacyT0_03   /* class from EClassConfig or ItemConfig or .epb name for vessels (without the .epb) */
   Category: BaseDefenseOrbitVessel  /* category name. A category can contain multiple units of different strength. system will choose the best for requested price
                                     /*  - SmallMinigunDone, MediumMinigunDrone, HeavyMinigunDrone */
-  CommandPointsLvl1: 100             /* price of the unit at lvl 1 */
-  CommandPointsPerLevel: 5          /* price per level, final price = CommandPointsLvl1 + level * CommandPointsPerLevel */
+  CommandPointsLvl1: 50              /* price of the unit at lvl 1 */
+  CommandPointsPerLevel: 10          /* price per level, final price = CommandPointsLvl1 + level * CommandPointsPerLevel */
 }
-{ Element Name: Unit 
-  Faction: TheLegacy
-  ClassName: SDS_Eradicator   /* class from EClassConfig or ItemConfig or .epb name for vessels (without the .epb) */
-  Category: BaseDefenseOrbitVessel  /* category name. A category can contain multiple units of different strength. system will choose the best for requested price
-                                    /*  - SmallMinigunDone, MediumMinigunDrone, HeavyMinigunDrone */
-  CommandPointsLvl1: 150             /* price of the unit at lvl 1 */
-  CommandPointsPerLevel: 5          /* price per level, final price = CommandPointsLvl1 + level * CommandPointsPerLevel */
-}
-
 
 { Element Name: Scenario
   Name: BD1A

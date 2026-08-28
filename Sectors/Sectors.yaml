@@ -696,6 +696,366 @@ SolarSystems:
 
 # ------------------------------------------------------------------------------------------------- POIs
 
+
+# Teleporting between different star sytems using fixed teleporters on planets is broken. Until or unless the game developers fix this issue, random starting planets are a no-go.
+# Someone else can reproduce this in vanilla and report it to the developers. I already wasted 4 and a half hours working on this.
+# Update: Was able to make it work by using teleporters to teleport you to a room with a portal. Janky but what else is new.
+# ======================================================================================================================================================== Random Starting System 1
+# Near the Wastelands
+  - Name: Alphalan
+    Coordinates: [-135, -25, -345]
+    StarClass: A3
+    HideFromMap: true
+    HideFromSearch: true
+    Sectors:
+      - Coordinates: [0, 0, 0]
+        SectorMapType: None
+        Playfields:
+          - ['0,0,0', Alphalan, SunRandom, '']
+      - Coordinates: [4, 0, 0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Alphalan [Sun Right]', SpaceWarpTargetFixed, '']
+      - Coordinates: [-4, 0, 0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Alphalan [Sun Left]', SpaceWarpTargetFixed, '']
+      - Coordinates: [0, 4, 0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Alphalan [Sun Top]', SpaceWarpTargetFixed, '']
+      - Coordinates: [0, -4, 0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Alphalan [Sun Bottom]', SpaceWarpTargetFixed, '']
+      - Coordinates: [0, 0, 4]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Alphalan [Sun Front]', SpaceWarpTargetFixed, '']
+      - Coordinates: [0, 0, -4]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Alphalan [Sun Back]', SpaceWarpTargetFixed, '']
+
+# ------------------------------------------------------------------------------------------------- Starting Planets
+
+      - Coordinates: [-20, -4, 20]
+        Color: '0.50,0.47,0.04 : 0.5,0.5,0.5'
+        Playfields:
+          - ['0, 0, 0', Alphalan III, StarterRandom_Arid_V2,'', '', '', '']
+          - ['2403, 9037, -11729', Alphalan III Moon, Start_MoonBarren_V2]
+          - ['0,0,0', Alphalan III Sector, Starter_Tallodar_Orbit, '']
+
+      - Coordinates: [-30, 0, -10]
+        Color: '0.04,0.8,0.4 : 0.5,0.5,0.5'
+        Playfields:
+          - ['0, 0, 0', Alphalan IV, StarterRandom_Irradiated,'', '', '', '']
+          - ['-10695, 8475, -6228', Alphalan IV Moon, Start_MoonBarren_V2]
+          - ['0,0,0', Alphalan IV Sector, Starter_Tallodar_Orbit, '']
+
+      - Coordinates: [30, -2, 15]
+        Color: '0.35,0,0.35 : 0.5,0.5,0.5'
+        Playfields:
+          - ['0, 0, 0', Alphalan V, StarterRandom_Dead,'', '', '', '']
+          - ['-10695, 8475, -6228', Alphalan V Moon, Start_MoonBarren_V2]
+          - ['0,0,0', Alphalan V Sector, Starter_Tallodar_Orbit, '']
+
+      - Coordinates: [-35, -2, 18]
+        Color: '0.84,0.59,0.54 : 0.5,0.5,0.5'
+        Playfields:
+          - ['0, 0, 0', Alphalan VI, StarterRandom_Volcanic_V2,'', '', '', '']
+          - ['-10695, 8475, -6228', Alphalan VI Moon, Start_MoonBarren_V2]
+          - ['0,0,0', Alphalan VI Sector, Starter_Tallodar_Orbit, '']
+
+# ------------------------------------------------------------------------------------------------- Planets
+      - Coordinates: [28, 0, -77]
+        Color: '0.33,0.20,0.14'
+        SectorMapType: GasGiant
+        Playfields:
+          - ['0, 0, 0', Alphalan I, GasGiant,'', '', 'SaturnBrown', '11']
+      - Coordinates: [26, -1, -75]
+        Color: '0.5,0.5,0.5'
+        Playfields:
+          - ['0, 0, 0', Alphalan I Moon, Start_MoonBarren_V2,'', '', '', '']
+          - ['0,0,0', Alphalan I Moon Sector, Start_OrbitEasy, '']
+      - Coordinates: [27, 1, -80]
+        Color: '0.16,0.18,0.51 : 1,0,0 : 0.5,0.5,0.5 : 0.5,0.5,0.5'
+        Playfields:
+          - ['-6500, -2500, 10000', Alphalan I Moon I, StarterRandom_IceMoon,'', '', '', '']
+          - ['6500, 2500, 10000', Alphalan I Moon IB, StarterRandom_MoonCrystal_V2,'', '', '', '']
+          - ['6500, 4500, -10000', Alphalan I Moon IC, Start_MoonBarren_V2,'', '', '', '']
+          - ['-6500, -4500, -7500', Alphalan I Moon ID, Start_MoonBarren_V2,'', '', '', '']
+          - ['0,0,0', Alphalan I Moon I Sector, Starter_Tallodar_Orbit, '']
+      - Coordinates: [30, 0, -78]
+        Color: '0.5,0.5,1'
+        Playfields:
+          - ['0, 0, 0', Alphalan I Moon II, StarterRandom_TemperatePlateau,'', '', '', '']
+          - ['6500, 2500, 10000', Alphalan I Moon IIB, Start_MoonBarren_V2,'', '', '', '']
+          - ['0,0,0', Alphalan I Moon IV Sector, Starter_Tallodar_Orbit, '']
+
+      - Coordinates: [15, 0, -10]
+        Color: '0.50,0.32,0.04 : 0.5,0.5,0.5 : 0.5,0.5,0.5'
+        Playfields:
+          - ['0, 0, 0', Alphalan II, Start_Desert,'', '', '', '']
+          - ['-8279, -7524, -9994', Alphalan II Moon, Start_MoonBarren_V2]
+          - ['0,0,0', Alphalan II Sector, Start_OrbitEasy, '']
+
+      - Coordinates: [104, 1, 31]
+        Color: '0.85,0.85,0.85 : 0.16,0.18,0.51'
+        Playfields:
+          - ['0, 0, 0', Alphalan VII, Start_Snow_V2,'', '', '', '']
+          - ['-14791, -1211, 2188', Alphalan VII Moon, Start_MoonIce_V2]
+          - ['0,0,0', Alphalan VII Sector, Start_OrbitEasy, '']
+
+      - Coordinates: [-60, 1, 121]
+        Color: '0.35,0.35,0.35 : 0.16,0.18,0.51'
+        Playfields:
+          - ['0, 0, 0', Alphalan VIII, Start_Barren,'', '', '', '']
+          - ['8896, 9794, -7065', Alphalan VIII Moon, Start_MoonIce_V2]
+          - ['0,0,0', Alphalan VIII Sector, Start_OrbitEasy, '']
+# ------------------------------------------------------------------------------------------------- POIs
+
+      - Coordinates: [-79, 0, -79]
+        Color: '0.7,0.7,0.7'
+        SectorMapType: AsteroidFieldFew
+        Playfields:
+          - ['0, 0, 0', Alphalan Asteroid Field, Start_AsteroidField,'', '', '', '']
+
+      - Coordinates: [79, 15, -79]
+        Color: '0.7,0.7,0.7'
+        SectorMapType: AsteroidFieldFew
+        Playfields:
+          - ['0, 0, 0', Alphalan Asteroid Field II, Start_AsteroidField,'', '', '', '']
+
+# ======================================================================================================================================================== Random Starting System 2
+# In the M32 sub-galaxy.
+  - Name: Betalan
+    Coordinates: [325, -245, 325]
+    StarClass: K2V
+    HideFromMap: true
+    HideFromSearch: true
+    Sectors:
+      - Coordinates: [0, 0, 0]
+        SectorMapType: None
+        Playfields:
+          - ['0,0,0', Betalan, SunRandom, '']
+      - Coordinates: [4, 0, 0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Betalan [Sun Right]', SpaceWarpTargetFixed, '']
+      - Coordinates: [-4, 0, 0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Betalan [Sun Left]', SpaceWarpTargetFixed, '']
+      - Coordinates: [0, 4, 0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Betalan [Sun Top]', SpaceWarpTargetFixed, '']
+      - Coordinates: [0, -4, 0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Betalan [Sun Bottom]', SpaceWarpTargetFixed, '']
+      - Coordinates: [0, 0, 4]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Betalan [Sun Front]', SpaceWarpTargetFixed, '']
+      - Coordinates: [0, 0, -4]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Betalan [Sun Back]', SpaceWarpTargetFixed, '']
+
+# ------------------------------------------------------------------------------------------------- Starting Planets
+      - Coordinates: [-15, 0, -15]
+        Color: '0.50,0.32,0.04 : 0.5,0.5,0.5'
+        Playfields:
+          - ['0, 0, 0', Betalan I, StarterRandom_DesertRock_V2,'', '', '', '']
+          - ['2403, 9037, -11729', Betalan I Moon, Start_MoonBarren_V2]
+          - ['6500, -2500, -7500', Betalan I Moon I, StarterRandom_MoonDesertCanyon]
+          - ['0,0,0', Betalan I Sector, Starter_Tallodar_Orbit, '']
+
+      - Coordinates: [35, 1, 14]
+        Color: '0,0.35,0.35 : 0.5,0.5,0.5'
+        Playfields:
+          - ['0, 0, 0', Betalan III, StarterRandom_EdenSwampMire,'', '', '', '']
+          - ['2403, 9037, -11729', Betalan III Moon, Start_MoonBarren_V2]
+          - ['0,0,0', Betalan III Sector, Starter_Tallodar_Orbit, '']
+
+      - Coordinates: [30, 1, -14]
+        Color: '0.04,0.75,0.74 : 0.5,0.5,0.5'
+        Playfields:
+          - ['0, 0, 0', Betalan IV, StarterRandom_AlienFungal_V2,'', '', '', '']
+          - ['2403, 9037, -11729', Betalan IV Moon, Start_MoonBarren_V2]
+          - ['0,0,0', Betalan IV Sector, Starter_Tallodar_Orbit, '']
+
+      - Coordinates: [75, 2, 104]
+        Color: '0.33,0.20,0.14'
+        SectorMapType: GasGiant
+        Playfields:
+          - ['0, 0, 0', Betalan V, GasGiant,'', '', 'SaturnBrown', '11']
+      - Coordinates: [72, 3, 102]
+        Color: '0.85,0.85,0.85 : 0.35,0.35,0.35 : 0.5,0.5,0.5 : 0.5,0.5,0.5'
+        Playfields:
+          - ['-6500, -2500, 10000', Betalan V Moon, StarterRandom_FrozenInferno,'', '', '', '']
+          - ['6500, 2500, 10000', Betalan V Moon B, StarterRandom_BarrenMetal,'', '', '', '']
+          - ['6500, 4500, -10000', Betalan V Moon C, Start_MoonBarren_V2,'', '', '', '']
+          - ['-6500, -4500, -7500', Betalan V Moon D, Start_MoonBarren_V2,'', '', '', '']
+          - ['0,0,0', Betalan V Sector, Starter_Tallodar_Orbit, '']
+
+# ------------------------------------------------------------------------------------------------- Planets
+      - Coordinates: [15, 0, -10]
+        Color: '0.50,0.32,0.04 : 0.5,0.5,0.5'
+        Playfields:
+          - ['0, 0, 0', Betalan II, Start_Desert,'', '', '', '']
+          - ['-8279, -7524, -9994', Betalan II Moon, Start_MoonBarren_V2]
+          - ['0,0,0', Betalan II Sector, Start_OrbitEasy, '']
+
+      - Coordinates: [104, 1, 31]
+        Color: '0.85,0.85,0.85 : 0.16,0.18,0.51'
+        Playfields:
+          - ['0, 0, 0', Betalan VI, Start_Snow_V2,'', '', '', '']
+          - ['-14791, -1211, 2188', Betalan VI Moon, Start_MoonIce_V2]
+          - ['0,0,0', Betalan VI Sector, Start_OrbitEasy, '']
+
+      - Coordinates: [-60, 1, 121]
+        Color: '0.35,0.35,0.35 : 0.16,0.18,0.51'
+        Playfields:
+          - ['0, 0, 0', Betalan VII, Start_Barren,'', '', '', '']
+          - ['8896, 9794, -7065', Betalan VII Moon, Start_MoonIce_V2]
+          - ['0,0,0', Betalan VII Sector, Start_OrbitEasy, '']
+# ------------------------------------------------------------------------------------------------- POIs
+
+      - Coordinates: [-79, 0, -79]
+        Color: '0.7,0.7,0.7'
+        SectorMapType: AsteroidFieldFew
+        Playfields:
+          - ['0, 0, 0', Betalan Asteroid Field, Start_AsteroidField,'', '', '', '']
+
+      - Coordinates: [79, 15, -79]
+        Color: '0.7,0.7,0.7'
+        SectorMapType: AsteroidFieldFew
+        Playfields:
+          - ['0, 0, 0', Betalan Asteroid Field II, Start_AsteroidField,'', '', '', '']
+
+
+# ======================================================================================================================================================== Random Starting System 3
+# Near Solitude
+  - Name: Deltalan
+    Coordinates: [-392, -20, -135]
+    StarClass: A4V
+    HideFromMap: true
+    HideFromSearch: true
+    Sectors:
+      - Coordinates: [0, 0, 0]
+        SectorMapType: None
+        Playfields:
+          - ['0,0,0', Deltalan, SunRandom, '']
+      - Coordinates: [4, 0, 0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Deltalan [Sun Right]', SpaceWarpTargetFixed, '']
+      - Coordinates: [-4, 0, 0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Deltalan [Sun Left]', SpaceWarpTargetFixed, '']
+      - Coordinates: [0, 4, 0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Deltalan [Sun Top]', SpaceWarpTargetFixed, '']
+      - Coordinates: [0, -4, 0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Deltalan [Sun Bottom]', SpaceWarpTargetFixed, '']
+      - Coordinates: [0, 0, 4]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Deltalan [Sun Front]', SpaceWarpTargetFixed, '']
+      - Coordinates: [0, 0, -4]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Deltalan [Sun Back]', SpaceWarpTargetFixed, '']
+
+# ------------------------------------------------------------------------------------------------- Second Sun
+      - Coordinates: [3, 2, 0]
+        Color: '0.5,0.65,0.8'
+        SectorMapType: Sun
+        Playfields:
+          - ['0, 0, 0', Deltalan Pulsar, SunRandom,'', '', 'PSR', '8']
+
+# ------------------------------------------------------------------------------------------------- Starting Planets
+      - Coordinates: [-15, 0, -15]
+        Color: '0.50,0.32,0.04 : 0.5,0.5,0.5'
+        Playfields:
+          - ['0, 0, 0', Deltalan I, StarterRandom_Desert,'', '', '', '']
+          - ['2403, 9037, -11729', Deltalan I Moon, Start_MoonBarren_V2]
+          - ['0,0,0', Deltalan I Sector, Starter_Tallodar_Orbit, '']
+
+      - Coordinates: [22, 1, 14]
+        Color: '0.50,0.32,0.04 : 0.5,0.5,0.5 : 0.04,0.5,0.3'
+        Playfields:
+          - ['0, 0, 0', Deltalan II, StarterRandom_EdenDesertOasis_V2,'', '', '', '']
+          - ['2403, 9037, -11729', Deltalan II Moon, Start_MoonBarren_V2]
+          - ['6500, -2500, -7500', Deltalan II Moon I, StarterRandom_Tropical2]
+          - ['0,0,0', Deltalan II Sector, Starter_Tallodar_Orbit, '']
+
+      - Coordinates: [30, 1, -14]
+        Color: '0.04,0.5,0.1 : 0.5,0.5,0.5 : 0.5,0.5,0.5'
+        Playfields:
+          - ['0, 0, 0', Deltalan III, StarterRandom_TemperateRainforest,'', '', '', '']
+          - ['2403, 9037, -11729', Deltalan III Moon, Start_MoonBarren_V2]
+          - ['12500, -3500, 2500', Deltalan III Moon I, StarterRandom_MoonBarrenSilicon]
+          - ['0,0,0', Deltalan III Sector, Starter_Tallodar_Orbit, '']
+
+      - Coordinates: [-40, 0, 60]
+      # - Coordinates: [53, 1, -2]
+        Color: '0.36,0.30,0.56'
+        SectorMapType: GasGiant
+        Playfields:
+          - ['0, 0, 0', Deltalan IV, GasGiant,'', '', 'NeptunePurple', '10']
+      - Coordinates: [-42, 1, 60]
+      # - Coordinates: [55, 0, 0]
+        Color: '0.57,0.09,0.05 : 0.16,0.18,0.51 : 0.9,0.3,0 : 0.5,0.5,0.5'
+        Playfields:
+          - ['-6500, -2500, 10000', Deltalan IV Moon, StarterRandom_MoonLava2,'', '', '', '']
+          - ['6500, 2500, 10000', Deltalan IV Moon B, StarterRandom_IceGlacial,'', '', '', '']
+          - ['6500, 4500, -10000', Deltalan IV Moon C, StarterRandom_MoonVolcanic,'', '', '', '']
+          - ['-6500, -4500, -7500', Deltalan IV Moon D, Start_MoonBarren_V2,'', '', '', '']
+          - ['0,0,0', Deltalan IV Moon Sector, Starter_Tallodar_Orbit, '']
+
+# ------------------------------------------------------------------------------------------------- Planets
+      # - Coordinates: [15, 0, -10]
+        # Color: '0.50,0.32,0.04 : 0.5,0.5,0.5'
+        # Playfields:
+          # - ['0, 0, 0', Deltalan II, Start_Desert,'', '', '', '']
+          # - ['-8279, -7524, -9994', Deltalan II Moon, Start_MoonBarren_V2]
+          # - ['0,0,0', Deltalan II Sector, Start_OrbitEasy, '']
+
+      - Coordinates: [104, 1, 31]
+        Color: '0.85,0.85,0.85 : 0.16,0.18,0.51'
+        Playfields:
+          - ['0, 0, 0', Deltalan V, Start_Snow_V2,'', '', '', '']
+          - ['-14791, -1211, 2188', Deltalan V Moon, StarterRandom_MoonIce2]
+          - ['0,0,0', Deltalan V Sector, Start_OrbitEasy, '']
+
+      - Coordinates: [-60, 1, 121]
+        Color: '0.35,0.35,0.35 : 0.16,0.18,0.51'
+        Playfields:
+          - ['0, 0, 0', Deltalan VI, Start_Barren,'', '', '', '']
+          - ['8896, 9794, -7065', Deltalan VI Moon, Start_MoonIce_V2]
+          - ['0,0,0', Deltalan VI Sector, Start_OrbitEasy, '']
+# ------------------------------------------------------------------------------------------------- POIs
+
+      - Coordinates: [-79, 0, -79]
+        Color: '0.7,0.7,0.7'
+        SectorMapType: AsteroidFieldFew
+        Playfields:
+          - ['0, 0, 0', Deltalan Asteroid Field, Start_AsteroidField,'', '', '', '']
+
+      - Coordinates: [79, 15, -79]
+        Color: '0.7,0.7,0.7'
+        SectorMapType: AsteroidFieldFew
+        Playfields:
+          - ['0, 0, 0', Deltalan Asteroid Field II, Start_AsteroidField,'', '', '', '']
+
 # ======================================================================================================================================================== Creative system. Not accessible via normal means. For creative mode.
   # - Name: Creative System
     # Coordinates: [-400, 25, -250]
@@ -1161,6 +1521,561 @@ SolarSystems:
         Playfields:
           - ['0,0,0', 'Decay [Sun Back]', SpaceWarpTargetFixed, '']
 
+# ======================================================================================================================================================== Creative system (inaccessible by normal means)
+
+  - Name: Creative
+    Coordinates: [200, 30, 72]
+    StarClass: Creative
+    HideFromMap: true
+    Sectors:
+      - Coordinates: [0, 0, 0]
+        SectorMapType: None
+        Playfields:
+          - ['0,0,0', Creative, SunRandom, '']
+      - Coordinates: [2, 0, 0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Creative [Sun Right]', SpaceWarpTargetFixed, '']
+      - Coordinates: [-2, 0, 0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Creative [Sun Left]', SpaceWarpTargetFixed, '']
+      - Coordinates: [0, 2, 0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Creative [Sun Top]', SpaceWarpTargetFixed, '']
+      - Coordinates: [0, -2, 0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Creative [Sun Bottom]', SpaceWarpTargetFixed, '']
+      - Coordinates: [0, 0, 2]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Creative [Sun Front]', SpaceWarpTargetFixed, '']
+      - Coordinates: [0, 0, -2]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Creative [Sun Back]', SpaceWarpTargetFixed, '']
+
+
+# ======================= Creative worlds:
+
+      - Coordinates: [-45, -42, -35] 
+      # - Coordinates: [-5, -60, -5] 
+        # Color: '0.04, 0.8, 0.1 : 0.5,0.5,0.5 : 0.5,0.5,0.5'   # Planet (and moon colours)
+        Color: '0.5,0.5,0.5'   # Planet (and moon colours)
+        Playfields:
+          # - ['0, 0, 0', 'Temperate Planet', 1_TemperateCreative, '', '', '', '']
+          - ['0, 0, 0', 'Creative Canvas', CreativeCanvas, '', '', '', '']
+          # - ['9400, 3500, 24000', 'White Canvas', 4_MoonCanvas, '', '', '', '']
+          - ['0, 0, 0', 'Creative Sector', Starter_Tallodar_Orbit, '', '']
+
+
+      - Coordinates: [45, 0, 35] 
+        Color: '0.5,0.5,0.5'
+        Playfields:
+          - ['0, 0, 0', 'Random', StarterRandom_Hub, 'Human:1', '', '', ''] # Remove the "Human:1" so it's blank to remove the random start option. Some people HATE this for some reason so there's your option.
+          - ['0, 0, 0', 'Random Sector', Starter_Tallodar_Orbit, '', '']
+
+# ======================================================================================================================================================== Jump Gates
+
+# ======================= Northwest Jump Gate
+  - Name: NW to SE
+    Coordinates: [-200, 20, 200]
+    StarClass: JumpGate
+    # AllowSystem: ["Decay-Andromeda Destination","Andromeda-Decay Destination","Decay-Andromeda"] # Disabled until system can be fixed.
+    Sectors:
+      - Coordinates: [0, 0, 0]
+        SectorMapType: None
+        Playfields:
+          - ['0,0,0', NW to SE, SunRandom, '']
+      - Coordinates: [2, 0, 0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'NW to SE [Sun Right]', SpaceWarpTargetFixed, '']
+      - Coordinates: [-2, 0, 0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'NW to SE [Sun Left]', SpaceWarpTargetFixed, '']
+      - Coordinates: [0, 2, 0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'NW to SE [Sun Top]', SpaceWarpTargetFixed, '']
+      - Coordinates: [0, -2, 0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'NW to SE [Sun Bottom]', SpaceWarpTargetFixed, '']
+      - Coordinates: [0, 0, 2]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'NW to SE [Sun Front]', SpaceWarpTargetFixed, '']
+      - Coordinates: [0, 0, -2]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'NW to SE [Sun Back]', SpaceWarpTargetFixed, '']
+
+# Secondary star
+      - Coordinates: [3, -2, 1]
+        Color: '0,1,1'
+        SectorMapType: Sun
+        Playfields:
+          - ['0, 0, 0', NW to SE B, SunRandom,'', '', 'JumpGate', '8']
+
+# Jump Gate
+      - Coordinates: [8, 0, -8]
+        Color: '0,1,1'
+        SectorMapType: Station
+        Playfields:
+          - ['0, 0, 0', NW to SE Jump Gate, EdenSpace_JumpGate_NW,'', '', '', '']
+
+# ======================= Southeast Jump Gate
+  - Name: SE to NW
+    Coordinates: [200, 20, -200]
+    StarClass: JumpGate
+    # AllowSystem: ["Decay-Andromeda Destination","Andromeda-Decay Destination","Decay-Andromeda"] # Disabled until system can be fixed.
+    Sectors:
+      - Coordinates: [0, 0, 0]
+        SectorMapType: None
+        Playfields:
+          - ['0,0,0', SE to NW, SunRandom, '']
+      - Coordinates: [2, 0, 0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'SE to NW [Sun Right]', SpaceWarpTargetFixed, '']
+      - Coordinates: [-2, 0, 0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'SE to NW [Sun Left]', SpaceWarpTargetFixed, '']
+      - Coordinates: [0, 2, 0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'SE to NW [Sun Top]', SpaceWarpTargetFixed, '']
+      - Coordinates: [0, -2, 0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'SE to NW [Sun Bottom]', SpaceWarpTargetFixed, '']
+      - Coordinates: [0, 0, 2]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'SE to NW [Sun Front]', SpaceWarpTargetFixed, '']
+      - Coordinates: [0, 0, -2]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'SE to NW [Sun Back]', SpaceWarpTargetFixed, '']
+
+# Secondary star
+      - Coordinates: [-3, -2, 1]
+        Color: '0,1,1'
+        SectorMapType: Sun
+        Playfields:
+          - ['0, 0, 0', SE to NW B, SunRandom,'', '', 'JumpGate', '8']
+
+# Jump Gate
+      - Coordinates: [-8, 0, 8]
+        Color: '0,1,1'
+        SectorMapType: Station
+        Playfields:
+          - ['0, 0, 0', SE to NW Jump Gate, EdenSpace_JumpGate_SE,'', '', '', '']
+
+
+# ======================= East Rim Jump Gate
+  - Name: East Rim to Solitude
+    # Coordinates: [500, -15, 0]
+    Coordinates: [450, -15, 0]
+    StarClass: JumpGate
+    # AllowSystem: ["Decay-Andromeda Destination","Andromeda-Decay Destination","Decay-Andromeda"] # Disabled until system can be fixed.
+    Sectors:
+      - Coordinates: [0, 0, 0]
+        SectorMapType: None
+        Playfields:
+          - ['0,0,0', East Rim to Solitude, SunRandom, '']
+      - Coordinates: [2, 0, 0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'East Rim to Solitude [Sun Right]', SpaceWarpTargetFixed, '']
+      - Coordinates: [-2, 0, 0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'East Rim to Solitude [Sun Left]', SpaceWarpTargetFixed, '']
+      - Coordinates: [0, 2, 0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'East Rim to Solitude [Sun Top]', SpaceWarpTargetFixed, '']
+      - Coordinates: [0, -2, 0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'East Rim to Solitude [Sun Bottom]', SpaceWarpTargetFixed, '']
+      - Coordinates: [0, 0, 2]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'East Rim to Solitude [Sun Front]', SpaceWarpTargetFixed, '']
+      - Coordinates: [0, 0, -2]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'East Rim to Solitude [Sun Back]', SpaceWarpTargetFixed, '']
+
+# Secondary star
+      - Coordinates: [1, -2, 4]
+        Color: '0,1,1'
+        SectorMapType: Sun
+        Playfields:
+          - ['0, 0, 0', East Rim to Solitude B, SunRandom,'', '', 'JumpGate', '8']
+
+# Jump Gate
+      - Coordinates: [-15, 0, 0]
+        Color: '0,1,1'
+        SectorMapType: Station
+        Playfields:
+          - ['0, 0, 0', East Rim to Solitude Jump Gate, EdenSpace_JumpGate_EastRim,'', '', '', '']
+
+# ======================= Solitude Jump Gate
+  - Name: Solitude to East Rim
+    Coordinates: [-275, -15, -190]
+    StarClass: JumpGate
+    # AllowSystem: ["Decay-Andromeda Destination","Andromeda-Decay Destination","Decay-Andromeda"] # Disabled until system can be fixed.
+    Sectors:
+      - Coordinates: [0, 0, 0]
+        SectorMapType: None
+        Playfields:
+          - ['0,0,0', Solitude to East Rim, SunRandom, '']
+      - Coordinates: [2, 0, 0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Solitude to East Rim [Sun Right]', SpaceWarpTargetFixed, '']
+      - Coordinates: [-2, 0, 0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Solitude to East Rim [Sun Left]', SpaceWarpTargetFixed, '']
+      - Coordinates: [0, 2, 0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Solitude to East Rim [Sun Top]', SpaceWarpTargetFixed, '']
+      - Coordinates: [0, -2, 0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Solitude to East Rim [Sun Bottom]', SpaceWarpTargetFixed, '']
+      - Coordinates: [0, 0, 2]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Solitude to East Rim [Sun Front]', SpaceWarpTargetFixed, '']
+      - Coordinates: [0, 0, -2]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Solitude to East Rim [Sun Back]', SpaceWarpTargetFixed, '']
+
+# Secondary star
+      - Coordinates: [2, -1, 4]
+        Color: '0,1,1'
+        SectorMapType: Sun
+        Playfields:
+          - ['0, 0, 0', Solitude to East Rim B, SunRandom,'', '', 'JumpGate', '8']
+
+# Jump Gate
+      - Coordinates: [15, 0, 0]
+        Color: '0,1,1'
+        SectorMapType: Station
+        Playfields:
+          - ['0, 0, 0', Solitude to East Rim Jump Gate, EdenSpace_JumpGate_Solitude,'', '', '', '']
+
+
+
+# ======================= West Rim Jump Gate
+  - Name: West Rim to Core
+    Coordinates: [-500, 10, 150]
+    StarClass: JumpGate
+    # AllowSystem: ["Decay-Andromeda Destination","Andromeda-Decay Destination","Decay-Andromeda"] # Disabled until system can be fixed.
+    Sectors:
+      - Coordinates: [0, 0, 0]
+        SectorMapType: None
+        Playfields:
+          - ['0,0,0', West Rim to Core, SunRandom, '']
+      - Coordinates: [2, 0, 0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'West Rim to Core [Sun Right]', SpaceWarpTargetFixed, '']
+      - Coordinates: [-2, 0, 0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'West Rim to Core [Sun Left]', SpaceWarpTargetFixed, '']
+      - Coordinates: [0, 2, 0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'West Rim to Core [Sun Top]', SpaceWarpTargetFixed, '']
+      - Coordinates: [0, -2, 0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'West Rim to Core [Sun Bottom]', SpaceWarpTargetFixed, '']
+      - Coordinates: [0, 0, 2]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'West Rim to Core [Sun Front]', SpaceWarpTargetFixed, '']
+      - Coordinates: [0, 0, -2]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'West Rim to Core [Sun Back]', SpaceWarpTargetFixed, '']
+
+# Secondary star
+      - Coordinates: [1, -2, 4]
+        Color: '0,1,1'
+        SectorMapType: Sun
+        Playfields:
+          - ['0, 0, 0', West Rim to Core B, SunRandom,'', '', 'JumpGate', '8']
+
+# Jump Gate
+      - Coordinates: [15, 0, 0]
+        Color: '0,1,1'
+        SectorMapType: Station
+        Playfields:
+          - ['0, 0, 0', West Rim to Core Jump Gate, EdenSpace_JumpGate_WestRim,'', '', '', '']
+
+# ======================= Core Jump Gate
+  - Name: Core to West Rim
+    Coordinates: [75, 10, 0]
+    StarClass: JumpGate
+    # AllowSystem: ["Decay-Andromeda Destination","Andromeda-Decay Destination","Decay-Andromeda"] # Disabled until system can be fixed.
+    Sectors:
+      - Coordinates: [0, 0, 0]
+        SectorMapType: None
+        Playfields:
+          - ['0,0,0', Core to West Rim, SunRandom, '']
+      - Coordinates: [2, 0, 0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Core to West Rim [Sun Right]', SpaceWarpTargetFixed, '']
+      - Coordinates: [-2, 0, 0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Core to West Rim [Sun Left]', SpaceWarpTargetFixed, '']
+      - Coordinates: [0, 2, 0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Core to West Rim [Sun Top]', SpaceWarpTargetFixed, '']
+      - Coordinates: [0, -2, 0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Core to West Rim [Sun Bottom]', SpaceWarpTargetFixed, '']
+      - Coordinates: [0, 0, 2]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Core to West Rim [Sun Front]', SpaceWarpTargetFixed, '']
+      - Coordinates: [0, 0, -2]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Core to West Rim [Sun Back]', SpaceWarpTargetFixed, '']
+
+# Secondary star
+      - Coordinates: [1, -2, 4]
+        Color: '0,1,1'
+        SectorMapType: Sun
+        Playfields:
+          - ['0, 0, 0', Core to West Rim B, SunRandom,'', '', 'JumpGate', '8']
+
+# Jump Gate
+      - Coordinates: [-15, 0, 0]
+        Color: '0,1,1'
+        SectorMapType: Station
+        Playfields:
+          - ['0, 0, 0', Core to West Rim Jump Gate, EdenSpace_JumpGate_Core,'', '', '', '']
+
+
+
+# ======================= Wastelands Jump Gate
+  - Name: Wastelands to Badlands
+    # Coordinates: [-150, 10, -450]
+    Coordinates: [-140, 10, -420]
+    StarClass: JumpGate
+    # AllowSystem: ["Decay-Andromeda Destination","Andromeda-Decay Destination","Decay-Andromeda"] # Disabled until system can be fixed.
+    Sectors:
+      - Coordinates: [0, 0, 0]
+        SectorMapType: None
+        Playfields:
+          - ['0,0,0', Wastelands to Badlands, SunRandom, '']
+      - Coordinates: [2, 0, 0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Wastelands to Badlands [Sun Right]', SpaceWarpTargetFixed, '']
+      - Coordinates: [-2, 0, 0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Wastelands to Badlands [Sun Left]', SpaceWarpTargetFixed, '']
+      - Coordinates: [0, 2, 0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Wastelands to Badlands [Sun Top]', SpaceWarpTargetFixed, '']
+      - Coordinates: [0, -2, 0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Wastelands to Badlands [Sun Bottom]', SpaceWarpTargetFixed, '']
+      - Coordinates: [0, 0, 2]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Wastelands to Badlands [Sun Front]', SpaceWarpTargetFixed, '']
+      - Coordinates: [0, 0, -2]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Wastelands to Badlands [Sun Back]', SpaceWarpTargetFixed, '']
+
+# Secondary star
+      - Coordinates: [1, -2, 4]
+        Color: '0,1,1'
+        SectorMapType: Sun
+        Playfields:
+          - ['0, 0, 0', Wastelands to Badlands B, SunRandom,'', '', 'JumpGate', '8']
+
+# Jump Gate
+      - Coordinates: [15, 0, 3]
+        Color: '0,1,1'
+        SectorMapType: Station
+        Playfields:
+          - ['0, 0, 0', Wastelands to Badlands Jump Gate, EdenSpace_JumpGate_Wastelands,'', '', '', '']
+
+# ======================= Badlands Jump Gate
+  - Name: Badlands to Wastelands
+    Coordinates: [400, 10, 100]
+    StarClass: JumpGate
+    # AllowSystem: ["Decay-Andromeda Destination","Andromeda-Decay Destination","Decay-Andromeda"] # Disabled until system can be fixed.
+    Sectors:
+      - Coordinates: [0, 0, 0]
+        SectorMapType: None
+        Playfields:
+          - ['0,0,0', Badlands to Wastelands, SunRandom, '']
+      - Coordinates: [2, 0, 0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Badlands to Wastelands [Sun Right]', SpaceWarpTargetFixed, '']
+      - Coordinates: [-2, 0, 0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Badlands to Wastelands [Sun Left]', SpaceWarpTargetFixed, '']
+      - Coordinates: [0, 2, 0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Badlands to Wastelands [Sun Top]', SpaceWarpTargetFixed, '']
+      - Coordinates: [0, -2, 0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Badlands to Wastelands [Sun Bottom]', SpaceWarpTargetFixed, '']
+      - Coordinates: [0, 0, 2]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Badlands to Wastelands [Sun Front]', SpaceWarpTargetFixed, '']
+      - Coordinates: [0, 0, -2]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Badlands to Wastelands [Sun Back]', SpaceWarpTargetFixed, '']
+
+# Secondary star
+      - Coordinates: [1, -2, 4]
+        Color: '0,1,1'
+        SectorMapType: Sun
+        Playfields:
+          - ['0, 0, 0', Badlands to Wastelands B, SunRandom,'', '', 'JumpGate', '8']
+
+# Jump Gate
+      - Coordinates: [-15, 0, 0]
+        Color: '0,1,1'
+        SectorMapType: Station
+        Playfields:
+          - ['0, 0, 0', Badlands to Wastelands Jump Gate, EdenSpace_JumpGate_Badlands,'', '', '', '']
+
+# ======================= Messier 110 Jump Gate
+  - Name: Messier 110 to North Rim
+    Coordinates: [210, 225, 690]
+    StarClass: JumpGate
+    # AllowSystem: ["Decay-Andromeda Destination","Andromeda-Decay Destination","Decay-Andromeda"] # Disabled until system can be fixed.
+    Sectors:
+      - Coordinates: [0, 0, 0]
+        SectorMapType: None
+        Playfields:
+          - ['0,0,0', Messier 110 to North Rim, SunRandom, '']
+      - Coordinates: [2, 0, 0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Messier 110 to North Rim [Sun Right]', SpaceWarpTargetFixed, '']
+      - Coordinates: [-2, 0, 0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Messier 110 to North Rim [Sun Left]', SpaceWarpTargetFixed, '']
+      - Coordinates: [0, 2, 0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Messier 110 to North Rim [Sun Top]', SpaceWarpTargetFixed, '']
+      - Coordinates: [0, -2, 0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Messier 110 to North Rim [Sun Bottom]', SpaceWarpTargetFixed, '']
+      - Coordinates: [0, 0, 2]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Messier 110 to North Rim [Sun Front]', SpaceWarpTargetFixed, '']
+      - Coordinates: [0, 0, -2]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'Messier 110 to North Rim [Sun Back]', SpaceWarpTargetFixed, '']
+
+# Secondary star
+      - Coordinates: [1, -2, 4]
+        Color: '0,1,1'
+        SectorMapType: Sun
+        Playfields:
+          - ['0, 0, 0', Messier 110 to North Rim B, SunRandom,'', '', 'JumpGate', '8']
+
+# Jump Gate
+      - Coordinates: [0, 0, -15]
+        Color: '0,1,1'
+        SectorMapType: Station
+        Playfields:
+          - ['0, 0, 0', Messier 110 to North Rim Jump Gate, EdenSpace_JumpGate_Messier110,'', '', '', '']
+
+# ======================= Messier 110 Jump Gate
+  - Name: North Rim to Messier 110
+    Coordinates: [210, 25, 525]
+    StarClass: JumpGate
+    # AllowSystem: ["Decay-Andromeda Destination","Andromeda-Decay Destination","Decay-Andromeda"] # Disabled until system can be fixed.
+    Sectors:
+      - Coordinates: [0, 0, 0]
+        SectorMapType: None
+        Playfields:
+          - ['0,0,0', North Rim to Messier 110, SunRandom, '']
+      - Coordinates: [2, 0, 0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'North Rim to Messier 110 [Sun Right]', SpaceWarpTargetFixed, '']
+      - Coordinates: [-2, 0, 0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'North Rim to Messier 110 [Sun Left]', SpaceWarpTargetFixed, '']
+      - Coordinates: [0, 2, 0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'North Rim to Messier 110 [Sun Top]', SpaceWarpTargetFixed, '']
+      - Coordinates: [0, -2, 0]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'North Rim to Messier 110 [Sun Bottom]', SpaceWarpTargetFixed, '']
+      - Coordinates: [0, 0, 2]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'North Rim to Messier 110 [Sun Front]', SpaceWarpTargetFixed, '']
+      - Coordinates: [0, 0, -2]
+        SectorMapType: WarpTarget
+        Playfields:
+          - ['0,0,0', 'North Rim to Messier 110 [Sun Back]', SpaceWarpTargetFixed, '']
+
+# Secondary star
+      - Coordinates: [1, -2, 4]
+        Color: '0,1,1'
+        SectorMapType: Sun
+        Playfields:
+          - ['0, 0, 0', North Rim to Messier 110 B, SunRandom,'', '', 'JumpGate', '8']
+
+# Jump Gate
+      - Coordinates: [0, 0, 15]
+        Color: '0,1,1'
+        SectorMapType: Station
+        Playfields:
+          - ['0, 0, 0', North Rim to Messier 110 Jump Gate, EdenSpace_JumpGate_NorthRim,'', '', '', '']
+
 # ======================================================================================================================================================== Admin and Testing system (inaccessible by normal means)
   - Name: TestSystem
     Coordinates: [250, 25, 250]
@@ -1200,16 +2115,16 @@ SolarSystems:
 # # -------------------------------------------------------------------------------------------------------------------------------------------------------- Test Planets
 
 # # ------------------------------------------------------------------------------------------------- Planets
-      - Coordinates: [-25, -5, -95]
-        Color: '0.2,0,0.2 : 0.3,0,0 : 0.3,0,0 : 0.3,0,0'
-        Playfields:
-          - ['0, 0, 0', TestPlanet, EdenLegacyInfected_V2,'', '', '', '']
-          - ['1427, 14929, 246', TestPlanet Moon 1, EdenMoonRadioactive_V2]
+      # - Coordinates: [-25, -5, -95]
+        # Color: '0.2,0,0.2 : 0.3,0,0 : 0.3,0,0 : 0.3,0,0'
+        # Playfields:
+          # - ['0, 0, 0', TestPlanet, EdenLegacyInfected_V2,'', '', '', '']
+          # - ['1427, 14929, 246', TestPlanet Moon 1, EdenMoonRadioactive_V2]
           # - ['1427, -14929, 246', TestPlanet Moon 2, EdenMoonCrystalErestrum]
           # - ['10000, -14929, 246', TestPlanet Moon 3, EdenStart_MoonIce_V2Outer2]
           # - ['-10000, -14929, 246', TestPlanet Moon 4, EdenStart_MoonIce_V2Outer3]
           # - ['10000, 14929, 246', TestPlanet Moon 5, EdenStart_MoonIce_V2Outer4]
-          - ['0,0,0', TestPlanet Sector, Start_OrbitEasy, '']
+          # - ['0,0,0', TestPlanet Sector, Start_OrbitEasy, '']
 
       # - Coordinates: [-25, -5, -100]
         # Color: '0.50,0.32,0.04'
@@ -1278,26 +2193,26 @@ SolarSystems:
         # # # Playfields:
           # # # - ['0, 0, 0', Object 82, EdenSpacePOIObject82,'', '', '', '']
 
-# Space Test 1
-      - Coordinates: [50, 0, 0]
-        Color: '1, 0, 1'
-        SectorMapType: Triangle
-        Playfields:
-          - ['0, 0, 0', TestSpace1, EdenSpace_POI_CombatT1_2,'', '', '', '']
+# # Space Test 1
+      # - Coordinates: [50, 0, 0]
+        # Color: '1, 0, 1'
+        # SectorMapType: Triangle
+        # Playfields:
+          # - ['0, 0, 0', TestSpace1, EdenSpace_POI_CombatT1_2,'', '', '', '']
 
-# Space Test 2
-      - Coordinates: [60, 0, 0]
-        Color: '1, 0, 1'
-        SectorMapType: Triangle
-        Playfields:
-          - ['0, 0, 0', TestSpace2, EdenSpaceZirax_POI_PentaxidMine,'', '', '', '']
+# # Space Test 2
+      # - Coordinates: [60, 0, 0]
+        # Color: '1, 0, 1'
+        # SectorMapType: Triangle
+        # Playfields:
+          # - ['0, 0, 0', TestSpace2, EdenSpaceZirax_POI_PentaxidMine,'', '', '', '']
 
-# Space Test 3
-      - Coordinates: [70, 0, 0]
-        Color: '1, 0, 1'
-        SectorMapType: Triangle
-        Playfields:
-          - ['0, 0, 0', TestSpace3, EdenSpaceZirax_POI_PentaxidMine,'', '', '', '']
+# # Space Test 3
+      # - Coordinates: [70, 0, 0]
+        # Color: '1, 0, 1'
+        # SectorMapType: Triangle
+        # Playfields:
+          # - ['0, 0, 0', TestSpace3, EdenSpaceZirax_POI_PentaxidMine,'', '', '', '']
 
 # # Space Test 4
       # - Coordinates: [80, 0, -40]
@@ -1887,7 +2802,7 @@ SolarSystems:
 
 # ------------------------------------------------------------------------------------------------- Second Sun
       - Coordinates: [-2, 3, 2]
-        Color: '1,0.95,0.63'
+        Color: '0,0.75,1'
         SectorMapType: Sun
         Playfields:
           - ['0, 0, 0', Trealt B, SunRandom,'', '', 'N2', '7']
@@ -3366,106 +4281,107 @@ SolarSystems:
 
 
 
-# ======================================================================================================================================================== Progenitor Dyson Sphere in Progenitor Star Cluster
-  - Name: Dyson Sphere System
-    Coordinates: [1010, 290, 0]
-    StarClass: R
-    Sectors:
-      - Coordinates: [0, 0, 0]
-        SectorMapType: None
-        Playfields:
-          - ['0,0,0', Dyson Sphere System, SunRandom, '']
-      - Coordinates: [20, 0, 0]
-        SectorMapType: WarpTarget
-        Playfields:
-          - ['0,0,0', 'Dyson Sphere System [Sun Right]', SpaceWarpTargetFixed, '']
-        Deny: [Sphere Observation 2, Sphere Observation 3, Sphere Observation 4, Sphere Access 1, Sphere Interior 1 Sector, Dyson Sphere]
-      - Coordinates: [-20, 0, 0]
-        SectorMapType: WarpTarget
-        Playfields:
-          - ['0,0,0', 'Dyson Sphere System [Sun Left]', SpaceWarpTargetFixed, '']
-        Deny: [Sphere Observation 2, Sphere Observation 3, Sphere Observation 4, Sphere Access 1, Sphere Interior 1 Sector, Dyson Sphere]
-      - Coordinates: [0, 20, 0]
-        SectorMapType: WarpTarget
-        Playfields:
-          - ['0,0,0', 'Dyson Sphere System [Sun Top]', SpaceWarpTargetFixed, '']
-        Deny: [Sphere Observation 2, Sphere Observation 3, Sphere Observation 4, Sphere Access 1, Sphere Interior 1 Sector, Dyson Sphere]
-      - Coordinates: [0, -20, 0]
-        SectorMapType: WarpTarget
-        Playfields:
-          - ['0,0,0', 'Dyson Sphere System [Sun Bottom]', SpaceWarpTargetFixed, '']
-        Deny: [Sphere Observation 2, Sphere Observation 3, Sphere Observation 4, Sphere Access 1, Sphere Interior 1 Sector, Dyson Sphere]
-      - Coordinates: [0, 0, 20]
-        SectorMapType: WarpTarget
-        Playfields:
-          - ['0,0,0', 'Dyson Sphere System [Sun Front]', SpaceWarpTargetFixed, '']
-        Deny: [Sphere Observation 2, Sphere Observation 3, Sphere Observation 4, Sphere Access 1, Sphere Interior 1 Sector, Dyson Sphere]
-      - Coordinates: [0, 0, -20]
-        SectorMapType: WarpTarget
-        Playfields:
-          - ['0,0,0', 'Dyson Sphere System [Sun Back]', SpaceWarpTargetFixed, '']
-        Deny: [Sphere Observation 2, Sphere Observation 3, Sphere Observation 4, Sphere Access 1, Sphere Interior 1 Sector, Dyson Sphere]
+# # ======================================================================================================================================================== Progenitor Dyson Sphere in Progenitor Star Cluster
+  # - Name: Dyson Sphere System
+    # Coordinates: [1010, 290, 0]
+    # StarClass: R
+    # HideFromMap: true
+    # Sectors:
+      # - Coordinates: [0, 0, 0]
+        # SectorMapType: None
+        # Playfields:
+          # - ['0,0,0', Dyson Sphere System, SunRandom, '']
+      # - Coordinates: [20, 0, 0]
+        # SectorMapType: WarpTarget
+        # Playfields:
+          # - ['0,0,0', 'Dyson Sphere System [Sun Right]', SpaceWarpTargetFixed, '']
+        # Deny: [Sphere Observation 2, Sphere Observation 3, Sphere Observation 4, Sphere Access 1, Sphere Interior 1 Sector, Dyson Sphere]
+      # - Coordinates: [-20, 0, 0]
+        # SectorMapType: WarpTarget
+        # Playfields:
+          # - ['0,0,0', 'Dyson Sphere System [Sun Left]', SpaceWarpTargetFixed, '']
+        # Deny: [Sphere Observation 2, Sphere Observation 3, Sphere Observation 4, Sphere Access 1, Sphere Interior 1 Sector, Dyson Sphere]
+      # - Coordinates: [0, 20, 0]
+        # SectorMapType: WarpTarget
+        # Playfields:
+          # - ['0,0,0', 'Dyson Sphere System [Sun Top]', SpaceWarpTargetFixed, '']
+        # Deny: [Sphere Observation 2, Sphere Observation 3, Sphere Observation 4, Sphere Access 1, Sphere Interior 1 Sector, Dyson Sphere]
+      # - Coordinates: [0, -20, 0]
+        # SectorMapType: WarpTarget
+        # Playfields:
+          # - ['0,0,0', 'Dyson Sphere System [Sun Bottom]', SpaceWarpTargetFixed, '']
+        # Deny: [Sphere Observation 2, Sphere Observation 3, Sphere Observation 4, Sphere Access 1, Sphere Interior 1 Sector, Dyson Sphere]
+      # - Coordinates: [0, 0, 20]
+        # SectorMapType: WarpTarget
+        # Playfields:
+          # - ['0,0,0', 'Dyson Sphere System [Sun Front]', SpaceWarpTargetFixed, '']
+        # Deny: [Sphere Observation 2, Sphere Observation 3, Sphere Observation 4, Sphere Access 1, Sphere Interior 1 Sector, Dyson Sphere]
+      # - Coordinates: [0, 0, -20]
+        # SectorMapType: WarpTarget
+        # Playfields:
+          # - ['0,0,0', 'Dyson Sphere System [Sun Back]', SpaceWarpTargetFixed, '']
+        # Deny: [Sphere Observation 2, Sphere Observation 3, Sphere Observation 4, Sphere Access 1, Sphere Interior 1 Sector, Dyson Sphere]
 
-# -------------------------------------------------------------------------------------------------------------------------------------------------------- Dyson Sphere
-      - Coordinates: [50, 0, 0]
-        Color: '0.35,0.35,0.35'
-        # SectorMapType: Planet
-        Playfields:
-          - ['0, 0, 0', Dyson Sphere, EdenDysonSphere,'', '', '', '14']
+# # -------------------------------------------------------------------------------------------------------------------------------------------------------- Dyson Sphere
+      # - Coordinates: [50, 0, 0]
+        # Color: '0.35,0.35,0.35'
+        # # SectorMapType: Planet
+        # Playfields:
+          # - ['0, 0, 0', Dyson Sphere, EdenDysonSphere,'', '', '', '14']
 
-# ------------------------------------------------------------------------------------------------- Observation Zones
-# Observation 1
-      - Coordinates: [25, 0, 0]
-        Color: '0.5,0.5,0.5'
-        SectorMapType: Triangle
-        Playfields:
-          - ['0, 0, 0', Sphere Observation 1, SpaceEmpty,'', '', '', '']
-        Deny: [Sphere Observation 3, Sphere Interior 1 Sector, Dyson Sphere]
+# # ------------------------------------------------------------------------------------------------- Observation Zones
+# # Observation 1
+      # - Coordinates: [25, 0, 0]
+        # Color: '0.5,0.5,0.5'
+        # SectorMapType: Triangle
+        # Playfields:
+          # - ['0, 0, 0', Sphere Observation 1, SpaceEmpty,'', '', '', '']
+        # Deny: [Sphere Observation 3, Sphere Interior 1 Sector, Dyson Sphere]
 
-# Observation 2
-      - Coordinates: [50, 0, 25]
-        Color: '0.5,0.5,0.5'
-        SectorMapType: Triangle
-        Playfields:
-          - ['0, 0, 0', Sphere Observation 2, SpaceEmpty,'', '', '', '']
-        Deny: [Sphere Observation 4, Sphere Interior 1 Sector, Dyson Sphere]
+# # Observation 2
+      # - Coordinates: [50, 0, 25]
+        # Color: '0.5,0.5,0.5'
+        # SectorMapType: Triangle
+        # Playfields:
+          # - ['0, 0, 0', Sphere Observation 2, SpaceEmpty,'', '', '', '']
+        # Deny: [Sphere Observation 4, Sphere Interior 1 Sector, Dyson Sphere]
 
-# Observation 3
-      - Coordinates: [75, 0, 0]
-        Color: '0.5,0.5,0.5'
-        SectorMapType: Triangle
-        Playfields:
-          - ['0, 0, 0', Sphere Observation 3, SpaceEmpty,'', '', '', '']
-        Deny: [Sphere Observation 1, Sphere Interior 1 Sector, Dyson Sphere]
+# # Observation 3
+      # - Coordinates: [75, 0, 0]
+        # Color: '0.5,0.5,0.5'
+        # SectorMapType: Triangle
+        # Playfields:
+          # - ['0, 0, 0', Sphere Observation 3, SpaceEmpty,'', '', '', '']
+        # Deny: [Sphere Observation 1, Sphere Interior 1 Sector, Dyson Sphere]
 
-# Observation 4
-      - Coordinates: [50, 0, -25]
-        Color: '0.5,0.5,0.5'
-        SectorMapType: Triangle
-        Playfields:
-          - ['0, 0, 0', Sphere Observation 4, SpaceEmpty,'', '', '', '']
-        Deny: [Sphere Observation 2, Sphere Interior 1 Sector, Dyson Sphere]
+# # Observation 4
+      # - Coordinates: [50, 0, -25]
+        # Color: '0.5,0.5,0.5'
+        # SectorMapType: Triangle
+        # Playfields:
+          # - ['0, 0, 0', Sphere Observation 4, SpaceEmpty,'', '', '', '']
+        # Deny: [Sphere Observation 2, Sphere Interior 1 Sector, Dyson Sphere]
 
-# ------------------------------------------------------------------------------------------------- Access Zone
-# Access 1
-      - Coordinates: [50, 21, 0]
-        Color: '0.5,0.5,0.5'
-        SectorMapType: Triangle
-        Playfields:
-          - ['0, 0, 0', Sphere Access 1, EdenSpaceProg_DysonAccess1,'', '', '', '']
-        Deny: [Sphere Interior 1 Sector, Dyson Sphere]
+# # ------------------------------------------------------------------------------------------------- Access Zone
+# # Access 1
+      # - Coordinates: [50, 21, 0]
+        # Color: '0.5,0.5,0.5'
+        # SectorMapType: Triangle
+        # Playfields:
+          # - ['0, 0, 0', Sphere Access 1, EdenSpaceProg_DysonAccess1,'', '', '', '']
+        # Deny: [Sphere Interior 1 Sector, Dyson Sphere]
 
-# ------------------------------------------------------------------------------------------------- Dungeon planet
-      - Coordinates: [50, 5, 0]
-        Color: '0.1,0.1,0.1'
-        SectorMapType: Triangle
-        Playfields:
-          - ['0, 0, 0', Sphere Interior 1, EdenProgDysonDungeon1,'', '', '', '']
-          # - ['2949, -10596, 10199', Rogue J-5565 Moon, EdenStart_MoonBarren_V2Rogue]
-          # - ['7636, 9006, 9250', Rogue J-5565 Moon 1, EdenStart_MoonBarren_V2Rogue]
-          # - ['-10560, -10594, -1125', Rogue J-5565 Moon 2, EdenStart_MoonBarren_V2Rogue2]
-          - ['0,0,0', Sphere Interior 1 Sector, SpaceEmpty, '']
-        Deny: [Sphere Observation 1, Sphere Observation 2, Sphere Observation 3, Sphere Observation 4, Sphere Access 1]
+# # ------------------------------------------------------------------------------------------------- Dungeon planet
+      # - Coordinates: [50, 5, 0]
+        # Color: '0.1,0.1,0.1'
+        # SectorMapType: Triangle
+        # Playfields:
+          # - ['0, 0, 0', Sphere Interior 1, EdenProgDysonDungeon1,'', '', '', '']
+          # # - ['2949, -10596, 10199', Rogue J-5565 Moon, EdenStart_MoonBarren_V2Rogue]
+          # # - ['7636, 9006, 9250', Rogue J-5565 Moon 1, EdenStart_MoonBarren_V2Rogue]
+          # # - ['-10560, -10594, -1125', Rogue J-5565 Moon 2, EdenStart_MoonBarren_V2Rogue2]
+          # - ['0,0,0', Sphere Interior 1 Sector, SpaceEmpty, '']
+        # Deny: [Sphere Observation 1, Sphere Observation 2, Sphere Observation 3, Sphere Observation 4, Sphere Access 1]
 
 
 # ======================================================================================================================================================== Dying Sun System

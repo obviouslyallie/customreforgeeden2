@@ -31,8 +31,8 @@
   OpenContainer:           "-6000,  -6000,    -6000,    -6000,  -6000,      -6000,  -6000,   -6000,   -6000,  -6000,   -6000,   -6000,  -6000,  -6000,         -6000,  -6000,              0"
   AttackedPrey:            "    0,  -0.05,        0,        0,      0,          0,      0,       0,       0,      0,       0,       0,      0,      0,             0,      0,              0" # multiplied with damage points
   AttackedPredator:        "    0,   0.03,     0.02,        0,      0,          0,      0,       0,       0,      0,       0,       0,      0,      0,             0,      0,              0" # multiplied with damage points
-  StructSpawnedInTerritory:"-500,    -500,     -500,     -500,      0,       -100,   -500,    -500,    -500,   -500,    -500,   -1000,   -500,   -500,          -500,   -500,              0"
-  StructStayInTerritory:   "  -25,    -50,        0,      -50,      0,        -25,    -25,     -25,     -25,    -25,     -25,     -25,    -25,    -25,           -30,    -30,              0" # every 5min realtime and only WITH pilot 
+  StructSpawnedInTerritory:"    0,      0,        0,        0,      0,          0,      0,       0,       0,      0,       0,       0,      0,      0,             0,      0,              0"
+  StructStayInTerritory:   "    0,      0,        0,        0,      0,          0,      0,       0,       0,      0,       0,       0,      0,      0,             0,      0,              0" # every 5min realtime and only WITH pilot 
   OreMined:                "  -15,     -5,      -50,      -15,    -20,        -40,    -20,     -50,     -20,    -20,     -20,     -20,    -20,    -35,           -30,    -30,              0" # about every 10 ores
   PlantHarvest:            "    0,    -10,        0,        0,      0,         -5,      0,       0,       0,      0,       0,       0,      0,      0,             0,      0,              0"
   PlantDestroy:            "    0,    -30,        0,        0,      0,         -5,      0,       0,       0,      0,       0,       0,      0,      0,             0,      0,              0"
@@ -81,7 +81,7 @@
 { Reputation Name: "Action.ThresholdLevel"
   StructSpawnedInTerritory: "Honored"
   StructStayInTerritory:    "Friendly"
-  OreMined:                 "Honored"
+  OreMined:                 "Friendly"
   PlantHarvest:             "Friendly"
   PlantDestroy:             "Friendly"
 }

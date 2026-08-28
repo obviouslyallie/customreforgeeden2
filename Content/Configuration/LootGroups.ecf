@@ -407,11 +407,10 @@
 { +LootGroup Name: ZiraxComputer
   Count: "1"
   Item_0: DataCore, param1: "1", param2: 0.6
-  Item_1: CommunicationEquipment, param1: "1,2", param2: 0.45
+  Item_1: CommunicationEquipment, param1: "1,3", param2: 0.45
   Item_2: Optronics, param1: "2,4", param2: 0.4
-  Item_3: Superconductor, param1: "3,5", param2: 0.4
-  Item_4: RadiationShielding, param1: "3,5", param2: 0.4
-  Item_5: Oscillator, param1: "25,50", param2: 0.2
+  Item_3: Superconductor, param1: "5,7", param2: 0.4
+  Item_4: RadiationShielding, param1: "4,6", param2: 0.4
 }
 { +LootGroup Name: LegacyBiological
   Count: "1"
@@ -636,7 +635,7 @@
   Item_20: Token, param1: "meta=70", param2: 0.1
   Item_21: Token, param1: "meta=71", param2: 0.1
   Item_22: Token, param1: "meta=81", param2: 0.1
-  Item_23: Token, param1: "meta=82", param2: 0.1
+  Item_23: Token, param1: "meta=82", param2: 0.075
 }
 # Unique/Tool Upgrades
 { +LootGroup Name: WeaponUpgradesTool
@@ -653,7 +652,7 @@
   Item_9: Token, param1: "meta=33", param2: 0.1
   Item_10: Token, param1: "meta=34", param2: 0.1
   Item_11: Token, param1: "meta=35", param2: 0.1
-  Item_12: Token, param1: "meta=82", param2: 0.1
+  Item_12: Token, param1: "meta=82", param2: 0.05
 }
 # Legacy Upgrades
 { +LootGroup Name: WeaponUpgradesLegacy
@@ -750,6 +749,7 @@
   Item_3: Token, param1: "meta=162", param2: 0.05
   Item_4: Token, param1: "meta=168", param2: 0.05
 }
+
 
 
 
@@ -913,6 +913,132 @@
 }
 
 
+
+# ========================================================================================================================== Smuggler loot groups
+
+{ +LootGroup Name: Eden_SmugglerValuables
+  Count: "1,1"
+  Item_0: MoneyCard, param1: "1000,3000", param2: 1
+  Item_1: GoldCoins, param1: "20,100", param2: 0.4
+  Item_2: Jewellery, param1: "5,15", param2: 0.4
+  Item_3: AncientRelics, param1: "1,2", param2: 0.1
+  Item_4: GoldIngot, param1: "25,75", param2: 0.1
+  Item_5: AlphaVirus, param1: "1,1", param2: 0.1
+  Item_6: RawDiamond, param1: "5,15", param2: 0.1
+  Item_7: Narcotics, param1: "10,20", param2: 0.1
+  Item_8: LuxuryClothing, param1: "5,25", param2: 0.1
+  Item_9: PlatinumCard, param1: "1,2", param2: 0.05
+}
+
+{ +LootGroup Name: Eden_SmugglerContraband
+  Count: "1,1"
+  Item_0: SmallOptronicBridge, param1: "1,2", param2: 0.4
+  Item_1: SmallOptronicMatrix, param1: "1,1", param2: 0.2
+  Item_2: LargeOptronicBridge, param1: "1,2", param2: 0.3
+  Item_3: LargeOptronicMatrix, param1: "1,1", param2: 0.15
+  Item_4: SmallUpgradeKit, param1: "1,1", param2: 0.1
+  Item_5: LargeUpgradeKit, param1: "1,1", param2: 0.1
+  Item_6: AdvancedUpgradeKit, param1: "1,1", param2: 0.1
+  Item_7: PlasmaConverter, param1: "1,4", param2: 1
+  Item_8: AntimatterConverter, param1: "1,4", param2: 0.35
+}
+
+{ +LootGroup Name: Eden_WeaponsSmallT1
+  Count: "1,1"
+  Item_0: WeaponSV01, param1: "1,4", param2: 0.5
+  Item_1: WeaponSV02, param1: "1,4", param2: 1
+  Item_2: WeaponSV03, param1: "1,4", param2: 0.5
+  Item_3: WeaponSV04, param1: "1,4", param2: 0.5
+  Item_4: WeaponSVRocketLauncherT1Blocks, param1: "1,2", param2: 0.75
+  Item_5: WeaponSV05Homing, param1: "1,2", param2: 0.5
+}
+
+{ +LootGroup Name: Eden_WeaponsSmallT2
+  Count: "1,1"
+  Item_0: WeaponSVPlasmaCannonT2, param1: "1,1", param2: 0.5
+  Item_1: WeaponSVRailgunT2, param1: "1,1", param2: 0.5
+  Item_2: WeaponSVLaserT2, param1: "1,1", param2: 0.5
+  Item_3: WeaponSVGatlingT2, param1: "1,1", param2: 1
+  Item_4: WeaponSVBombLauncherT2Blocks, param1: "1,1", param2: 0.5
+  Item_5: WeaponHVFlamethrowerT2, param1: "1,1", param2: 0.5
+  Item_6: WeaponSVRocketT2, param1: "1,1", param2: 0.75
+  Item_7: WeaponSVRocketHomingT2, param1: "1,1", param2: 0.5
+  Item_8: Eden_ModularLaserBlocksSV, param1: "1,1", param2: 0.1
+}
+
+{ +LootGroup Name: Eden_WeaponsLargeT1
+  Count: "1,1"
+  Item_0: WeaponCVPlasmaT1, param1: "1,4", param2: 0.5
+  Item_1: WeaponCVRailgunT1, param1: "1,4", param2: 0.5
+  Item_2: WeaponMS01, param1: "1,4", param2: 0.5
+  Item_3: WeaponMS02, param1: "1,4", param2: 0.5
+  Item_4: WeaponSVRocketLauncherT1Blocks, param1: "1,4", param2: 0.5
+  Item_5: WeaponSV05Homing, param1: "1,4", param2: 0.5
+}
+
+{ +LootGroup Name: Eden_DefenseSystemsT1
+  Count: "1,1"
+  Item_0: ShieldGeneratorT0, param1: "1,1", param2: 0.5
+  Item_1: ShieldGeneratorSV, param1: "1,1", param2: 0.5
+  Item_2: ShieldGeneratorHV, param1: "1,1", param2: 0.5
+  Item_3: ShieldGeneratorCV, param1: "1,1", param2: 0.5
+  Item_4: ShieldGeneratorBA, param1: "1,1", param2: 0.5
+  Item_5: ShieldBoosterSmallT1Blocks, param1: "1,2", param2: 0.5
+  Item_6: ShieldBoosterSmallT2Blocks, param1: "1,1", param2: 0.25
+  Item_7: ShieldBoosterLargeT1Blocks, param1: "1,2", param2: 0.5
+  Item_8: ShieldBoosterLargeT2Blocks, param1: "1,1", param2: 0.25
+  Item_9: Eden_TurretAlarm, param1: "1,4", param2: 0.5
+  Item_10: Eden_TurretTargetPainter, param1: "1,4", param2: 0.5
+  Item_11: DroneLargePlayer01Unit, param1: "1,4", param2: 1
+  Item_12: WeaponSVChaff, param1: "1,1", param2: 0.5
+}
+
+{ +LootGroup Name: Eden_ReportsCommon
+  Count: "1,1"
+  Item_0: ReportMaintenanceData, param1: "1,1", param2: 0.5
+  Item_1: ReportWorkShiftData, param1: "1,1", param2: 0.5
+  Item_2: ReportTransportationData, param1: "1,1", param2: 0.5
+  Item_3: ReportCommunicationData, param1: "1,1", param2: 0.5
+  Item_4: ReportEconomicData, param1: "1,1", param2: 0.5
+}
+
+{ +LootGroup Name: Eden_ReportsScience
+  Count: "1,1"
+  Item_0: ReportScienceRawData, param1: "1,1", param2: 0.5
+  Item_1: ReportBiologicalData, param1: "1,1", param2: 0.5
+  Item_2: ReportMaterialData, param1: "1,1", param2: 0.5
+  Item_3: ReportArcheologicalData, param1: "1,1", param2: 0.5
+  Item_4: ReportMaterialData, param1: "1,1", param2: 0.5
+  Item_5: ReportArcheologicalData, param1: "1,1", param2: 0.5
+  Item_6: ReportAnomalousData, param1: "1,1", param2: 0.5
+}
+
+{ +LootGroup Name: Eden_ReportsExloration
+  Count: "1,1"
+  Item_0: ReportExplorationRawData, param1: "1,1", param2: 0.5
+  Item_1: ReportGeologicalData, param1: "1,1", param2: 0.5
+  Item_2: ReportAtmosphericData, param1: "1,1", param2: 0.5
+  Item_3: ReportAstronomicalData, param1: "1,1", param2: 0.5
+  Item_4: ReportPlanetaryResourceData, param1: "1,1", param2: 0.5
+}
+
+{ +LootGroup Name: Eden_ReportsSecurity
+  Count: "1,1"
+  Item_0: ReportSpaceWeather, param1: "1,1", param2: 0.5
+  Item_1: ReportNavigationData, param1: "1,1", param2: 0.5
+  Item_2: ReportSpaceAnomality, param1: "1,1", param2: 0.5
+  Item_3: ReportWarpSignatures, param1: "1,1", param2: 0.5
+  Item_4: ReportWeaponSignatures, param1: "1,1", param2: 0.5
+}
+
+{ +LootGroup Name: Eden_ReportsMilitary
+  Count: "1,1"
+  Item_0: ReportMilitaryRawData, param1: "1,1", param2: 0.5
+  Item_1: ReportMilitaryScouting, param1: "1,1", param2: 0.5
+  Item_2: ReportMilitarySurveillance, param1: "1,1", param2: 0.5
+  Item_3: ReportMilitaryTroopMovement, param1: "1,1", param2: 0.5
+  Item_4: ReportMilitaryClassified, param1: "1,1", param2: 0.5
+}
 
 # ========================================================================================================================== Combat Site loot groups
 
@@ -1507,17 +1633,62 @@
   Item_16: Graphite, param1: "1,25", param2: 1
 }
 
-# Mining Contracts
+
+# Mining Contracts (all)
 { +LootGroup Name: Eden_MiningContracts
   Count: "1"
-  Item_0: Token, param1: "meta=6811", param2: 0.25
-  Item_1: Token, param1: "meta=6812", param2: 0.25
-  Item_2: Token, param1: "meta=6813", param2: 0.25
-  Item_3: Token, param1: "meta=6821", param2: 0.25
-  Item_4: Token, param1: "meta=6822", param2: 0.25
-  Item_5: Token, param1: "meta=6823", param2: 0.25
-  Item_6: Token, param1: "meta=6824", param2: 0.25
+  Item_0: Token, param1: "meta=6799", param2: 1 # Sealed Mining Contract
 }
+
+# Mining Contracts (Free Colonists)
+{ +LootGroup Name: Eden_MiningContractsCol
+  Count: "1"
+  Item_0: Token, param1: "meta=6800", param2: 0.5 # Graphite
+  Item_1: Token, param1: "meta=6801", param2: 0.5 # Iron
+  Item_2: Token, param1: "meta=6802", param2: 0.5 # Silicon
+  Item_3: Token, param1: "meta=6803", param2: 0.5 # Copper
+  Item_4: Token, param1: "meta=6804", param2: 0.25 # Ice (rare)
+  Item_5: Token, param1: "meta=6805", param2: 0.5 # Titanium
+  Item_6: Token, param1: "meta=6806", param2: 0.25 # Aluminium (rare)
+}
+
+# Mining Contracts (Polaris Megacorp)
+{ +LootGroup Name: Eden_MiningContractsPol
+  Count: "1"
+  Item_0: Token, param1: "meta=6820", param2: 0.5 # Cobalt
+  Item_1: Token, param1: "meta=6821", param2: 0.5 # Titanium
+  Item_2: Token, param1: "meta=6822", param2: 0.5 # Neodymium
+  Item_3: Token, param1: "meta=6823", param2: 0.5 # Aluminium
+  Item_4: Token, param1: "meta=6824", param2: 0.25 # Promethium (rare)
+  Item_5: Token, param1: "meta=6825", param2: 0.25 # Rich Ice (rare)
+  Item_6: Token, param1: "meta=6826", param2: 0.5 # Iron
+  Item_7: Token, param1: "meta=6827", param2: 0.5 # Copper
+}
+
+# Mining Contracts (Trade Federation)
+{ +LootGroup Name: Eden_MiningContractsTra
+  Count: "1"
+  Item_0: Token, param1: "meta=6840", param2: 0.25 # Platinum (rare)
+  Item_1: Token, param1: "meta=6841", param2: 0.5 # Erestrum
+  Item_2: Token, param1: "meta=6842", param2: 0.5 # Gold
+  Item_3: Token, param1: "meta=6843", param2: 0.5 # Tungsten
+  Item_4: Token, param1: "meta=6844", param2: 0.5 # Pentaxid
+  Item_5: Token, param1: "meta=6845", param2: 0.25 # Stone (rare)
+}
+
+# Mining Contracts (Zirax Empire)
+{ +LootGroup Name: Eden_MiningContractsZir
+  Count: "1"
+  Item_0: Token, param1: "meta=6860", param2: 0.5 # Magnesium
+  Item_1: Token, param1: "meta=6861", param2: 0.5 # Sathium
+  Item_2: Token, param1: "meta=6862", param2: 0.5 # Zascosium
+  Item_3: Token, param1: "meta=6863", param2: 0.25 # Palladium (rare)
+  Item_4: Token, param1: "meta=6864", param2: 0.25 # Magmacite (rare)
+  Item_5: Token, param1: "meta=6865", param2: 0.5 # Erestrum
+  Item_6: Token, param1: "meta=6866", param2: 0.5 # Titanium
+}
+
+
 
 # Missing Cargo
 { +LootGroup Name: Eden_MissingCargo

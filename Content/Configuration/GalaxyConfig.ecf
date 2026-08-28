@@ -147,7 +147,9 @@
 
 
 { GalaxyConfig, Name: General
-  StarCount: "28000, 30000" # Minimum and maximum star count based on seed. Lowering this number will take away stars from the main spiral shape of the galaxy. Individual star clusters will be unaffected (unless the main shape runs out of stars completely).
+  # StarCount: "28000, 30000" # Old count
+  # StarCount: "38000, 40000"
+  StarCount: "50000, 52000" # Minimum and maximum star count based on seed. Lowering this number will take away stars from the main spiral shape of the galaxy. Individual star clusters will be unaffected (unless the main shape runs out of stars completely). 20000 of these stars are hidden background stars.
   Radius: "0, 850"                           # inner and outer radius of galaxy in LY (no random!)
 
 
@@ -196,7 +198,7 @@
   NebulaColors14: "0.1,0.15,0,  0,0.02,0,  0.02,0.02,0,  0.05,0.04,0, 0.1,0.08,0,  0.1,0.2,0.1,  0,0.2,0" # Legacy Outer
   
   # Unused
-  NebulaColors15: "0.5,0.1,0.1,  0.3,0,0,  0.3,0.3,0.4,  0.4,0.35,0.35" # Galactic Core
+  NebulaColors15: "0.22,0.2,0.16,  0.17,0.15,0.1,  0.33,0.3,0.18" # Galactic Core White
   
   NebulaColors16: "1,0.16,0,     1.0,0.4,0,     1.0,0.20,0,   1.0,0.13,0.0,      0.22,0.79,0.7"  # Galactic Core
   NebulaColors17: "0.005,0.062,0.083,   0.050,0.045,0.055,    0.005,0.060,0.085,   0.050,0.053,0.048,   0.004,0.003,0.008,    0.075,0.067,0.068,  0.500,0.080,0.120"  # Void Nebula
@@ -246,7 +248,7 @@
     NebulaSpawnCount: 5
     NebulaColorIndex: 18
   }
-  { Child StarRegion_2  
+  { Child StarRegion_2
     Name: "Inner Center Sphere"
     Shape: Sphere
     RadiusMinMax: "3, 25"
@@ -265,7 +267,7 @@
     NebulaSpawnCount: 15
     NebulaColorIndex: 15
   }
-  { Child StarRegion_3  
+  { Child StarRegion_3
     Name: "Outer Center Sphere"
     Shape: Elliptical 
     RadiusMinMax: "20, 150"
@@ -442,6 +444,18 @@
     StarClass_2: F, param1: "Prob=0.3"
     StarClass_3: A, param1: "Prob=0.2"
     StarClass_4: M, param1: "Prob=0.15"
+  }
+
+  { Child StarRegion_14
+    Name: "Inner Galaxy Starglow"
+    Shape: Elliptical
+    RadiusMinMax: "2, 55"
+    TotalSpawnCount: 0
+    FlattenFac: 0.025  # default is 0.2
+    UseDefaultStarDef: false
+    StarClass_1: O1b, param1: "Prob=0.2, ClusterProb=0, ClusterRange=0-0"      
+    NebulaSpawnCount: 10
+    NebulaColorIndex: 14
   }
 
 # ------------------------------------------------------------------------------------------------------------------------------------------------------------------ Kriel Cluster
@@ -651,7 +665,7 @@
 
   { Child StarRegion_31
     Name: "Star Cluster Wastelands Center"
-    LabelName: "<align=center><voffset=12em><line-height=1em>The Wastelands<br><size=75%>[Wastelanders, ARC]"
+    LabelName: "<align=center><voffset=12em><line-height=1em>The Wastelands<br><size=75%>[Wastelanders]"
     LabelColor: "1, 1, 1, 0.8"
     LabelSize: 200
     Shape: Elliptical
@@ -725,7 +739,7 @@
 
 # ------------------------------------------------------------------------------------------------------------------------------------------------------------------ Tesch Cluster
   { Child StarRegion_35
-    Name: "Fractal Expanse"
+    Name: "Experimuntus"
     LabelName: "<align=center><voffset=6em><line-height=1em>Experimuntus<br><size=75%>[Tesch]"
     LabelColor: "0.6, 0.6, 0.6, 0.6"
     LabelSize: 100
@@ -758,7 +772,9 @@
     UseDefaultStarDef: false
     StarClass_1: M1Ia, param1: "SpawnAmount=6, Prob=1"
     StarClass_2: WR1, param1: "SpawnAmount=2, Prob=1"
-    StarClass_3: K, param1: "Prob=0.5"
+    StarClass_3: K, param1: "Prob=0.4"
+    StarClass_4: P, param1: "Prob=0.4"
+    StarClass_5: P-P, param1: "Prob=0.2"
   }
 
 # Demon Nebula
@@ -776,6 +792,8 @@
     StarClass_1: M1Ia, param1: "SpawnAmount=6, Prob=1"
     StarClass_2: WR1, param1: "SpawnAmount=3, Prob=1"
     StarClass_3: K, param1: "Prob=0.5"
+    StarClass_4: P, param1: "Prob=0.25"
+    StarClass_5: P-P, param1: "Prob=0.1"
     NebulaSpawnCount: 35
     NebulaColorIndex: 19
   }
@@ -860,6 +878,8 @@
     StarClass_1: G, param1: "Prob=1"
     StarClass_2: K, param1: "Prob=0.6"
     StarClass_3: M, param1: "Prob=0.3"
+    StarClass_4: P, param1: "Prob=0.1"
+    StarClass_5: P-P, param1: "Prob=0.03"
   }
 
   { Child StarRegion_48
@@ -880,9 +900,54 @@
     NebulaColorIndex: 16
   }
 
+  { Child StarRegion_49
+    Name: "Pulsar Nebula"
+    LabelName: "<align=center><voffset=6em><line-height=1em>Pulsar Nebula"
+    LabelColor: "0.6, 0.6, 0.6, 0.6"
+    LabelSize: 100
+    Shape: Elliptical
+    Position: "-500, 35, 10"
+    RadiusMinMax: "5, 40"
+    TotalSpawnCount: 35
+    FlattenFac: 0.65  # default is 0.2
+    UseDefaultStarDef: false
+    StarClass_1: PSR, param1: "Prob=1"
+    StarClass_2: PSR2, param1: "Prob=1"
+    StarClass_3: PSR2-PSR2, param1: "Prob=0.4"
+    StarClass_4: N, param1: "Prob=0.35"
+    StarClass_5: N2, param1: "Prob=0.35"
+    StarClass_6: N2, param1: "Prob=0.35"
+    StarClass_7: N3, param1: "Prob=0.35"
+    StarClass_8: N4, param1: "Prob=0.35"
+    StarClass_9: D, param1: "Prob=0.25"
+    StarClass_10: D3, param1: "Prob=0.25"
+    StarClass_11: D5, param1: "Prob=0.25"
+    NebulaSpawnCount: 3
+    NebulaColorIndex: 24
+  }
 
+  { Child StarRegion_50
+    Name: "Heart Nebula"
+    LabelName: "<align=center><voffset=6em><line-height=1em>Heart Nebula"
+    LabelColor: "0.6, 0.6, 0.6, 0.6"
+    LabelSize: 100
+    Shape: Elliptical
+    Position: "225, 15, 500"
+    RadiusMinMax: "0, 22"
+    TotalSpawnCount: 15
+    FlattenFac: 0.65  # default is 0.2
+    UseDefaultStarDef: false
+    StarClass_1: P, param1: "Prob=1"
+    StarClass_2: P-P, param1: "Prob=1"
+    StarClass_3: K, param1: "Prob=0.25"
+    StarClass_4: K2, param1: "Prob=0.25"
+    StarClass_5: K3, param1: "Prob=0.25"
+    StarClass_6: K4, param1: "Prob=0.25"
+    NebulaSpawnCount: 3
+    NebulaColorIndex: 21
+  }
 
-# ------------------------------------------------------ Background Galaxy M32
+# ------------------------------------------------------ Satellite Galaxy M32
   { Child StarRegion_56
     Name: "M32 Inner"
     LabelName: "<align=center><voffset=12em><line-height=1em>M32"
@@ -925,9 +990,9 @@
     Name: "M32 Outer"
     Shape: Elliptical
     Position: "300, -250, 300"
-    RadiusMinMax: "20, 115"
+    RadiusMinMax: "20, 125"
     TotalSpawnCount: 600
-    # FlattenFac: 0.2  # default is 0.2
+    FlattenFac: 0.25
     UseDefaultStarDef: false
     # StarClass_1: O, param1: "Prob=0.1"
     StarClass_1: O1b, param1: "Prob=0.1"
@@ -942,23 +1007,132 @@
     # NebulaColorIndex: 19
   }
 
-# ------------------------------------------------------------------------------------------------------------------------------------------------------------------ Decay Star Cluster
+# # ------------------------------------------------------ Satellite Galaxy Andromeda I
+# # Small, dust filled with lots of old red dwarfs and some medium age sun-like stars.
+  # { Child StarRegion_59
+    # Name: "Andromeda I"
+    # LabelName: "<align=center><voffset=12em><line-height=1em>Andromeda I"
+    # LabelColor: "1, 1, 1, 0.8"
+    # LabelSize: 200
+    # Shape: Elliptical
+    # Position: "-700, -150, 75"
+    # RadiusMinMax: "0, 85"
+    # TotalSpawnCount: 100
+    # FlattenFac: 0.45
+    # UseDefaultStarDef: false
+    # StarClass_1: M, param1: "Prob=0.75"
+    # StarClass_2: M3, param1: "Prob=0.75"
+    # StarClass_3: M4, param1: "Prob=0.75"
+    # StarClass_4: M5, param1: "Prob=0.75"
+    # StarClass_5: G, param1: "Prob=0.2"
+    # StarClass_6: G3, param1: "Prob=0.2"
+    # StarClass_7: G4, param1: "Prob=0.2"
+    # StarClass_8: G5, param1: "Prob=0.2"
+    # StarClass_9: G6, param1: "Prob=0.2"
+    # StarClass_10: F, param1: "Prob=0.2"
+    # StarClass_11: F2, param1: "Prob=0.2"
+    # StarClass_12: F4, param1: "Prob=0.2"
+    # StarClass_13: F5, param1: "Prob=0.2"
+    # NebulaSpawnCount: 30
+    # NebulaColorIndex: 26
+  # }
+
+# ------------------------------------------------------ Satellite Galaxy Cassiopeia Dwarf
+# Small dwarf galaxy with lots of old red dwarfs and some medium age sun-like stars.
   { Child StarRegion_59
-    Name: "Decay Cluster"
-    LabelName: "<align=center><voffset=12em><line-height=1em>Decay<br><size=75%>[Ancient Progenitors]"
+    Name: "Cassiopeia Dwarf Galaxy"
+    LabelName: "<align=center><voffset=12em><line-height=1em>Cassiopeia Dwarf Galaxy"
     LabelColor: "1, 1, 1, 0.8"
     LabelSize: 200
     Shape: Elliptical
-    Position: "1010, 290, 0"
-    RadiusMinMax: "5, 100"
-    TotalSpawnCount: 375
-    FlattenFac: 0.35
+    Position: "-700, -150, 75"
+    RadiusMinMax: "0, 85"
+    TotalSpawnCount: 100
+    FlattenFac: 0.45
     UseDefaultStarDef: false
-    StarClass_1: S2, param1: "SpawnAmount=5, Prob=1"
-    StarClass_2: D2, param1: "Prob=0.5"
-    NebulaSpawnCount: 6
-    NebulaColorIndex: 9
+    StarClass_1: M, param1: "Prob=0.75"
+    StarClass_2: M3, param1: "Prob=0.75"
+    StarClass_3: M4, param1: "Prob=0.75"
+    StarClass_4: M5, param1: "Prob=0.75"
+    StarClass_5: G, param1: "Prob=0.2"
+    StarClass_6: G3, param1: "Prob=0.2"
+    StarClass_7: G4, param1: "Prob=0.2"
+    StarClass_8: G5, param1: "Prob=0.2"
+    StarClass_9: G6, param1: "Prob=0.2"
+    StarClass_10: F, param1: "Prob=0.2"
+    StarClass_11: F2, param1: "Prob=0.2"
+    StarClass_12: F4, param1: "Prob=0.2"
+    StarClass_13: F5, param1: "Prob=0.2"
+    # NebulaSpawnCount: 30
+    # NebulaColorIndex: 26
   }
+
+# ------------------------------------------------------ Satellite Galaxy Andromeda I
+# Small dwarf galaxy filled with dust and some young blue stars in the center
+  { Child StarRegion_60
+    Name: "Messier 110 Center"
+    LabelName: "<align=center><voffset=12em><line-height=1em>Messier 110"
+    LabelColor: "1, 1, 1, 0.8"
+    LabelSize: 200
+    Shape: Elliptical
+    Position: "200, 250, 750"
+    RadiusMinMax: "0, 15"
+    TotalSpawnCount: 30
+    FlattenFac: 0.45
+    UseDefaultStarDef: false
+    StarClass_1: B, param1: "Prob=1"
+    StarClass_2: B3, param1: "Prob=1"
+    StarClass_3: B-A4V, param1: "Prob=0.3"
+    StarClass_4: B-D, param1: "Prob=0.3"
+    StarClass_5: O1b, param1: "Prob=0.4"
+    StarClass_6: O3, param1: "Prob=0.4"
+    StarClass_7: WR2, param1: "Prob=0.2"
+    NebulaSpawnCount: 30
+    NebulaColorIndex: 26
+  }
+  { Child StarRegion_61
+    Name: "Messier 110 Outer"
+    Shape: Elliptical
+    Position: "200, 250, 750"
+    RadiusMinMax: "0, 150"
+    TotalSpawnCount: 225
+    FlattenFac: 0.35
+    UseDefaultStarDef: true
+    # StarClass_1: M, param1: "Prob=0.75"
+    # StarClass_2: M3, param1: "Prob=0.75"
+    # StarClass_3: M4, param1: "Prob=0.75"
+    # StarClass_4: M5, param1: "Prob=0.75"
+    # StarClass_5: G, param1: "Prob=0.2"
+    # StarClass_6: G3, param1: "Prob=0.2"
+    # StarClass_7: G4, param1: "Prob=0.2"
+    # StarClass_8: G5, param1: "Prob=0.2"
+    # StarClass_9: G6, param1: "Prob=0.2"
+    # StarClass_10: F, param1: "Prob=0.2"
+    # StarClass_11: F2, param1: "Prob=0.2"
+    # StarClass_12: F4, param1: "Prob=0.2"
+    # StarClass_13: F5, param1: "Prob=0.2"
+    NebulaSpawnCount: 20
+    NebulaColorIndex: 26
+  }
+
+# ------------------------------------------------------------------------------------------------------------------------------------------------------------------ Decay Star Cluster
+# Diabled for RE2.
+  # { Child StarRegion_59
+    # Name: "Decay Cluster"
+    # LabelName: "<align=center><voffset=12em><line-height=1em>Decay<br><size=75%>[Ancient Progenitors]"
+    # LabelColor: "1, 1, 1, 0.8"
+    # LabelSize: 200
+    # Shape: Elliptical
+    # Position: "1010, 290, 0"
+    # RadiusMinMax: "5, 100"
+    # TotalSpawnCount: 375
+    # FlattenFac: 0.35
+    # UseDefaultStarDef: false
+    # StarClass_1: S2, param1: "SpawnAmount=5, Prob=1"
+    # StarClass_2: D2, param1: "Prob=0.5"
+    # NebulaSpawnCount: 6
+    # NebulaColorIndex: 9
+  # }
 
 # ------------------------------------------------------ Background Galaxy N16
   # { Child StarRegion_60
@@ -1037,161 +1211,6 @@
     # StarClass_6: N, param1: "Prob=0.03"
   # }
 
-  { Child StarRegion_68
-    Name: "Random Nebula Colors 1"
-    Shape: Elliptical
-    Position: "0, 0, 0"
-    RadiusMinMax: "175, 750"
-    TotalSpawnCount: 0
-    FlattenFac: 0.15
-    UseDefaultStarDef: true
-    NebulaSpawnCount: 10
-    NebulaColorIndex: 26
-  }
-
-  { Child StarRegion_69
-    Name: "Random Nebula Colors 2"
-    Shape: Elliptical
-    Position: "0, 0, 0"
-    RadiusMinMax: "175, 750"
-    TotalSpawnCount: 0
-    FlattenFac: 0.15
-    UseDefaultStarDef: true
-    # NebulaSpawnCount: 5
-    NebulaSpawnCount: 5
-    NebulaColorIndex: 25
-  }
-
-  { Child StarRegion_70
-    Name: "Random Nebula Colors 3"
-    Shape: Elliptical
-    Position: "0, 0, 0"
-    RadiusMinMax: "175, 750"
-    TotalSpawnCount: 0
-    FlattenFac: 0.15
-    UseDefaultStarDef: true
-    NebulaSpawnCount: 5
-    NebulaColorIndex: 20
-  }
-
-  { Child StarRegion_71
-    Name: "Random Nebula Colors 4"
-    Shape: Elliptical
-    Position: "0, 0, 0"
-    RadiusMinMax: "175, 750"
-    TotalSpawnCount: 0
-    FlattenFac: 0.15
-    UseDefaultStarDef: true
-    NebulaSpawnCount: 3
-    NebulaColorIndex: 21
-  }
-
-  { Child StarRegion_72
-    Name: "Random Nebula Colors 5"
-    Shape: Elliptical
-    Position: "0, 0, 0"
-    RadiusMinMax: "175, 750"
-    TotalSpawnCount: 0
-    FlattenFac: 0.15
-    UseDefaultStarDef: true
-    NebulaSpawnCount: 3
-    NebulaColorIndex: 22
-  }
-
-  { Child StarRegion_73
-    Name: "Random Nebula Colors 6"
-    Shape: Elliptical
-    Position: "0, 0, 0"
-    RadiusMinMax: "175, 750"
-    TotalSpawnCount: 0
-    FlattenFac: 0.15
-    UseDefaultStarDef: true
-    NebulaSpawnCount: 10
-    NebulaColorIndex: 23
-  }
-
-  { Child StarRegion_74
-    Name: "Random Nebula Colors 7"
-    Shape: Elliptical
-    Position: "0, 0, 0"
-    RadiusMinMax: "175, 750"
-    TotalSpawnCount: 0
-    FlattenFac: 0.15
-    UseDefaultStarDef: true
-    NebulaSpawnCount: 10
-    NebulaColorIndex: 24
-  }
-
-  { Child StarRegion_75
-    Name: "Admin"
-    LabelName: "<align=center><voffset=6em><line-height=1em>Admin and Instances</size></line-height><line-height=-50>\n<size=40%><sprite=4> No Entry <sprite=4>"
-    LabelColor: "0.6, 0.6, 0.6, 0.6"
-    LabelSize: 60
-    Shape: Elliptical
-    Position: "150, 500, 150"
-    RadiusMinMax: "1, 1"
-    TotalSpawnCount: 0
-    FlattenFac: 0.55  # default is 0.2
-    UseDefaultStarDef: false
-    StarClass_1: M, param1: "Prob=0"
-  }
-
-  { Child StarRegion_76
-    Name: "Galactic North"
-    LabelName: "<align=center><line-height=1em>↑<br>N"
-    LabelColor: "0.1, 0.1, 0.1, 0.03"
-    LabelSize: 10000
-    Shape: Elliptical
-    Position: "2000, 500, 0"
-    RadiusMinMax: "1, 1"
-    TotalSpawnCount: 0
-    FlattenFac: 0.55  # default is 0.2
-    UseDefaultStarDef: false
-    StarClass_1: M, param1: "Prob=0"
-  }
-
-  { Child StarRegion_77
-    Name: "Galactic East"
-    LabelName: "<align=center><line-height=1em>↑<br>E"
-    LabelColor: "0.1, 0.1, 0.1, 0.03"
-    LabelSize: 10000
-    Shape: Elliptical
-    Position: "0, 500, -2000"
-    RadiusMinMax: "1, 1"
-    TotalSpawnCount: 0
-    FlattenFac: 0.55  # default is 0.2
-    UseDefaultStarDef: false
-    StarClass_1: M, param1: "Prob=0"
-  }
-
-  { Child StarRegion_78
-    Name: "Galactic South"
-    LabelName: "<align=center><line-height=1em>↑<br>S"
-    LabelColor: "0.1, 0.1, 0.1, 0.03"
-    LabelSize: 10000
-    Shape: Elliptical
-    Position: "-2000, 500, 0"
-    RadiusMinMax: "1, 1"
-    TotalSpawnCount: 0
-    FlattenFac: 0.55  # default is 0.2
-    UseDefaultStarDef: false
-    StarClass_1: M, param1: "Prob=0"
-  }
-
-  { Child StarRegion_79
-    Name: "Galactic West"
-    LabelName: "<align=center><line-height=1em>↑<br>W"
-    LabelColor: "0.1, 0.1, 0.1, 0.03"
-    LabelSize: 10000
-    Shape: Elliptical
-    Position: "0, 500, 2000"
-    RadiusMinMax: "1, 1"
-    TotalSpawnCount: 0
-    FlattenFac: 0.55  # default is 0.2
-    UseDefaultStarDef: false
-    StarClass_1: M, param1: "Prob=0"
-  }
-
 # ------------------------------------------------------------------------------------------------------------------------------------------------------------------ Galaxy Shape
   { Child StarRegion_80
     Name: "Filler"
@@ -1256,12 +1275,14 @@
     StarClass_1: M, param1: "Prob=0.3"
     StarClass_2: M2-Drone, param1: "Prob=0.55"
     StarClass_3: R-Drone, param1: "Prob=0.2"
-    StarClass_4: K, param1: "Prob=0.2"
-    StarClass_5: D, param1: "Prob=0.2"
-    StarClass_6: T-Drone, param1: "Prob=0.2"
-    StarClass_7: M-M, param1: "SpawnAmount=4, Prob=1"
-    StarClass_8: M6, param1: "SpawnAmount=4, Prob=1"
-    StarClass_9: K7, param1: "SpawnAmount=4, Prob=1"
+    StarClass_4: P, param1: "Prob=1"
+    StarClass_5: K, param1: "Prob=0.2"
+    StarClass_6: D, param1: "Prob=0.2"
+    StarClass_7: T-Drone, param1: "Prob=0.2"
+    StarClass_8: M-M, param1: "SpawnAmount=4, Prob=1"
+    StarClass_9: M6, param1: "SpawnAmount=4, Prob=1"
+    StarClass_10: K7, param1: "SpawnAmount=4, Prob=1"
+    StarClass_11: D-BH, param1: "Prob=0.1"
     NebulaSpawnCount: 22
     NebulaColorIndex: 11
   }
@@ -1280,6 +1301,7 @@
     StarClass_4: K, param1: "Prob=0.2"
     StarClass_5: D, param1: "Prob=0.2"
     StarClass_6: T-Drone, param1: "Prob=0.2"
+    StarClass_7: D-BH, param1: "Prob=0.1"
   }
 
   { Child StarRegion_87
@@ -1296,6 +1318,7 @@
     StarClass_4: K, param1: "Prob=0.2"
     StarClass_5: D, param1: "Prob=0.2"
     StarClass_6: T-Drone, param1: "Prob=0.2"
+    StarClass_7: D-BH, param1: "Prob=0.1"
   }
 
   { Child StarRegion_88
@@ -1312,6 +1335,7 @@
     StarClass_4: K, param1: "Prob=0.2"
     StarClass_5: D, param1: "Prob=0.2"
     StarClass_6: T-Drone, param1: "Prob=0.2"
+    StarClass_7: D-BH, param1: "Prob=0.1"
   }
 
   { Child StarRegion_89
@@ -1328,6 +1352,7 @@
     StarClass_4: K, param1: "Prob=0.2"
     StarClass_5: D, param1: "Prob=0.2"
     StarClass_6: T-Drone, param1: "Prob=0.2"
+    StarClass_7: D-BH, param1: "Prob=0.1"
   }
 
   { Child StarRegion_90
@@ -1344,6 +1369,7 @@
     StarClass_4: K, param1: "Prob=0.2"
     StarClass_5: D, param1: "Prob=0.2"
     StarClass_6: T-Drone, param1: "Prob=0.2"
+    StarClass_7: D-BH, param1: "Prob=0.1"
   }
 
   { Child StarRegion_91
@@ -1360,6 +1386,7 @@
     StarClass_4: K, param1: "Prob=0.2"
     StarClass_5: D, param1: "Prob=0.2"
     StarClass_6: T-Drone, param1: "Prob=0.2"
+    StarClass_7: D-BH, param1: "Prob=0.1"
   }
 
   { Child StarRegion_92
@@ -1376,6 +1403,7 @@
     StarClass_4: K, param1: "Prob=0.2"
     StarClass_5: D, param1: "Prob=0.2"
     StarClass_6: T-Drone, param1: "Prob=0.2"
+    StarClass_7: D-BH, param1: "Prob=0.1"
   }
 
   { Child StarRegion_93
@@ -1392,9 +1420,175 @@
     StarClass_4: K, param1: "Prob=0.2"
     StarClass_5: D, param1: "Prob=0.2"
     StarClass_6: T-Drone, param1: "Prob=0.2"
+    StarClass_7: D-BH, param1: "Prob=0.1"
   }
 
-  { Child StarRegion_97
+  { Child StarRegion_175
+    Name: "Messier 110 to North Rim"
+    LabelName: "<voffset=2.25em><align=center><size=400%><color=#00ffff80>◌</size></voffset><line-height=-1em>\n<voffset=4em><size=60>Messier 110 to North Rim Jump Gate</size></color>"
+    LabelColor: "0.6, 0.6, 0.6, 0.6"
+    LabelSize: 100
+    Shape: Elliptical
+    Position: "210, 225, 690"
+    RadiusMinMax: "1, 1"
+    TotalSpawnCount: 0
+    FlattenFac: 0.55
+    UseDefaultStarDef: false
+    StarClass_1: M, param1: "Prob=0"
+  }
+
+  { Child StarRegion_176
+    Name: "North Rim to Messier 110"
+    LabelName: "<voffset=2.25em><align=center><size=400%><color=#00ffff80>◌</size></voffset><line-height=-1em>\n<voffset=4em><size=60>North Rim to Messier 110 Jump Gate</size></color>"
+    LabelColor: "0.6, 0.6, 0.6, 0.6"
+    LabelSize: 100
+    Shape: Elliptical
+    Position: "210, 25, 525"
+    RadiusMinMax: "1, 1"
+    TotalSpawnCount: 0
+    FlattenFac: 0.55
+    UseDefaultStarDef: false
+    StarClass_1: M, param1: "Prob=0"
+  }
+
+# Random nebula spawning
+  { Child StarRegion_177
+    Name: "Random Nebula Colors 1"
+    Shape: Elliptical
+    Position: "0, 0, 0"
+    RadiusMinMax: "175, 750"
+    TotalSpawnCount: 0
+    FlattenFac: 0.15
+    UseDefaultStarDef: true
+    NebulaSpawnCount: 8
+    NebulaColorIndex: 26
+  }
+
+  { Child StarRegion_178
+    Name: "Random Nebula Colors 2"
+    Shape: Elliptical
+    Position: "0, 0, 0"
+    RadiusMinMax: "175, 750"
+    TotalSpawnCount: 0
+    FlattenFac: 0.15
+    UseDefaultStarDef: true
+    # NebulaSpawnCount: 5
+    NebulaSpawnCount: 4
+    NebulaColorIndex: 25
+  }
+
+  { Child StarRegion_179
+    Name: "Random Nebula Colors 3"
+    Shape: Elliptical
+    Position: "0, 0, 0"
+    RadiusMinMax: "175, 750"
+    TotalSpawnCount: 0
+    FlattenFac: 0.15
+    UseDefaultStarDef: true
+    NebulaSpawnCount: 4
+    NebulaColorIndex: 20
+  }
+
+  { Child StarRegion_180
+    Name: "Random Nebula Colors 4"
+    Shape: Elliptical
+    Position: "0, 0, 0"
+    RadiusMinMax: "175, 750"
+    TotalSpawnCount: 0
+    FlattenFac: 0.15
+    UseDefaultStarDef: true
+    NebulaSpawnCount: 3
+    NebulaColorIndex: 21
+  }
+
+  { Child StarRegion_181
+    Name: "Random Nebula Colors 5"
+    Shape: Elliptical
+    Position: "0, 0, 0"
+    RadiusMinMax: "175, 750"
+    TotalSpawnCount: 0
+    FlattenFac: 0.15
+    UseDefaultStarDef: true
+    NebulaSpawnCount: 3
+    NebulaColorIndex: 22
+  }
+
+  { Child StarRegion_182
+    Name: "Random Nebula Colors 6"
+    Shape: Elliptical
+    Position: "0, 0, 0"
+    RadiusMinMax: "175, 750"
+    TotalSpawnCount: 0
+    FlattenFac: 0.15
+    UseDefaultStarDef: true
+    NebulaSpawnCount: 8
+    NebulaColorIndex: 23
+  }
+
+  { Child StarRegion_183
+    Name: "Random Nebula Colors 7"
+    Shape: Elliptical
+    Position: "0, 0, 0"
+    RadiusMinMax: "175, 750"
+    TotalSpawnCount: 0
+    FlattenFac: 0.15
+    UseDefaultStarDef: true
+    NebulaSpawnCount: 8
+    NebulaColorIndex: 24
+  }
+
+  { Child StarRegion_184
+    Name: "Admin"
+    LabelName: "<align=center><voffset=6em><line-height=1em>Admin and Instances</size></line-height><line-height=-50>\n<size=40%><sprite=4> No Entry <sprite=4>"
+    LabelColor: "0.6, 0.6, 0.6, 0.6"
+    LabelSize: 60
+    Shape: Elliptical
+    Position: "150, 500, 150"
+    RadiusMinMax: "1, 1"
+    TotalSpawnCount: 0
+    FlattenFac: 0.55  # default is 0.2
+    UseDefaultStarDef: false
+    StarClass_1: M, param1: "Prob=0"
+  }
+
+# Hidden background stars thin band
+  { Child StarRegion_185
+    Name: "Background Stars"
+    Shape: Elliptical
+    RadiusMinMax: "25, 700"
+    # TotalSpawnCount: 10000
+    TotalSpawnCount: 10000
+    # FlattenFac: 0.5  # default is 0.2
+    FlattenFac: 0.11  # default is 0.2
+    UseDefaultStarDef: false
+    StarClass_1: BackgroundWhite, param1: "Prob=1"
+    StarClass_2: BackgroundBlue, param1: "Prob=0.35"
+    StarClass_3: BackgroundYellow, param1: "Prob=0.35"
+    StarClass_4: BackgroundRed, param1: "Prob=0.35"
+    # StarClass_2: Test2, param1: "Prob=1"
+    # StarClass_3: Test3, param1: "Prob=0.5"
+  }
+
+# Hidden background stars wide spread
+  { Child StarRegion_186
+    Name: "Background Stars"
+    Shape: Elliptical
+    RadiusMinMax: "25, 700"
+    # TotalSpawnCount: 10000
+    TotalSpawnCount: 10000
+    # FlattenFac: 0.5  # default is 0.2
+    FlattenFac: 0.35  # default is 0.2
+    UseDefaultStarDef: false
+    StarClass_1: BackgroundWhite, param1: "Prob=1"
+    StarClass_2: BackgroundBlue, param1: "Prob=0.35"
+    StarClass_3: BackgroundYellow, param1: "Prob=0.35"
+    StarClass_4: BackgroundRed, param1: "Prob=0.35"
+    # StarClass_2: Test2, param1: "Prob=1"
+    # StarClass_3: Test3, param1: "Prob=0.5"
+  }
+
+# Galaxy nebula
+  { Child StarRegion_187
     Name: "Galaxy Nebula"
     Shape: Elliptical
     Position: "0, 0, 0"
@@ -1402,11 +1596,187 @@
     TotalSpawnCount: 0
     FlattenFac: 0.25
     UseDefaultStarDef: true
-    NebulaSpawnCount: 70
+    NebulaSpawnCount: 60
   }
 
+# ------------------------------------------------------------------------------------------------------------------------------------------------------------------ Labels
+
+# Jump gate labels
+
+  { Child StarRegion_188
+    Name: "NW to SE"
+    LabelName: "<voffset=2.25em><align=center><size=400%><color=#00ffff80>◌</size></voffset><line-height=-1em>\n<voffset=4em><size=60>NW to SE Jump Gate</size></color>"
+    LabelColor: "0.6, 0.6, 0.6, 0.6"
+    LabelSize: 100
+    Shape: Elliptical
+    Position: "-200, 20, 200"
+    RadiusMinMax: "1, 1"
+    TotalSpawnCount: 0
+    FlattenFac: 0.55
+    UseDefaultStarDef: false
+    StarClass_1: M, param1: "Prob=0"
+  }
+
+  { Child StarRegion_189
+    Name: "SE to NW"
+    LabelName: "<voffset=2.25em><align=center><size=400%><color=#00ffff80>◌</size></voffset><line-height=-1em>\n<voffset=4em><size=60>SE to NW Jump Gate</size></color>"
+    LabelColor: "0.6, 0.6, 0.6, 0.6"
+    LabelSize: 100
+    Shape: Elliptical
+    Position: "200, 20, -200"
+    RadiusMinMax: "1, 1"
+    TotalSpawnCount: 0
+    FlattenFac: 0.55
+    UseDefaultStarDef: false
+    StarClass_1: M, param1: "Prob=0"
+  }
+
+  { Child StarRegion_190
+    Name: "East Rim to Solitude"
+    LabelName: "<voffset=2.25em><align=center><size=400%><color=#00ffff80>◌</size></voffset><line-height=-1em>\n<voffset=4em><size=60>East Rim to Solitude Jump Gate</size></color>"
+    LabelColor: "0.6, 0.6, 0.6, 0.6"
+    LabelSize: 100
+    Shape: Elliptical
+    Position: "450, -15, 0"
+    RadiusMinMax: "1, 1"
+    TotalSpawnCount: 0
+    FlattenFac: 0.55
+    UseDefaultStarDef: false
+    StarClass_1: M, param1: "Prob=0"
+  }
+
+  { Child StarRegion_191
+    Name: "Solitude to East Rim"
+    LabelName: "<voffset=2.25em><align=center><size=400%><color=#00ffff80>◌</size></voffset><line-height=-1em>\n<voffset=4em><size=60>Solitude to East Rim Jump Gate</size></color>"
+    LabelColor: "0.6, 0.6, 0.6, 0.6"
+    LabelSize: 100
+    Shape: Elliptical
+    Position: "-275, -15, -190"
+    RadiusMinMax: "1, 1"
+    TotalSpawnCount: 0
+    FlattenFac: 0.55
+    UseDefaultStarDef: false
+    StarClass_1: M, param1: "Prob=0"
+  }
+
+  { Child StarRegion_192
+    Name: "West Rim to Core"
+    LabelName: "<voffset=2.25em><align=center><size=400%><color=#00ffff80>◌</size></voffset><line-height=-1em>\n<voffset=4em><size=60>West Rim to Core Jump Gate</size></color>"
+    LabelColor: "0.6, 0.6, 0.6, 0.6"
+    LabelSize: 100
+    Shape: Elliptical
+    Position: "-500, 10, 150"
+    RadiusMinMax: "1, 1"
+    TotalSpawnCount: 0
+    FlattenFac: 0.55
+    UseDefaultStarDef: false
+    StarClass_1: M, param1: "Prob=0"
+  }
+
+  { Child StarRegion_193
+    Name: "Core to West Rim"
+    LabelName: "<voffset=2.25em><align=center><size=400%><color=#00ffff80>◌</size></voffset><line-height=-1em>\n<voffset=4em><size=60>Core to West Rim Jump Gate</size></color>"
+    LabelColor: "0.6, 0.6, 0.6, 0.6"
+    LabelSize: 100
+    Shape: Elliptical
+    Position: "75, 10, 0"
+    RadiusMinMax: "1, 1"
+    TotalSpawnCount: 0
+    FlattenFac: 0.55
+    UseDefaultStarDef: false
+    StarClass_1: M, param1: "Prob=0"
+  }
+
+
+  { Child StarRegion_194
+    Name: "Wastelands to Badlands"
+    LabelName: "<voffset=2.25em><align=center><size=400%><color=#00ffff80>◌</size></voffset><line-height=-1em>\n<voffset=4em><size=60>Wastelands to Badlands Jump Gate</size></color>"
+    LabelColor: "0.6, 0.6, 0.6, 0.6"
+    LabelSize: 100
+    Shape: Elliptical
+    Position: "-140, 10, -420"
+    RadiusMinMax: "1, 1"
+    TotalSpawnCount: 0
+    FlattenFac: 0.55
+    UseDefaultStarDef: false
+    StarClass_1: M, param1: "Prob=0"
+  }
+
+
+  { Child StarRegion_195
+    Name: "Badlands to Wastelands"
+    LabelName: "<voffset=2.25em><align=center><size=400%><color=#00ffff80>◌</size></voffset><line-height=-1em>\n<voffset=4em><size=60>Badlands to Wastelands Jump Gate</size></color>"
+    LabelColor: "0.6, 0.6, 0.6, 0.6"
+    LabelSize: 100
+    Shape: Elliptical
+    Position: "400, 10, 100"
+    RadiusMinMax: "1, 1"
+    TotalSpawnCount: 0
+    FlattenFac: 0.55
+    UseDefaultStarDef: false
+    StarClass_1: M, param1: "Prob=0"
+  }
+
+  { Child StarRegion_196
+    Name: "Galactic North"
+    LabelName: "<align=center><line-height=1em>↑<br>N"
+    LabelColor: "0.1, 0.1, 0.1, 0.03"
+    LabelSize: 10000
+    Shape: Elliptical
+    Position: "0, 500, 2000"
+    RadiusMinMax: "1, 1"
+    TotalSpawnCount: 0
+    FlattenFac: 0.55  # default is 0.2
+    UseDefaultStarDef: false
+    StarClass_1: M, param1: "Prob=0"
+  }
+
+  { Child StarRegion_197
+    Name: "Galactic South"
+    LabelName: "<align=center><line-height=1em>↑<br>S"
+    LabelColor: "0.1, 0.1, 0.1, 0.03"
+    LabelSize: 10000
+    Shape: Elliptical
+    Position: "0, 500, -2000"
+    RadiusMinMax: "1, 1"
+    TotalSpawnCount: 0
+    FlattenFac: 0.55  # default is 0.2
+    UseDefaultStarDef: false
+    StarClass_1: M, param1: "Prob=0"
+  }
+
+  { Child StarRegion_198
+    Name: "Galactic West"
+    LabelName: "<align=center><line-height=1em>↑<br>W"
+    LabelColor: "0.1, 0.1, 0.1, 0.03"
+    LabelSize: 10000
+    Shape: Elliptical
+    Position: "-2000, 500, 0"
+    RadiusMinMax: "1, 1"
+    TotalSpawnCount: 0
+    FlattenFac: 0.55  # default is 0.2
+    UseDefaultStarDef: false
+    StarClass_1: M, param1: "Prob=0"
+  }
+
+  { Child StarRegion_199
+    Name: "Galactic East"
+    LabelName: "<align=center><line-height=1em>↑<br>E"
+    LabelColor: "0.1, 0.1, 0.1, 0.03"
+    LabelSize: 10000
+    Shape: Elliptical
+    Position: "2000, 500, 0"
+    RadiusMinMax: "1, 1"
+    TotalSpawnCount: 0
+    FlattenFac: 0.55  # default is 0.2
+    UseDefaultStarDef: false
+    StarClass_1: M, param1: "Prob=0"
+  }
+
+
+
 # ------------------------------------------------------------------------------------------------------------------------------------------------------------------ Main Spiral. Uses up remaining stars.
-  { Child StarRegion_98
+  { Child StarRegion_200
     Name: "Rest"
     Shape: Spiral 
     RadiusMinMax: "150, 550"
@@ -1424,7 +1794,8 @@
   { Child Territory_1
     Faction: Zirax
     Center: "10, 0, 45"
-    Radius: 145
+    # Radius: 145
+    Radius: 115
     Other_1: Talon, param1: "0.3, 0.7"  # prob for Talon spawn at "center, radius"
     Other_2: Alien, param1: "1, 1"
     Other_3: Xenu, param1: "1, 1"
@@ -1503,16 +1874,16 @@
     # Other_3: Colonists, param1: "1, 1"       # As long as they do not bother the Tesch, they are allowed
     # Other_4: Void, param1: "1, 1"            # Void/Tesch/Progenitor share one history
   # }
+  # { Child Territory_7
+    # Faction: Eden_Progenitor
+    # # Center: "850, 200, 0" 
+    # Center: "1010, 290, 0"
+    # Radius: 150  # in LY 
+    # Other_1: Progenitor, param1: "1, 1"
+    # Other_2: Alien, param1: "1, 1"
+    # Other_3: Void, param1: "1, 1"
+  # }
   { Child Territory_7
-    Faction: Eden_Progenitor
-    # Center: "850, 200, 0" 
-    Center: "1010, 290, 0"
-    Radius: 150  # in LY 
-    Other_1: Progenitor, param1: "1, 1"
-    Other_2: Alien, param1: "1, 1"
-    Other_3: Void, param1: "1, 1"
-  }
-  { Child Territory_8
     Faction: Farr
     Center: "138, 0, 415"
     Radius: 40
@@ -1524,7 +1895,7 @@
     Other_6: Talon, param1: "0, 0.2"
     Other_7: Civilian, param1: "1, 1"
   }
-  { Child Territory_9 # Large colonized area of space.
+  { Child Territory_8 # Large colonized area of space.
     Faction: Colonists
     Center: "-200, 0, 350" 
     Radius: 125
@@ -1537,7 +1908,7 @@
     Other_7: Eden_ColonistsTerritory, param1: "1, 1"
     Other_8: Civilian, param1: "1, 1"
   }
-  { Child Territory_10 # Outlaw Space
+  { Child Territory_9 # Outlaw Space
     Faction: Wastelanders
     Center: "-100, 0, -350" 
     Radius: 160
@@ -1547,12 +1918,12 @@
     Other_4: ARC, param1: "1, 1"
     Other_5: Ravagers, param1: "1, 1"
   }
-  { Child Territory_11 # Dronelands
+  { Child Territory_10 # Dronelands
     Faction: Eden_DroneHome
     Center: "-625, -25, 625" 
     Radius: 275
   }
-  { Child Territory_12 # Solitude
+  { Child Territory_11 # Solitude
     Faction: Eden_SolitudeTerritory
     Center: "-418, 0, -258" 
     Radius: 125
@@ -2970,7 +3341,7 @@
   SurfaceTemperature: "4000, 4000" 
   ColorName: White
   Mass: 2
-  Radius: 0.00004 
+  Radius: 0.00004
   Description: "[c][ff00ff]Exotic system.[-][/c] A neutron star is the collapsed core of a giant star which before collapse had a total mass of between 10 and 29 solar masses. Neutron stars are the smallest and densest stars, excluding black holes, hypothetical white holes, quark stars and strange stars. Neutron stars have a radius on the order of 10 kilometres (6.2 mi) and a mass of about 1.4 solar masses. They result from the supernova explosion of a massive star, combined with gravitational collapse, that compresses the core past white dwarf star density to that of atomic nuclei."
   #Luminosity: 0.002
   Age: 400
@@ -2986,6 +3357,108 @@
   HabitableTemperate: "16, 20"
   HabitableCold: "21, 24"
   OuterSystem: "25, 69"
+}
+
+# Type PSR
+{ GalaxyConfig, Name: Pulsar
+  StarClass: PSR
+  SolarSystemConfigSuffix: _MainExoticT1
+  Model: SunGeneric
+  Probability: 0.002
+  SizeClass: 7
+  Color: "0.5,0.65,0.8"
+  LightColor: "0.35,0.45,0.75"
+  ModelColor: "0.75, 0.85, 1" # (can be used if you want a different color apart from Color or LightColor)
+  ModelColor2: "0.4, 0.5, 0.8" # (use only if you want to switch to "two color" mode...I need to check out what areas this 2nd color affects)
+  ModelBrightness: 1 # (overall brightness)
+  # ModelNoiseTiling: 20 # (default is 40, set to higher values for bigger stars)
+  # ModelNoiseTiling: 0.01 # (default is 40, set to higher values for bigger stars)
+  ModelNoiseTiling: 0.02 # (default is 40, set to higher values for bigger stars)
+  ModelCoronaSpikesSize: 0.85 # (default is 0.75, values < 0.6 will hide the spikes completely)
+  # ModelPlasmaArcsSize: 0.1 # (default is 0.5)
+  ModelPlasmaArcsSize: 0.75 # (default is 0.5)
+  ModelFlareBrightness: 0.5 # (values < 1 will make the flare smaller)
+  SurfaceTemperature: "10, 20" 
+  Mass: 2
+  Radius: 0.00004
+  Luminosity: 0.002
+  ColorName: Blue-White
+  Age: 50
+  InnerSystem: "8, 11"
+  HabitableHot: "12, 15"
+  HabitableTemperate: "16, 20"
+  HabitableCold: "21, 24"
+  OuterSystem: "25, 69"
+  Description: "A pulsar."
+}
+
+# Type PSR
+{ GalaxyConfig, Name: Pulsar
+  StarClass: PSR2
+  SolarSystemConfigSuffix: _MainExoticT1
+  Model: SunGeneric
+  Probability: 0.002
+  SizeClass: 10
+  Color: "0.35,0.5,1"
+  LightColor: "0.35,0.5,1"
+  # ModelColor: "0.001,0.35,0.6" # (can be used if you want a different color apart from Color or LightColor)
+  ModelColor: "0.35, 0.5, 1" # (can be used if you want a different color apart from Color or LightColor)
+  ModelColor2: "0.2, 0.45, 1" # (use only if you want to switch to "two color" mode...I need to check out what areas this 2nd color affects)
+  # ModelColor2: "0.001,0.35,0.6" # (use only if you want to switch to "two color" mode...I need to check out what areas this 2nd color affects)
+  ModelBrightness: 1 # (overall brightness)
+  # ModelNoiseTiling: 20 # (default is 40, set to higher values for bigger stars)
+  ModelNoiseTiling: 0.02 # (default is 40, set to higher values for bigger stars)
+  ModelCoronaSpikesSize: 1000 # (default is 0.75, values < 0.6 will hide the spikes completely)
+  # ModelPlasmaArcsSize: 0.1 # (default is 0.5)
+  ModelPlasmaArcsSize: 0.4 # (default is 0.5)
+  ModelFlareBrightness: 0.9 # (values < 1 will make the flare smaller)
+  SurfaceTemperature: "10, 20" 
+  Mass: 2
+  Radius: 0.00004
+  Luminosity: 0.002
+  ColorName: Blue-White
+  Age: 50
+  InnerSystem: "10, 14" 
+  HabitableHot: "15, 19" 
+  HabitableTemperate: "20, 24" 
+  HabitableCold: "25, 29" 
+  OuterSystem: "30, 35"
+  Description: "A pulsar."
+}
+
+# Type PSR
+{ GalaxyConfig, Name: Pulsar
+  StarClass: PSR2-PSR2
+  SolarSystemConfigSuffix: _MainExoticT1
+  CompanionStarClass: PSR2
+  Model: SunGeneric
+  Probability: 0.001
+  SizeClass: 10
+  Color: "0.35,0.5,1"
+  LightColor: "0.35,0.5,1"
+  # ModelColor: "0.001,0.35,0.6" # (can be used if you want a different color apart from Color or LightColor)
+  ModelColor: "0.5, 0.7, 1" # (can be used if you want a different color apart from Color or LightColor)
+  ModelColor2: "0.35, 0.55, 1" # (use only if you want to switch to "two color" mode...I need to check out what areas this 2nd color affects)
+  # ModelColor2: "0.001,0.35,0.6" # (use only if you want to switch to "two color" mode...I need to check out what areas this 2nd color affects)
+  ModelBrightness: 1 # (overall brightness)
+  # ModelNoiseTiling: 20 # (default is 40, set to higher values for bigger stars)
+  ModelNoiseTiling: 0.05 # (default is 40, set to higher values for bigger stars)
+  ModelCoronaSpikesSize: 1000 # (default is 0.75, values < 0.6 will hide the spikes completely)
+  # ModelPlasmaArcsSize: 0.1 # (default is 0.5)
+  ModelPlasmaArcsSize: 0.4 # (default is 0.5)
+  ModelFlareBrightness: 0.9 # (values < 1 will make the flare smaller)
+  SurfaceTemperature: "10, 20" 
+  Mass: 2
+  Radius: 0.00004
+  Luminosity: 0.002
+  ColorName: Blue-White
+  Age: 50
+  InnerSystem: "10, 14" 
+  HabitableHot: "15, 19" 
+  HabitableTemperate: "20, 24" 
+  HabitableCold: "25, 29" 
+  OuterSystem: "30, 35"
+  Description: "A pulsar."
 }
 
 # Type N
@@ -3531,6 +4004,80 @@
   GalaxySpawnAmount: 0
 }
 
+# Old style
+# Type Jump Gate
+{ GalaxyConfig, Name: JumpGate
+  StarClass: JumpGate
+  Model: SunGeneric
+  Probability: 0
+  SizeClass: 8
+  Color: "0,1,1"
+  # LightColor: "0.35,0.35,0.75"
+  LightColor: "0.35,0.45,0.75"
+  # ModelColor: "0.001,0.35,0.6" # (can be used if you want a different color apart from Color or LightColor)
+  # ModelColor: "0.3, 0.55, 0.65" # (can be used if you want a different color apart from Color or LightColor)
+  # ModelColor: "0.1, 0.45, 0.95" # (can be used if you want a different color apart from Color or LightColor)
+  ModelColor: "0.25, 0.65, 1.2" # (can be used if you want a different color apart from Color or LightColor)
+  # ModelColor2: "0.3, 0.55, 0.65" # (use only if you want to switch to "two color" mode...I need to check out what areas this 2nd color affects)
+  # ModelColor2: "0.001,0.35,0.6" # (use only if you want to switch to "two color" mode...I need to check out what areas this 2nd color affects)
+  # ModelColor2: "0.1, 0.45, 0.95" # (use only if you want to switch to "two color" mode...I need to check out what areas this 2nd color affects)
+  ModelColor2: "0.1, 0.55, 0.95" # (use only if you want to switch to "two color" mode...I need to check out what areas this 2nd color affects)
+  ModelBrightness: 1 # (overall brightness)
+  # ModelNoiseTiling: 20 # (default is 40, set to higher values for bigger stars)
+  ModelNoiseTiling: 0.01 # (default is 40, set to higher values for bigger stars)
+  ModelCoronaSpikesSize: 0 # (default is 0.75, values < 0.6 will hide the spikes completely)
+  # ModelPlasmaArcsSize: 0.1 # (default is 0.5)
+  ModelPlasmaArcsSize: 1 # (default is 0.5)
+  ModelFlareBrightness: 0.5 # (values < 1 will make the flare smaller)
+  SurfaceTemperature: "10, 20" 
+  Mass: 0.3
+  Radius: 0.4 
+  Luminosity: 0.002
+  ColorName: Blue-White
+  Age: 50
+  InnerSystem: "10, 49" 
+  HabitableHot: "50, 69" 
+  HabitableTemperate: "70, 99" 
+  HabitableCold: "100, 149" 
+  OuterSystem: "150, 350"
+  Description: "A binary pulsar system with a jump gate."
+  GalaxySpawnAmount: 0
+}
+
+# # Type Jump Gate
+# { GalaxyConfig, Name: JumpGate
+  # StarClass: JumpGate
+  # Model: SunGeneric
+  # Probability: 0
+  # SizeClass: 10
+  # Color: "0.35,0.5,1"
+  # LightColor: "0.35,0.5,1"
+  # # ModelColor: "0.001,0.35,0.6" # (can be used if you want a different color apart from Color or LightColor)
+  # ModelColor: "0.35, 0.5, 1" # (can be used if you want a different color apart from Color or LightColor)
+  # ModelColor2: "0.2, 0.45, 1" # (use only if you want to switch to "two color" mode...I need to check out what areas this 2nd color affects)
+  # # ModelColor2: "0.001,0.35,0.6" # (use only if you want to switch to "two color" mode...I need to check out what areas this 2nd color affects)
+  # ModelBrightness: 1 # (overall brightness)
+  # # ModelNoiseTiling: 20 # (default is 40, set to higher values for bigger stars)
+  # ModelNoiseTiling: 0.02 # (default is 40, set to higher values for bigger stars)
+  # ModelCoronaSpikesSize: 1000 # (default is 0.75, values < 0.6 will hide the spikes completely)
+  # # ModelPlasmaArcsSize: 0.1 # (default is 0.5)
+  # ModelPlasmaArcsSize: 0.4 # (default is 0.5)
+  # ModelFlareBrightness: 0.9 # (values < 1 will make the flare smaller)
+  # SurfaceTemperature: "10, 20" 
+  # Mass: 0.3
+  # Radius: 0.4 
+  # Luminosity: 0.002
+  # ColorName: Blue-White
+  # Age: 50
+  # InnerSystem: "10, 49" 
+  # HabitableHot: "50, 69" 
+  # HabitableTemperate: "70, 99" 
+  # HabitableCold: "100, 149" 
+  # OuterSystem: "150, 350"
+  # Description: "A binary pulsar system with a jump gate."
+  # GalaxySpawnAmount: 0
+# }
+
 # Type Gate
 { GalaxyConfig, Name: Gate
   StarClass: Gate
@@ -3742,7 +4289,7 @@
   SizeClass: 9
   # Color: "0.9,0.9,0.93"
   Color: "0.72,0.72,0.75"
-  LightColor: "0.7,0.7,.9"
+  LightColor: "0.7,0.7,0.9"
   ModelColor: "0.83,0.83,0.95" # (can be used if you want a different color apart from Color or LightColor)
   # ModelColor2: "1, 0.7, 0.7" # (use only if you want to switch to "two color" mode...I need to check out what areas this 2nd color affects)
   ModelBrightness: 0.9 # (overall brightness)
@@ -3806,6 +4353,110 @@
   HabitableCold: "25, 34"
   OuterSystem: "35, 60"
   Description: "[c][ffff00]Cold system.[-][/c] A white dwarf, also called a degenerate dwarf, is a stellar core remnant composed mostly of electron-degenerate matter. A white dwarf is very dense: its mass is comparable to that of the Sun, while its volume is comparable to that of Earth."
+}
+
+# Type D
+# Found along edges of the galaxy.
+{ GalaxyConfig, Name: D-BH Type Binary Star
+  StarClass: D-BH
+  SolarSystemConfigSuffix: _MainColdT2
+  CompanionStarClass: BH
+  # Model: SunWhiteDwarf
+  Model: SunGeneric
+  Probability: 0.0001
+  SizeClass: 8
+  # SizeClass: 7
+  # Color: "0.9,0.9,0.93"
+  # Color: "0.72,0.72,0.75"
+  # Color: "0.9,0.9,0.95"
+  Color: "0.85,0.85,0.82"
+  LightColor: "0.77,0.77,0.73"
+  ModelColor: "1,1,0.95" # (can be used if you want a different color apart from Color or LightColor)
+  # ModelColor2: "1, 0.7, 0.7" # (use only if you want to switch to "two color" mode...I need to check out what areas this 2nd color affects)
+  # ModelBrightness: 0.75 # (overall brightness)
+  ModelBrightness: 1.05 # (overall brightness)
+  ModelNoiseTiling: 80 # (default is 40, set to higher values for bigger stars)
+  ModelCoronaSpikesSize: 0.0 # (default is 0.75, values < 0.6 will hide the spikes completely)
+  ModelPlasmaArcsSize: 0.0 # (default is 0.5)
+  # ModelFlareBrightness: 0.7 # (values < 1 will make the flare smaller)
+  # ModelFlareBrightness: 0.55 # (values < 1 will make the flare smaller)
+  # ModelFlareBrightness: 0.75 # (values < 1 will make the flare smaller)
+  ModelFlareBrightness: 0.63 # (values < 1 will make the flare smaller)
+  SurfaceTemperature: "7500, 10000"
+  Mass: 1.1
+  Radius: 0.001
+  Luminosity: 0.1
+  ColorName: White
+  Age: 2.5
+  # InnerSystem: "5, 11"
+  # HabitableHot: "12, 19"
+  # HabitableTemperate: "20, 34"
+  # HabitableCold: "35, 49"
+  # OuterSystem: "50, 74"
+  # Class D Climate Ranges
+  InnerSystem: "10, 14"
+  HabitableHot: "15, 19"
+  HabitableTemperate: "20, 24"
+  HabitableCold: "25, 29"
+  OuterSystem: "30, 40"
+  Description: "[c][ffff00]Cold system.[-][/c] A white dwarf and black hole binary pair."
+}
+
+# Type D
+{ GalaxyConfig, Name: D-N Type Binary Star
+  StarClass: D-N
+  SolarSystemConfigSuffix: _MainColdT2
+  CompanionStarClass: N-Companion
+  # Model: SunWhiteDwarf
+  Model: SunGeneric
+  # Probability: 0.0001
+  Probability: 0.0005
+  SizeClass: 7
+  Color: "0.85,0.85,0.82"
+  LightColor: "0.77,0.77,0.73"
+  ModelColor: "0.8,0.8,0.95" # (can be used if you want a different color apart from Color or LightColor)
+  ModelBrightness: 0.9 # (overall brightness)
+  ModelNoiseTiling: 80 # (default is 40, set to higher values for bigger stars)
+  ModelCoronaSpikesSize: 0.0 # (default is 0.75, values < 0.6 will hide the spikes completely)
+  ModelPlasmaArcsSize: 0.0 # (default is 0.5)
+  # ModelFlareBrightness: 0.7 # (values < 1 will make the flare smaller)
+  # ModelFlareBrightness: 0.55 # (values < 1 will make the flare smaller)
+  # ModelFlareBrightness: 0.75 # (values < 1 will make the flare smaller)
+  ModelFlareBrightness: 0.63 # (values < 1 will make the flare smaller)
+  SurfaceTemperature: "7500, 10000"
+  Mass: 1.1
+  Radius: 0.001
+  Luminosity: 0.1
+  ColorName: White
+  Age: 2.5
+  InnerSystem: "10, 14"
+  HabitableHot: "15, 19"
+  HabitableTemperate: "20, 24"
+  HabitableCold: "25, 29"
+  OuterSystem: "30, 40"
+  Description: "[c][ffff00]Cold system.[-][/c] A white dwarf and neutron star binary pair."
+}
+
+# Type N
+# Used as companion star
+{ GalaxyConfig, Name: Neutron Star
+  StarClass: N-Companion
+  SolarSystemConfigSuffix: _MainExoticT1
+  Model: SunNeutron
+  Probability: 0
+  SizeClass: 10
+  Color: "0.1,0.1,0.1"
+  SurfaceTemperature: "4000, 4000" 
+  ColorName: White
+  Mass: 2
+  Radius: 0.00004 
+  Description: "[c][ff00ff]Exotic system.[-][/c] A neutron star is the collapsed core of a giant star which before collapse had a total mass of between 10 and 29 solar masses. Neutron stars are the smallest and densest stars, excluding black holes, hypothetical white holes, quark stars and strange stars. Neutron stars have a radius on the order of 10 kilometres (6.2 mi) and a mass of about 1.4 solar masses. They result from the supernova explosion of a massive star, combined with gravitational collapse, that compresses the core past white dwarf star density to that of atomic nuclei."
+  Age: 400
+  InnerSystem: "8, 11"
+  HabitableHot: "12, 15"
+  HabitableTemperate: "16, 20"
+  HabitableCold: "21, 24"
+  OuterSystem: "25, 69"
 }
 
 # Type K-G
@@ -3970,6 +4621,82 @@
   GalaxySpawnAmount: 5
 }
 
+# Protostars
+{ GalaxyConfig, Name: Protostar
+  StarClass: P
+  Model: SunGeneric  # SunNeutron
+  SolarSystemConfigSuffix: _MainHotProto
+  SizeClass: 10
+  Probability: 0
+  ClusterProb: 0
+  ClusterRange: "0, 0"
+  Color: "0.5,-0.5,-1.5"
+  LightColor: "1,0.5,0.1"
+# =============  Protostar ========= Calm 'non-star' with lots of 'flare material' ==============
+  ModelColor: "0.85, 0.5, -0.9"    # Inner - Organge/ black pulsing
+  ModelColor2: "0.15,0.07,0.0"     # Corona & protuberances
+  ModelBrightness: 3.5             # (overall brightness) 
+  ModelNoiseTiling: 1.3
+  ModelCoronaSpikesSize: -3        # Large spikes
+  ModelPlasmaArcsSize: 0.2
+  ModelFlareBrightness: 1.5
+  # ====== CHECK TRIVIA VALUES ==== !
+  SurfaceTemperature: "2000, 3000" #.
+  Mass: 0.5                        #. (Low-mass type)
+  Radius: 2                        #_
+  Luminosity: 1                    # ?
+  ColorName: Orange                # (Dull red, actually)
+  Age: 0.005                       # ?
+  HabitableZone: "450, 900" 
+  InnerSystem: "12, 20"                 #
+  HabitableHot: "23, 25"               #  (Very narrow band with space left, to define 'asteroid rings')
+  HabitableTemperate: "31, 40"         #
+  HabitableCold: "41, 56"              #
+  OuterSystem: "57, 82"                # 
+  # 9 lines
+  Description: "[c][ff0000]Hot system.[-][/c] [c]Protostar.    -  -  [i]''[b]Baby Sun[/b]''[/i]                                   [c][a6a6a6][i]Molten planetoids and asteroid belts.[/i][-][/c]                                            [/b]                                                                                    An infant star, still gaining mass in the cradle of its nebula.                                                                     Not yet big enough for sustained fusion power.                                  [/b]                                                                                    [/b]                                                                                    This system is too young to have formed large planets. - But may be rich in asteroids.   [c][a6a6a6][b]<<[/b][c][00000000]XXXXXXXXXXXXXXXXXXXXXXXXXXXX_Line00_XXXXXXXXXXXXXXXXXXXXXXXXXXXX_Line01_XXXXXXXXXXXXXXXXXXXXXXXXXXXX_Line02_XXXXXXXXXXXXXXXXXXXXXXXXXXXX_Line03_XXXXXXXXXXXXXXXXXXXXXXXXXXXX_Line04_XXXXXXXXXXXXXXXXXXXXXXXXXXXX_Line05_XXXXXXXXXXXXXXXXXXXXXXXXXXXX_Line06_XXXXXXXXXXXXXXXXXXXXXXXXXXXX_Line07_XXXXXXXXXXXXXXXXXXXXXXXXXXXX_Line08_XXXXXXXXXXXXXXXXXXXXXXXXXXXX_Line09_XXXXXXXXXXXXXXXXXXXXXXXXXXXX_Line10_XXXXXXXXXXXXXXXXXXXXXXXXXXXX_Line11_XXXXXXXXXXXXXXXXXXXXXXXXXXXX_Line12_XXXXXXXXXXXXXXXXXXXXXXXXXXXX_Line13_XXXXXXXXXXXXXXXXXXXXXXXXXXXX_Line14_XXXXXXXXXXXXXXXXXXXXXXXXXXXX_Line15_XXXXXXXXXXXXXXXXXXXXXXXXXXXX_Line16_XXXXXXXXXXXXXXXXXXXXXXXXXXXX_Line17_XXXXXXXXXXXXXXXXXXXXXXXXXXXX_Line18_XXXXXXXXXXXXXXXXXXXXXXXXXXXX_Line19_XXXXXXXXXXXXXXXXXXXXXXXXXXXX_Line20_XXXXXXXXXXXXXXXXXXXXXXXXXXXX_Line21_"
+}
+
+{ GalaxyConfig, Name: Protostar
+  StarClass: P-P
+  Model: SunGeneric  # SunNeutron
+  SolarSystemConfigSuffix: _MainHotProto
+  CompanionStarClass: P
+  SizeClass: 11
+  Probability: 0
+  ClusterProb: 0
+  ClusterRange: "0, 0"
+  Color: "0.5,-0.5,-1.5"
+  LightColor: "1,0.5,0.1"
+# =============  Protostar ========= Calm 'non-star' with lots of 'flare material' ==============
+  ModelColor: "0.85, 0.5, -0.9"    # Inner - Organge/ black pulsing
+  # ModelColor2: "0.15,0.07,0.0"     # Corona & protuberances
+  ModelColor2: "0.13,0.02,0.0"     # Corona & protuberances
+  ModelBrightness: 3.5             # (overall brightness) 
+  ModelNoiseTiling: 1.3
+  # ModelCoronaSpikesSize: -3        # Large spikes
+  ModelCoronaSpikesSize: -2        # Large spikes
+  ModelPlasmaArcsSize: 0.2
+  ModelFlareBrightness: 1.5
+  # ====== CHECK TRIVIA VALUES ==== !
+  SurfaceTemperature: "2000, 3000" #.
+  Mass: 0.5                        #. (Low-mass type)
+  Radius: 2                        #_
+  Luminosity: 1                    # ?
+  ColorName: Orange                # (Dull red, actually)
+  Age: 0.005                       # ?
+  HabitableZone: "450, 900" 
+  InnerSystem: "12, 20"                 #
+  HabitableHot: "23, 25"               #  (Very narrow band with space left, to define 'asteroid rings')
+  HabitableTemperate: "31, 40"         #
+  HabitableCold: "41, 56"              #
+  OuterSystem: "57, 82"                # 
+  # 9 lines
+  Description: "[c][ff0000]Hot system.[-][/c] [c]Protostar.    -  -  [i]''[b]Baby Sun[/b]''[/i]                                   [c][a6a6a6][i]Molten planetoids and asteroid belts.[/i][-][/c]                                            [/b]                                                                                    An infant star, still gaining mass in the cradle of its nebula.                                                                     Not yet big enough for sustained fusion power.                                  [/b]                                                                                    [/b]                                                                                    This system is too young to have formed large planets. - But may be rich in asteroids.   [c][a6a6a6][b]<<[/b][c][00000000]XXXXXXXXXXXXXXXXXXXXXXXXXXXX_Line00_XXXXXXXXXXXXXXXXXXXXXXXXXXXX_Line01_XXXXXXXXXXXXXXXXXXXXXXXXXXXX_Line02_XXXXXXXXXXXXXXXXXXXXXXXXXXXX_Line03_XXXXXXXXXXXXXXXXXXXXXXXXXXXX_Line04_XXXXXXXXXXXXXXXXXXXXXXXXXXXX_Line05_XXXXXXXXXXXXXXXXXXXXXXXXXXXX_Line06_XXXXXXXXXXXXXXXXXXXXXXXXXXXX_Line07_XXXXXXXXXXXXXXXXXXXXXXXXXXXX_Line08_XXXXXXXXXXXXXXXXXXXXXXXXXXXX_Line09_XXXXXXXXXXXXXXXXXXXXXXXXXXXX_Line10_XXXXXXXXXXXXXXXXXXXXXXXXXXXX_Line11_XXXXXXXXXXXXXXXXXXXXXXXXXXXX_Line12_XXXXXXXXXXXXXXXXXXXXXXXXXXXX_Line13_XXXXXXXXXXXXXXXXXXXXXXXXXXXX_Line14_XXXXXXXXXXXXXXXXXXXXXXXXXXXX_Line15_XXXXXXXXXXXXXXXXXXXXXXXXXXXX_Line16_XXXXXXXXXXXXXXXXXXXXXXXXXXXX_Line17_XXXXXXXXXXXXXXXXXXXXXXXXXXXX_Line18_XXXXXXXXXXXXXXXXXXXXXXXXXXXX_Line19_XXXXXXXXXXXXXXXXXXXXXXXXXXXX_Line20_XXXXXXXXXXXXXXXXXXXXXXXXXXXX_Line21_"
+}
+
+
+
 # Pink brown dwarf.
 { GalaxyConfig, Name: L Brown Dwarf
   StarClass: L
@@ -4028,6 +4755,39 @@
   OuterSystem: "100, 150"
   Description: "[c][ff00ff]Exotic system.[-][/c] Brown Dwarfs are failed stars that never grew massive enough to initiate fusion."
   GalaxySpawnAmount: 10
+}
+
+# Orange brown dwarf
+{ GalaxyConfig, Name: L Brown Dwarf
+  StarClass: L3
+  Model: SunGeneric  # SunRedDwarf
+  SolarSystemConfigSuffix: _MainExoticT2
+  SizeClass: 9 # (Similar size of the gas giants.)
+  Probability: 0.002
+  ClusterProb: 0
+  ClusterRange: "0, 0"
+  Color: "0.4,-0.1,-0.1"
+  LightColor: "0.6,0.25,0.1"    # Brown dwarf  - Dark Red/Orange
+  ModelColor: "0.6, 0.20, -6.0" 
+  ModelColor2: "0.2,0.1,0.05"
+  ModelBrightness: 1.4
+  ModelNoiseTiling: 6
+  ModelCoronaSpikesSize: 0.75
+  ModelPlasmaArcsSize: 0.22
+  ModelFlareBrightness: 0.7
+
+  SurfaceTemperature: "1300, 2100"   #.
+  Mass: 0.08                         #?
+  Radius: 0.15                       #.
+  Luminosity: 0.001                  #.
+  ColorName: Dim Red
+  Age: 4                             #.. (Can vary a lot.)
+  InnerSystem: "12, 18"
+  HabitableHot: "19, 24"
+  HabitableTemperate: "25, 32"
+  HabitableCold: "33, 40"
+  OuterSystem: "41, 53"
+  Description: "[c][ff00ff]Exotic system.[-][/c] Brown Dwarfs are failed stars that never grew massive enough to initiate fusion."
 }
 
 # Q23 type Anomaly Bright Blue
@@ -4253,6 +5013,108 @@
   HabitableCold: "45, 69"
   OuterSystem: "70, 135"
   Description: "[c][ffff00]Cold system.[-][/c] An A-type main-sequence star is a main-sequence (hydrogen-burning) star of spectral type A and luminosity class V. They have masses from 1.4 to 2.1 times the mass of the Sun and surface temperatures between 7600 and 10,000  K"
+}
+
+
+
+# ===================================================================================================================================================
+# =================================================== BACKGROUND STARS ==============================================================================
+# ===================================================================================================================================================
+
+# Background White
+{ GalaxyConfig, Name: Background White Star
+  StarClass: BackgroundWhite
+  SolarSystemConfigSuffix: _Empty
+  Model: SunGeneric
+  Probability: 0
+  SizeClass: 7
+  Color: "0.97,0.97,1"
+  SurfaceTemperature: "7500, 10000"
+  Mass: 2.2
+  Radius: 2.4
+  Luminosity: 1
+  ColorName: White
+  Age: 0.5
+  InnerSystem: "19, 29"
+  HabitableHot: "30, 39"
+  HabitableTemperate: "40, 69"
+  HabitableCold: "70, 109"
+  OuterSystem: "110, 150"
+  Description: "An empty system. There is nothing of interest here."
+  HideFromMap: true
+  HideFromSearch: true
+}
+
+# Background Yellow
+{ GalaxyConfig, Name: Background Red Star
+  StarClass: BackgroundRed
+  SolarSystemConfigSuffix: _Empty
+  Model: SunGeneric
+  Probability: 0
+  SizeClass: 7
+  Color: "0.9,0.1,0"
+  SurfaceTemperature: "7500, 10000"
+  Mass: 2.2
+  Radius: 2.4
+  Luminosity: 1
+  ColorName: White
+  Age: 0.5
+  InnerSystem: "19, 29"
+  HabitableHot: "30, 39"
+  HabitableTemperate: "40, 69"
+  HabitableCold: "70, 109"
+  OuterSystem: "110, 150"
+  Description: "An empty system. There is nothing of interest here."
+  HideFromMap: true
+  HideFromSearch: true
+}
+
+# Background Yellow
+{ GalaxyConfig, Name: Background Yellow Star
+  StarClass: BackgroundYellow
+  SolarSystemConfigSuffix: _Empty
+  Model: SunGeneric
+  Probability: 0
+  SizeClass: 7
+  Color: "0.9,0.8,0"
+  SurfaceTemperature: "7500, 10000"
+  Mass: 2.2
+  Radius: 2.4
+  Luminosity: 1
+  ColorName: White
+  Age: 0.5
+  InnerSystem: "19, 29"
+  HabitableHot: "30, 39"
+  HabitableTemperate: "40, 69"
+  HabitableCold: "70, 109"
+  OuterSystem: "110, 150"
+  Description: "An empty system. There is nothing of interest here."
+  HideFromMap: true
+  HideFromSearch: true
+}
+
+# Background Yellow
+{ GalaxyConfig, Name: Background Blue Star
+  StarClass: BackgroundBlue
+  SolarSystemConfigSuffix: _Empty
+  Model: SunGeneric
+  Probability: 0
+  SizeClass: 7
+  Color: "0.3,0.3,1"
+  SurfaceTemperature: "7500, 10000"
+  Mass: 2.2
+  Radius: 2.4
+  Luminosity: 100
+  ColorName: White
+  Age: 0.5
+  InnerSystem: "19, 29"
+  HabitableHot: "30, 39"
+  HabitableTemperate: "40, 69"
+  HabitableCold: "70, 109"
+  OuterSystem: "110, 150"
+  Description: "An empty system. There is nothing of interest here."
+  HideFromMap: true
+  HideFromSearch: true
 }
 
 
@@ -5255,7 +6117,7 @@
   SolarSystemConfigSuffix: _FactionTeschT1
   # Model: SunRedDwarf
   Model: SunGeneric
-  Probability: 0.3
+  Probability: 0
   SizeClass: 9
   Color: "0.97,0.64,0.19"
   LightColor: "0.97,0.5,0.15"
@@ -5715,50 +6577,75 @@
 }
 
 
+
+# Type Creative
+{ GalaxyConfig, Name: Creative Type Star
+  StarClass: Creative
+  SolarSystemConfigSuffix: _MainHabitableT2
+  # Model: SunWhiteDwarf
+  Model: SunGeneric
+  Probability: 0
+  SizeClass: 10
+  Color: "0.97,0.97,1"
+  LightColor: "0.97,0.97,1"
+  # ModelColor: "1, 0.7, 0.7" # (can be used if you want a different color apart from Color or LightColor)
+  # ModelColor2: "1, 0.7, 0.7" # (use only if you want to switch to "two color" mode...I need to check out what areas this 2nd color affects)
+  ModelBrightness: 0.75 # (overall brightness)
+  ModelNoiseTiling: 80 # (default is 40, set to higher values for bigger stars)
+  ModelCoronaSpikesSize: 0.75 # (default is 0.75, values < 0.6 will hide the spikes completely)
+  ModelPlasmaArcsSize: 0.4 # (default is 0.5)
+  ModelFlareBrightness: 0.8 # (values < 1 will make the flare smaller)
+  SurfaceTemperature: "7500, 10000" 
+  Mass: 2.2
+  Radius: 2.4
+  Luminosity: 25
+  ColorName: White
+  Age: 0.5
+  # InnerSystem: "5, 78"
+  # HabitableHot: "79, 97"
+  # HabitableTemperate: "98, 139"
+  # HabitableCold: "140, 179"
+  # OuterSystem: "180, 250"
+  # Class A Climate Ranges
+  InnerSystem: "19, 29"
+  HabitableHot: "30, 39"
+  HabitableTemperate: "40, 69"
+  HabitableCold: "70, 109"
+  OuterSystem: "110, 150"
+  Description: "[c][00ff00]Habitable system.[-][/c] An A-type main-sequence star is a main-sequence (hydrogen-burning) star of spectral type A and luminosity class V. They have masses from 1.4 to 2.1 times the mass of the Sun and surface temperatures between 7600 and 10,000  K"
+  GalaxySpawnAmount: 0
+}
+
+
+
+
 # Test star
 { GalaxyConfig, Name: Test Star
   StarClass: Test
   SolarSystemConfigSuffix: _Test
-  # Model: SunYellow
   Model: SunGeneric
   Probability: 0
   SizeClass: 11
-  Color: "1,0.95,0.63"
-  LightColor: "1,0.96,0.85"
-  ModelColor: "1,0.90,0.45" # (can be used if you want a different color apart from Color or LightColor)
-  ModelColor2: "1,0.8,0.4" # (use only if you want to switch to "two color" mode...I need to check out what areas this 2nd color affects)
+  Color: "1,0.85,0.44"
+  LightColor: "1,0.85,0.44"
+  ModelColor: "1,0.30,0.05" # (can be used if you want a different color apart from Color or LightColor)
+  ModelColor2: "1,0.85,0.44" # (use only if you want to switch to "two color" mode...I need to check out what areas this 2nd color affects)
   ModelBrightness: 0.70 # (overall brightness)
-  ModelNoiseTiling: 140 # (default is 40, set to higher values for bigger stars)
-  ModelCoronaSpikesSize: 0.7 # (default is 0.75, values < 0.6 will hide the spikes completely)
+  ModelNoiseTiling: 60 # (default is 40, set to higher values for bigger stars)
+  ModelCoronaSpikesSize: 0.65 # (default is 0.75, values < 0.6 will hide the spikes completely)
   ModelPlasmaArcsSize: 0.35 # (default is 0.5)
-  # ModelFlareBrightness: 0.8 # (values < 1 will make the flare smaller)
-  ModelFlareBrightness: 0.8 # (values < 1 will make the flare smaller)
-  SurfaceTemperature: "5500, 6000" 
-  Mass: 1
-  Radius: 1
-  Luminosity: 1
-  ColorName: Yellow
-  Age: 10
-  # InnerSystem: "5, 35"
-  # HabitableHot: "36, 63"
-  # HabitableTemperate: "64, 89"
-  # HabitableCold: "90, 104"
-  # OuterSystem: "105, 132"
-
-  # Size 10 Habitable
-  # InnerSystem: "10, 19"
-  # HabitableHot: "20, 29"
-  # HabitableTemperate: "30, 44"
-  # HabitableCold: "45, 69"
-  # OuterSystem: "70, 135"
-
-  # Size 12 Habitable
-  InnerSystem: "10, 24"
-  HabitableHot: "25, 34"
-  HabitableTemperate: "35, 59"
-  HabitableCold: "60, 79"
-  OuterSystem: "80, 150"
-
-  Description: "[c][00ff00]Habitable system.[-][/c] G-type stars, including the Sun, have prominent spectral lines H and K of Ca II, which are most pronounced at G2. They have even weaker hydrogen lines than F, but along with the ionized metals, they have neutral metals. There is a prominent spike in the G band of CH molecules."
+  ModelFlareBrightness: 1.7 # (values < 1 will make the flare smaller)
+  SurfaceTemperature: "4000, 5500" 
+  Mass: 0.3
+  Radius: 0.4 
+  Luminosity: 0.002
+  ColorName: Blue-White
+  Age: 50
+  InnerSystem: "10, 49" 
+  HabitableHot: "50, 69" 
+  HabitableTemperate: "70, 99" 
+  HabitableCold: "100, 149" 
+  OuterSystem: "150, 350"
+  Description: "A jump gate is located in this system."
   GalaxySpawnAmount: 0
 }

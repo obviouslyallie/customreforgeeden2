@@ -65,7 +65,7 @@
   Reputation: true            # Do not change. Hardcoded effect on Base Attacks. Change will lead to issues with related features!
   # AttackNPC: true
   Discovery: true
-  ForceAttack: "Warlord,Alien,TheLegacy,Kriel,Eden_Drone,Eden_DroneHome,Pirates,Wastelanders"
+  ForceAttack: "Warlord,Alien,TheLegacy,Kriel,Eden_Drone,Eden_DroneHome,Pirates,Wastelanders,Eden_Defender"
 }
 
 { Faction Id: 3, Name: "Predator"
@@ -201,7 +201,7 @@
   HideAbbrev: true
   # AttackNPC: true
   # ForceAttack: "UCH,GLaD,TheLegacy,Kriel,Pirates,Warlord"
-  ForceAttack: "Eden_Defender,Zirax,Polaris,Trader,Colonists,Alien,TheLegacy,Kriel,Eden_Drone,Eden_DroneHome,Wastelanders"
+  ForceAttack: "Eden_Defender,Zirax,Polaris,Trader,Colonists,Alien,TheLegacy,Kriel,Eden_Drone,Eden_DroneHome,Wastelanders,Pirates"
   #Discovery: true
 }
 
@@ -240,7 +240,7 @@
   ClaimTerritory: true
   Reputation: true
   Discovery: true
-  ForceAttack: "Eden_Defender,Zirax,Polaris,Trader,Alien,TheLegacy,Kriel,Eden_Drone,Eden_DroneHome,Wastelanders"
+  ForceAttack: "Eden_Defender,Zirax,Polaris,Trader,Colonists,Alien,TheLegacy,Kriel,Eden_Drone,Eden_DroneHome,Wastelanders,Warlord"
 }
 
 { Faction Id: 17, Name: "Kriel"
@@ -277,7 +277,7 @@
   Reputation: true
   Discovery: true
   # AttackNPC: true # Test
-  ForceAttack: "Warlord,Alien,TheLegacy,Kriel,Eden_Drone,Eden_DroneHome,Eden_Resource,Prey"
+  ForceAttack: "Warlord,Alien,TheLegacy,Kriel,Pirates,Eden_Drone,Eden_DroneHome,Eden_Resource,Prey"
 }
 
 { Faction Id: 20, Name: "Tesch" 
@@ -510,7 +510,7 @@
   Reputation: true
   Discovery: true
   # AttackNPC: true # Test
-  ForceAttack: "Warlord,Alien,TheLegacy,Kriel,Eden_Drone,Eden_DroneHome"
+  ForceAttack: "Warlord,Alien,TheLegacy,Kriel,Eden_Drone,Eden_DroneHome,Zirax"
 }
 
 { Faction Id: 70, Name: "Eden_ColonistsTerritory"

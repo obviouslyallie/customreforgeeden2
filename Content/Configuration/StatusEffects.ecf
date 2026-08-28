@@ -66,6 +66,7 @@
   OnExpiredSound: Player_Male/sigh
   Description: igmDermalBurn
   Icon: TmpEff_DermalBurn 
+  Mutex: DrugIceBuff
 
   { Child Modify0
     Stat: health
@@ -92,6 +93,7 @@
   OnExpiredSound: Player_Male/sigh
   Description: igmInfectedWound
   Icon: TmpEff_InfectedWound  
+  Mutex: DrugIceBuff
 
   { Child Modify0
     Stat: health
@@ -173,7 +175,7 @@
   OnExpired: "Necrosis"
   Evolves: "Necrosis,0.25"
   NextIsWorse: true
-  Mutex: Necrosis
+  Mutex: "Necrosis, DrugIceBuff"
 
   { Child Modify0
     Stat: food
@@ -195,6 +197,7 @@
   CastSound: Buffs/normalBreathingShort
   Description: igmNecrosis
   Icon: TmpEff_Necrosis  
+  Mutex: DrugIceBuff
 
   { Child Modify0
     Stat: health
@@ -229,6 +232,7 @@
   NextIsWorse: true
   Description: igmEffectDehydration
   Icon: TmpEff_Indigestion
+  Mutex: DrugIceBuff
 
   { Child Modify0
     Stat: stamina
@@ -257,6 +261,7 @@
   Description: igmFever
   Icon: TmpEff_FeverAttack 
   Actions: screen(heat)
+  Mutex: DrugIceBuff
 
   { Child Modify0
     Stat: stamina
@@ -279,6 +284,7 @@
   Description: igmFoodPoisoning
   Icon: TmpEff_PoisonFood
   Actions: "debuff(WellFed)"
+  Mutex: DrugIceBuff
   
   { Child Modify0
     Stat: food
@@ -305,6 +311,7 @@
   Description: igmPoison
   Icon: TmpEff_Intoxication
   Actions: screen(poison_v1)
+  Mutex: DrugIceBuff
 
    { Child Modify0
     Stat: health
@@ -355,6 +362,7 @@
   Stack: extend
   Description: igmStunned
   Icon: TmpEff_Stunned  
+  Mutex: "DrugIceBuff,HealthyRed"
 
   { Child Modify0
     Stat: speedmodifier
@@ -666,6 +674,86 @@
     Type: speedmodifier
   }
 }
+# Illegal Drug: Wire
+# Blocks pain receptors, doubling max health.
+{ StatusEffect Name: DrugWireBuff
+  Duration: 600
+  Name: WireBuff
+  CastSound: UseActions/person_deep_sigh
+  OnDebuffSound: UseActions/exhale
+  OnExpiredSound: UseActions/exhale
+  OnExpired: "Withdrawal"
+  Actions: "debuff(Withdrawal);screen(heat)"
+  DebuffActions: buff(Withdrawal)
+  Type: staminaup
+  Stack: extend
+  Description: igmEffectWire
+  Icon: TmpEff_IncBodyTemp
+
+  { Child Modify0
+    Stat: health
+    ModifyMaxValue: 500
+    NumberOperationType: Flat
+  }
+  { Child Modify1
+    Stat: food
+    Amount: -1
+    Rate: 2
+  }
+}
+# Illegal Drug: Black Ice
+# Blocks most status effects, prevents food loss.
+{ StatusEffect Name: DrugIceBuff
+  Duration: 600
+  Name: IceBuff
+  CastSound: UseActions/person_deep_sigh
+  OnDebuffSound: UseActions/exhale
+  OnExpiredSound: UseActions/exhale
+  OnExpired: "Withdrawal"
+  Actions: "debuff(Withdrawal);screen(frost)"
+  DebuffActions: buff(Withdrawal)
+  Type: staminaup
+  Stack: extend
+  Description: igmEffectIce
+  Icon: TmpEff_DeccBodyTemp
+
+  { Child Modify0
+    Stat: stamina
+    ModifyMaxValue: -300
+    NumberOperationType: Flat
+  }
+  { Child Modify1
+    Stat: food
+    Amount: 1
+    Rate: 3
+  }
+}
+# Drug withdrawal
+# Incurable effect of drug use (effects reduced with detox kit)
+{ StatusEffect Name: Withdrawal
+  Duration: 600
+  Name: Withdrawal
+  CastSound: UseActions/VOICEOhNo2
+  OnDebuffSound: UseActions/exhale
+  OnExpiredSound: UseActions/exhale
+  OnExpired: "Dehydration"
+  Type: staminadown
+  Stack: discard
+  Description: igmEffectWithdrawal
+  Icon: TmpEff_StaminaDown
+  Actions: screen(underWaterFog)
+
+  { Child Modify0
+    Stat: speedmodifier
+    SetValue: 0.5    
+    Type: speedmodifier
+  }
+  { Child Modify1
+    Stat: stamina
+    ModifyMaxValue: -400
+    NumberOperationType: Flat
+  }
+}
 # ====================================================================================================================================================================================================================
 # ====================================================================================================================================================================================================================
 #                                                                                                        COLD-RELATED STATUSES
@@ -678,7 +766,7 @@
   OnDebuffSound: Player_Male/sigh
   BuffIf: varBodyTemp < 15
   DebuffIf: varBodyTemp > 15
-  Mutex: "Freezing, Hypothermia, BloodyBuzz"
+  Mutex: "Freezing, Hypothermia, BloodyBuzz, DrugIceBuff"
   Type: bodyTemp  
   Description: igmEffectCold
   Icon: TmpEff_Cold
@@ -702,7 +790,7 @@
   OnDebuffSound: Player_Male/sigh
   BuffIf: varBodyTemp < 10
   DebuffIf: varBodyTemp > 20
-  Mutex: "Fever, Hypothermia, BloodyBuzz"
+  Mutex: "Fever, Hypothermia, BloodyBuzz, DrugIceBuff"
   Actions: debuff(Cold);screen(frost)
   Type: bodyTemp  
   Description: igmFreezing
@@ -736,7 +824,7 @@
   OnExpired: "Frostbite"
   Description: igmEffectHypothermia
   Icon: TmpEff_BlackoutCold 
-  Mutex: "BloodyBuzz"
+  Mutex: "BloodyBuzz, DrugIceBuff"
   Actions: debuff(Cold);debuff(Freezing);screen(frost);screen(underWaterFog)
 
   { Child Modify0          
@@ -773,7 +861,7 @@
   OnDebuffSound: Player_Male/sigh
   BuffIf: varBodyTemp > 35
   DebuffIf: varBodyTemp < 35
-  Mutex: "HeatStroke, Overheating, Brainfreeze"
+  Mutex: "HeatStroke, Overheating, Brainfreeze, DrugIceBuff"
   Type: bodyTemp
   Description: igmEffectHot
   Icon: TmpEff_Hot
@@ -796,7 +884,7 @@
   Type: bodyTemp
   Description: igmEffectHeatStroke
   Icon: TmpEff_HeatStroke
-  Mutex: "Overheating, Brainfreeze"
+  Mutex: "Overheating, Brainfreeze, DrugIceBuff"
 
   { Child Modify0
     Stat: health
@@ -826,7 +914,7 @@
   Description: igmOverheating
   Icon: TmpEff_BlackoutHot
   Actions: debuff(HeatStroke)
-  Mutex: "Brainfreeze"
+  Mutex: "Brainfreeze, DrugIceBuff"
   
   { Child Modify0
     Stat: health
@@ -867,7 +955,7 @@
   Type: radiation  
   Description: igmRadiationBurn
   Icon: TmpEff_RadiationBurn
-  Mutex: "RadiationImmunity"
+  Mutex: "RadiationImmunity, DrugIceBuff"
   
   { Child Modify0
     Stat: radiation
@@ -896,6 +984,7 @@
   Type: radiation
   Description: igmEffectRadiationPoisoning
   Icon: TmpEff_RadiationPoisoning
+  Mutex: DrugIceBuff
   
   { Child Modify0
     Stat: health
@@ -1370,6 +1459,28 @@
     SetValue: 0.1
   }
 }
+
+# Spacial Distortion Effect
+{ StatusEffect Name: Eden_SpacialDistortionEffect
+  Duration: 300
+  Name: Eden_SpacialDistortionEffect
+  # CastSound: UseActions/VOICEOhNo2
+  CastSound: UseActions/VOICEOhNo
+  Type: speedmodifier
+  # Stack: extend
+  Description: Eden_SpacialDistortionEffectinfo
+  Icon: TmpEff_Hangover
+  Actions: "screen(underWaterFog)"
+  # Actions: "screen(underWaterFog)"
+  # Actions: screen(underWaterFog)
+
+  # { Child Modify0
+    # Stat: speedmodifier
+    # SetValue: 0.25
+  # }
+}
+
+
 
 # ========================================================================================================================== Short Duration Debuffs
 

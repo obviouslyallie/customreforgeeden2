@@ -21,3 +21,21 @@ For a smaller server we want to promote unity and coop experience slightly more 
 - No one used drones
 - Stalled mid-game for most
 - Players would get seperated and mildly ruin the coop experience
+
+This repository contains modifications to the configuration files
+of Reforged Eden 2 for Empyrion - Galactic Survival.
+
+The original scenario and custom assets are by ravien_ff and Vermillion.
+Their Workshop distribution terms prohibit redistribution of the
+scenario's custom assets outside of the game.
+
+This repository therefore contains only modified game configuration
+files (.yaml/.ecf/.epb), which the authors' Workshop notice explicitly
+permits others to use.
+
+Original Workshop item:
+[[Steam Workshop link]](https://steamcommunity.com/sharedfiles/filedetails/?id=3143225812)
+
+Original creators:
+ravien_ff
+Vermillion

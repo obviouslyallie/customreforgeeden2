@@ -44,17 +44,17 @@
 
  { BlockGroup Name: LightWeaponsLarge
    MaxCount: 32
-   Blocks: "WeaponCVPlasmaT1, WeaponCVRailgunT1, WeaponMS01, WeaponMS02, TurretMSMinigunRetract, TurretMSMinigun, TurretMSCannon, TurretMSCannonRetract, TurretMSRocket, TurretMSRocketRetract, TurretMSPlasma, TurretMSPlasmaRetract, TurretMSPulseLaser, TurretMSPulseLaserRetract, TurretMSFlak, TurretMSFlakRetract, TurretBaseMinigunRetract, TurretBaseMinigun, TurretBaseCannon, TurretBaseCannonRetract, TurretBaseRocket, TurretBaseRocketRetract, TurretBasePlasma, TurretBasePlasmaRetract, TurretBasePulseLaser, TurretBasePulseLaserRetract, TurretBaseFlak, TurretBaseFlakRetract, Eden_TurretBolterCV, Eden_TurretMissileLight, Eden_TurretBeamBlocksT1, Eden_TurretLaserBeamCV, Eden_TurretLaserBeamCVT2, Eden_TurretLaserBeamCVT3, Eden_CVTorpedoRapid, TurretEnemyOrange"
+   Blocks: "WeaponCVPlasmaT1, WeaponCVRailgunT1, WeaponMS01, WeaponMS02, TurretMSMinigunRetract, TurretMSMinigun, TurretMSCannon, TurretMSCannonRetract, TurretMSRocket, TurretMSRocketRetract, TurretMSPlasma, TurretMSPlasmaRetract, TurretMSPulseLaser, TurretMSPulseLaserRetract, TurretMSFlak, TurretMSFlakRetract, TurretBaseMinigunRetract, TurretBaseMinigun, TurretBaseCannon, TurretBaseCannonRetract, TurretBaseRocket, TurretBaseRocketRetract, TurretBasePlasma, TurretBasePlasmaRetract, TurretBasePulseLaser, TurretBasePulseLaserRetract, TurretBaseFlak, TurretBaseFlakRetract, Eden_TurretBolterCV, Eden_TurretMissileLight, Eden_TurretBeamBlocksT1, Eden_TurretLaserBeamCV, Eden_TurretLaserBeamCVT2, Eden_TurretLaserBeamCVT3, Eden_CVTorpedoRapid"
  }
 
  { BlockGroup Name: MediumWeaponsLarge
    MaxCount: 16
-   Blocks: "WeaponCVPlasmaT2, WeaponCVPlasmaT2V2, WeaponCVRailgunT2, WeaponCVRailgunT2V2, WeaponCVLaserCannonT2V2, WeaponCVHeavyCannonT2, WeaponCVHeavyCannonT2V2, WeaponCVLaserCannonT2, WeaponCVRocketLauncherT2, TurretMSMinigunRetractT2, TurretMSMinigunT2, TurretMSCannonT2, TurretMSCannonRetractT2, TurretMSRocketT2, TurretMSRocketRetractT2, TurretMSPlasmaT2, TurretMSPlasmaRetractT2, TurretMSPulseLaserT2, TurretMSPulseLaserRetractT2, TurretMSFlakT2, TurretMSFlakRetractT2, TurretMSArtillery, TurretMSArtilleryRetract, TurretMSPlasmaArtillery, TurretMSPlasmaArtilleryRetract, TurretBAMinigunRetractT2, TurretBAMinigunT2, TurretBACannonT2, TurretBACannonRetractT2, TurretBARocketT2, TurretBARocketRetractT2, TurretBAPlasmaT2, TurretBAPlasmaRetractT2, TurretBAPulseLaserT2, TurretBAPulseLaserRetractT2, TurretBAFlakT2, TurretBAFlakRetractT2, TurretBaseArtillery, TurretBaseArtilleryRetract, TurretBAPlasmaArtillery, TurretBAPlasmaArtilleryRetract, Eden_TurretBolterBA, Eden_TurretMissileLightT2, Eden_TurretFlakClose, Eden_TurretVulcanCV, Eden_TurretAlienVulcan, Eden_TurretRailgun, Eden_TurretBeamBlocksT2, Eden_TurretModulatedCVT2V1, Eden_TurretModulatedCVT2V2, Eden_TurretModulatedCVT2V3, Eden_BlasterCVT2"
+   Blocks: "WeaponCVPlasmaT2, WeaponCVPlasmaT2V2, WeaponCVRailgunT2, WeaponCVRailgunT2V2, WeaponCVLaserCannonT2V2, WeaponCVHeavyCannonT2, WeaponCVHeavyCannonT2V2, WeaponCVLaserCannonT2, WeaponCVRocketLauncherT2, TurretMSMinigunRetractT2, TurretMSMinigunT2, TurretMSCannonT2, TurretMSCannonRetractT2, TurretMSRocketT2, TurretMSRocketRetractT2, TurretMSPlasmaT2, TurretMSPlasmaRetractT2, TurretMSPulseLaserT2, TurretMSPulseLaserRetractT2, TurretMSFlakT2, TurretMSFlakRetractT2, TurretMSArtillery, TurretMSArtilleryRetract, TurretMSPlasmaArtillery, TurretMSPlasmaArtilleryRetract, TurretBAMinigunRetractT2, TurretBAMinigunT2, TurretBACannonT2, TurretBACannonRetractT2, TurretBARocketT2, TurretBARocketRetractT2, TurretBAPlasmaT2, TurretBAPlasmaRetractT2, TurretBAPulseLaserT2, TurretBAPulseLaserRetractT2, TurretBAFlakT2, TurretBAFlakRetractT2, TurretBaseArtillery, TurretBaseArtilleryRetract, TurretBAPlasmaArtillery, TurretBAPlasmaArtilleryRetract, TurretEnemyOrange, Eden_TurretBolterBA, Eden_TurretMissileLightT2, Eden_TurretFlakClose, Eden_TurretVulcanCV, Eden_TurretAlienVulcan, Eden_TurretRailgun, Eden_TurretBeamBlocksT2, Eden_TurretModulatedCVT2V1, Eden_TurretModulatedCVT2V2, Eden_TurretModulatedCVT2V3, Eden_BlasterCVT2"
  }
 
  { BlockGroup Name: HeavyWeaponsLarge
    MaxCount: 8
-   Blocks: "WeaponCVPlasmaT3, WeaponCVRailgunT3, WeaponCVHeavyCannonT3, WeaponCVPlasmaT3V2, WeaponCVRailgunT3V2, WeaponCVHeavyCannonT3V2, WeaponCVLaserCannonT3V2, WeaponCVLaserCannonT3, WeaponCVRocketLauncherT3, WeaponCVPositronT3, TurretBAPositronT3, TurretBAPlasmaT3, Eden_TurretRailgunT2, Eden_TurretMissileCruiseBlocks, Eden_TurretMissileCruiseCV, Eden_TurretMissileCruiseEMPCV"
+   Blocks: "WeaponCVPlasmaT3, WeaponCVRailgunT3, WeaponCVHeavyCannonT3, WeaponCVPlasmaT3V2, WeaponCVRailgunT3V2, WeaponCVHeavyCannonT3V2, WeaponCVLaserCannonT3V2, WeaponCVLaserCannonT3, WeaponCVRocketLauncherT3, WeaponCVPositronT3, TurretBAPositronT3, TurretBAPlasmaT3, WeaponCVHeavyVulcanT3, Eden_TurretRailgunT2, Eden_TurretMissileCruiseBlocks, Eden_TurretMissileCruiseCV, Eden_TurretMissileCruiseEMPCV"
  }
 
  { BlockGroup Name: Crew
@@ -66,6 +66,11 @@
    MaxCount: 1
    Blocks: "DetectorHVT1, DetectorSVT1, DetectorSVT2, DetectorSVT3, DetectorCV, DetectorCVT2, DetectorCVT3"
  }
+# Apparently needed to maintain set limits
+ { BlockGroup Name: SentryGuns
+   MaxCount: 32
+   Blocks: "SentryGun03, SentryGun03Retract, SentryGun05, SentryGun05Retract, SentryGun05RetractV2"
+ }
 # To prevent people from placing multiple shield generators and receiving no benefits only extra costs
 # { BlockGroup Name: ShieldGenerator
 #   MaxCount: 1
@@ -76,7 +81,10 @@
    MaxCount: 30
    Blocks: "Acacia_Sapling_Fall_BA, Alien_Shroomtree_02_1_BA, Alien_Shroomtree_02_2_BA, Alien_Tree_01_1_BA, Alien_Tree_01_2_BA, Alien_Tree_04_3_BA, Birch_Paper_Desktop_Forest_Fall_BA, Birch_Paper_Desktop_Forest_Spring_BA, Birch_Paper_Sapling_Fall_BA,Birch_Paper_Sapling_Spring_BA,ElderberryBushBlue_BA,ElderberryBushNoFruitPrefab_BA,Maple_Red_Hero_Field_Fall_BA,Oak_White_Desktop_Field_Fall_BA,Oak_White_Desktop_Field_Spring_BA,Palm_Coconut_Hero_1_Spring_BA,Redwood_Sierra_Hero_Field_BA,Sycamore_American_Hero_Forest_Fall_BA,Sycamore_American_Hero_Forest_Spring_BA,Sycamore_American_Sapling_1_Spring_BA,Alien_Shroomtree_02_1_h2_BA,Alien_Shroomtree_02_2_h2_BA,Alien_Shroomtree_02_2_h3_BA"
  }
- 
+
+
+
+
 # Project Eden Custom block limits
 
  { BlockGroup Name: Eden_MaxWindTurbines
@@ -86,12 +94,12 @@
 
  { BlockGroup Name: Eden_MaxGeoPower
    MaxCount: 8
-   Blocks: "Eden_GeothermalGeneratorActive"
+   Blocks: "Eden_GeothermalGenerator, Eden_GeothermalGeneratorActive"
  }
 
  { BlockGroup Name: Eden_ExpWeaponsLarge
    MaxCount: 2
-   Blocks: "Eden_RailgunCVSpinal"
+   Blocks: "Eden_RailgunCVSpinal,Eden_DroneBayHawk"
  }
 
  # { BlockGroup Name: Eden_MaxAuxiliaryCores
